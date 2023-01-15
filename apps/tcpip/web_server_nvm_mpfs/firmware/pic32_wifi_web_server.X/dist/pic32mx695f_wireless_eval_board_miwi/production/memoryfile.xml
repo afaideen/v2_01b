@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/pic32mx695f_wireless_eval_board_miwi/production/pic32_wifi_web_server.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>531968</length>                 
+      <used>341156</used>                     
+      <free>190812</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>23352</used>                     
+      <free>107720</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
