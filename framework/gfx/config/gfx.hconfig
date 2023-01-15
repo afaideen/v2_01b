@@ -1,0 +1,741 @@
+menu "Graphics Library"
+
+menu "Harmony Graphics Library"
+
+config USE_GFX_STACK
+    bool "Use Graphics Library?"
+    select BSP_GRAPHICS_NEEDED
+    default n
+	---help---
+	IDH_HTML_GFXLIB_Graphics_Library_Help
+	---endhelp---
+
+config GFX_MAX_LAYERS
+    persistent
+    int "Maximum Supported Layers"
+    depends on USE_GFX_STACK
+    default 1
+
+ifblock (GFX_MAX_LAYERS = 1) || (GFX_MAX_LAYERS = 2) || (GFX_MAX_LAYERS = 3)
+config GFX_INST_0
+    depends on USE_GFX_STACK
+    bool "Enable Layer 0"
+    default y
+#source "$HARMONY_VERSION_PATH/framework/gfx/config/gfx_idx0.hconfig"
+endif
+
+ifblock (GFX_MAX_LAYERS = 2) || (GFX_MAX_LAYERS = 3)
+config GFX_INST_1
+    depends on USE_GFX_STACK
+    bool "Enable Layer 1"
+    default y
+#source "$HARMONY_VERSION_PATH/framework/gfx/config/gfx_idx1.hconfig"
+endif
+
+ifblock (GFX_MAX_LAYERS = 3)
+config GFX_INST_2
+    depends on USE_GFX_STACK
+    bool "Enable Layer 2"
+    default y
+#source "$HARMONY_VERSION_PATH/framework/gfx/config/gfx_idx2.hconfig"
+endif
+
+source "$HARMONY_VERSION_PATH/framework/gfx/config/gfx_hgc.hconfig"
+
+menu "RTOS Configuration"
+    depends on USE_GFX_STACK
+    depends on USE_3RDPARTY_RTOS
+
+config GFX_RTOS
+    string "Run Library Tasks As"
+    range 3RDPARTY_RTOS_SYS_TASKS_OPTIONS
+    default "Standalone"
+
+config GFX_RTOS_TASK_SIZE
+    int "Task Size"
+    depends on GFX_RTOS = "Standalone"
+    default 1024
+
+config GFX_RTOS_TASK_PRIORITY
+    int "Task Priority"
+    depends on GFX_RTOS = "Standalone"
+    default 1
+
+config GFX_RTOS_USE_DELAY
+    bool "Use Task Delay?"
+    depends on GFX_RTOS = "Standalone"
+    default y
+
+config GFX_RTOS_DELAY
+    int "Task Delay"
+    depends on GFX_RTOS = "Standalone"
+    depends on GFX_RTOS_USE_DELAY
+    default 1000
+
+endmenu
+
+enum GFX_PREEMPTION_LEVELS
+    "GFX_NO_PREEMPTION"
+    || "GFX_LOW_PREEMPTION"
+    || "GFX_MODERATE_PREEMPTION"
+
+config GFX_CFG_PREEMPTION_LEVEL
+    string "Preemption Level"
+    depends on USE_GFX_STACK
+    range GFX_PREEMPTION_LEVELS
+    default "GFX_NO_PREEMPTION"
+
+config GFX_PREEMPTION_LEVEL
+    int
+    depends on USE_GFX_STACK
+    default 0 if GFX_CFG_PREEMPTION_LEVEL = "GFX_NO_PREEMPTION"
+    default 1 if GFX_CFG_PREEMPTION_LEVEL = "GFX_LOW_PREEMPTION"
+    default 2 if GFX_CFG_PREEMPTION_LEVEL = "GFX_MODERATE_PREEMPTION"
+
+enum GFX_COLOR_DEPTH_CHOICE
+    "GFX_COLOR_DEPTH_1"
+    || "GFX_COLOR_DEPTH_4"
+    || "GFX_COLOR_DEPTH_8"
+    || "GFX_COLOR_DEPTH_16"
+    || "GFX_COLOR_DEPTH_24"
+    || "GFX_COLOR_DEPTH_32"
+
+config GFX_CFG_COLOR_DEPTH_SIZE
+    string "Color Depth"
+    depends on USE_GFX_STACK
+    range GFX_COLOR_DEPTH_CHOICE
+    default "GFX_COLOR_DEPTH_16"
+        ---help---
+        IDH_HTML_GFX_CONFIG_COLOR_DEPTH
+        ---endhelp---
+
+comment "**** WARNING: Harmony Graphics Composer Does Not Support This Color Depth Setting ****"
+	depends on USE_GFX_STACK && USE_GFX_HGC_GEN && GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_4" || GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_1" 
+
+comment "**** WARNING: Gradient Fill Requires 16-bit or 24-bit Color Depth ****"
+	depends on USE_GFX_STACK && GFX_GRADIENT_DISABLE && GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_4" || GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_1" || GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_8" 
+
+config GFX_COLOR_DEPTH
+    int
+    depends on USE_GFX_STACK
+    default 1 if GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_1"
+    default 4 if GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_4"
+    default 8 if GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_8"
+    default 16 if GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_16"
+    default 24 if GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_24"
+    default 32 if GFX_CFG_COLOR_DEPTH_SIZE = "GFX_COLOR_DEPTH_32"
+        ---help---
+        IDH_HTML_GFXLIB_Graphics_Library_Help
+        ---endhelp---
+		
+config USE_GFX_FONTS
+    bool "Use Fonts?"
+    depends on USE_GFX_STACK
+    default n if !USE_GFX_FONTS_NEEDED
+    default y if USE_GFX_FONTS_NEEDED
+    ---help---
+    IDH_HTML_GFXLIB_Graphics_Fonts
+    ---endhelp---
+
+enum GFX_FONT_SIZE
+    "GFX_FONT_SIZE_8"
+    || "GFX_FONT_SIZE_16"
+
+config GFX_CFG_FONT_CHAR_SIZE
+    string "Font Character Size"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_FONTS
+    range GFX_FONT_SIZE
+    default "GFX_FONT_SIZE_8"
+        ---help---
+        IDH_HTML_GFX_CONFIG_FONT_CHAR_SIZE
+        ---endhelp---
+
+config GFX_FONT_CHAR_SIZE
+    int
+    depends on USE_GFX_STACK
+    depends on USE_GFX_FONTS
+    default 8 if GFX_CFG_FONT_CHAR_SIZE = "GFX_FONT_SIZE_8"
+    default 16 if GFX_CFG_FONT_CHAR_SIZE = "GFX_FONT_SIZE_16"
+
+config GFX_FONT_FLASH_DISABLE
+    bool "Enable Internal Program Flash Memory Fonts"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_FONTS
+    default n if !USE_GFX_FONT_FLASH_NEEDED
+    default y if USE_GFX_FONT_FLASH_NEEDED
+        ---help---
+        IDH_HTML_GFX_CONFIG_FONT_FLASH_DISABLE
+        ---endhelp---
+
+config GFX_FONT_EXTERNAL_DISABLE
+    bool "Enable External Memory Fonts"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_FONTS
+    default n if !USE_GFX_FONT_EXTERNAL_NEEDED
+    default y if USE_GFX_FONT_EXTERNAL_NEEDED
+        ---help---
+        IDH_HTML_GFX_CONFIG_FONT_EXTERNAL_DISABLE
+        ---endhelp---
+
+config GFX_EXTERNAL_FONT_RASTER_BUFFER_SIZE
+    int "External Font Raster Size"
+    depends on USE_GFX_STACK
+    depends on GFX_FONT_EXTERNAL_DISABLE
+    default 51
+        ---help---
+        IDH_HTML_GFX_EXTERNAL_FONT_RASTER_BUFFER_SIZE
+        ---endhelp---
+
+config GFX_FONT_RAM_DISABLE
+    bool "Enable Data Memory (SRAM) Fonts"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_FONTS
+    default n
+        ---help---
+        IDH_HTML_GFX_CONFIG_FONT_RAM_DISABLE
+        ---endhelp---
+
+config USE_GFX_IMAGES
+    bool "Use Images?"
+    depends on USE_GFX_STACK
+    default n if !USE_GFX_IMAGES_NEEDED
+    default y if USE_GFX_IMAGES_NEEDED
+    ---help---
+    IDH_HTML_GFXLIB_Graphics_Images
+    ---endhelp---
+
+config GFX_IMAGE_FLASH_DISABLE
+    bool "Enable Internal Program Flash Memory Images"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n if !USE_GFX_IMAGE_FLASH_NEEDED
+    default y if USE_GFX_IMAGE_FLASH_NEEDED
+        ---help---
+        IDH_HTML_GFX_CONFIG_IMAGE_FLASH_DISABLE
+        ---endhelp---
+
+config GFX_IMAGE_EXTERNAL_DISABLE
+    bool "Enable External Program Flash Memory Images"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n if !USE_GFX_IMAGE_EXTERNAL_NEEDED
+    default y if USE_GFX_IMAGE_EXTERNAL_NEEDED
+        ---help---
+        IDH_HTML_GFX_CONFIG_IMAGE_EXTERNAL_DISABLE
+        ---endhelp---
+
+config GFX_IMAGE_RAM_DISABLE
+    bool "Enable Data Memory (SRAM) Images"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n
+        ---help---
+        IDH_HTML_GFX_CONFIG_IMAGE_RAM_DISABLE
+        ---endhelp---
+
+config GFX_RLE_DECODE_DISABLE
+    bool "Enable RLE Decode Images"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n if !USE_GFX_RLE_DECODE_NEEDED
+    default y if USE_GFX_RLE_DECODE_NEEDED
+        ---help---
+        IDH_HTML_GFX_CONFIG_RLE_DECODE_DISABLE
+        ---endhelp---
+		
+config GFX_IPU_DECODE_DISABLE
+    bool "Enable IPU Decode Images"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n
+        ---help---
+        IDH_HTML_GFX_CONFIG_IPU_DECODE_DISABLE
+        ---endhelp---
+
+config GFX_IMAGE_PADDING_DISABLE
+    bool "Enable GRC Image Padding"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default y
+        ---help---
+        IDH_HTML_GFX_CONFIG_IMAGE_PADDING_DISABLE
+        ---endhelp---
+
+config USE_GFX_JPEG_SUPPORT
+    bool "Enable JPEG Support"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n if !USE_GFX_JPEG_SUPPORT_NEEDED
+    default y if USE_GFX_JPEG_SUPPORT_NEEDED
+    select USE_IMAGE_DECODER_NEEDED
+    select USE_JPEG_DECODER_NEEDED
+        ---help---
+        IDH_HTML_GFXLIB_Graphics_Images
+        ---endhelp---
+
+config USE_GFX_BMP_SUPPORT
+    bool "Enable BMP Support (Requires File System Service)"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n if !USE_GFX_BMP_SUPPORT_NEEDED
+    default y if USE_GFX_BMP_SUPPORT_NEEDED
+    select USE_IMAGE_DECODER_NEEDED
+    select USE_BMP_DECODER_NEEDED
+        ---help---
+        IDH_HTML_GFXLIB_Graphics_Images
+        ---endhelp---
+
+config USE_GFX_GIF_SUPPORT
+    bool "Enable GIF Support (Requires File System Service)"
+    depends on USE_GFX_STACK && USE_GFX_IMAGES
+    default n if !USE_GFX_GIF_SUPPORT_NEEDED
+    default y if USE_GFX_GIF_SUPPORT_NEEDED
+    select USE_IMAGE_DECODER_NEEDED
+    select USE_GIF_DECODER_NEEDED
+        ---help---
+        IDH_HTML_GFXLIB_Graphics_Images
+        ---endhelp---
+
+config USE_GFX_GOL
+	depends on USE_GFX_STACK
+    bool "Use GOL Widgets?"
+    default n if !USE_GFX_GOL_NEEDED
+    default y if USE_GFX_GOL_NEEDED
+	---help---
+	IDH_HTML_GFXLIB_Graphics_Objects
+	---endhelp---
+	
+config GFX_FOCUS_DISABLE
+    bool "Enable Object Focus"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_GOL
+    default n
+        ---help---
+        IDH_HTML_GFX_CONFIG_FOCUS_DISABLE
+        ---endhelp---
+
+config USE_GFX_GOL_BUTTON
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Button' widget?"
+    default n if !USE_GFX_GOL_BUTTON_NEEDED
+    default y if USE_GFX_GOL_BUTTON_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_BUTTON
+	---endhelp---
+
+config USE_GFX_GOL_CHKBOX
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Check Box' widget?"
+    default n if !USE_GFX_GOL_CHKBOX_NEEDED
+    default y if USE_GFX_GOL_CHKBOX_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_CHECKBOX
+	---endhelp---
+	
+config USE_GFX_GOL_CUSTOM_CONTROL
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Custom Control' Widget?"
+    default n	
+	---help---
+	IDH_HTML_GFX_GOL_CUSTOMCONTROL
+	---endhelp---
+
+config USE_GFX_GOL_DGTL_MTR
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Digital Meter' widget?"
+    default n if !USE_GFX_GOL_DGTL_MTR_NEEDED
+    default y if USE_GFX_GOL_DGTL_MTR_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_DIGITALMETER
+	---endhelp---
+	
+config USE_GFX_EDIT_BOX
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Edit Box' widget?"
+    default n if !USE_GFX_EDIT_BOX_NEEDED
+    default y if USE_GFX_EDIT_BOX_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_EDITBOX
+	---endhelp---
+	
+config USE_GFX_GOL_GRP_BOX
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Group Box' widget?"
+    default n if !USE_GFX_GOL_GRP_BOX_NEEDED
+    default y if USE_GFX_GOL_GRP_BOX_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_GROUPBOX
+	---endhelp---
+
+config USE_GFX_GOL_LIST_BOX
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'List Box' widget?"
+    default n if !USE_GFX_GOL_LIST_BOX_NEEDED
+    default y if USE_GFX_GOL_LIST_BOX_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_LISTBOX
+	---endhelp---
+	
+config USE_GFX_GOL_METER
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Meter' widget?"
+    default n if !USE_GFX_GOL_METER_NEEDED
+    default y if USE_GFX_GOL_METER_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_METER
+	---endhelp---
+	
+config USE_GFX_GOL_PICTURE
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Picture' widget?"
+    default n if !USE_GFX_GOL_PICTURE_NEEDED
+    default y if USE_GFX_GOL_PICTURE_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_PICTURECONTROL
+	---endhelp---
+
+config USE_GFX_GOL_PROGRESS_BAR
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Progress Bar' widget?"
+    default n if !USE_GFX_GOL_PROGRESS_BAR_NEEDED
+    default y if USE_GFX_GOL_PROGRESS_BAR_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_PROGRESSBAR
+	---endhelp---
+	
+config USE_GFX_GOL_RADIO_BTN
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Radio Button' widget?"
+    default n if !USE_GFX_GOL_RADIO_BTN_NEEDED
+    default y if USE_GFX_GOL_RADIO_BTN_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_RADIOBUTTON
+	---endhelp---
+	
+config USE_GFX_GOL_SCROLL_BAR
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Scroll Bar' widget?"
+    default n if !USE_GFX_GOL_SCROLL_BAR_NEEDED
+    default y if USE_GFX_GOL_SCROLL_BAR_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_SCROLLBAR
+	---endhelp---
+	
+config USE_GFX_GOL_STATIC_TEXT
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Static Text' widget?"
+    default n if !USE_GFX_GOL_STATIC_TEXT_NEEDED
+    default y if USE_GFX_GOL_STATIC_TEXT_NEEDED
+	---help---
+	IDH_HTML_GFX_GOL_STATICTEXT
+	---endhelp---
+	
+config USE_GFX_GOL_SURFACE
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Surface' Widget?"
+    default n		
+	---help---
+	IDH_HTML_GFXLIB_Surface_Object
+	---endhelp---
+	
+config USE_GFX_GOL_TEXT_ENTRY
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Text Entry' Widget?"
+    default n if !USE_GFX_GOL_TEXT_ENTRY_NEEDED
+    default y if USE_GFX_GOL_TEXT_ENTRY_NEEDED	
+	---help---
+	IDH_HTML_GFX_GOL_TEXTENTRY
+	---endhelp---
+	
+config USE_GFX_GOL_WINDOW
+	depends on USE_GFX_GOL
+    depends on USE_GFX_STACK
+    bool "Use 'Window' Widget?"
+    default n if !USE_GFX_GOL_WINDOW_NEEDED
+    default y if USE_GFX_GOL_WINDOW_NEEDED	
+	---help---
+	IDH_HTML_GFX_GOL_WINDOW
+	---endhelp---
+
+config USE_GFX_TECHNIQUES
+    bool "Use Special Effects?"
+    depends on USE_GFX_STACK
+    default n if !USE_GFX_TECHNIQUES_NEEDED
+    default y if USE_GFX_TECHNIQUES_NEEDED	
+    ---help---
+    IDH_HTML_GFXLIB_Graphics_Fonts
+    ---endhelp---
+
+config GFX_ALPHABLEND_DISABLE
+    bool "Enable Alpha Blending"
+    depends on USE_GFX_TECHNIQUES
+    depends on USE_GFX_STACK
+    default n if !GFX_ALPHABLEND_DISABLE_NEEDED
+    default y if GFX_ALPHABLEND_DISABLE_NEEDED
+	---help---
+	IDH_HTML_GFX_CONFIG_ALPHABLEND_DISABLE
+	---endhelp---
+
+config GFX_GRADIENT_DISABLE
+    bool "Enable Gradient Fill"
+    depends on USE_GFX_TECHNIQUES
+    depends on USE_GFX_STACK
+    default n if !GFX_GRADIENT_DISABLE_NEEDED
+    default y if GFX_GRADIENT_DISABLE_NEEDED
+	---help---
+	IDH_HTML_GFX_CONFIG_GRADIENT_DISABLE
+	---endhelp---
+
+config GFX_PALETTE_DISABLE
+    bool "Enable Palette Feature"
+    depends on USE_GFX_TECHNIQUES
+    depends on USE_GFX_STACK
+    default n
+	---help---
+	IDH_HTML_GFX_CONFIG_PALETTE_DISABLE
+	---endhelp---
+
+config GFX_FONT_ANTIALIASED_DISABLE
+    bool "Enable Anti-aliased Fonts"
+    depends on USE_GFX_TECHNIQUES
+    depends on USE_GFX_STACK
+    default n if !GFX_FONT_ANTIALIASED_DISABLE_NEEDED
+    default y if GFX_FONT_ANTIALIASED_DISABLE_NEEDED
+	---help---
+	IDH_HTML_GFX_CONFIG_FONT_ANTIALIASED_DISABLE
+	---endhelp---
+
+config GFX_TRANSPARENT_COLOR_DISABLE
+    bool "Enable Transparent Color"
+    depends on USE_GFX_TECHNIQUES
+    depends on USE_GFX_STACK
+    default n if !GFX_TRANSPARENT_COLOR_DISABLE_NEEDED
+    default y if GFX_TRANSPARENT_COLOR_DISABLE_NEEDED
+	---help---
+	IDH_HTML_GFX_CONFIG_TRANSPARENT_COLOR_DISABLE
+	---endhelp---
+
+config GFX_PALETTE_EXTERNAL_DISABLE
+    bool "Enable External Palette"
+    depends on USE_GFX_TECHNIQUES
+    depends on USE_GFX_STACK
+    default n
+	---help---
+	IDH_HTML_GFX_CONFIG_PALETTE_EXTERNAL_DISABLE
+	---endhelp---
+
+config GFX_DOUBLE_BUFFERING_DISABLE
+    bool "Enable Double Buffering"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_TECHNIQUES
+    default n if !GFX_DOUBLE_BUFFER_DISABLE_NEEDED
+    default y if GFX_DOUBLE_BUFFER_DISABLE_NEEDED
+	---help---
+	IDH_HTML_GFX_CONFIG_DOUBLE_BUFFERING_DISABLE
+	---endhelp---
+	
+config GFX_VSYNC_ENABLE
+	bool "Enable VSYNC"
+	depends on USE_GFX_STACK
+    depends on USE_GFX_TECHNIQUES
+	depends on GFX_DOUBLE_BUFFERING_DISABLE
+	depends on USE_DRV_GFX_LCC = y
+	default n
+
+config GFX_PIXEL_ARRAY_NO_SWAP_DISABLE
+    bool "Enable Array Swap"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_TECHNIQUES
+    default n
+        ---help---
+        IDH_HTML_GFX_CONFIG_PIXEL_ARRAY_NO_SWAP_DISABLE
+        ---endhelp---
+
+config USE_GFX_INPUT_DEVICE
+    bool "Use Input Devices?"
+    depends on USE_GFX_STACK
+    default n if !USE_GFX_INPUT_DEVICE_NEEDED
+    default y if USE_GFX_INPUT_DEVICE_NEEDED
+    ---help---
+    IDH_HTML_GFXLIB_Graphics_Input
+    ---endhelp---
+
+config GFX_USE_KEYBOARD_DISABLE
+    bool "Enable Keyboard Support"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_INPUT_DEVICE
+    default n
+    ---help---
+    IDH_HTML_GFXLIB_Graphics_Input
+    ---endhelp---
+
+config GFX_USE_TOUCHSCREEN
+    bool "Enable Touchscreen Support"
+    depends on USE_GFX_STACK
+    depends on USE_GFX_INPUT_DEVICE
+    select BSP_TOUCH_INPUT_NEEDED
+	select USE_SYS_TOUCH_NEEDED
+    default n if !GFX_USE_TOUCHSCREEN_NEEDED
+    default y if GFX_USE_TOUCHSCREEN_NEEDED
+    ---help---
+    IDH_HTML_GFXLIB_Graphics_Input
+    ---endhelp---
+
+endmenu
+
+source "$HARMONY_VERSION_PATH/framework/gfx/config/gfx_segger.hconfig"
+
+endmenu
+
+ifblock USE_GFX_STACK
+
+add "<#include \"/framework/gfx/templates/gfx_init_data.c.ftl\">"  to list SYSTEM_INIT_C_LIBRARY_INITIALIZATION_DATA
+add "<#include \"/framework/gfx/templates/gfx_init.c.ftl\">"  to list SYSTEM_INIT_C_INITIALIZE_MIDDLEWARE
+add "<#include \"/framework/gfx/templates/gfx_tasks.c.ftl\">"  to list SYSTEM_TASKS_C_CALL_LIB_TASKS
+add "<#include \"/framework/gfx/config/gfx.h.ftl\">"  to list SYSTEM_CONFIG_H_MIDDLEWARE_CONFIGURATION 
+
+file GFX_H "$HARMONY_VERSION_PATH/framework/gfx/gfx.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx.h"
+file GFX_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx.c"
+file GFX_PRIMITIVE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_primitive.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_primitive.h"
+file GFX_PRIMITVE_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_primitive.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_primitive.c"
+file GFX_COLORS_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_colors.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_colors.h"
+file GFX_TYPES_FONT_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_types_font.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_types_font.h"
+file GFX_TYPES_MACROS_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_types_macros.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_types_macros.h"
+file GFX_TYPES_IMAGE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_types_image.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_types_image.h"
+file GFX_TYPES_PALETTE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_types_palette.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_types_palette.h"
+file GFX_TYPES_RESOURCE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_types_resource.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_types_resource.h"
+
+ifblock !GFX_PALETTE_DISABLE
+file GFX_PALETTE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_palette.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_palette.h"
+endif
+
+file GFX_GOL_CHKBOX_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_check_box.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_check_box.h"
+file GFX_GOL_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol.h"
+file GFX_GOL_BUTTON_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_button.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_button.h"
+file GFX_GOL_CUSTOM_CONTROL_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_custom_control.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_custom_control.h"
+file GFX_GOL_DGTL_MTR_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_digital_meter.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_digital_meter.h"
+file GFX_EDIT_BOX_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_edit_box.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_edit_box.h"
+file GFX_GOL_GRP_BOX_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_group_box.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_group_box.h"
+file GFX_GOL_LIST_BOX_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_list_box.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_list_box.h"
+file GFX_GOL_METER_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_meter.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_meter.h"
+file GFX_GOL_PICTURE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_picture.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_picture.h"
+file GFX_GOL_PROGRESS_BAR_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_progress_bar.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_progress_bar.h"
+file GFX_GOL_RADIO_BTN_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_radio_button.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_radio_button.h"
+file GFX_GOL_SCROLL_BAR_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_scroll_bar.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_scroll_bar.h"
+file GFX_GOL_STATIC_TEXT_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_static_text.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_static_text.h"
+file GFX_GOL_SURFACE_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_surface.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_surface.h"
+file GFX_GOL_TEXT_ENTRY_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_text_entry.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_text_entry.h"
+file GFX_GOL_WINDOW_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_window.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_window.h"
+
+endif
+
+ifblock USE_GFX_GOL
+file GFX_GOL_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol.c"
+file GFX_GOL_SCHEME_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_scheme.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_scheme.h"
+file GFX_GOL_SCHEME_DEFAULT_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_scheme_default.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_scheme_default.c"
+file GFX_GOL_SCAN_CODES_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_gol_scan_codes.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_gol_scan_codes.h"
+endif
+
+ifblock USE_GFX_GOL_BUTTON
+file GFX_GOL_BUTTON_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_button.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_button.c"
+endif
+
+ifblock USE_GFX_GOL_CHKBOX
+file GFX_GOL_CHKBOX_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_check_box.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_check_box.c"
+endif
+
+ifblock USE_GFX_GOL_CUSTOM_CONTROL
+file GFX_GOL_CUSTOM_CONTROL_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_custom_control.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_custom_control.c"
+endif 
+	
+ifblock USE_GFX_GOL_DGTL_MTR
+file GFX_GOL_DGTL_MTR_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_digital_meter.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_digital_meter.c"
+endif	
+
+ifblock USE_GFX_EDIT_BOX
+file GFX_EDIT_BOX_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_edit_box.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_edit_box.c"
+endif	
+
+ifblock USE_GFX_GOL_GRP_BOX
+file GFX_GOL_GRP_BOX_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_group_box.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_group_box.c"
+endif
+
+ifblock USE_GFX_GOL_LIST_BOX
+file GFX_GOL_LIST_BOX_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_list_box.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_list_box.c"
+endif
+
+	
+ifblock USE_GFX_GOL_METER
+file GFX_GOL_METER_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_meter.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_meter.c"
+endif
+
+	
+ifblock USE_GFX_GOL_PICTURE
+file GFX_GOL_PICTURE_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_picture.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_picture.c"
+endif
+
+ifblock USE_GFX_GOL_PROGRESS_BAR
+file GFX_GOL_PROGRESS_BAR_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_progress_bar.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_progress_bar.c"
+endif
+	
+ifblock USE_GFX_GOL_RADIO_BTN
+file GFX_GOL_RADIO_BTN_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_radio_button.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_radio_button.c"
+endif
+	
+ifblock USE_GFX_GOL_SCROLL_BAR
+file GFX_GOL_SCROLL_BAR_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_scroll_bar.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_scroll_bar.c"
+endif
+	
+ifblock USE_GFX_GOL_STATIC_TEXT
+file GFX_GOL_STATIC_TEXT_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_static_text.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_static_text.c"
+endif	
+
+
+ifblock USE_GFX_GOL_SURFACE
+file GFX_GOL_SURFACE_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_surface.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_surface.c"
+endif
+	
+ifblock USE_GFX_GOL_TEXT_ENTRY
+file GFX_GOL_TEXT_ENTRY_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_text_entry.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_text_entry.c"
+endif
+	
+ifblock USE_GFX_GOL_WINDOW
+file GFX_GOL_WINDOW_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_gol_window.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_gol_window.c"
+endif	
+
+ifblock USE_GFX_JPEG_SUPPORT
+file JPEG_IMAGE_H "$HARMONY_VERSION_PATH/framework/gfx/jpeg_image.h" to "$PROJECT_HEADER_FILES/framework/gfx/jpeg_image.h"
+file JPEG_IMAGE_C "$HARMONY_VERSION_PATH/framework/gfx/src/jpeg_image.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/jpeg_image.c"
+endif
+
+ifblock USE_GFX_BMP_SUPPORT
+file BMP_IMAGE_H "$HARMONY_VERSION_PATH/framework/gfx/bmp_image.h" to "$PROJECT_HEADER_FILES/framework/gfx/bmp_image.h"
+file BMP_IMAGE_C "$HARMONY_VERSION_PATH/framework/gfx/src/bmp_image.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/bmp_image.c"
+endif
+
+ifblock USE_GFX_GIF_SUPPORT
+file GIF_IMAGE_H "$HARMONY_VERSION_PATH/framework/gfx/gif_image.h" to "$PROJECT_HEADER_FILES/framework/gfx/gif_image.h"
+file GIF_IMAGE_C "$HARMONY_VERSION_PATH/framework/gfx/src/gif_image.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gif_image.c"
+endif
+
+ifblock USE_GFX_JPEG_SUPPORT || USE_GFX_BMP_SUPPORT || USE_GFX_GIF_SUPPORT
+file GFX_IMAGE_DECODER_H "$HARMONY_VERSION_PATH/framework/gfx/gfx_image_decoder.h" to "$PROJECT_HEADER_FILES/framework/gfx/gfx_image_decoder.h"
+file GFX_IMAGE_DECODER_C "$HARMONY_VERSION_PATH/framework/gfx/src/gfx_image_decoder.c" to "$PROJECT_SOURCE_FILES/framework/gfx/src/gfx_image_decoder.c"
+endif
+
+ifblock USE_GFX_HGC_GEN
+
+add "<#include \"/framework/gfx/templates/gfx_hgc_init.c.ftl\">"  to list SYSTEM_INIT_C_INITIALIZE_MIDDLEWARE
+add "<#include \"/framework/gfx/templates/gfx_hgc_tasks.c.ftl\">"  to list SYSTEM_TASKS_C_CALL_LIB_TASKS
+
+template GFX_HGC_DEFINITIONS_H "$HARMONY_VERSION_PATH/framework/gfx/templates/gfx_hgc_definitions.h.ftl" to "$PROJECT_HEADER_FILES/app/system_config/$CONFIGURATION/gfx_hgc_definitions.h"
+template GFX_HGC_DEFINITIONS_C "$HARMONY_VERSION_PATH/framework/gfx/templates/gfx_hgc_definitions.c.ftl" to "$PROJECT_SOURCE_FILES/app/system_config/$CONFIGURATION/gfx_hgc_definitions.c"
+endif

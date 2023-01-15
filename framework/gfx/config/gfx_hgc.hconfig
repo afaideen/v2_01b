@@ -1,0 +1,249 @@
+execute COMPOSER_EXEC
+	depends on USE_GFX_STACK
+    prompt "Create a Design With MPLAB Harmony Graphics Composer"
+    default "composer"
+
+config USE_GFX_HGC_GEN
+	depends on USE_GFX_STACK
+    bool "Use MPLAB Harmony Graphics Composer Design"
+    default n
+	
+menu "MPLAB Harmony Graphics Composer Options"
+	depends on USE_GFX_HGC_GEN
+	
+comment "**** All settings listed here are managed by MPLAB Harmony Composer ****"
+	depends on USE_GFX_HGC_GEN
+
+config USE_GFX_FONTS_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Fonts"
+	default n
+	
+config USE_GFX_FONT_FLASH_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Flash Fonts"
+	default n
+	
+config USE_GFX_FONT_EXTERNAL_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable External Fonts"
+	default n
+	
+config USE_GFX_IMAGES_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Images"
+	default n
+	
+config USE_GFX_IMAGE_FLASH_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Flash Images"
+	default n
+	
+config USE_GFX_IMAGE_EXTERNAL_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable External Images"
+	default n
+
+config USE_GFX_RLE_DECODE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable RLE Compression"
+	default n
+
+config USE_GFX_GOL_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Graphics Object Library"
+	default n
+	
+config USE_GFX_GOL_BUTTON_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Button Widget"
+	default n
+	
+config USE_GFX_GOL_CHKBOX_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Check Box Widget"
+	default n
+	
+config USE_GFX_GOL_DGTL_MTR_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Digital Meter Widget"
+	default n
+
+config USE_GFX_EDIT_BOX_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Edit Box Widget"
+	default n
+	
+config USE_GFX_GOL_GRP_BOX_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Group Box Widget"
+	default n
+	
+config USE_GFX_GOL_LIST_BOX_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable List Box Widget"
+	default n
+
+config USE_GFX_GOL_METER_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Meter Widget"
+	default n
+
+config USE_GFX_GOL_PICTURE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Picture Widget"
+	default n
+	
+config USE_GFX_GOL_PROGRESS_BAR_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Progress Bar Widget"
+	default n
+
+config USE_GFX_GOL_RADIO_BTN_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Radio Button Widget"
+	default n
+	
+config USE_GFX_GOL_SCROLL_BAR_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Scroll Bar Widget"
+	default n
+	
+config USE_GFX_GOL_STATIC_TEXT_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Static Text Widget"
+	default n
+	
+config USE_GFX_GOL_TEXT_ENTRY_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Text Entry Widget"
+	default n
+	
+config USE_GFX_GOL_WINDOW_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Window Widget"
+	default n
+	
+config USE_GFX_TECHNIQUES_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Special Effects"
+	default n
+	
+config GFX_ALPHABLEND_DISABLE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Alpha Blending"
+	default n
+	
+config GFX_GRADIENT_DISABLE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Gradient"
+	default n
+	
+config GFX_FONT_ANTIALIASED_DISABLE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Antialiasing"
+	default n
+	
+config GFX_TRANSPARENT_COLOR_DISABLE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Transparency"
+	default n
+	
+config GFX_DOUBLE_BUFFER_DISABLE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Double Buffering"
+	default n
+	
+config USE_GFX_INPUT_DEVICE_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Input Devices"
+	default n
+	
+config GFX_USE_TOUCHSCREEN_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable Touch Screen"
+	default n
+	
+config USE_GFX_JPEG_SUPPORT_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable JPEG Support"
+	default n
+    	
+config USE_GFX_BMP_SUPPORT_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable BMP Support"
+	default n
+    	
+config USE_GFX_GIF_SUPPORT_NEEDED
+	depends on USE_GFX_HGC_GEN
+	bool "Enable GIF Support"
+	default n
+    	
+endmenu	
+
+menu "RTOS Configuration"
+	depends on USE_GFX_STACK
+    depends on USE_GFX_HGC_GEN
+    depends on USE_3RDPARTY_RTOS
+
+config GFX_HGC_RTOS
+	depends on USE_GFX_STACK
+    string "Run Library Tasks As"
+    range 3RDPARTY_RTOS_SYS_TASKS_OPTIONS
+    default "Standalone"
+
+config GFX_HGC_RTOS_TASK_SIZE
+    int "Task Size"
+	depends on USE_GFX_STACK
+    depends on GFX_HGC_RTOS = "Standalone"
+    default 1024
+
+config GFX_HGC_RTOS_TASK_PRIORITY
+    int "Task Priority"
+	depends on USE_GFX_STACK
+    depends on GFX_HGC_RTOS = "Standalone"
+    default 1
+
+config GFX_HGC_RTOS_USE_DELAY
+    bool "Use Task Delay?"
+	depends on USE_GFX_STACK
+    depends on GFX_HGC_RTOS = "Standalone"
+    default y
+
+config GFX_HGC_RTOS_DELAY
+    int "Task Delay"
+	depends on USE_GFX_STACK
+    depends on GFX_HGC_RTOS = "Standalone"
+    depends on GFX_HGC_RTOS_USE_DELAY
+    default 1000
+
+endmenu
+
+config GFX_HGC_DISP_ORIENTATION
+	depends on USE_GFX_STACK
+    int
+    default 0 if DRV_GFX_DISP_ORIENTATION = "0"
+    default 90 if DRV_GFX_DISP_ORIENTATION = "90"
+    default 180 if DRV_GFX_DISP_ORIENTATION = "180"
+    default 270 if DRV_GFX_DISP_ORIENTATION = "270"
+
+config GFX_HGC_DISP_ORIENTATION_STR
+        string
+        depends on USE_GFX_STACK
+        default "0" if GFX_HGC_DISP_ORIENTATION = 0
+        default "90" if GFX_HGC_DISP_ORIENTATION = 90
+        default "180" if GFX_HGC_DISP_ORIENTATION = 180
+        default "270" if GFX_HGC_DISP_ORIENTATION = 270
+
+config GFX_HGC_DISP_HOR_RESOLUTION
+	depends on USE_GFX_STACK
+    int
+    default DRV_GFX_DISP_HOR_RESOLUTION
+
+config GFX_HGC_DISP_VER_RESOLUTION
+	depends on USE_GFX_STACK
+    int
+    default DRV_GFX_DISP_VER_RESOLUTION
+
+
+

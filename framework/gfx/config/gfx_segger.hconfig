@@ -1,0 +1,17 @@
+menu "SEGGER emWin Graphics Library"
+
+config USE_SEGGER_EMWIN_NEEDED
+    bool
+
+config USE_SEGGER_EMWIN
+    bool "Use SEGGER emWin Graphics Library?"
+    select 3RDPARTY_SEGGER_EMWIN_LIBRARY_NEEDED
+    select BSP_GRAPHICS_NEEDED
+    select BSP_TOUCH_INPUT_NEEDED
+    default y if USE_SEGGER_EMWIN_NEEDED
+    default n
+	---help---
+    SEGGER Graphics EMWIN Help Needed
+	---endhelp---
+
+endmenu
