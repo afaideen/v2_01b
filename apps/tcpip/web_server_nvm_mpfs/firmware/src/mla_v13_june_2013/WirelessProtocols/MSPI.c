@@ -75,7 +75,7 @@
 ********************************************************************/
 void SPIPut(BYTE v)
 {
-    BYTE i;
+    BYTE __attribute__((__unused__)) i;
     
     #if !defined(HARDWARE_SPI)
         
@@ -169,7 +169,7 @@ BYTE SPIGet(void)
     ********************************************************************/
     void SPIPut2(BYTE v)
     {
-        BYTE i;
+        BYTE __attribute__((__unused__)) i;
         
         #if !defined(HARDWARE_SPI)
             

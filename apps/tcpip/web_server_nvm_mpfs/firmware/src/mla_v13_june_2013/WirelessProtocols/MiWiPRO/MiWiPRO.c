@@ -2345,7 +2345,7 @@ START_ASSOCIATION_RESPONSE:
                         #if defined(NWK_ROLE_COORDINATOR) && defined(ENABLE_INDIRECT_MESSAGE)
                         case MAC_COMMAND_DATA_REQUEST:
                         {
-                            BYTE handle;
+//                            BYTE handle;
                             
                             #if defined(IEEE_802_15_4)                              
                                 
@@ -5101,7 +5101,7 @@ BYTE    MiApp_EstablishConnection(INPUT BYTE ActiveScanIndex, INPUT BYTE Mode)
     {
         if( ActiveScanIndex == 0xFF )
         {
-            while( i = MiApp_SearchConnection(10, ((DWORD)0x00000001)<<currentChannel) == 0 )
+            while( ( i = MiApp_SearchConnection(10, ((DWORD)0x00000001)<<currentChannel) ) == 0 )
 //            while( i = MiApp_SearchConnection(11, ((DWORD)0x00000001) << currentChannel) == 0 )
             {
                 if( --retry == 0 )

@@ -54,6 +54,7 @@
         #include "TimeDelay.h"
     
     extern void MacroNop(void);
+    extern void BSP_DelayUs(uint16_t microseconds);
     
     #define  Delay10us(x)                    BSP_DelayUs(x)
       

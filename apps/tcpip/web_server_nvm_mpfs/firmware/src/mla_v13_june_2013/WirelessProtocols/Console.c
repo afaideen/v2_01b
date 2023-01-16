@@ -56,6 +56,7 @@
 //#include "HardwareProfile.h"
 #include "system_config.h"
 #include <peripheral/legacy/uart_legacy.h>
+#include <peripheral/osc.h>
 
 #if defined(ENABLE_CONSOLE)
 #if defined(__dsPIC33F__) || defined(__PIC24F__) || defined(__PIC24FK__) || defined(__PIC24H__) || defined(__PIC32MX__)
