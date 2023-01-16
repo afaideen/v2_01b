@@ -56,7 +56,8 @@ extern "C"
 // *****************************************************************************
 // *****************************************************************************
 #include <xc.h>
-#include <sys/attribs.h>
+//#include <sys/attribs.h>
+#include "attribs.h"
 
 #if   (((__PIC32_FEATURE_SET__ >= 100) && (__PIC32_FEATURE_SET__ <= 299)) || defined(__32MXGENERIC__))
 #   include <peripheral/int_1xx_2xx.h>

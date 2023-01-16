@@ -63,6 +63,7 @@
 #define GetSystemClock()		(CLOCK_FREQ)      // Hz
 #define GetInstructionClock()	(GetSystemClock()/1)
 #define GetPeripheralClock()	(GetInstructionClock()/1)	// Set your divider according to your Peripheral Bus Frequency configuration fuse setting
+//#define GetPeripheralClock()	(GetInstructionClock()/4)	// Set your divider according to your Peripheral Bus Frequency configuration fuse setting
 
 
 // Hardware mappings

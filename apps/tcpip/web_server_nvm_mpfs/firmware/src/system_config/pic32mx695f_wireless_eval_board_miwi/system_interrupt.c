@@ -77,7 +77,7 @@ void __ISR(_EXTERNAL_1_VECTOR, IPL3AUTO) _IntHandlerExternalInterruptInstance0(v
 }
 
     
-void __ISR(_TIMER_2_VECTOR, ipl4AUTO) IntHandlerDrvTmrInstance0(void)
+void __ISR(_TIMER_1_VECTOR, ipl2AUTO) IntHandlerDrvTmrInstance0(void)
 {
     DRV_TMR_Tasks(sysObj.drvTmr0);
 }

@@ -327,7 +327,7 @@ void APP_WIFI_Tasks(void)
                         dwLastIP[i].Val = ipAddr.Val;
                         SYS_CONSOLE_PRINT("%s IP Address: %d.%d.%d.%d \r\n", TCPIP_STACK_NetNameGet(netH), ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
                         #if defined(WIRELESS_EVAL_BOARD)
-                        DelayMs(4000);
+//                        DelayMs(500);
                          startTick = SYS_TMR_TickCountGet();
                          LCDBacklightOFF();
                         #endif
@@ -335,10 +335,11 @@ void APP_WIFI_Tasks(void)
                  
             }
 
-            if (SYS_TMR_TickCountGet() - startTick >= SYS_TMR_TickCounterFrequencyGet() / 2ul)
+//            if (SYS_TMR_TickCountGet() - startTick >= SYS_TMR_TickCounterFrequencyGet() / 2ul)
+            if (SYS_TMR_TickCountGet() - startTick >= SYS_TMR_TickCounterFrequencyGet() * 1ul)
             {
                 startTick = SYS_TMR_TickCountGet();
-                if( TCPIP_DHCP_IsBound(TCPIP_STACK_IndexToNet(0)) )
+//                if( TCPIP_DHCP_IsBound(TCPIP_STACK_IndexToNet(0)) )
                 {
                         #if defined(WIRELESS_EVAL_BOARD)
                         LCDBacklightOFF();

@@ -46,7 +46,8 @@
 #ifdef _DMAC0
 /* DMA channels exist */
 #include <peripheral/dma.h>
-#include <peripheral/int.h>
+//#include <peripheral/int.h>
+//#include "int.h"
 
 /*
 *  WARNING: All the Peripheral Library (PLIB) functions, including those in this file, 

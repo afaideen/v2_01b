@@ -553,6 +553,16 @@
         <itemPath>../../../../../third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="mla_v13-6-2013" projectFiles="true">
+        <logicalFolder name="f3" displayName="legacy" projectFiles="true">
+          <itemPath>../src/mla_v13_june_2013/legacy/osc.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/ports.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/spi_legacy.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/int_5xx_6xx_7xx_legacy.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/system.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/pcache.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/int_5xx_6xx_7xx.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/legacy/int.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f2" displayName="Transceivers" projectFiles="true">
           <logicalFolder name="f1" displayName="MRF24J40" projectFiles="true">
             <itemPath>../src/mla_v13_june_2013/Transceivers/MRF24J40/MRF24J40.h</itemPath>
@@ -12543,6 +12553,7 @@
         <property key="UART6" value="true"/>
         <property key="USB" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="hwtoolclock.instructionspeed" value="4"/>
         <property key="hwtoolclock.units" value="mips"/>

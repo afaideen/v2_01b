@@ -42,6 +42,7 @@
 #include <xc.h>
 //#include <peripheral/int.h>
 #include "int.h"
+//#include "legacy/int_5xx_6xx_7xx.h"
 
 /*
 *  WARNING: All the Peripheral Library (PLIB) functions, including those in this file, 

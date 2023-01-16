@@ -1494,7 +1494,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>4A680AD2B92F66988C1851D21483946A</Checksum>
+        <Checksum>7229A0159900480CD920B448AFFAD6E5</Checksum>
         <ProjectFileChecksum>9CADFAEDDA6344B0BD607460210B48F9</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1552,7 +1552,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>D4BB7599DA8132C8CF68A2D1D7EA02C4</Checksum>
+        <Checksum>52A8705E5F00C83580176F17D57352BF</Checksum>
         <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1576,7 +1576,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>EFB851EA713819C30FB93E86E36AD234</Checksum>
+        <Checksum>0B3CA2935059886D3DFDB5BFE9B79287</Checksum>
         <ProjectFileChecksum>127C4950F1708730DF7F3459D811CD84</ProjectFileChecksum>
       </Template>
       <Template>

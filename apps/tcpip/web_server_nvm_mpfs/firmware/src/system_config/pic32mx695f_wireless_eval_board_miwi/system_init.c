@@ -67,20 +67,20 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 /*** DEVCFG1 ***/
 
-#pragma config FNOSC =      PRIPLL
-#pragma config FSOSCEN =    ON
-#pragma config IESO =       ON
-#pragma config POSCMOD =    XT
+#pragma config FNOSC =      FRCPLL
+#pragma config FSOSCEN =    OFF
+#pragma config IESO =       OFF
+#pragma config POSCMOD =    OFF
 #pragma config OSCIOFNC =   OFF
 #pragma config FPBDIV =     DIV_1
-#pragma config FCKSM =      CSECME
+#pragma config FCKSM =      CSDCMD
 #pragma config WDTPS =      PS1048576
 #pragma config FWDTEN =     OFF
 /*** DEVCFG2 ***/
 
 #pragma config FPLLIDIV =   DIV_2
-#pragma config FPLLMUL =    MUL_20
-#pragma config FPLLODIV =   DIV_2
+#pragma config FPLLMUL =    MUL_16
+#pragma config FPLLODIV =   DIV_1
 #pragma config UPLLIDIV =   DIV_2
 #pragma config UPLLEN =     OFF
 /*** DEVCFG3 ***/
@@ -89,8 +89,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config FSRSSEL =    PRIORITY_7
 #pragma config FMIIEN =     OFF
 #pragma config FETHIO =     OFF
-#pragma config FUSBIDIO =   OFF
-#pragma config FVBUSONIO =  OFF
+#pragma config FUSBIDIO =   ON
+#pragma config FVBUSONIO =  ON
 // </editor-fold>
 
 // *****************************************************************************
@@ -171,7 +171,7 @@ const DRV_TMR_INIT drvTmr0InitData =
     .tmrId = DRV_TMR_PERIPHERAL_ID_IDX0,
     .clockSource = DRV_TMR_CLOCK_SOURCE_IDX0, 
     .prescale = DRV_TMR_PRESCALE_IDX0,
-    .mode = DRV_TMR_OPERATION_MODE_IDX0,
+    .mode = DRV_TMR_OPERATION_MODE_16_BIT,
     .interruptSource = DRV_TMR_INTERRUPT_SOURCE_IDX0,
     .asyncWriteEnable = false,
 };
@@ -537,8 +537,8 @@ void SYS_Initialize ( void* data )
 
     sysObj.drvTmr0 = DRV_TMR_Initialize(DRV_TMR_INDEX_0, (SYS_MODULE_INIT *)&drvTmr0InitData);
 
-    SYS_INT_VectorPrioritySet(INT_VECTOR_T2, INT_PRIORITY_LEVEL4);
-    SYS_INT_VectorSubprioritySet(INT_VECTOR_T2, INT_SUBPRIORITY_LEVEL0);
+    SYS_INT_VectorPrioritySet(INT_VECTOR_T1, INT_PRIORITY_LEVEL2);
+    SYS_INT_VectorSubprioritySet(INT_VECTOR_T1, INT_SUBPRIORITY_LEVEL0);
  
  
      sysObj.drvUsart0 = DRV_USART_Initialize(DRV_USART_INDEX_0, (SYS_MODULE_INIT *)&drvUsart0InitData);

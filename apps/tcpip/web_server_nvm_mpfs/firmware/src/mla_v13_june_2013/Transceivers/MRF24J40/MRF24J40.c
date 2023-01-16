@@ -63,6 +63,7 @@
     #include "WirelessProtocols/Console.h"
     #include "WirelessProtocols/SymbolTime.h"
     #include "WirelessProtocols/NVM.h"
+    #include "legacy/attribs.h"
   
     /************************ VARIABLES ********************************/
     MACINIT_PARAM   MACInitParams;
@@ -1594,302 +1595,302 @@
      ********************************************************************/
 
 //TODO: configure later
-//        #if defined(WIRELESS_EVAL_BOARD)
-//            void __ISR(_EXTERNAL_2_VECTOR, ipl4) _INT2Interrupt(void)
-//        #endif
-//    {
-//        if(RFIE && RFIF)
-//        {  
-//            BYTE i;
-//            BYTE j;
-//              
-//            //clear the interrupt flag as soon as possible such that another interrupt can
-//            //occur quickly.
-//            RFIF = 0;
-//
-//            //create a new scope for the MRF24J40 interrupts so that we can clear the interrupt
-//            //flag quickly and then handle the interrupt that we have already received
-//            {
-//                MRF24J40_IFREG flags;        
-//    
-//                //read the interrupt status register to see what caused the interrupt        
-//                flags.Val=PHYGetShortRAMAddr(READ_ISRSTS);
-//
-//                if(flags.bits.RF_TXIF)
-//                {
-//                    //if the TX interrupt was triggered
-//                    //clear the busy flag indicating the transmission was complete
-//                    MRF24J40Status.bits.TX_BUSY = 0;
-//                    
-//                    failureCounter = 0;
-//                    
-//                    #ifndef TARGET_SMALL
-//                        //if we were waiting for an ACK
-//                        if(MRF24J40Status.bits.TX_PENDING_ACK)
-//                        {
-//                            BYTE_VAL results;
-//                            
-//                            //read out the results of the transmission
-//                            results.Val = PHYGetShortRAMAddr(READ_TXSR);
-//                            
-//                            if(results.bits.b0 == 1)
-//                            {
-//                                //the transmission wasn't successful and the number
-//                                //of retries is located in bits 7-6 of TXSR
-//                                MRF24J40Status.bits.TX_FAIL = 1;
-//                            }
-//
-//                            //transmission finished
-//                            //clear that I am pending an ACK, already got it
-//                            MRF24J40Status.bits.TX_PENDING_ACK = 0;
-//
-//                        }
-//                    #endif
-//                }
-//                
-//                if(flags.bits.RF_RXIF)
-//                {  
-//                    BYTE RxBank = 0xFF;
-//                    
-//                    for(i = 0; i < BANK_SIZE; i++)
-//                    {
-//                        if( RxBuffer[i].PayloadLen == 0 )
-//                        {
-//                            RxBank = i;
-//                            break;
-//                        }
-//                    }        
-//                          
-//                    //if the RX interrupt was triggered
-//                    if( RxBank < BANK_SIZE )
-//                    {
-//                        #ifdef ENABLE_SECURITY
-//                            if( MRF24J40Status.bits.RX_SECURITY )
-//                            {
-//                                BYTE DecryptionStatus = PHYGetShortRAMAddr(READ_SECISR);
-//                                BYTE FrameControl;
-//                                
-//                                MRF24J40Status.bits.RX_SECURITY = 0;
-//                                if( (DecryptionStatus & 0x02) != 0 )
-//                                {
-//                                    PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
-//                                    goto START_OF_SEC_INT;
-//                                }
-//                                
-//                                i = 6;
-//                                FrameControl = PHYGetLongRAMAddr(0x301);
-//                                if( (FrameControl & 0x40) == 0 ) // intra PAN?
-//                                {
-//                                    i += 2;
-//                                }
-//                                
-//                                FrameControl = PHYGetLongRAMAddr(0x302);
-//                                if( (FrameControl & 0x0C) == 0x0C )
-//                                {
-//                                    i += 8;
-//                                }
-//                                else
-//                                {
-//                                    i += 2;
-//                                }
-//            
-//                                // get the source address
-//                                for(j = 0; j < 8; j++)
-//                                {
-//                                    tmpSourceLongAddress[j] = PHYGetLongRAMAddr(0x300 + i + j);
-//                                }
-//                              
-//                                for(j = 0; j < 4; j++)
-//                                {
-//                                    tmpFrameCounter.v[j] = PHYGetLongRAMAddr(0x308 + i + j);
-//                                }
-//                                
-//
-//                                for(i = 0; i < CONNECTION_SIZE; i++)
-//                                {
-//                                    if( (ConnectionTable[i].status.bits.isValid) && 
-//                                        isSameAddress(ConnectionTable[i].Address, tmpSourceLongAddress) )
-//                                    {
-//                                        break;
-//                                    }
-//                                }
-//                                
-//                                if( i < CONNECTION_SIZE )
-//                                {
-//                                    if( IncomingFrameCounter[i].Val > tmpFrameCounter.Val )
-//                                    {
-//                                        PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);  
-//                                        goto START_OF_SEC_INT;
-//                                    }
-//                                    else
-//                                    {
-//                                        if( tmpFrameCounter.Val == 0xFFFFFFFF )
-//                                        {
-//                                            IncomingFrameCounter[i].Val = 0;
-//                                        }
-//                                        else
-//                                        {
-//                                            IncomingFrameCounter[i].Val = tmpFrameCounter.Val;
-//                                        }
-//                                        
-//                                    }
-//                                }
-//
-//                            }
-//                            else
-//                        #endif
-//                        #if defined(ENABLE_SECURITY) && !defined(TARGET_SMALL)
-//                            if( MRF24J40Status.bits.RX_IGNORE_SECURITY )
-//                            {
-//                                MRF24J40Status.bits.RX_IGNORE_SECURITY = 0;
-//                                PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
-//                                goto START_OF_SEC_INT; 
-//                            }
-//                        #endif
-//                        //If the part is enabled for receiving packets right now
-//                        //(not pending an ACK)
-//                        //indicate that we have a packet in the buffer pending to 
-//                        //be read into the buffer from the FIFO
-//                        PHYSetShortRAMAddr(WRITE_BBREG1, 0x04);
-//
-//                        //get the size of the packet
-//                        //2 more bytes for RSSI and LQI reading 
-//                        RxBuffer[RxBank].PayloadLen = PHYGetLongRAMAddr(0x300) + 2;
-//                        if(RxBuffer[RxBank].PayloadLen<RX_PACKET_SIZE)
-//                        {   
-//                            //indicate that data is now stored in the buffer
-//                            MRF24J40Status.bits.RX_BUFFERED = 1;
-//                            
-//                            //copy all of the data from the FIFO into the TxBuffer, plus RSSI and LQI
-//                            for(i=1;i<=RxBuffer[RxBank].PayloadLen+2;i++)
-//                            {
-//                                RxBuffer[RxBank].Payload[i-1] = PHYGetLongRAMAddr(0x300+i);
-//                            }
-//                            PHYSetShortRAMAddr(WRITE_RXFLUSH, 0x01);
-//                        }
-//                        else
-//                        {
-//                            //else it was a larger packet than we can receive
-//                            //flush it
-//                            PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01); 
-//                        }
-//    
-//                        // enable radio to receive next packet
-//                        PHYSetShortRAMAddr(WRITE_BBREG1, 0x00);
-//                    }
-//                    else
-//                    {
-//                        //else if the RX is not enabled then we need to flush this packet
-//                        //flush the buffer
-//                        PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
-//                        #if defined(ENABLE_SECURITY)
-//                            MRF24J40Status.bits.RX_SECURITY = 0;
-//                            #if !defined(TARGET_SMALL)
-//                                MRF24J40Status.bits.RX_IGNORE_SECURITY = 0;
-//                            #endif
-//                        #endif
-//                    }//end of RX_BUFFERED check
-//                        
-//                } //end of RXIF check
-//                
-//START_OF_SEC_INT:                
-//                if( flags.bits.SECIF )
-//                {
-//                    #ifdef ENABLE_SECURITY
-//                        BYTE FrameControl;
-//                        if( MRF24J40Status.bits.TX_BUSY )
-//                        {
-//                            MRF24J40Status.bits.RX_IGNORE_SECURITY = 1;
-//                            PHYSetShortRAMAddr(WRITE_SECCR0, 0x80);
-//                            PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
-//                            goto END_OF_RF_INT;
-//                        }
-//                        
-//                        #ifndef TARGET_SMALL
-//                            
-//                            // all the code below is to check the key sequence
-//                            // number
-//                            
-//                            i = 6;
-//                            FrameControl = PHYGetLongRAMAddr(0x301);
-//                            if( (FrameControl & 0x40) == 0 ) // intra PAN?
-//                            {
-//                                i += 2;
-//                            }
-//                            
-//                            FrameControl = PHYGetLongRAMAddr(0x302);
-//                            if( (FrameControl & 0x0C) == 0x0C )
-//                            {
-//                                i += 8;
-//                            }
-//                            else
-//                            {
-//                                i += 2;
-//                            }
-//                            
-//                            // wait until the key sequence number is available
-//                            for(j = 0; j < i + 10; j++)
-//                            {
-//                                PHYGetLongRAMAddr(0x301+j);
-//                            }
-//                            
-//                            // get key sequence number
-//                            j = PHYGetLongRAMAddr(0x30C + i);
-//    
-//                            if( j != myKeySequenceNumber )
-//                            {
-//                                PHYSetShortRAMAddr(WRITE_SECCR0, 0x80); // ignore the packet
-//                                MRF24J40Status.bits.RX_IGNORE_SECURITY = 1;
-//                            }
-//
-//                            if( MRF24J40Status.bits.RX_IGNORE_SECURITY == 0 )
-//                        #endif
-//                        {
-//                            // supply the key
-//                            for(i = 0; i < 16; i++)
-//                            {
-//                                PHYSetLongRAMAddr(0x2B0 + i, mySecurityKey[i]);
-//                            }
-//                            MRF24J40Status.bits.RX_SECURITY = 1;
-//    
-//                            // set security level and trigger the decryption
-//                            PHYSetShortRAMAddr(WRITE_SECCR0, mySecurityLevel << 3 | 0x40);
-//                        }
-//                    #else
-//                        PHYSetShortRAMAddr(WRITE_SECCR0, 0x80); // ignore the packet
-//                        //MRF24J40Status.bits.RX_IGNORE_SECURITY = 1;
-//                    #endif 
-//                }                
-//            } //end of scope of RF interrupt handler
-//        } //end of if(RFIE && RFIF)
-//
-//END_OF_RF_INT:        
-//        #if defined(__18CXX)
-//            //check to see if the symbol timer overflowed
-//            if(TMR_IF)
-//            {
-//                if(TMR_IE)
-//                {
-//                    /* there was a timer overflow */
-//                    TMR_IF = 0;
-//                    timerExtension1++;
-//                    if(timerExtension1 == 0)
-//                    {
-//                        timerExtension2++;
-//                    }
-//                }
-//            }
-//            
-//            UserInterruptHandler(); 
-//        #endif
-//
-//        
-//        return;
-//        
-//    } //end of interrupt handler
-//    
-//    
-//    
+        #if defined(WIRELESS_EVAL_BOARD)
+            void __ISR(_EXTERNAL_2_VECTOR, ipl4) _INT2Interrupt(void)
+        #endif
+    {
+        if(RFIE && RFIF)
+        {  
+            BYTE i;
+            BYTE j;
+              
+            //clear the interrupt flag as soon as possible such that another interrupt can
+            //occur quickly.
+            RFIF = 0;
+
+            //create a new scope for the MRF24J40 interrupts so that we can clear the interrupt
+            //flag quickly and then handle the interrupt that we have already received
+            {
+                MRF24J40_IFREG flags;        
+    
+                //read the interrupt status register to see what caused the interrupt        
+                flags.Val=PHYGetShortRAMAddr(READ_ISRSTS);
+
+                if(flags.bits.RF_TXIF)
+                {
+                    //if the TX interrupt was triggered
+                    //clear the busy flag indicating the transmission was complete
+                    MRF24J40Status.bits.TX_BUSY = 0;
+                    
+                    failureCounter = 0;
+                    
+                    #ifndef TARGET_SMALL
+                        //if we were waiting for an ACK
+                        if(MRF24J40Status.bits.TX_PENDING_ACK)
+                        {
+                            BYTE_VAL results;
+                            
+                            //read out the results of the transmission
+                            results.Val = PHYGetShortRAMAddr(READ_TXSR);
+                            
+                            if(results.bits.b0 == 1)
+                            {
+                                //the transmission wasn't successful and the number
+                                //of retries is located in bits 7-6 of TXSR
+                                MRF24J40Status.bits.TX_FAIL = 1;
+                            }
+
+                            //transmission finished
+                            //clear that I am pending an ACK, already got it
+                            MRF24J40Status.bits.TX_PENDING_ACK = 0;
+
+                        }
+                    #endif
+                }
+                
+                if(flags.bits.RF_RXIF)
+                {  
+                    BYTE RxBank = 0xFF;
+                    
+                    for(i = 0; i < BANK_SIZE; i++)
+                    {
+                        if( RxBuffer[i].PayloadLen == 0 )
+                        {
+                            RxBank = i;
+                            break;
+                        }
+                    }        
+                          
+                    //if the RX interrupt was triggered
+                    if( RxBank < BANK_SIZE )
+                    {
+                        #ifdef ENABLE_SECURITY
+                            if( MRF24J40Status.bits.RX_SECURITY )
+                            {
+                                BYTE DecryptionStatus = PHYGetShortRAMAddr(READ_SECISR);
+                                BYTE FrameControl;
+                                
+                                MRF24J40Status.bits.RX_SECURITY = 0;
+                                if( (DecryptionStatus & 0x02) != 0 )
+                                {
+                                    PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
+                                    goto START_OF_SEC_INT;
+                                }
+                                
+                                i = 6;
+                                FrameControl = PHYGetLongRAMAddr(0x301);
+                                if( (FrameControl & 0x40) == 0 ) // intra PAN?
+                                {
+                                    i += 2;
+                                }
+                                
+                                FrameControl = PHYGetLongRAMAddr(0x302);
+                                if( (FrameControl & 0x0C) == 0x0C )
+                                {
+                                    i += 8;
+                                }
+                                else
+                                {
+                                    i += 2;
+                                }
+            
+                                // get the source address
+                                for(j = 0; j < 8; j++)
+                                {
+                                    tmpSourceLongAddress[j] = PHYGetLongRAMAddr(0x300 + i + j);
+                                }
+                              
+                                for(j = 0; j < 4; j++)
+                                {
+                                    tmpFrameCounter.v[j] = PHYGetLongRAMAddr(0x308 + i + j);
+                                }
+                                
+
+                                for(i = 0; i < CONNECTION_SIZE; i++)
+                                {
+                                    if( (ConnectionTable[i].status.bits.isValid) && 
+                                        isSameAddress(ConnectionTable[i].Address, tmpSourceLongAddress) )
+                                    {
+                                        break;
+                                    }
+                                }
+                                
+                                if( i < CONNECTION_SIZE )
+                                {
+                                    if( IncomingFrameCounter[i].Val > tmpFrameCounter.Val )
+                                    {
+                                        PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);  
+                                        goto START_OF_SEC_INT;
+                                    }
+                                    else
+                                    {
+                                        if( tmpFrameCounter.Val == 0xFFFFFFFF )
+                                        {
+                                            IncomingFrameCounter[i].Val = 0;
+                                        }
+                                        else
+                                        {
+                                            IncomingFrameCounter[i].Val = tmpFrameCounter.Val;
+                                        }
+                                        
+                                    }
+                                }
+
+                            }
+                            else
+                        #endif
+                        #if defined(ENABLE_SECURITY) && !defined(TARGET_SMALL)
+                            if( MRF24J40Status.bits.RX_IGNORE_SECURITY )
+                            {
+                                MRF24J40Status.bits.RX_IGNORE_SECURITY = 0;
+                                PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
+                                goto START_OF_SEC_INT; 
+                            }
+                        #endif
+                        //If the part is enabled for receiving packets right now
+                        //(not pending an ACK)
+                        //indicate that we have a packet in the buffer pending to 
+                        //be read into the buffer from the FIFO
+                        PHYSetShortRAMAddr(WRITE_BBREG1, 0x04);
+
+                        //get the size of the packet
+                        //2 more bytes for RSSI and LQI reading 
+                        RxBuffer[RxBank].PayloadLen = PHYGetLongRAMAddr(0x300) + 2;
+                        if(RxBuffer[RxBank].PayloadLen<RX_PACKET_SIZE)
+                        {   
+                            //indicate that data is now stored in the buffer
+                            MRF24J40Status.bits.RX_BUFFERED = 1;
+                            
+                            //copy all of the data from the FIFO into the TxBuffer, plus RSSI and LQI
+                            for(i=1;i<=RxBuffer[RxBank].PayloadLen+2;i++)
+                            {
+                                RxBuffer[RxBank].Payload[i-1] = PHYGetLongRAMAddr(0x300+i);
+                            }
+                            PHYSetShortRAMAddr(WRITE_RXFLUSH, 0x01);
+                        }
+                        else
+                        {
+                            //else it was a larger packet than we can receive
+                            //flush it
+                            PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01); 
+                        }
+    
+                        // enable radio to receive next packet
+                        PHYSetShortRAMAddr(WRITE_BBREG1, 0x00);
+                    }
+                    else
+                    {
+                        //else if the RX is not enabled then we need to flush this packet
+                        //flush the buffer
+                        PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
+                        #if defined(ENABLE_SECURITY)
+                            MRF24J40Status.bits.RX_SECURITY = 0;
+                            #if !defined(TARGET_SMALL)
+                                MRF24J40Status.bits.RX_IGNORE_SECURITY = 0;
+                            #endif
+                        #endif
+                    }//end of RX_BUFFERED check
+                        
+                } //end of RXIF check
+                
+START_OF_SEC_INT:                
+                if( flags.bits.SECIF )
+                {
+                    #ifdef ENABLE_SECURITY
+                        BYTE FrameControl;
+                        if( MRF24J40Status.bits.TX_BUSY )
+                        {
+                            MRF24J40Status.bits.RX_IGNORE_SECURITY = 1;
+                            PHYSetShortRAMAddr(WRITE_SECCR0, 0x80);
+                            PHYSetShortRAMAddr(WRITE_RXFLUSH,0x01);
+                            goto END_OF_RF_INT;
+                        }
+                        
+                        #ifndef TARGET_SMALL
+                            
+                            // all the code below is to check the key sequence
+                            // number
+                            
+                            i = 6;
+                            FrameControl = PHYGetLongRAMAddr(0x301);
+                            if( (FrameControl & 0x40) == 0 ) // intra PAN?
+                            {
+                                i += 2;
+                            }
+                            
+                            FrameControl = PHYGetLongRAMAddr(0x302);
+                            if( (FrameControl & 0x0C) == 0x0C )
+                            {
+                                i += 8;
+                            }
+                            else
+                            {
+                                i += 2;
+                            }
+                            
+                            // wait until the key sequence number is available
+                            for(j = 0; j < i + 10; j++)
+                            {
+                                PHYGetLongRAMAddr(0x301+j);
+                            }
+                            
+                            // get key sequence number
+                            j = PHYGetLongRAMAddr(0x30C + i);
+    
+                            if( j != myKeySequenceNumber )
+                            {
+                                PHYSetShortRAMAddr(WRITE_SECCR0, 0x80); // ignore the packet
+                                MRF24J40Status.bits.RX_IGNORE_SECURITY = 1;
+                            }
+
+                            if( MRF24J40Status.bits.RX_IGNORE_SECURITY == 0 )
+                        #endif
+                        {
+                            // supply the key
+                            for(i = 0; i < 16; i++)
+                            {
+                                PHYSetLongRAMAddr(0x2B0 + i, mySecurityKey[i]);
+                            }
+                            MRF24J40Status.bits.RX_SECURITY = 1;
+    
+                            // set security level and trigger the decryption
+                            PHYSetShortRAMAddr(WRITE_SECCR0, mySecurityLevel << 3 | 0x40);
+                        }
+                    #else
+                        PHYSetShortRAMAddr(WRITE_SECCR0, 0x80); // ignore the packet
+                        //MRF24J40Status.bits.RX_IGNORE_SECURITY = 1;
+                    #endif 
+                }                
+            } //end of scope of RF interrupt handler
+        } //end of if(RFIE && RFIF)
+
+END_OF_RF_INT:        
+        #if defined(__18CXX)
+            //check to see if the symbol timer overflowed
+            if(TMR_IF)
+            {
+                if(TMR_IE)
+                {
+                    /* there was a timer overflow */
+                    TMR_IF = 0;
+                    timerExtension1++;
+                    if(timerExtension1 == 0)
+                    {
+                        timerExtension2++;
+                    }
+                }
+            }
+            
+            UserInterruptHandler(); 
+        #endif
+
+        
+        return;
+        
+    } //end of interrupt handler
+    
+    
+    
 
 
 #else

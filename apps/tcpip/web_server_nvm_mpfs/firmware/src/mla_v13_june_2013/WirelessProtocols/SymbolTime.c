@@ -53,7 +53,8 @@
 #include "Compiler.h"
 #include "GenericTypeDefs.h"
 #include "WirelessProtocols/Console.h"
-#include <peripheral/timer.h>
+#include "legacy/timer.h"
+
 /************************ DEFINITIONS ******************************/
 
 
@@ -107,7 +108,8 @@ void InitSymbolTimer()
     WriteTimer2(0x00);
     WriteTimer3(0x00);
     WritePeriod3(0xFFFF);
-    OpenTimer2((T2_ON|T2_32BIT_MODE_ON|CLOCK_DIVIDER_SETTING),0xFFFFFFFF);     
+    OpenTimer2((T2_ON|T2_32BIT_MODE_ON|CLOCK_DIVIDER_SETTING),0xFFFFFFFF);     //original
+//    OpenTimer2((T2_ON|T2_32BIT_MODE_ON|CLOCK_DIVIDER_SETTING|T2_SOURCE_INT),0xFFFFFFFF);     
 #else
     #error "Symbol timer implementation required for stack usage."
 #endif
@@ -150,6 +152,8 @@ MIWI_TICK MiWi_TickGet(void)
        currentTime.word.w1 = TMR3;
        currentTime.word.w0 = TMR2;
     }
+
+    
 #else
     #error "Symbol timer implementation required for stack usage."
 #endif

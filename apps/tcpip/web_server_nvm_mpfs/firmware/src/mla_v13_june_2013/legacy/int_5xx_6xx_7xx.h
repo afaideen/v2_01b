@@ -52,7 +52,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 #include <xc.h>
-#include <sys/attribs.h>
+//#include <sys/attribs.h>
+#include "attribs.h"
 
 /*
 *  WARNING: All the Peripheral Library (PLIB) functions, including those in this file, 
@@ -90,6 +91,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     These definitions can be used to set or get the state of the interrupt source flag and
     interrupt enable.
 */
+//#if !defined(INT_SOURCE)
 typedef enum
 {
     INT_CT = 0,             // Core Timer Interrupt
@@ -233,7 +235,7 @@ typedef enum
 
     INT_NUM                 // Number of available interrupt soruces and vectors
 }INT_SOURCE;
-
+//#endif
 // *****************************************************************************
 /* Interrupt Muli-Channel Converter 
 
@@ -292,6 +294,7 @@ typedef enum
     These definitions can be used to set or get the state of the interrupt vector 
     priority and sub-priority.
 */
+//#if !defined(INT_VECTOR)
 typedef enum
 {
     INT_CORE_TIMER_VECTOR,            // Core Timer Interrupt
@@ -371,6 +374,7 @@ typedef enum
     
 
 }INT_VECTOR;
+//#endif
 
 // *****************************************************************************
 /* Interrupt Muli-Channel Converter 
