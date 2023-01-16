@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/Configs/ConfigApp.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/NVM.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/NVM.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/Configs/HWP%20PIC32%20EVAL_BRD.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app_miwi.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/MiWiPRO/MiWiPRO.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/SymbolTime.c</file>
+        </group>
     </open-files>
 </project-private>

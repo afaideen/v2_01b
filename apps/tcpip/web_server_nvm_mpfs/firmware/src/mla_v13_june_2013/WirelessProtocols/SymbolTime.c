@@ -53,6 +53,7 @@
 #include "Compiler.h"
 #include "GenericTypeDefs.h"
 #include "WirelessProtocols/Console.h"
+#include <peripheral/timer.h>
 /************************ DEFINITIONS ******************************/
 
 

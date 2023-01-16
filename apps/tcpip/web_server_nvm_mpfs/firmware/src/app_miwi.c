@@ -59,6 +59,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 void putsUART2(unsigned int *buffer);
 void DelayMs(uint16_t ms);
+BOOL MiApp_ProtocolInit(BOOL bNetworkFreezer);
 
 // *****************************************************************************
 // *****************************************************************************
@@ -150,6 +151,7 @@ void APP_MIWI_Initialize ( void )
 ////                DelayMs(4000);
 //                BSP_DelayMs(4000);
 //        }
+        MiApp_ProtocolInit(FALSE);
         putsUART( (unsigned int*) "Running MiWi...\r\n" );
 }
 

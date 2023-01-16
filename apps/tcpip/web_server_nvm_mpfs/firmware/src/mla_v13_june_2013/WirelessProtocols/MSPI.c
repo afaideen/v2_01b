@@ -52,6 +52,7 @@
 #include "Compiler.h"
 #include "GenericTypeDefs.h"
 #include "WirelessProtocols/Console.h"
+#include "legacy/spi_legacy.h"
 
 #if defined(__dsPIC30F__) || defined(__dsPIC33F__) || defined(__PIC24F__) || defined(__PIC24FK__) || defined(__PIC24H__) || defined(__PIC32MX__)
 

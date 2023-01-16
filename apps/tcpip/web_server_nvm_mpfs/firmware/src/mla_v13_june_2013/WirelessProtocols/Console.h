@@ -52,8 +52,9 @@
 /************************ HEADERS **********************************/
 #include "GenericTypeDefs.h"
 #include "Compiler.h"
-//#include "SystemProfile.h"
-#include "HardwareProfile.h"
+#include "SystemProfile.h"
+//#include "HardwareProfile.h"
+#include "system_config.h"
 
 #ifndef BAUD_RATE
     #define BAUD_RATE 115200//19200
@@ -129,6 +130,7 @@
 #endif
 
 #define Printf(x) ConsolePutROMString((ROM char*)x)
+//#define Printf(x)       putsUART(x)
 //#define printf(x) ConsolePutROMString((ROM char*)x)
 #endif
 

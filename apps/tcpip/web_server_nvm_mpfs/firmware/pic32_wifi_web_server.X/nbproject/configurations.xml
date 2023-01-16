@@ -553,6 +553,20 @@
         <itemPath>../../../../../third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="mla_v13-6-2013" projectFiles="true">
+        <logicalFolder name="f2" displayName="Transceivers" projectFiles="true">
+          <logicalFolder name="f1" displayName="MRF24J40" projectFiles="true">
+            <itemPath>../src/mla_v13_june_2013/Transceivers/MRF24J40/MRF24J40.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f1" displayName="WirelessProtocols" projectFiles="true">
+          <logicalFolder name="f1" displayName="MiWiPRO" projectFiles="true">
+            <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MiWiPRO/MiWiPRO.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/mla_v13_june_2013/WirelessProtocols/NVM.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/WirelessProtocols/SymbolTime.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/WirelessProtocols/Console.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MSPI.h</itemPath>
+        </logicalFolder>
         <itemPath>../src/mla_v13_june_2013/LCD_ST7032.h</itemPath>
         <itemPath>../src/mla_v13_june_2013/NVM.h</itemPath>
         <itemPath>../src/mla_v13_june_2013/SPIFlash.h</itemPath>
@@ -579,6 +593,20 @@
             <itemPath>../src/mla_v13_june_2013/SPI/spi_map_tbl_libp.c</itemPath>
             <itemPath>../src/mla_v13_june_2013/SPI/spi_chn_getc_lib.c</itemPath>
             <itemPath>../src/mla_v13_june_2013/SPI/spi_chn_putc_lib.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="Transceivers" projectFiles="true">
+            <logicalFolder name="f1" displayName="MRF24J40" projectFiles="true">
+              <itemPath>../src/mla_v13_june_2013/Transceivers/MRF24J40/MRF24J40.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="WirelessProtocols" projectFiles="true">
+            <logicalFolder name="f1" displayName="MiWiPRO" projectFiles="true">
+              <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MiWiPRO/MiWiPRO.c</itemPath>
+            </logicalFolder>
+            <itemPath>../src/mla_v13_june_2013/WirelessProtocols/NVM.c</itemPath>
+            <itemPath>../src/mla_v13_june_2013/WirelessProtocols/SymbolTime.c</itemPath>
+            <itemPath>../src/mla_v13_june_2013/WirelessProtocols/Console.c</itemPath>
+            <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MSPI.c</itemPath>
           </logicalFolder>
           <itemPath>../src/mla_v13_june_2013/LCD_ST7032.c</itemPath>
           <itemPath>../src/mla_v13_june_2013/UART.c</itemPath>
@@ -4731,32 +4759,172 @@
         </C32Global>
       </item>
       <item path="../src/app_miwi.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/bsp_delay.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/Common/delay.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/LCD_ST7032.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/SPI/spi_chn_getc_lib.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/SPI/spi_chn_putc_lib.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/SPI/spi_map_tbl_libp.c"
             ex="true"
             overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/SPIEEPROM.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/SPIFlash.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/mla_v13_june_2013/UART.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/system_config/chipkit_wf32/bsp/bsp.c"
             ex="true"
@@ -13009,7 +13177,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/mla_v13_june_2013/Common;../src/mla_v13_june_2013;../src;../src/system_config/pic32mx695f_wireless_eval_board_miwi;../../../../../framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp"/>
+                  value="../src/mla_v13_june_2013/Common;../src/mla_v13_june_2013;../src;../src/system_config/pic32mx695f_wireless_eval_board_miwi;../../../../../framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp;..\src\mla_v13_june_2013\Configs"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -13271,7 +13439,6 @@
         <property key="UART6" value="true"/>
         <property key="USB" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="hwtoolclock.instructionspeed" value="4"/>
         <property key="hwtoolclock.units" value="mips"/>
