@@ -1,0 +1,56 @@
+
+menu "SEGGER emWin Graphics Library" 
+depends on (!DRV_WIFI_DISABLE_LIBS && 3RDPARTY_SEGGER_EMWIN_LIBRARY)
+
+config SEGGER_EMWIN_LCC_MAX_LAYERS
+    int
+    depends on 3RDPARTY_SEGGER_EMWIN_LIBRARY
+    default 1
+
+config SEGGER_EMWIN_LCC_COLOR_DEPTH
+    int
+    depends on 3RDPARTY_SEGGER_EMWIN_LIBRARY
+    default 16
+
+config SEGGER_EMWIN_TOUCH_WRAPPER
+    bool "Use SEGGER emWin Touch Wrapper?"
+    depends on 3RDPARTY_SEGGER_EMWIN_LIBRARY
+    default n
+    select USE_SYS_TOUCH
+    select USE_SYS_MSG
+
+ifblock (SEGGER_EMWIN_TOUCH_WRAPPER)
+source "$HARMONY_VERSION_PATH/third_party/gfx/emwin/touch/config/emwin_touch.hconfig"
+endif
+
+config SEGGER_EMWIN_GUI_WRAPPER
+    bool "Use SEGGER emWin GUI Wrapper?"
+    depends on 3RDPARTY_SEGGER_EMWIN_LIBRARY
+    default n
+
+ifblock (SEGGER_EMWIN_GUI_WRAPPER)
+source "$HARMONY_VERSION_PATH/third_party/gfx/emwin/gui/config/emwin_gui.hconfig"
+endif
+
+ifblock (SEGGER_EMWIN_GUI_WRAPPER || SEGGER_EMWIN_TOUCH_WRAPPER)
+compiler EMWIN_WRAPPER_COMPILER_INCLUDEPATH includepath "$PROJECT_HEADER_FILES/system_config/$CONFIGURATION/third_party/gfx/emwin/config"
+endif
+
+ifblock (3RDPARTY_SEGGER_EMWIN_LIBRARY)
+ifblock (DS60001320)
+library LIB_SEGGER_EMWIN "$HARMONY_VERSION_PATH/bin/framework/gfx/segger_emwin/lib/emWin.a"
+endif
+
+ifblock (!DS60001320)
+library LIB_SEGGER_EMWIN_NOFP "$HARMONY_VERSION_PATH/bin/framework/gfx/segger_emwin/lib/emWin_noFP.a"
+endif
+
+compiler EMWIN_COMPILER_INCLUDEPATH includepath "$HARMONY_VERSION_PATH/bin/framework/gfx/segger_emwin/inc"
+endif
+
+endmenu
+
+ifblock (USE_SEGGER_EMWIN)
+add "<#include \"/third_party/gfx/emwin/templates/system_config.h.ftl\">"  to list SYSTEM_CONFIG_H_MIDDLEWARE_CONFIGURATION 
+endif
+
