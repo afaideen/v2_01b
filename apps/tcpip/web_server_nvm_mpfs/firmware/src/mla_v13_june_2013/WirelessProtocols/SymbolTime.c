@@ -141,74 +141,8 @@ void InitSymbolTimer()
 MIWI_TICK MiWi_TickGet(void)
 {
     MIWI_TICK currentTime;
-    
-#if defined(__18CXX)
-    //BYTE failureCounter;
-    BYTE IntFlag1;
-    BYTE IntFlag2;
-    
-    /* copy the byte extension */
-    currentTime.byte.b2 = 0;
-    currentTime.byte.b3 = 0;
-    
-    /* disable the timer to prevent roll over of the lower 16 bits while before/after reading of the extension */
-    TMR_IE = 0;
-
-#if 1
-    do
-    {
-        IntFlag1 = TMR_IF;
-        currentTime.byte.b0 = TMR_L;
-        currentTime.byte.b1 = TMR_H;
-        IntFlag2 = TMR_IF;
-    } while(IntFlag1 != IntFlag2);
-
-    if( IntFlag1 > 0 )
-    {
-        TMR_IF = 0;
-        timerExtension1++;
-        if(timerExtension1 == 0)
-        {
-            timerExtension2++;
-        }
-    }
-
-#else
-
-    
-    failureCounter = 0;
-    /* read the timer value */
-    do
-    {
-        currentTime.byte.b0 = TMR_L;
-        currentTime.byte.b1 = TMR_H;
-    } while( currentTime.word.w0 == 0xFFFF && failureCounter++ < 3 );
-
-    //if an interrupt occured after IE = 0, then we need to figure out if it was
-    //before or after we read TMR0L
-    if(TMR_IF)
-    {
-        //if(currentTime.byte.b0<10)
-        {
-            //if we read TMR0L after the rollover that caused the interrupt flag then we need
-            //to increment the 3rd byte
-            currentTime.byte.b2++;  //increment the upper most
-            if(timerExtension1 == 0xFF)
-            {
-                currentTime.byte.b3++;
-            }
-        }
-    }
-#endif
-
-    /* copy the byte extension */
-    currentTime.byte.b2 += timerExtension1;
-    currentTime.byte.b3 += timerExtension2;
-    
-    /* enable the timer*/
-    TMR_IE = 1;
-    
-#elif defined(__dsPIC30F__) || defined(__dsPIC33F__) || defined(__PIC24F__) || defined(__PIC24FK__) || defined(__PIC24H__) || defined(__PIC32MX__)
+        
+#if defined(__dsPIC30F__) || defined(__dsPIC33F__) || defined(__PIC24F__) || defined(__PIC24FK__) || defined(__PIC24H__) || defined(__PIC32MX__)
     currentTime.word.w1 = TMR3;
     currentTime.word.w0 = TMR2;
     if( currentTime.word.w1 != TMR3 )

@@ -149,7 +149,7 @@ extern "C" {
 #define SYS_PORT_A_LAT          0x0000
 #define SYS_PORT_A_ODC          0x0000
 
-#define SYS_PORT_B_TRIS         0xFFFF
+#define SYS_PORT_B_TRIS         0xFDFF
 #define SYS_PORT_B_LAT          0x0000
 #define SYS_PORT_B_ODC          0x0000
 
@@ -157,8 +157,8 @@ extern "C" {
 #define SYS_PORT_C_LAT          0x0000
 #define SYS_PORT_C_ODC          0x0000
 
-#define SYS_PORT_D_TRIS         0xFFFF
-#define SYS_PORT_D_LAT          0x0000
+#define SYS_PORT_D_TRIS         0xF7FF
+#define SYS_PORT_D_LAT          0x0800
 #define SYS_PORT_D_ODC          0x0000
 
 #define SYS_PORT_E_TRIS         0xFF1F
@@ -677,119 +677,25 @@ extern "C" {
 /*** Functions for BSP_SWITCH_0 pin ***/
 #define BSP_SWITCH_0StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_6)
 
+/*** Functions for WAKE pin ***/
+#define WAKEToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_9)
+#define WAKEOn() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_9)
+#define WAKEOff() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_9)
+#define WAKEStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_9)
+#define WAKEStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_9, Value)
+
+/*** Functions for RESET_RADIO pin ***/
+#define RESET_RADIOToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11)
+#define RESET_RADIOOn() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11)
+#define RESET_RADIOOff() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11)
+#define RESET_RADIOStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11)
+#define RESET_RADIOStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11, Value)
+
+
 #include "Configs/HWP PIC32 EVAL_BRD.h"
-
-/*** Application Instance 0 Configuration ***/    
-//#include "UART.h"
-
-    // Select which UART the STACK_USE_UART and STACK_USE_UART2TCP_BRIDGE 
-// options will use.  You can change these to U1BRG, U1MODE, etc. if you 
-// want to use the UART1 module instead of UART2.
-//#define UBRG					U2BRG
-//#define UMODE					U2MODE
-//#define USTA					U2STA
-//#define BusyUART()				BusyUART2()
-//#define CloseUART()				CloseUART2()
-//#define ConfigIntUART(a)		ConfigIntUART2(a)
-//#define DataRdyUART()			DataRdyUART2()
-//#define OpenUART(a,b,c)			OpenUART2(a,b,c)
-//#define ReadUART()				ReadUART2()
-//#define WriteUART(a)			WriteUART2(a)
-//#define getsUART(a,b,c)			getsUART2(a,b,c)
-//
-//#define putsUART(a)			    putsUART2(a)
-//#define getcUART()				getcUART2()
-//#define putcUART(a)				do{while(BusyUART()); WriteUART(a); while(BusyUART()); }while(0)
-//#define putrsUART(a)			putsUART(a)	
-//
-//#define UARTTX_TRIS			(TRISFbits.TRISF5)
-//#define UARTTX_IO			(PORTFbits.RF5)
-//#define UARTRX_TRIS			(TRISFbits.TRISF4)
-//#define UARTRX_IO			(PORTFbits.RF4)
-
-///*** Application Instance 1 Configuration ***/
-//// #define LED0_OFF()           PLIB_PORTS_Clear(PORTS_ID_0, PORT_CHANNEL_E, 0x0005)//{LATECLR = BIT_5;}
-// #define LED0_OFF()          LATEbits.LATE5 = 0; //{LATECLR = 5;}
-////#define LED0_ON()           PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_5)//{LATESET = BIT_5;}
-//#define LED0_ON()           LATEbits.LATE5 = 1;//{LATESET = 5;}
-////#define LED0_INV()           PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_5)//LATEINV = BIT_5;
-//#define LED0_INV()           LATEbits.LATE5 ^= 1;//LATEINV = 5;
-////#define LED1_OFF()         PLIB_PORTS_Clear(PORTS_ID_0, PORT_CHANNEL_E, 0x0006) // {LATECLR = BIT_6;}
-//#define LED1_OFF()         LATEbits.LATE6 = 0; //{LATECLR = 6;}
-////#define LED1_ON()          PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_6)  //{LATESET = BIT_6;}
-//#define LED1_ON()          LATEbits.LATE6 = 1;//{LATESET = 6;}
-////#define LED1_INV()          PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_6) //LATEINV = BIT_6;
-//#define LED1_INV()          LATEbits.LATE6 ^= 1;//LATEINV = 6;
-////#define LED2_OFF()         LATECLR = 7//PLIB_PORTS_Clear(PORTS_ID_0, PORT_CHANNEL_E, 0x0007)  //{LATECLR = BIT_7;}
-//#define LED2_OFF()         LATEbits.LATE7 = 0;//LATECLR = 7//PLIB_PORTS_Clear(PORTS_ID_0, PORT_CHANNEL_E, 0x0007)  //{LATECLR = BIT_7;}
-////#define LED2_ON()           PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_7) //{LATESET = BIT_7;}
-////#define LED2_ON()           {LATESET = 7;}
-//#define LED2_ON()           LATEbits.LATE7 = 1;//{LATESET = 7;}
-////#define LED2_INV()          PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_7) //LATEINV = BIT_7;
-//#define LED2_INV()          LATEbits.LATE7 ^= 1;//LATEINV = 7;
-//
-//#define LEDS_OFF()          {LED0_OFF(); LED1_OFF(); LED2_OFF();}
-//#define LEDS_ON()           {LED0_ON(); LED1_ON(); LED2_ON();}
+/*** Application Instance 0 Configuration ***/
     
-//    // LCD Pin Definitions
-//#define LCD_CS_TRIS         TRISEbits.TRISE0
-//#define LCD_CS              LATEbits.LATE0
-//#define LCD_RS_TRIS         TRISEbits.TRISE1
-//#define LCD_RS              LATEbits.LATE1
-//#define LCD_RESET_TRIS      TRISEbits.TRISE2
-//#define LCD_RESET           LATEbits.LATE2
-//#define LCD_BKLT_TRIS       TRISEbits.TRISE3
-//#define LCD_BKLT            LATEbits.LATE3
-//
-//#define LCD_SPI_BRG         (SPI3BRG)
-//#define LCD_SPICON1         (SPI3CON)
-//#define LCD_SPICON1bits     (SPI3CONbits)
-//#define LCD_MAX_SPI_FREQ    (100000ul)	// Hz
-    
-    // PIC32MX processor
-    //used for MLA only
-//#define GetSystemClock()		SYS_CLK_FREQ     // Hz
-//    #define GetInstructionClock()	(GetSystemClock()/1)
-//#define GetPeripheralClock()	(GetInstructionClock()/1)
-
-//    // 25LC256 I/O pins
-////#define EEPROM_ADDRESS_APPCONFIG    0x0000 //0-127 reserved for data miwi config. network wifi config starts at 128 to 511. Address at 512 used for miwi room info
-//#define EEPROM_ADDRESS_APPCONFIG    256//0x0000 //0-127 reserved for data miwi config. network wifi config starts at 128 to 511. Address at 512 used for miwi room info
-//#define EEPROM_CS_TRIS		(TRISBbits.TRISB14)
-//#define EEPROM_CS_IO		(LATBbits.LATB14)
-//#define EEPROM_SCK_TRIS		(TRISDbits.TRISD10)
-//#define EEPROM_SDI_TRIS		(TRISCbits.TRISC4)
-//#define EEPROM_SDO_TRIS		(TRISDbits.TRISD0)
-//#define EEPROM_SPI_IF		(IFS0bits.SPI1RXIF)
-//#define EEPROM_SSPBUF		(SPI1BUF)
-//#define EEPROM_SPICON1		(SPI1CON)
-//#define EEPROM_SPICON1bits	(SPI1CONbits)
-//#define EEPROM_SPIBRG		(SPI1BRG)
-//#define EEPROM_SPISTAT		(SPI1STAT)
-//#define EEPROM_SPISTATbits	(SPI1STATbits)
-//
-////Analog POTENTIOMETER
-//#define ANALOG_POT_TRIS      (TRISBbits.TRISB11)
-//#define ANALOG_POT_IO        (LATBbits.LATB11)
-//
-////Temp Sensor
-//#define ANALOG_TEMP_TRIS    (TRISBbits.TRISB10)
-//#define ANALOG_TEMP_IO      (LATBbits.LATB10)
-//
-////SPI Flash
-//#define SPIFLASH_CS_TRIS       (TRISDbits.TRISD14)
-//#define SPIFLASH_CS_IO         (LATDbits.LATD14)
-//#define SPIFLASH_SCK_TRIS      (TRISDbits.TRISD15)
-//#define SPIFLASH_SDI_TRIS      (TRISFbits.TRISF2)
-//#define SPIFLASH_SDO_TRIS      (TRISFbits.TRISF8)
-//#define SPIFLASH_SPI_IF        (IFS0bits.SPI3RXIF)
-//#define SPIFLASH_SSPBUF        (SPI3BUF)
-//#define SPIFLASH_SPICON1       (SPI3CON)
-//#define SPIFLASH_SPICON1bits   (SPI3CONbits)
-//#define SPIFLASH_SPIBRG        (SPI3BRG)
-//#define SPIFLASH_SPISTAT       (SPI3STAT)
-//#define SPIFLASH_SPISTATbits   (SPI3STATbits)
-//#define FLASH_MAX_SPI_FREQ        (10000000ul)	// Hz
+/*** Application Instance 1 Configuration ***/
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
