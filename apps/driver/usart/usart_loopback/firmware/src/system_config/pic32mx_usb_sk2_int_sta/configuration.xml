@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../.."/>
+    <Processor name="PIC32MX795F512L"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>drv_usart.h</Name>
+        <Path>Header Files/framework/driver/usart</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>drv_usart_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/system/ports/src</Path>
+        <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>BE644D0142ACA48D9CA2E6255A02CDBA</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>6F6D3215924B7DA7816A0E335E4AF2C4</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/usart/src</Path>
+        <Checksum>00B645BED9D947D0C786270DFCAA4293</Checksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>6E5768D35D4DA2F70FDC0E7B6324A71E</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>EE7B5BF6505B65B57F01AF5C1EE583FE</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/system/clk/src</Path>
+        <Checksum>D98BF06DE2384C667B1216850F415DCE</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_static_local.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/usart/src</Path>
+        <Checksum>8191C35EEC5983516FD647B212786647</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_static_buffer_queue.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/usart/src</Path>
+        <Checksum>80B982837E6F3AED144D86E269D9CFC8</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/bsp</Path>
+        <Checksum>4BFD4ADFBD1349338DAF5682785F28A5</Checksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>AE2AAAEBF5F61D38797173AF66E46904</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_mapping.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/usart/src</Path>
+        <Checksum>087438D341ECCC991CB311C2B3B6D2EB</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/bsp</Path>
+        <Checksum>13105A2EA4197BA6ED37EC35570DF96E</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_usart_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/usart</Path>
+        <Checksum>5D0E4A5E359093077D998079FA1349BD</Checksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="E:/Git/core/apps/driver/usart/usart_loopback/firmware/src"/>
+        <Include value="E:/Git/core/apps/driver/usart/usart_loopback/firmware/src/system_config/pic32mx_usb_sk2_int_sta"/>
+        <Include value="E:/Git/core/framework"/>
+        <Include value="E:/Git/core/apps/driver/usart/usart_loopback/firmware/src/system_config/pic32mx_usb_sk2_int_sta/framework"/>
+        <Include value="../src/system_config/pic32mx_usb_sk2_int_sta/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

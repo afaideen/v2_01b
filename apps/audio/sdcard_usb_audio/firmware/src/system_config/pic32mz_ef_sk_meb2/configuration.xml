@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <Designer>
+    <Assets>
+      <Settings bpp="16" encoding="ASCII">
+        <MemoryLocations>
+          <MemoryLocation address="0" id="default"/>
+        </MemoryLocations>
+      </Settings>
+      <Image compress="false" fileName="MCHP_LOGO.bmp" height="30" location="internal" name="MCHP_LOGO" width="122">Qk1WKwAAAAAAADYAAAAoAAAAegAAAB4AAAABABgAAAAAACArAAAAAAAAAAAAAAAAAAAAAAAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOSwfPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0zJycpI0wiH3goJp0rKbIlJbUrKbIpJ6UkIoMtJlcuJCo7LR08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHSohKh0chyIk0SMm6CQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn6iAj1iEhly8nQTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dNionJCJ+IiXiJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftIybnHyCVKyIqPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh0nHy4jJLgkJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0gIsYuJkg8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHSwkNCEjySQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7V5f3GZdUzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dRjstxsbMZmjyJCftJCftJCftJCftJCftJCftJCftJCftKy7ti431YWPyJSjtJCftJCftJCftJCftJCftJCftNzru4eL96+vrVExBPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh2op6T////l5v05PO8kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+2OkPb+/v/v8P5TVvEkJ+0kJ+0kJ+0kJ+0kJ+0kJ+2io/f////////Lyso+MyY8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHWRdVvv7+////////7a4+Sgr7SQn7SQn7SQn7SQn7SQn7UpN8O3t/v///////9LT+ysu7SQn7SQn7SQn7SQn7Vha8ff3/v////////7+/o+LhzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dOzAi0NDO/////////////f3/hYb1JSjtJCftJCftJCftLC/uw8T6////////////////nZ73JSjtJCftJCftMTTu09P7////////////////5ubmTUI2PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi0ePTEiPTEiPTEiPTEiPTEiOy8gOy0dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi0dPTEiPTEiPTEiPTEiPTEiOy4fPC4dPC4dPC4dPC4dOy8fRDgpRjorRjorRjorRjorPzMkPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh1nX1X4+Pj////////////////x8f5UVvEkJ+0kJ+0kJ+16fPT+/v/////////////////19f5ZW/EkJ+0lKO2OkPb9/f////////////////////94dX07LR08Lh08Lh08Lh2Wj4XIxL+/u7Y9MyY8Lh08Lh06LR1SSDxSRzs8Lh08Lh08Lh1RRDbAvLfIxL9/eXJMQTS/u7bIxL9gWVA8Lh1dV064t7bJycnJycnJycnJycnJycnFxcV8dm88MCGinpnIxL94c2w8Lh08Lh08Lh08Lh2zrqfIxL9mYFc8Lh1ZUkm2tbTJycnJycnJycnJycnJycm+vbxsZl48Lh48Lh1lXVO/vbrW1tbb29vb29vb29vb29vNzcx/enM5LBytqKLIxL+BeW88Lh08Lh08Lh1DNia4tK/IxL9bUkdbU0rIxL/FwbxeVEhuZ2DIxL+spp88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHYWBnP7+/////////////////////8PE+iYo7SQn7To87+zs/f////////////////////X1/k5Q8SQn7UpM8PHx/v///////////////////+zs/kNFyjotJDwuHTwuHTwuHaWgmv////X19UxDODwuHTwuHXhya+zs7Ozs7GxlXTwuHTwuHWFVSP///////4OAfVJJPfLy8v///29qZT4zJujo6P///////////////////////////+np6T0xIsrKyv///5COjDwuHTwuHTwuHTksHeHg3v///3dzbjouIOTk5P////////////////////////////Pz80M6MEk+Md/e3v///////////////////////////9ra2kQ4K9nY1////5yWkDwuHTwuHTwuHUY5Kejo6P///2dgWGdiW/////v7+2xjWIF+ev///9jW0jwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAANSkjJym/ycr7////////////////////sLL4JSjtKCvttbb5////////////////////////kZP2JCftKSztxsf6/////////////////////f3/hIb1JCftJyBGPC4dPC4dPC4djIeB////+Pj4X1ZLPC4dPzIj19fX////////yMfFOS0fPC4dXVhR/////v7+gXhuUkk98vLy////b2plb2de////////7+/v4+Pj4+Pj4+Pj4+Pj4+Pj4eHgPTEiysrK////nJqYT0M1T0M1T0M1YlpP7u7u////d3JsZ19V/v7+////8PDw4+Pj4+Pj4+Pj7Ozs////////ioJ5aWJa/v7+////7u7u4uDe4+De4+De4+De4+DeycfFRzwu2djX////nJaQPC4dPC4dPC4dRjkp6Ojo////Z2BYZ2Jb////+/v7bGNYgX56////3tzZWE0+WE0+WE0+WE0+WE0+TkIzPC4ePC4dAAA3KzAhI9dHSfDw8f7////////////q6v1GSfAkJ+1sbvP4+P/////////////////////Y2fwvMu4kJ+17ffT9/f/////////////////////Ky/ssL+4kJ+0sJmg8Lh08Lh08Lh1vamT////8/PxwZ108Lh1eV0/////////////09PRdVEk8Lh1xa2X////7+/toX1VSST3y8vL///9vamWLhHr////39/daVEw9Myc9Myc9Myc9Myc9Myc9Myc9MSLKysr////29vbt7e3t7e3t7e329vb////19fVfVUl9dWv////6+vpiXVU9Myc9Myc9MydYT0Tr6+v///+UkY1vamX////09PReWE87LR08Lh08Lh08Lh08Lh08Lh08Lh3Z2Nf///+clpA8Lh08Lh08Lh1GOSno6Oj///9nYFhnYlv////7+/tsY1iBfnr////////////////////////////p6ellXlc8Lh0AADgsNyMm5yQn7Xp89P39//////39/4OE9SUo7TU47t3d/P////////////////////n5/mNl8iQn7UFD7+bm/f////////////////////j4/1FU8SQn7SMm6DEnQjwuHTwuHTwuHV5XTf///////4J5bjwuHamnpf///////////////5aUkTotHYF8dv////n5+VFIPlJJPfLy8v///29qZZaOhf///97e3kY6KzwuHTwuHTwuHTwuHTwuHTwuHT0xIsrKyv///////////////////////////769vDsvIY6Fe////+Tk5EtAMTwuHTwuHTwuHT8zJMvLy////5eWlG9qZf///+vr6z00KDwuHTwuHTwuHTwuHTwuHTwuHTwuHdnY1/////Hw7+Ti3+Ti3+Ti3+Xj4fz8/P///2dgWGdiW/////v7+2xjWIF+ev///////////////////////////////7y7ujwwIAAAOC05JCfrJCftKSztr7D4////xsb6Ky7uJSjtpKb3/////////////////////v7/pKb4JintKSvtsrP4/////////////////////v7/lpj2JSjtJCftIB6EOy0ePC4dPC4dPC4dXFFE9vb2////hIF+SD0v7+/u////4ODg8fHx////4eHhRDgqmZSO////9vb2OzEmUkk98vLy////b2pllo6F////19fXRDgoPC4dPC4dPC4dPC4dPC4dPC4dPTEiysrK////1dXUrKqnrKqnrKqntrWz+Pj4+/v7bmVajoV7////3d3dRzstPC4dPC4dPC4dPDAhw8PD////l5aUb2pl////6+vrPTQoPC4dPC4dPC4dPC4dPC4dPC4dPC4d2djX////////////////////////////////Z2BYZ2Jb////+/v7bGNYgX56////6enokY6MkY6MkY6MkY6M2NfW////4eHhRzorAAA3LDMiJN0kJ+0kJ+08P+/V1/xMTvAkJ+1YW/H6+v7////////////////////j5P08Pu8kJ+1oa/P7+//////////////////////X2Pw2Oe4kJ+0iI8YvJSo8Lh08Lh08Lh08Lh1ORDbo6Oj///+YlZJ9eXP+/v7///+Pi4ejoJ3///////9wamGtqKH////u7u08Lh1SST3y8vL///9vamWWjoX////f399HOis8Lh08Lh08Lh08Lh08Lh08Lh09MSLKysr///+Qjow8Lh08Lh08Lh06LR3h4N7///93c26OhXv////l5eVMQDI8Lh08Lh08Lh0/MyTLy8v///+XlpRvamX////r6+s9NCg8Lh08Lh08Lh08Lh08Lh08Lh08Lh3Z2Nf////29vbs7Ozs7Ozs7Ozt7e39/f3///9nYFhnYlv////7+/tsY1iBfnr////Y1tI8Lh08Lh08Lh08Lh2DfHP////q6upJPS4AADYqKR8hyiQn7SQn7SQn7Tc67iQn7S8y7tHS+////////////////////////3J09CQn7TAz7t/g/P////////////////////n6/2hq8yQn7SMm5yUgVzwuHTwuHTwuHTwuHTwuHUI3Kdvb2////6+tq8fFw/////Dw8FdNQVVORf///////7q5t7azr////9XU1DwuHVJJPfLy8v///29qZY2FfP////r6+lxUTD0vHj0vHj0vHj0vHj0vHj0vHj0xIsrKyv///5GPjD0vHj0vHj0vHkE1JuXk4v///3dzbn93bf////v7+2NcVT0vHj0vHj0vHlRKP+/v7////46Ni29qZf////b29mhhWT0vHj0vHj0vHj0vHj0vHj0vHjwuHdnY1////6Whm05CM05CM05CM1dMPuvr6////2dgWGdiW/////v7+2xjWIF+ev///9nW0z0vHj0vHj0vHj0vHo2Ig////+rq6kk9LgAAOSwdIyKmJCftJCftJCftJCftJSjtkZP2/v7/////////////////////ubr5JintJintoKL3////////////////////////q6z4JCftJCftHx+ZPC4dPC4dPC4dPC4dPC4dPC4dOy4f1NLQ////5eXl9vb2////t7WzOCscPzIiycnI////+vr629vb////ubm4PC4dUkk98vLy////b2plbmde////////////////////////////////4eHhPTEiysrK////8vLy5OTk5OTk5OTk8fHx////////d3JsY1tR/v7+/////Pz85OTk5OTk5OTk+Pj4////////ioJ5bGRb/v7+////////////////////////////0tLSPTIk2djX////nJaQPC4dPC4dPC4dRjkp6Ojo////Z2BYZ2Jb////+/v7bGNYgX56////+vr65OTk5OTk5OTk5ubm/f39////1NTUQjYnAAA8Lh0nI20kJ+wkJ+0kJ+0kJ+0qLO68vfr////////////////////r6/1ISvAkJ+0pLO7Fxvr////////////////////p6f05PO8kJ+0gI9UqIi08Lh08Lh08Lh08Lh08Lh08Lh08Lh3Bvrv////////////8/Px0bGM8Lh08Lh1/enT///////////////+kop88Lh1SST3y8vL///9vamU9Myjq6ur////////////////////////////U1NQ9MSLKysr////////////////////////////z8/NbUUU/MiPm5ub////////////////////////////09PRORDlKPzHh4N/////////////////////////////S0dA9MSLZ2Nf///+clpA8Lh08Lh08Lh1GOSno6Oj///9nYFhnYlv////7+/tsY1iBfnr///////////////////////////////+hnZk8Lh4AADwuHTAmMSEk2SQn7SQn7SQn7SQn7UpN8Ozt/v////////////7+/4eI9SUo7SQn7SQn7UpN8PPz/v////////////3+/3Z39CQn7SQn6yIeZjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHailof///////////+Tj4zswIzwuHTwuHUtBNOXl5f///////////52WjjwuHUlANL6+vcjIx1tWUTwuHV9XTru7u+Hh4OPj4uPj4uPj4uPj4tvb2nNxbTovIJ+fnsjIx8jIx8jIx8jIx8jIx8jIx8LCwXl1cDwvHjwuHVtTSri4uOHh4OPj4uPj4uPj4uLi4cPDw21mXTwuHjwuHV1WTbm5uOHh4OPj4uPj4uPj4uPj4tbW1oF7dDwuHauqqMjIx396czwuHTwuHTwuHUM2Jra2tcjIx1dQSFVQSsjIx8XFxF1USWhlYcjIx8jIx8jIx8jIx8jIx8jIx8fHxpqXkkU5LDwuHQAAPC4dPC4dHx6EJCftJCftJCftJCftJCftdHb0/f3/////////yMr7Ky7uJCftJCftJCftJCfte330/Pz/////////u7z6Ki3uJCftISKoOCshPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4djImF////////////lJCLPC4dPC4dPC4dPC4dpqOf////////////gHpyPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh0sIyUgItAkJ+0kJ+0kJ+0kJ+0mKe20tfn////19f5QUvAkJ+0kJ+0kJ+0kJ+0kJ+0pLO2ztPn////r6/1IS/AkJ+0jJdwtJDo8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh14c23////////39/dNRDo8Lh08Lh08Lh08Lh1eVk339/f///////9kXVU8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHSwlUyMm4yQn7SQn7SQn7SQn7TU47pKT9mRm8iQn7SQn7SQn7SQn7SQn7SQn7SQn7TY574+R9lZY8SQn7SQn7SEfdzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHU9ENuLi4f39/Zyalz0wHzwuHTwuHTwuHTwuHT0wH6mopv7+/tTU00U5KjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dOSscGxlhIiXiJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftHyG7MCUfPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi8hPjQpPC4dPC4dPC4dPC4dPC4dPC4dPC4dOy4dOTEnNCoePC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh04KxwjH2MiJd8kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0iJeEnIUhKPjBiWExCNyk8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHSsjRR0gwCQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7CEfiTstH3l3da6urnp0bjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dNiohJyNuIiTJIyboJCftJCftJCftJCftJCftJCftJCftJCftJCftIybpIyS7NioqPC4dcG5qm5ubcWtkPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh01KSQjH1AmJI8dH7ggI9QiJeMkJ+0jJuUgI9cfIb4nJZQmIFI2KSI8Lh08Lh09Lx5COCw6LR08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTUpITcrLjgsNDktOTgsNTgsLzYqJDwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAA</Image>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="false" fileName="Arial" italic="false" location="internal" name="Arial14pt" size="14">
+        <Ranges>
+          <Range end="127" name="default" start="32"/>
+        </Ranges>
+      </Font>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="false" fileName="Arial" italic="false" location="internal" name="Arial18pt" size="18">
+        <Ranges>
+          <Range end="94" name="Basic Latin" start="94"/>
+        </Ranges>
+      </Font>
+      <Image compress="false" fileName="AudioMute16_2.bmp" height="25" location="internal" name="AudioMute16_2" width="32">Qk0GAgAAAAAAAHYAAAAoAAAAIAAAABkAAAABAAQAAAAAAJABAAAAAAAAAAAAAAAAAAAQAAAAAAAA/wAAgP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////wAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAB/gAAAAAAAAAAAAAAAAAAH//AAAAAAAAAAAAAAAAAAj//wAAAAAAAAAAAAAAAACP//8AAAAAAAAAAAAAAAB4////AAAAAAAAAAAAAAAA/////wARAAAAARAHiIiIj/////8AmRAAABmRD///////////ABmRAAGZEA///////////wABmRAZkQAP//////////8AABmRmRAAD///////////AAAJmZkAAA///////////wAAAZmRAAAP//////////8AAAGZmQAAD///////////AAAZkZkQAA///////////wABmRAZkQAP//////////8AGZEAAZkQB4iIiI//////AJkQAAAZkQAAAAAA/////wARAAAAARAAAAAAAAj///8AAAAAAAAAAAAAAAAAj///AAAAAAAAAAAAAAAAAAf//wAAAAAAAAAAAAAAAAAAf/8AAAAAAAAAAAAAAAAAAAf4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</Image>
+      <Image compress="false" fileName="AudioPlay16_2.bmp" height="22" location="internal" name="AudioPlay16_2" width="29">Qk3WAQAAAAAAAHYAAAAoAAAAHQAAABYAAAABAAQAAAAAAGABAAAAAAAAAAAAAAAAAAAQAAAAAAAA/wAAgP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////wAAAAAAAAB3AAAABwAAAAAAAAAAAAAI+AAAAA+AAAAAAAAAAAAAj/gAAAAH+AAAAAAAAAAACP/4AAB4AI9wAAAAAAAAB///+AAAf4B/gAAAAAAAAH////gAMAjwCPAAAAiIiIj////4B/cH+Af3AAAP////////+AD4AP8H+AAAD/////////gAj3CPAPgAAA/////////4AH9wf3D/AAAP////////+AA/cH9w/wAAD/////////gAf3B/cP8AAA/////////4AH9wf3D/AAAP////////+ACPAI8A+AAAD/////////gH+AD4B/cAAAeIiIj////4B/cH9wf3AAAAAAAAf///+AAAD/AP8AAAAAAAAACP//gAAH9wf3AAAAAAAAAACP/4AAB4AP8AAAAAAAAAAACP+AAAAAj3AAAAAAAAAAAACPgAAAAPgAAAAAAAAAAAAAB3AAAABwAAAAA=</Image>
+    </Assets>
+    <Screens height="272" width="480">
+      <Screen active="true" background="000000" clearOnShow="true" doubleBuffer="false" export="true" name="MchpName" primary="true" visible="true">
+        <Objects>
+          <Widget type="RadioButtonWidget">
+            <Name>RadioButtonUSB</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>0</ZOrder>
+            <Position>39,167</Position>
+            <Size>106,35</Size>
+            <Scheme>RadioScheme</Scheme>
+            <firstInGroup>false</firstInGroup>
+            <Text>USB</Text>
+            <Group>0</Group>
+            <NumGroupsInScreen>1</NumGroupsInScreen>
+            <Check>false</Check>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Events>
+              <Event enabled="true" name="GFX_GOL_RADIOBUTTON_ACTION_CHECKED" pretty_name="Checked">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>GFX_GOL_ObjectStateSet(GFX_GOL_ObjectFind(GFX_INDEX_0, TrackListBox), GFX_GOL_LISTBOX_DISABLED_STATE|GFX_GOL_LISTBOX_DRAW_STATE);&#13;
+GFX_GOL_ObjectStateSet(GFX_GOL_ObjectFind(GFX_INDEX_0, ScrollUpButton), GFX_GOL_BUTTON_DISABLED_STATE|GFX_GOL_BUTTON_DRAW_STATE);&#13;
+GFX_GOL_ObjectStateSet(GFX_GOL_ObjectFind(GFX_INDEX_0, ScrollDownButton), GFX_GOL_BUTTON_DISABLED_STATE|GFX_GOL_BUTTON_DRAW_STATE);&#13;
+APP_DISPLAY_StreamSourceSet(1);&#13;
+APP_DISPLAY_VolumeMuteSourceSet(1);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+            </Events>
+          </Widget>
+          <Widget type="ButtonWidget">
+            <Name>VolButton</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>1</ZOrder>
+            <Position>401,209</Position>
+            <Size>59,38</Size>
+            <Scheme>VolumeButton</Scheme>
+            <Text/>
+            <HAlignment>Center</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Button_Type>Default</Button_Type>
+            <Radius>0</Radius>
+            <Pressed>true</Pressed>
+            <Press_Image>AudioPlay16_2</Press_Image>
+            <Release_Image>AudioMute16_2</Release_Image>
+            <Toggle>true</Toggle>
+            <Events>
+              <Event enabled="true" name="GFX_GOL_BUTTON_ACTION_PRESSED" pretty_name="Pressed">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>APP_DISPLAY_VolumeMuteChange(1);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_STILLPRESSED" pretty_name="Still Pressed"/>
+              <Event enabled="true" name="GFX_GOL_BUTTON_ACTION_RELEASED" pretty_name="Released">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>APP_DISPLAY_VolumeMuteChange(0);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_CANCELPRESS" pretty_name="Cancel Press"/>
+            </Events>
+          </Widget>
+          <Widget type="SliderWidget">
+            <Name>VolSlider</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>2</ZOrder>
+            <Position>412,69</Position>
+            <Size>36,138</Size>
+            <Scheme>TrackListBox</Scheme>
+            <Range>50</Range>
+            <PageSize>1</PageSize>
+            <orientation>Vertical</orientation>
+            <pos>0</pos>
+            <sliderType>slider</sliderType>
+            <Events>
+              <Event enabled="true" name="GFX_GOL_SCROLLBAR_ACTION_INC" pretty_name="Incremented">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>APP_DISPLAY_VolumeMuteChange(2);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+              <Event enabled="true" name="GFX_GOL_SCROLLBAR_ACTION_DEC" pretty_name="Decremented">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>APP_DISPLAY_VolumeMuteChange(2);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+            </Events>
+          </Widget>
+          <Widget type="ButtonWidget">
+            <Name>ScrollDownButton</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>3</ZOrder>
+            <Position>324,150</Position>
+            <Size>38,81</Size>
+            <Scheme>TrackListBox</Scheme>
+            <Text>v</Text>
+            <HAlignment>Center</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Button_Type>Default</Button_Type>
+            <Radius>0</Radius>
+            <Pressed>false</Pressed>
+            <Toggle>false</Toggle>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_PRESSED" pretty_name="Pressed"/>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_STILLPRESSED" pretty_name="Still Pressed"/>
+              <Event enabled="true" name="GFX_GOL_BUTTON_ACTION_RELEASED" pretty_name="Released">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>GFX_GOL_LISTBOX *pLb = (GFX_GOL_LISTBOX *) GFX_GOL_ObjectFind(GFX_INDEX_0, TrackListBox);&#13;
+GFX_GOL_ListBoxItemFocusSet(pLb, GFX_GOL_ListBoxItemFocusGet(pLb) + 1);&#13;
+GFX_GOL_ObjectStateSet(pLb, GFX_GOL_LISTBOX_DRAW_ITEMS_STATE);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_CANCELPRESS" pretty_name="Cancel Press"/>
+            </Events>
+          </Widget>
+          <Widget type="ButtonWidget">
+            <Name>ScrollUpButton</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>4</ZOrder>
+            <Position>324,69</Position>
+            <Size>38,81</Size>
+            <Scheme>ScrollUpScheme</Scheme>
+            <Text>^</Text>
+            <HAlignment>Center</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Button_Type>Default</Button_Type>
+            <Radius>0</Radius>
+            <Pressed>false</Pressed>
+            <Toggle>false</Toggle>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_PRESSED" pretty_name="Pressed"/>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_STILLPRESSED" pretty_name="Still Pressed"/>
+              <Event enabled="true" name="GFX_GOL_BUTTON_ACTION_RELEASED" pretty_name="Released">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>GFX_GOL_LISTBOX *pLb = (GFX_GOL_LISTBOX *) GFX_GOL_ObjectFind(GFX_INDEX_0, TrackListBox);&#13;
+if (GFX_GOL_ListBoxItemFocusGet(pLb) &gt; 0) &#13;
+{&#13;
+	GFX_GOL_ListBoxItemFocusSet(pLb, GFX_GOL_ListBoxItemFocusGet(pLb) - 1);&#13;
+	GFX_GOL_ObjectStateSet(pLb, GFX_GOL_LISTBOX_DRAW_ITEMS_STATE);&#13;
+}</Text>
+                  </Action>
+                </Actions>
+              </Event>
+              <Event enabled="false" name="GFX_GOL_BUTTON_ACTION_CANCELPRESS" pretty_name="Cancel Press"/>
+            </Events>
+          </Widget>
+          <Widget type="ListBoxWidget">
+            <Name>TrackListBox</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>5</ZOrder>
+            <Position>173,69</Position>
+            <Size>150,162</Size>
+            <Scheme>TrackListBox</Scheme>
+            <Alignment>Left</Alignment>
+            <Events>
+              <Event enabled="true" name="GFX_GOL_LISTBOX_ACTION_TOUCHSCREEN" pretty_name="Touched">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>APP_SDCARD_AUDIO_RandomTrackSet(GFX_GOL_ListBoxItemFocusGet((GFX_GOL_LISTBOX*)pObj));</Text>
+                  </Action>
+                </Actions>
+              </Event>
+              <Event enabled="false" name="GFX_GOL_LISTBOX_ACTION_MOVE" pretty_name="Moved"/>
+              <Event enabled="false" name="GFX_GOL_LISTBOX_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="RadioButtonWidget">
+            <Name>RadioButtonSd</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>6</ZOrder>
+            <Position>39,105</Position>
+            <Size>108,35</Size>
+            <Scheme>RadioScheme</Scheme>
+            <firstInGroup>true</firstInGroup>
+            <Text>SD Card</Text>
+            <Group>0</Group>
+            <NumGroupsInScreen>1</NumGroupsInScreen>
+            <Check>true</Check>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Events>
+              <Event enabled="true" name="GFX_GOL_RADIOBUTTON_ACTION_CHECKED" pretty_name="Checked">
+                <Actions count="1">
+                  <Action name="CustomAction" type="custom">
+                    <Text>GFX_GOL_ObjectStateClear(GFX_GOL_ObjectFind(GFX_INDEX_0, TrackListBox), GFX_GOL_LISTBOX_DISABLED_STATE);&#13;
+GFX_GOL_ObjectStateSet(GFX_GOL_ObjectFind(GFX_INDEX_0, TrackListBox),GFX_GOL_LISTBOX_SINGLE_SELECT_STATE|GFX_GOL_LISTBOX_DRAW_STATE);&#13;
+GFX_GOL_ListBoxItemFocusSet(hgcObj.pTrackListBoxObj,0);&#13;
+				&#13;
+GFX_GOL_ObjectStateClear(GFX_GOL_ObjectFind(GFX_INDEX_0, ScrollUpButton), GFX_GOL_BUTTON_DISABLED_STATE);&#13;
+GFX_GOL_ObjectStateSet(GFX_GOL_ObjectFind(GFX_INDEX_0, ScrollUpButton), GFX_GOL_BUTTON_DRAW_STATE);&#13;
+GFX_GOL_ObjectStateClear(GFX_GOL_ObjectFind(GFX_INDEX_0, ScrollDownButton), GFX_GOL_BUTTON_DISABLED_STATE);&#13;
+GFX_GOL_ObjectStateSet(GFX_GOL_ObjectFind(GFX_INDEX_0, ScrollDownButton), GFX_GOL_BUTTON_DRAW_STATE);&#13;
+								&#13;
+APP_DISPLAY_StreamSourceSet(0);&#13;
+APP_DISPLAY_VolumeMuteSourceSet(0);</Text>
+                  </Action>
+                </Actions>
+              </Event>
+            </Events>
+          </Widget>
+          <Widget type="GroupBoxWidget">
+            <Name>GroupBox1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>7</ZOrder>
+            <Position>33,62</Position>
+            <Size>120,170</Size>
+            <Scheme>GroupScheme</Scheme>
+            <Text>Source</Text>
+            <Alignment>Center</Alignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_GROUPBOX_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Primitive type="TextPrimitive">
+            <Name>DemoName</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>8</ZOrder>
+            <Origin>34,38</Origin>
+            <Text>Harmony Quick Audio Prototyping</Text>
+            <Font>Arial14pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="ImagePrimitive">
+            <Name>Image1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>9</ZOrder>
+            <Origin>1,2</Origin>
+            <Image>MCHP_LOGO</Image>
+            <TransparencyColor>1D2E3C</TransparencyColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>Rectangle1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>10</ZOrder>
+            <Point1>0,1</Point1>
+            <Point2>479,45</Point2>
+            <Outline>true</Outline>
+            <LineColor>000000</LineColor>
+            <LineThickness>Thin</LineThickness>
+            <LineStyle>Solid</LineStyle>
+            <FillStyle>Gradient_Down</FillStyle>
+            <StartColor>FF0000</StartColor>
+            <EndColor>000000</EndColor>
+          </Primitive>
+        </Objects>
+      </Screen>
+    </Screens>
+    <Schemes defaultSchemeName="default">
+      <Scheme name="default">
+        <Font>Arial14pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>FFFFFF</Primary>
+          <Secondary>404040</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>C0C0C0</EmbossLight>
+          <EmbossDark>404040</EmbossDark>
+          <TextPrimary>000000</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+      <Scheme name="GroupScheme">
+        <Font>Arial14pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>000000</Primary>
+          <Secondary>000070</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>A01410</EmbossLight>
+          <EmbossDark>E80000</EmbossDark>
+          <TextPrimary>18E0F0</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+      <Scheme name="RadioScheme">
+        <Font>Arial14pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>000000</Primary>
+          <Secondary>000070</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>F0F4F0</EmbossLight>
+          <EmbossDark>F0F4F0</EmbossDark>
+          <TextPrimary>E890D8</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+      <Scheme name="TrackListBox">
+        <Font>Arial14pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>000000</Primary>
+          <Secondary>C86C78</Secondary>
+          <Disabled>282420</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>A81818</EmbossLight>
+          <EmbossDark>E80000</EmbossDark>
+          <TextPrimary>B0F490</TextPrimary>
+          <TextSecondary>90F4F0</TextSecondary>
+          <TextDisabled>081008</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+      <Scheme name="ScrollUpScheme">
+        <Font>Arial18pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>000000</Primary>
+          <Secondary>C86C78</Secondary>
+          <Disabled>282420</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>A81818</EmbossLight>
+          <EmbossDark>E80000</EmbossDark>
+          <TextPrimary>B0F490</TextPrimary>
+          <TextSecondary>90F4F0</TextSecondary>
+          <TextDisabled>081008</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+      <Scheme name="VolumeButton">
+        <Font>Arial14pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>000000</Primary>
+          <Secondary>000000</Secondary>
+          <Disabled>000000</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>000000</EmbossLight>
+          <EmbossDark>000000</EmbossDark>
+          <TextPrimary>000000</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>Color</BackgroundType>
+      </Scheme>
+    </Schemes>
+  </Designer>
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../.."/>
+    <Processor name=""/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>drv_tmr_local.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_pic32mz.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>adpcm.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_picture.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_progress_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_static_text.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_fs_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>drv_spi_sys_queue_fifo.c</Name>
+        <Path>Source Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
+        <Name>usb_device_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>gfx.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_fs.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>flac.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_window.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>mp3.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_spi.h</Name>
+        <Path>Header Files/framework/driver/spi</Path>
+      </File>
+      <File>
+        <Name>drv_mtch6301.h</Name>
+        <Path>Header Files/framework/driver/touch/mtch6301</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache.h</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_digital_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_codec_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4953</Path>
+      </File>
+      <File>
+        <Name>gfx_common.h</Name>
+        <Path>Header Files/framework/driver/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_device.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>wma.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_touch.c</Name>
+        <Path>Source Files/framework/system/touch/src</Path>
+      </File>
+      <File>
+        <Name>speex.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_touch.h</Name>
+        <Path>Header Files/framework/driver/touch</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_read_write.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>gfx_types_image.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_dma.c</Name>
+        <Path>Source Files/framework/driver/i2s/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_edit_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_controller.h</Name>
+        <Path>Header Files/framework/driver/gfx/controller</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>drv_spi_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>sys_dma.c</Name>
+        <Path>Source Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>sys_touch_local.h</Name>
+        <Path>Header Files/framework/system/touch/src</Path>
+      </File>
+      <File>
+        <Name>drv_sdcard.c</Name>
+        <Path>Source Files/framework/driver/sdcard/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_list_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2s.h</Name>
+        <Path>Header Files/framework/driver/i2s</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scroll_bar.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_radio_button.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>usb_host.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_dma_local.h</Name>
+        <Path>Header Files/framework/driver/i2s/src</Path>
+      </File>
+      <File>
+        <Name>gfx_types_resource.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scan_codes.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_font.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_local.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>diskio.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/hardware_access</Path>
+      </File>
+      <File>
+        <Name>sys_touch.h</Name>
+        <Path>Header Files/framework/system/touch</Path>
+      </File>
+      <File>
+        <Name>flac.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_spi_sys_queue_local_fifo.h</Name>
+        <Path>Header Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_compatibility.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>wma.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>aac.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_surface.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>mp3.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>drv_spi_internal.h</Name>
+        <Path>Header Files/framework/driver/spi/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>ff.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>sys_msg.h</Name>
+        <Path>Header Files/framework/system/msg</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>speex.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scheme_default.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>opus_support.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_ak4953_local.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4953</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>usb_audio_v1_0.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_text_entry.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_spi.c</Name>
+        <Path>Source Files/framework/driver/spi/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_colors.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>ff.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/file_system</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_button.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_mtch6301.c</Name>
+        <Path>Source Files/framework/driver/touch/mtch6301/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_group_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scroll_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.c</Name>
+        <Path>Source Files/framework/driver/i2c/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_v1_0.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>mpfs.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>drv_spi_sys_queue.h</Name>
+        <Path>Header Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>sys_msg.c</Name>
+        <Path>Source Files/framework/system/msg/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_device.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_clk.c</Name>
+        <Path>Source Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>sys_tmr_local.h</Name>
+        <Path>Header Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>ffconf.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/file_system</Path>
+      </File>
+      <File>
+        <Name>adpcm.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>mpfs_local.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2s/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_check_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_macros.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_msg_local.h</Name>
+        <Path>Header Files/framework/system/msg/src</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>drv_usb.h</Name>
+        <Path>Header Files/framework/driver/usb</Path>
+      </File>
+      <File>
+        <Name>drv_sdcard_local.h</Name>
+        <Path>Header Files/framework/driver/sdcard/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_pic32mz.c</Name>
+        <Path>Source Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>drv_ak4953.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4953</Path>
+      </File>
+      <File>
+        <Name>usb_billboard.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_sdcard_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/sdcard/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>opus_support.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>wav.c</Name>
+        <Path>Source Files/framework/decoder/default/wav/support</Path>
+      </File>
+      <File>
+        <Name>gfx.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_interface.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_list_box.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>usb_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>usb_device_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>drv_sdcard.h</Name>
+        <Path>Header Files/framework/driver/sdcard</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_v1_0.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>drv_ak4953.c</Name>
+        <Path>Source Files/framework/driver/codec/ak4953/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_custom_control.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache_pic32mz.S</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scheme.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_device.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_group_box.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_local.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>drv_sdcard_mapping.h</Name>
+        <Path>Header Files/framework/driver/sdcard</Path>
+      </File>
+      <File>
+        <Name>wav.h</Name>
+        <Path>Header Files/framework/decoder/default/wav/support</Path>
+      </File>
+      <File>
+        <Name>sys_msg_config.h</Name>
+        <Path>Header Files/framework/system/msg/config</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_radio_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_variant_mapping.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>aac.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>diskio.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mz.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>usb_host_client_driver.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_forced.c</Name>
+        <Path>Source Files/framework/driver/i2c/src/dynamic</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>gfx_resources_int.S</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>C7B1F59B5848E11C38DD9705446CA260</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int_reference.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>296E6D940E608D31FFE722704D0C688E</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_api.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2/framework/driver/spi/dynamic</Path>
+        <Checksum>615D0B3998780D1680273302CCF44179</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>890E2914C19846645294A329D49A4226</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>5AC7D7324A7BEB9ED6FFF066F86D8BF7</Checksum>
+        <ProjectFileChecksum>C8D6B12941D5854A5BE2B732C9317DFF</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>A33D1A29F51C3768D566526B7108B3CB</Checksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>3BFBFEB4F1A360D835F66B9C25B42462</Checksum>
+      </Template>
+      <Template>
+        <Name>nvm_disk_images.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2/framework/system/fs</Path>
+        <Checksum>B00B90E021F15FFD6B0B1B7F2D0650A5</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2/framework/system/ports/src</Path>
+        <Checksum>E2A2C01A99DC9B72F09E50427C89103E</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>E0A5E2B1626FAC727726E6DF2410700F</Checksum>
+        <ProjectFileChecksum>B4C03C54902D50436B8AE36AAB11E9DD</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_gfx_lcc_generic.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2/framework/driver/gfx/controller/lcc</Path>
+        <Checksum>43202FF875E91AE678E480419B7F819E</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>449767E833CB555DDE7952B337494E13</Checksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>898BCEECF935F85E8AB6B45B42726658</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2/framework/system/dma</Path>
+        <Checksum>0CE14BBEB78DCA8EA4AE6AABF57ACD8D</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_meb2/bsp</Path>
+        <Checksum>5376DF3455399E72B1ED1D3FBB4AEDA8</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_gfx_lcc_generic.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2/framework/driver/gfx/controller/lcc</Path>
+        <Checksum>01FDB7AA1F703F4B8126F30E907BE813</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>drv_spi_master_ebm_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2/framework/driver/spi/dynamic</Path>
+        <Checksum>4C2C868738FD74E2D6A3C8A8FD6B1381</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2/framework/driver/spi/dynamic</Path>
+        <Checksum>B8D534FC99E9DAC9CE3CE2AFE17C3907</Checksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2</Path>
+        <Checksum>3CCE9C3A6F38DD2C0DC0213508A8D7D4</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_meb2/bsp</Path>
+        <Checksum>B981C89EBDF6C4B47D58B857C85B59C0</Checksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:\microchip\harmony\btaudio\apps\audio\sdcard_usb_audio\firmware\src"/>
+        <Include value="C:\microchip\harmony\btaudio\apps\audio\sdcard_usb_audio\firmware\src\system_config\pic32mz_ef_sk_meb2"/>
+        <Include value="C:\microchip\harmony\btaudio\framework"/>
+        <Include value="C:\microchip\harmony\btaudio\apps\audio\sdcard_usb_audio\firmware\src\system_config\pic32mz_ef_sk_meb2\framework"/>
+        <Include value="../src/system_config/pic32mz_ef_sk_meb2/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../bin/framework/peripheral/PIC32MZ2048EFH144_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.1">
+  <Designer>
+    <Assets>
+      <Settings bpp="16" encoding="ASCII">
+        <MemoryLocations>
+          <MemoryLocation address="0" id="default"/>
+        </MemoryLocations>
+      </Settings>
+    </Assets>
+    <Screens height="220" width="176">
+      <Screen active="true" background="000000" clearOnShow="true" doubleBuffer="false" export="true" name="Screen1" primary="true" visible="true">
+        <Objects/>
+      </Screen>
+    </Screens>
+    <Schemes defaultSchemeName="default">
+      <Scheme name="default">
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>FFFFFF</Primary>
+          <Secondary>404040</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>C0C0C0</EmbossLight>
+          <EmbossDark>404040</EmbossDark>
+          <TextPrimary>000000</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+    </Schemes>
+  </Designer>
+  <General>
+    <HarmonyPath path="../../.."/>
+    <Processor name=""/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+</configuration>

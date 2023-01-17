@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../.."/>
+    <Processor name="PIC32MX795F512L"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.c</Name>
+        <Path>Source Files/framework/driver/i2c/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_compatibility.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_local.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16</Path>
+        <Checksum>6665EA4F96796D367EDDD15BD4CE5B41</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16/bsp</Path>
+        <Checksum>A249133155874D27C40396686F1D402B</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mx795_pim_e16/bsp</Path>
+        <Checksum>401E2E050E8DC192DA85A4718731AD67</Checksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16</Path>
+        <Checksum>DE2AEAF6337F10A9E5692406C93A7F61</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16/framework/system/ports/src</Path>
+        <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx795_pim_e16</Path>
+        <Checksum>FE16039309C2F183B38F8E25C2A9E97B</Checksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16/framework/system/clk/src</Path>
+        <Checksum>FDF6C8068CFFAEEC5F8537A8D6514230</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx795_pim_e16</Path>
+        <Checksum>B4999C53A1B8DC9CF942ADDD10255F86</Checksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx795_pim_e16</Path>
+        <Checksum>BE644D0142ACA48D9CA2E6255A02CDBA</Checksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:/Users/c17015/Projects/GIT_Harmony/HarmonyReposAll/apps/driver/i2c/i2c_rtcc/firmware/src"/>
+        <Include value="C:/Users/c17015/Projects/GIT_Harmony/HarmonyReposAll/apps/driver/i2c/i2c_rtcc/firmware/src/system_config/pic32mx795_pim_e16"/>
+        <Include value="C:/Users/c17015/Projects/GIT_Harmony/HarmonyReposAll/framework"/>
+        <Include value="C:/Users/c17015/Projects/GIT_Harmony/HarmonyReposAll/apps/driver/i2c/i2c_rtcc/firmware/src/system_config/pic32mx795_pim_e16/framework"/>
+        <Include value="../src/system_config/pic32mx795_pim_e16/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

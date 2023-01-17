@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <Designer>
+    <Assets>
+      <Settings bpp="16" encoding="ASCII">
+        <MemoryLocations>
+          <MemoryLocation address="0" id="default"/>
+        </MemoryLocations>
+      </Settings>
+      <Image compress="false" fileName="MCHP_LOGO.bmp" height="30" location="internal" name="MCHP_LOGO" width="122">Qk1WKwAAAAAAADYAAAAoAAAAegAAAB4AAAABABgAAAAAACArAAAAAAAAAAAAAAAAAAAAAAAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOSwfPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0zJycpI0wiH3goJp0rKbIlJbUrKbIpJ6UkIoMtJlcuJCo7LR08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHSohKh0chyIk0SMm6CQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn6iAj1iEhly8nQTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dNionJCJ+IiXiJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftIybnHyCVKyIqPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh0nHy4jJLgkJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0gIsYuJkg8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHSwkNCEjySQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7V5f3GZdUzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dRjstxsbMZmjyJCftJCftJCftJCftJCftJCftJCftJCftKy7ti431YWPyJSjtJCftJCftJCftJCftJCftJCftNzru4eL96+vrVExBPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh2op6T////l5v05PO8kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+2OkPb+/v/v8P5TVvEkJ+0kJ+0kJ+0kJ+0kJ+0kJ+2io/f////////Lyso+MyY8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHWRdVvv7+////////7a4+Sgr7SQn7SQn7SQn7SQn7SQn7UpN8O3t/v///////9LT+ysu7SQn7SQn7SQn7SQn7Vha8ff3/v////////7+/o+LhzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dOzAi0NDO/////////////f3/hYb1JSjtJCftJCftJCftLC/uw8T6////////////////nZ73JSjtJCftJCftMTTu09P7////////////////5ubmTUI2PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi0ePTEiPTEiPTEiPTEiPTEiOy8gOy0dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi0dPTEiPTEiPTEiPTEiPTEiOy4fPC4dPC4dPC4dPC4dOy8fRDgpRjorRjorRjorRjorPzMkPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh1nX1X4+Pj////////////////x8f5UVvEkJ+0kJ+0kJ+16fPT+/v/////////////////19f5ZW/EkJ+0lKO2OkPb9/f////////////////////94dX07LR08Lh08Lh08Lh2Wj4XIxL+/u7Y9MyY8Lh08Lh06LR1SSDxSRzs8Lh08Lh08Lh1RRDbAvLfIxL9/eXJMQTS/u7bIxL9gWVA8Lh1dV064t7bJycnJycnJycnJycnJycnFxcV8dm88MCGinpnIxL94c2w8Lh08Lh08Lh08Lh2zrqfIxL9mYFc8Lh1ZUkm2tbTJycnJycnJycnJycnJycm+vbxsZl48Lh48Lh1lXVO/vbrW1tbb29vb29vb29vb29vNzcx/enM5LBytqKLIxL+BeW88Lh08Lh08Lh1DNia4tK/IxL9bUkdbU0rIxL/FwbxeVEhuZ2DIxL+spp88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHYWBnP7+/////////////////////8PE+iYo7SQn7To87+zs/f////////////////////X1/k5Q8SQn7UpM8PHx/v///////////////////+zs/kNFyjotJDwuHTwuHTwuHaWgmv////X19UxDODwuHTwuHXhya+zs7Ozs7GxlXTwuHTwuHWFVSP///////4OAfVJJPfLy8v///29qZT4zJujo6P///////////////////////////+np6T0xIsrKyv///5COjDwuHTwuHTwuHTksHeHg3v///3dzbjouIOTk5P////////////////////////////Pz80M6MEk+Md/e3v///////////////////////////9ra2kQ4K9nY1////5yWkDwuHTwuHTwuHUY5Kejo6P///2dgWGdiW/////v7+2xjWIF+ev///9jW0jwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAANSkjJym/ycr7////////////////////sLL4JSjtKCvttbb5////////////////////////kZP2JCftKSztxsf6/////////////////////f3/hIb1JCftJyBGPC4dPC4dPC4djIeB////+Pj4X1ZLPC4dPzIj19fX////////yMfFOS0fPC4dXVhR/////v7+gXhuUkk98vLy////b2plb2de////////7+/v4+Pj4+Pj4+Pj4+Pj4+Pj4eHgPTEiysrK////nJqYT0M1T0M1T0M1YlpP7u7u////d3JsZ19V/v7+////8PDw4+Pj4+Pj4+Pj7Ozs////////ioJ5aWJa/v7+////7u7u4uDe4+De4+De4+De4+DeycfFRzwu2djX////nJaQPC4dPC4dPC4dRjkp6Ojo////Z2BYZ2Jb////+/v7bGNYgX56////3tzZWE0+WE0+WE0+WE0+WE0+TkIzPC4ePC4dAAA3KzAhI9dHSfDw8f7////////////q6v1GSfAkJ+1sbvP4+P/////////////////////Y2fwvMu4kJ+17ffT9/f/////////////////////Ky/ssL+4kJ+0sJmg8Lh08Lh08Lh1vamT////8/PxwZ108Lh1eV0/////////////09PRdVEk8Lh1xa2X////7+/toX1VSST3y8vL///9vamWLhHr////39/daVEw9Myc9Myc9Myc9Myc9Myc9Myc9MSLKysr////29vbt7e3t7e3t7e329vb////19fVfVUl9dWv////6+vpiXVU9Myc9Myc9MydYT0Tr6+v///+UkY1vamX////09PReWE87LR08Lh08Lh08Lh08Lh08Lh08Lh3Z2Nf///+clpA8Lh08Lh08Lh1GOSno6Oj///9nYFhnYlv////7+/tsY1iBfnr////////////////////////////p6ellXlc8Lh0AADgsNyMm5yQn7Xp89P39//////39/4OE9SUo7TU47t3d/P////////////////////n5/mNl8iQn7UFD7+bm/f////////////////////j4/1FU8SQn7SMm6DEnQjwuHTwuHTwuHV5XTf///////4J5bjwuHamnpf///////////////5aUkTotHYF8dv////n5+VFIPlJJPfLy8v///29qZZaOhf///97e3kY6KzwuHTwuHTwuHTwuHTwuHTwuHT0xIsrKyv///////////////////////////769vDsvIY6Fe////+Tk5EtAMTwuHTwuHTwuHT8zJMvLy////5eWlG9qZf///+vr6z00KDwuHTwuHTwuHTwuHTwuHTwuHTwuHdnY1/////Hw7+Ti3+Ti3+Ti3+Xj4fz8/P///2dgWGdiW/////v7+2xjWIF+ev///////////////////////////////7y7ujwwIAAAOC05JCfrJCftKSztr7D4////xsb6Ky7uJSjtpKb3/////////////////////v7/pKb4JintKSvtsrP4/////////////////////v7/lpj2JSjtJCftIB6EOy0ePC4dPC4dPC4dXFFE9vb2////hIF+SD0v7+/u////4ODg8fHx////4eHhRDgqmZSO////9vb2OzEmUkk98vLy////b2pllo6F////19fXRDgoPC4dPC4dPC4dPC4dPC4dPC4dPTEiysrK////1dXUrKqnrKqnrKqntrWz+Pj4+/v7bmVajoV7////3d3dRzstPC4dPC4dPC4dPDAhw8PD////l5aUb2pl////6+vrPTQoPC4dPC4dPC4dPC4dPC4dPC4dPC4d2djX////////////////////////////////Z2BYZ2Jb////+/v7bGNYgX56////6enokY6MkY6MkY6MkY6M2NfW////4eHhRzorAAA3LDMiJN0kJ+0kJ+08P+/V1/xMTvAkJ+1YW/H6+v7////////////////////j5P08Pu8kJ+1oa/P7+//////////////////////X2Pw2Oe4kJ+0iI8YvJSo8Lh08Lh08Lh08Lh1ORDbo6Oj///+YlZJ9eXP+/v7///+Pi4ejoJ3///////9wamGtqKH////u7u08Lh1SST3y8vL///9vamWWjoX////f399HOis8Lh08Lh08Lh08Lh08Lh08Lh09MSLKysr///+Qjow8Lh08Lh08Lh06LR3h4N7///93c26OhXv////l5eVMQDI8Lh08Lh08Lh0/MyTLy8v///+XlpRvamX////r6+s9NCg8Lh08Lh08Lh08Lh08Lh08Lh08Lh3Z2Nf////29vbs7Ozs7Ozs7Ozt7e39/f3///9nYFhnYlv////7+/tsY1iBfnr////Y1tI8Lh08Lh08Lh08Lh2DfHP////q6upJPS4AADYqKR8hyiQn7SQn7SQn7Tc67iQn7S8y7tHS+////////////////////////3J09CQn7TAz7t/g/P////////////////////n6/2hq8yQn7SMm5yUgVzwuHTwuHTwuHTwuHTwuHUI3Kdvb2////6+tq8fFw/////Dw8FdNQVVORf///////7q5t7azr////9XU1DwuHVJJPfLy8v///29qZY2FfP////r6+lxUTD0vHj0vHj0vHj0vHj0vHj0vHj0xIsrKyv///5GPjD0vHj0vHj0vHkE1JuXk4v///3dzbn93bf////v7+2NcVT0vHj0vHj0vHlRKP+/v7////46Ni29qZf////b29mhhWT0vHj0vHj0vHj0vHj0vHj0vHjwuHdnY1////6Whm05CM05CM05CM1dMPuvr6////2dgWGdiW/////v7+2xjWIF+ev///9nW0z0vHj0vHj0vHj0vHo2Ig////+rq6kk9LgAAOSwdIyKmJCftJCftJCftJCftJSjtkZP2/v7/////////////////////ubr5JintJintoKL3////////////////////////q6z4JCftJCftHx+ZPC4dPC4dPC4dPC4dPC4dPC4dOy4f1NLQ////5eXl9vb2////t7WzOCscPzIiycnI////+vr629vb////ubm4PC4dUkk98vLy////b2plbmde////////////////////////////////4eHhPTEiysrK////8vLy5OTk5OTk5OTk8fHx////////d3JsY1tR/v7+/////Pz85OTk5OTk5OTk+Pj4////////ioJ5bGRb/v7+////////////////////////////0tLSPTIk2djX////nJaQPC4dPC4dPC4dRjkp6Ojo////Z2BYZ2Jb////+/v7bGNYgX56////+vr65OTk5OTk5OTk5ubm/f39////1NTUQjYnAAA8Lh0nI20kJ+wkJ+0kJ+0kJ+0qLO68vfr////////////////////r6/1ISvAkJ+0pLO7Fxvr////////////////////p6f05PO8kJ+0gI9UqIi08Lh08Lh08Lh08Lh08Lh08Lh08Lh3Bvrv////////////8/Px0bGM8Lh08Lh1/enT///////////////+kop88Lh1SST3y8vL///9vamU9Myjq6ur////////////////////////////U1NQ9MSLKysr////////////////////////////z8/NbUUU/MiPm5ub////////////////////////////09PRORDlKPzHh4N/////////////////////////////S0dA9MSLZ2Nf///+clpA8Lh08Lh08Lh1GOSno6Oj///9nYFhnYlv////7+/tsY1iBfnr///////////////////////////////+hnZk8Lh4AADwuHTAmMSEk2SQn7SQn7SQn7SQn7UpN8Ozt/v////////////7+/4eI9SUo7SQn7SQn7UpN8PPz/v////////////3+/3Z39CQn7SQn6yIeZjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHailof///////////+Tj4zswIzwuHTwuHUtBNOXl5f///////////52WjjwuHUlANL6+vcjIx1tWUTwuHV9XTru7u+Hh4OPj4uPj4uPj4uPj4tvb2nNxbTovIJ+fnsjIx8jIx8jIx8jIx8jIx8jIx8LCwXl1cDwvHjwuHVtTSri4uOHh4OPj4uPj4uPj4uLi4cPDw21mXTwuHjwuHV1WTbm5uOHh4OPj4uPj4uPj4uPj4tbW1oF7dDwuHauqqMjIx396czwuHTwuHTwuHUM2Jra2tcjIx1dQSFVQSsjIx8XFxF1USWhlYcjIx8jIx8jIx8jIx8jIx8jIx8fHxpqXkkU5LDwuHQAAPC4dPC4dHx6EJCftJCftJCftJCftJCftdHb0/f3/////////yMr7Ky7uJCftJCftJCftJCfte330/Pz/////////u7z6Ki3uJCftISKoOCshPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4djImF////////////lJCLPC4dPC4dPC4dPC4dpqOf////////////gHpyPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh0sIyUgItAkJ+0kJ+0kJ+0kJ+0mKe20tfn////19f5QUvAkJ+0kJ+0kJ+0kJ+0kJ+0pLO2ztPn////r6/1IS/AkJ+0jJdwtJDo8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh14c23////////39/dNRDo8Lh08Lh08Lh08Lh1eVk339/f///////9kXVU8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHSwlUyMm4yQn7SQn7SQn7SQn7TU47pKT9mRm8iQn7SQn7SQn7SQn7SQn7SQn7SQn7TY574+R9lZY8SQn7SQn7SEfdzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHU9ENuLi4f39/Zyalz0wHzwuHTwuHTwuHTwuHT0wH6mopv7+/tTU00U5KjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dOSscGxlhIiXiJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftHyG7MCUfPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi8hPjQpPC4dPC4dPC4dPC4dPC4dPC4dPC4dOy4dOTEnNCoePC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh04KxwjH2MiJd8kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0iJeEnIUhKPjBiWExCNyk8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHSsjRR0gwCQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7CEfiTstH3l3da6urnp0bjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dNiohJyNuIiTJIyboJCftJCftJCftJCftJCftJCftJCftJCftJCftIybpIyS7NioqPC4dcG5qm5ubcWtkPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh01KSQjH1AmJI8dH7ggI9QiJeMkJ+0jJuUgI9cfIb4nJZQmIFI2KSI8Lh08Lh09Lx5COCw6LR08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTUpITcrLjgsNDktOTgsNTgsLzYqJDwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAA</Image>
+      <Image compress="false" fileName="CONNECTED.bmp" height="30" location="internal" name="CONNECTED" width="30">Qk3+CgAAAAAAADYAAAAoAAAAHgAAAB4AAAABABgAAAAAAMgKAAAAAAAAAAAAAAAAAAAAAAAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3/mQA8Lh08Lh08Lh08Lh3/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHf+ZAP+ZAP+ZADwuHTwuHTwuHf+ZAP+ZAP+ZADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4d/5kA/5kA/5kA/5kA/5kAPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh3/mQD/mQD/mQD/mQD/mQD/mQD/mQA8Lh3/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHf+ZAP+ZAP+ZADwuHTwuHTwuHf+ZAP+ZAP+ZADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d/5kA/5kA/5kAPC4d/5kA/5kA/5kAPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh3/mQD/mQD/mQA8Lh3/mQD/mQD/mQA8Lh08Lh08Lh3/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHf+ZAP+ZAP+ZADwuHf+ZAP+ZAP+ZADwuHTwuHTwuHf+ZAP+ZAP+ZADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh3/mQD/mQD/mQD/mQD/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh3/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHf+ZAP+ZAP+ZAP+ZAP+ZADwuHTwuHTwuHTwuHTwuHTwuHf+ZAP+ZAP+ZADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh3/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHf+ZAP+ZAP+ZAP+ZAP+ZADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4d/5kA/5kA/5kA/5kA/5kA/5kA/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3/mQD/mQD/mQD/mQD/mQD/mQD/mQD/mQD/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHf+ZADwuHf+ZADwuHf+ZADwuHTwuHf+ZAP+ZAP+ZAP+ZAP+ZAP+ZAP+ZAP+ZAP+ZADwuHTwuHf+ZADwuHf+ZADwuHf+ZADwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d/5kAPC4d/5kAPC4d/5kAPC4dPC4d/5kA/5kA/5kA/5kA/5kA/5kA/5kA/5kA/5kAPC4dPC4d/5kAPC4d/5kAPC4d/5kAPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh3/mQA8Lh3/mQA8Lh3/mQA8Lh08Lh08Lh3/mQD/mQD/mQD/mQD/mQD/mQD/mQA8Lh08Lh08Lh3/mQA8Lh3/mQA8Lh3/mQA8Lh08Lh08Lh08Lh0AADwuHTwuHTwuHf+ZADwuHf+ZADwuHTwuHf+ZADwuHTwuHTwuHf+ZAP+ZAP+ZAP+ZAP+ZADwuHTwuHTwuHf+ZADwuHTwuHf+ZADwuHf+ZADwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d/5kAPC4dPC4d/5kAPC4dPC4d/5kAPC4dPC4dPC4d/5kA/5kA/5kAPC4dPC4dPC4d/5kAPC4dPC4d/5kAPC4dPC4d/5kAPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh3/mQA8Lh08Lh3/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3/mQA8Lh08Lh3/mQA8Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHf+ZADwuHTwuHf+ZADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHf+ZADwuHTwuHf+ZADwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4d/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4d/5kAPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh3/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3/mQA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAA</Image>
+      <Image compress="false" fileName="NO_PAIR_NO_CONNECTION.bmp" height="30" location="internal" name="NO_PAIR_NO_CONNECTION" width="30">Qk3+CgAAAAAAADYAAAAoAAAAHgAAAB4AAAABABgAAAAAAMgKAAAAAAAAAAAAAAAAAAAAAAAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh1/f388Lh08Lh08Lh08Lh1/f39/f39/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHX9/f39/f39/fzwuHTwuHTwuHX9/f39/f39/fzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4df39/f39/f39/f39/f39/PC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh1/f39/f39/f39/f39/f39/f39/f388Lh1/f39/f39/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHX9/f39/f39/fzwuHTwuHTwuHX9/f39/f39/fzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4df39/f39/f39/PC4df39/f39/f39/PC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh1/f39/f39/f388Lh1/f39/f39/f388Lh08Lh08Lh1/f39/f39/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHX9/f39/f39/fzwuHX9/f39/f39/fzwuHTwuHTwuHX9/f39/f39/fzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh1/f39/f39/f39/f39/f39/f39/f388Lh08Lh08Lh08Lh08Lh1/f39/f39/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHX9/f39/f39/f39/f39/fzwuHTwuHTwuHTwuHTwuHTwuHX9/f39/f39/fzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh1/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh1/f39/f39/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHX9/f39/f39/f39/f39/fzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4df39/f39/f39/f39/f39/f39/f39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh1/f39/f39/f39/f39/f39/f39/f39/f39/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHX9/fzwuHX9/fzwuHX9/fzwuHTwuHX9/f39/f39/f39/f39/f39/f39/f39/f39/fzwuHTwuHX9/fzwuHX9/fzwuHX9/fzwuHTwuHTwuHTwuHQAAPC4dPC4dPC4df39/PC4df39/PC4df39/PC4dPC4df39/f39/f39/f39/f39/f39/f39/f39/f39/PC4dPC4df39/PC4df39/PC4df39/PC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh1/f388Lh1/f388Lh1/f388Lh08Lh08Lh1/f39/f39/f39/f39/f39/f39/f388Lh08Lh08Lh1/f388Lh1/f388Lh1/f388Lh08Lh08Lh08Lh0AADwuHTwuHTwuHX9/fzwuHX9/fzwuHTwuHX9/fzwuHTwuHTwuHX9/f39/f39/f39/f39/fzwuHTwuHTwuHX9/fzwuHTwuHX9/fzwuHX9/fzwuHTwuHTwuHTwuHQAAPC4dPC4dPC4df39/PC4dPC4df39/PC4dPC4df39/PC4dPC4dPC4df39/f39/f39/PC4dPC4dPC4df39/PC4dPC4df39/PC4dPC4df39/PC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh1/f388Lh08Lh1/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh1/f388Lh08Lh1/f388Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHX9/fzwuHTwuHX9/fzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHX9/fzwuHTwuHX9/fzwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4df39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4df39/PC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh1/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh1/f388Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAA</Image>
+      <Image compress="false" fileName="PAIRED.bmp" height="30" location="internal" name="PAIRED" width="30">Qk3+CgAAAAAAADYAAAAoAAAAHgAAAB4AAAABABgAAAAAAMgKAAAAAAAAAAAAAAAAAAAAAAAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3///88Lh08Lh08Lh08Lh3///////////88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHf///////////zwuHTwuHTwuHf///////////zwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4d////////////////////PC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh3///////////////////////////88Lh3///////////88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHf///////////zwuHTwuHTwuHf///////////zwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d////////////PC4d////////////PC4dPC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh3///////////88Lh3///////////88Lh08Lh08Lh3///////////88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHf///////////zwuHf///////////zwuHTwuHTwuHf///////////zwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh3///////////////////////////88Lh08Lh08Lh08Lh08Lh3///////////88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHf///////////////////zwuHTwuHTwuHTwuHTwuHTwuHf///////////zwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4d////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh3///88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3///////////88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHf///////////////////zwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4d////////////////////////////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3///////////////////////////////////88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHf///zwuHf///zwuHf///zwuHTwuHf///////////////////////////////////zwuHTwuHf///zwuHf///zwuHf///zwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d////PC4d////PC4d////PC4dPC4d////////////////////////////////////PC4dPC4d////PC4d////PC4d////PC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh3///88Lh3///88Lh3///88Lh08Lh08Lh3///////////////////////////88Lh08Lh08Lh3///88Lh3///88Lh3///88Lh08Lh08Lh08Lh0AADwuHTwuHTwuHf///zwuHf///zwuHTwuHf///zwuHTwuHTwuHf///////////////////zwuHTwuHTwuHf///zwuHTwuHf///zwuHf///zwuHTwuHTwuHTwuHQAAPC4dPC4dPC4d////PC4dPC4d////PC4dPC4d////PC4dPC4dPC4d////////////PC4dPC4dPC4d////PC4dPC4d////PC4dPC4d////PC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh3///88Lh08Lh3///88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3///88Lh08Lh3///88Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHf///zwuHTwuHf///zwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHf///zwuHTwuHf///zwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4d////PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4d////PC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh3///88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh3///88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAA</Image>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="true" fileName="Arial" italic="false" location="internal" name="Arial14pt" size="14">
+        <Ranges>
+          <Range end="255" name="range" start="32"/>
+        </Ranges>
+      </Font>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="true" fileName="Arial" italic="false" location="internal" name="Arial20pt" size="20">
+        <Ranges>
+          <Range end="255" name="range" start="32"/>
+        </Ranges>
+      </Font>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="true" fileName="Arial" italic="false" location="internal" name="Arial12pt" size="12">
+        <Ranges>
+          <Range end="255" name="range" start="32"/>
+        </Ranges>
+      </Font>
+    </Assets>
+    <Screens height="220" width="176">
+      <Screen active="true" background="000000" clearOnShow="true" doubleBuffer="false" export="true" name="HomeScreen" primary="true" visible="true">
+        <Objects>
+          <Widget type="StaticTextWidget">
+            <Name>HarmonyVersion</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>0</ZOrder>
+            <Position>140,0</Position>
+            <Size>36,15</Size>
+            <Scheme>default</Scheme>
+            <Text>v0.00</Text>
+            <Frame>false</Frame>
+            <Background>false</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>BtConnected</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>1</ZOrder>
+            <Position>208,28</Position>
+            <Size>14,15</Size>
+            <Scheme>default</Scheme>
+            <Text>0</Text>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>Buffer4</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>2</ZOrder>
+            <Position>10,110</Position>
+            <Size>100,18</Size>
+            <Scheme>default</Scheme>
+            <Text/>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>Buffer3</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>3</ZOrder>
+            <Position>10,93</Position>
+            <Size>100,18</Size>
+            <Scheme>default</Scheme>
+            <Text/>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>Buffer1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>4</ZOrder>
+            <Position>10,60</Position>
+            <Size>100,18</Size>
+            <Scheme>default</Scheme>
+            <Text/>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>Buffer2</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>5</ZOrder>
+            <Position>10,77</Position>
+            <Size>100,18</Size>
+            <Scheme>default</Scheme>
+            <Text/>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>MacId</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>6</ZOrder>
+            <Position>115,40</Position>
+            <Size>106,19</Size>
+            <Scheme>default</Scheme>
+            <Text>MAC ADDRESS</Text>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>BroadCastName</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>7</ZOrder>
+            <Position>30,40</Position>
+            <Size>100,17</Size>
+            <Scheme>default</Scheme>
+            <Text>BT Name</Text>
+            <Frame>false</Frame>
+            <Background>true</Background>
+            <HAlignment>Left</HAlignment>
+            <VAlignment>Top</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Primitive type="TextPrimitive">
+            <Name>RGBLED_text</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>8</ZOrder>
+            <Origin>157,135</Origin>
+            <Text>RGB LED</Text>
+            <Font>Arial12pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="TextPrimitive">
+            <Name>Virtual_LED_Text1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>9</ZOrder>
+            <Origin>15,135</Origin>
+            <Text>Virtual LED's</Text>
+            <Font>Arial12pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LED1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>10</ZOrder>
+            <Point1>11,152</Point1>
+            <Point2>19,168</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>007F00</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>RGBLED</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>11</ZOrder>
+            <Point1>161,152</Point1>
+            <Point2>199,168</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>7F0000</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LED4</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>12</ZOrder>
+            <Point1>56,152</Point1>
+            <Point2>64,168</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>007F00</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LED5</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>13</ZOrder>
+            <Point1>71,152</Point1>
+            <Point2>79,168</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>007F00</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LED3</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>14</ZOrder>
+            <Point1>41,152</Point1>
+            <Point2>49,168</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>007F00</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LED2</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>15</ZOrder>
+            <Point1>26,152</Point1>
+            <Point2>34,168</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>007F00</FillColor>
+          </Primitive>
+          <Primitive type="TextPrimitive">
+            <Name>DemoName</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>16</ZOrder>
+            <Origin>30,24</Origin>
+            <Text>Bluetooth SPP Demo</Text>
+            <Font>Arial12pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>RgbLedOutLine</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>17</ZOrder>
+            <Point1>160,150</Point1>
+            <Point2>200,170</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>808080</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LedOutLine5</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>18</ZOrder>
+            <Point1>70,150</Point1>
+            <Point2>80,170</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>808080</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LedOutLine4</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>19</ZOrder>
+            <Point1>55,150</Point1>
+            <Point2>65,170</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>808080</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LedOutLine3</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>20</ZOrder>
+            <Point1>40,150</Point1>
+            <Point2>50,170</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>808080</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LedOutLine2</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>21</ZOrder>
+            <Point1>25,150</Point1>
+            <Point2>35,170</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>808080</FillColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>LedOutLine1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>22</ZOrder>
+            <Point1>10,150</Point1>
+            <Point2>20,170</Point2>
+            <Outline>false</Outline>
+            <FillStyle>Color</FillStyle>
+            <FillColor>808080</FillColor>
+          </Primitive>
+          <Primitive type="ImagePrimitive">
+            <Name>Image2</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>23</ZOrder>
+            <Origin>190,0</Origin>
+            <Image>NO_PAIR_NO_CONNECTION</Image>
+            <TransparencyColor>1D2E3C</TransparencyColor>
+          </Primitive>
+          <Primitive type="ImagePrimitive">
+            <Name>MCHP_LOGO_NAME</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>24</ZOrder>
+            <Origin>4,1</Origin>
+            <Image>MCHP_LOGO</Image>
+            <TransparencyColor>1D2E3C</TransparencyColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>BottomTaskBar</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>25</ZOrder>
+            <Point1>0,137</Point1>
+            <Point2>220,186</Point2>
+            <Radius>15</Radius>
+            <Outline>false</Outline>
+            <FillStyle>Gradient_Down</FillStyle>
+            <StartColor>7F7F7F</StartColor>
+            <EndColor>000000</EndColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>TopTaskBar</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>26</ZOrder>
+            <Point1>0,-5</Point1>
+            <Point2>220,34</Point2>
+            <Radius>15</Radius>
+            <Outline>false</Outline>
+            <FillStyle>Gradient_Down</FillStyle>
+            <StartColor>FF0000</StartColor>
+            <EndColor>000000</EndColor>
+          </Primitive>
+        </Objects>
+      </Screen>
+    </Screens>
+    <Schemes defaultSchemeName="default">
+      <Scheme name="default">
+        <Font>Arial12pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>FFFFFF</Primary>
+          <Secondary>404040</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>C0C0C0</EmbossLight>
+          <EmbossDark>404040</EmbossDark>
+          <TextPrimary>FFFFFF</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+    </Schemes>
+  </Designer>
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../.."/>
+    <Processor name="PIC32MX270F512L"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>bufferutils.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>hcitr_tih4.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_local.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_picture.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_progress_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_static_text.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_pmp_config.h</Name>
+        <Path>Header Files/framework/driver/pmp/config</Path>
+      </File>
+      <File>
+        <Name>gfx.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_window.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>hcitr_3wire.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>hci_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>bt_types.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>sdp_client.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_otm2201a.h</Name>
+        <Path>Header Files/framework/driver/gfx/controller/otm2201a</Path>
+      </File>
+      <File>
+        <Name>drv_pmp_local.h</Name>
+        <Path>Header Files/framework/driver/pmp/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_digital_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_common.h</Name>
+        <Path>Header Files/framework/driver/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_usart_local_dma.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>bt_std.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ti_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/ti</Path>
+      </File>
+      <File>
+        <Name>baseband.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>spp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/spp</Path>
+      </File>
+      <File>
+        <Name>gfx_types_image.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>bt_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>l2cap_fixed_channel.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_otm2201a.c</Name>
+        <Path>Source Files/framework/driver/gfx/controller/otm2201a/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_edit_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>hci_cmd_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>cmdbuffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>rfcomm_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_controller.h</Name>
+        <Path>Header Files/framework/driver/gfx/controller</Path>
+      </File>
+      <File>
+        <Name>sys_dma.c</Name>
+        <Path>Source Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>chmanager.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>bt_system.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>l2cap_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sdp_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>hci_linkkey_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>drv_pmp.h</Name>
+        <Path>Header Files/framework/driver/pmp</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_list_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>rfcomm_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>rfcomm_mgr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>hcitr_bcsp_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>hcitr_uart.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>gfx_types_resource.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>frame_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>gfx_types_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scan_codes.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>bt_version.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ssp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/ssp</Path>
+      </File>
+      <File>
+        <Name>gfx_types_font.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>l2cap_command_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>types.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/plat</Path>
+      </File>
+      <File>
+        <Name>fifo.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>sdp_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>dsp_script__PB_109_DSP_rev8.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>rfcomm_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>l2cap_timer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_surface.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>l2cap_test.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>dsp_script__PB_109_DSP_rev8_friendly_DCR_included.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>hci_conn_state.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>issc.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/issc</Path>
+      </File>
+      <File>
+        <Name>bt_private_wo_asserts.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ti.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/ti</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>l2cap_psm.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scheme_default.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>channel.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>hci_eir.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>drv_usart_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>rfcomm_timer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>hci_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>ssp_event_handler.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/ssp</Path>
+      </File>
+      <File>
+        <Name>rda.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/rda</Path>
+      </File>
+      <File>
+        <Name>gap.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/gap</Path>
+      </File>
+      <File>
+        <Name>hci_config_event_handlers.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>bt_hcitr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>script__PB_101_CSR8811_CSP28_UART.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>vcard_parser.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>hci_evt_handlers.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_text_entry.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>bt_oem_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>gfx_colors.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>hci_ctrl_state.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>hci_transport.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>spp_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/spp</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_group_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scroll_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>uuid.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>rfcomm.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>command.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>rfcomm_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sdp_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>hci_utils.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>script__PB_173_CSR8X11_REV1.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>hci.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>xml_parser.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>bt_oem.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>l2cap_config_handlers.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>hcitr_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>script__PB_90_REV6.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_static_text.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/plat</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_tmr_local.h</Name>
+        <Path>Header Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>bt_log.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>bt_bdaddr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>drv_usart.h</Name>
+        <Path>Header Files/framework/driver/usart</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>hci_errors.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>csr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/csr</Path>
+      </File>
+      <File>
+        <Name>spp_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/spp</Path>
+      </File>
+      <File>
+        <Name>lm.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_check_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_macros.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>bt_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>at_parser.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>hci_le.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>l2cap_eretr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>drv_usart_buffer_queue_dma.c</Name>
+        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>patch.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr</Path>
+      </File>
+      <File>
+        <Name>drv_usart_local.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>gfx.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sdp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>bt_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>rfcomm_cmd_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>l2cap_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>l2cap.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>hci_cmd_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_usart_dma.c</Name>
+        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sdp_utils.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_custom_control.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>l2cap_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scheme.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>rfcomm_mx.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>script__PB_109_CSR8811_REV16.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>hcitr_bcsp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>script__PB_27_R20_BC6ROM_A04.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_radio_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>hci_data_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>hci_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>bt_timer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ssp_event.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/ssp</Path>
+      </File>
+      <File>
+        <Name>hci_data_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>l2cap_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>bt_private_with_asserts.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>bt_storage.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/framework/system/clk/src</Path>
+        <Checksum>9E1735DC00A06796E5D2C1A7FF8668AC</Checksum>
+        <ProjectFileChecksum>8A31753E9DE083023CD3BA45D2EB6BDD</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/framework/system/ports/src</Path>
+        <Checksum>58413D617D2BC1DC44552F8C96742369</Checksum>
+        <ProjectFileChecksum>80CFD348692E10E89DDFDB4B3F28398F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>drv_pmp_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/framework/driver/pmp/src</Path>
+        <Checksum>7F6216B6339F1312FD9F8DC102157FB9</Checksum>
+        <ProjectFileChecksum>0C365CF4085205EA750C798ED95A162F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>6A317002F5650CBBDF0E2DE084369F59</Checksum>
+        <ProjectFileChecksum>497D38A5CC3B7919716E60701F2589B4</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/bsp</Path>
+        <Checksum>A935B833132361EE7EF3F6B5511A961A</Checksum>
+        <ProjectFileChecksum>F8FAFFFD07B3FD94DC80904503E97D56</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>1B6F9BB80DAFC352F0CA94EC0F270803</Checksum>
+        <ProjectFileChecksum>26716C97BE932011E06B0FEC7237BD19</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>44EA161767990811FFB5CDE8CFB8BC2C</Checksum>
+        <ProjectFileChecksum>6310A4C314AE132616F4427809197CAF</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/bsp</Path>
+        <Checksum>76311293E39AFB03F0CC14ACAD0CBB86</Checksum>
+        <ProjectFileChecksum>2DF07D88E3A54017E08D17A7FB4AB5E3</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/framework/system/dma</Path>
+        <Checksum>03852E55C37A93C50A04522C41BC8495</Checksum>
+        <ProjectFileChecksum>3C9878B11662C500DDBB6276CF938C99</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_pmp_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk/framework/driver/pmp</Path>
+        <Checksum>799BFBF404CEF514B5929A7011B8FCD7</Checksum>
+        <ProjectFileChecksum>0B545ACCF11A33CED4F7A8BB89FE9E8B</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>301A90903B40A212BB3FC1C48034E49F</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>64746A7BF8849809F6EB776DC2C53329</Checksum>
+        <ProjectFileChecksum>40C5BC34946BED0C69F71D7418EA452C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>1F5251CEF7B02264BA7F2CA775A8A5D9</Checksum>
+        <ProjectFileChecksum>9D705F643295C907255B75B7A68749BC</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>8180CD78C95453C355ECC87E32EC1B20</Checksum>
+        <ProjectFileChecksum>ECCABB937955DDAD5C2E5CF67226B485</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int.S</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>73F3DE45A232F953770E2CBB6B6B76CE</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>EC3F3E94E6CEA0AF3833F6044A467EC3</Checksum>
+        <ProjectFileChecksum>F99CDD43E4FF7143DA9C91F2D7D4EC3A</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int_reference.c</Name>
+        <Path>Source Files/app/system_config/pic32mx270f512l_pim_bt_audio_dk</Path>
+        <Checksum>BA85BAB24837ED58B8463FF04A0A8F35</Checksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:/Microchip/harmony/2xxDev/apps/bluetooth/data/data_basic/firmware/src"/>
+        <Include value="C:/Microchip/harmony/2xxDev/apps/bluetooth/data/data_basic/firmware/src/system_config/pic32mx270f512l_pim_bt_audio_dk"/>
+        <Include value="C:/Microchip/harmony/2xxDev/framework"/>
+        <Include value="C:/Microchip/harmony/2xxDev/apps/bluetooth/data/data_basic/firmware/src/system_config/pic32mx270f512l_pim_bt_audio_dk/framework"/>
+        <Include value="../src/system_config/pic32mx270f512l_pim_bt_audio_dk/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../bin/framework/peripheral/PIC32MX270F512L_peripherals.a"/>
+      <Library value="../../../../../../bin/framework/bluetooth/lib_bluetooth_SPPonly_O3_v2_4_1.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

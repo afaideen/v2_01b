@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <Designer>
+    <Assets>
+      <Settings bpp="16" encoding="ASCII">
+        <MemoryLocations>
+          <MemoryLocation address="0" id="default"/>
+        </MemoryLocations>
+      </Settings>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="false" fileName="Arial" italic="false" location="internal" name="Arial" size="22">
+        <Ranges>
+          <Range end="127" name="default" start="32"/>
+        </Ranges>
+      </Font>
+    </Assets>
+    <Screens height="272" width="480">
+      <Screen active="true" background="F8F8F8" clearOnShow="true" doubleBuffer="false" export="true" name="Screen1" primary="true" visible="true">
+        <Objects>
+          <Widget type="StaticTextWidget">
+            <Name>StaticText2</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>0</ZOrder>
+            <Position>163,138</Position>
+            <Size>158,25</Size>
+            <Scheme>default</Scheme>
+            <Text>Please wait ....</Text>
+            <Frame>false</Frame>
+            <Background>false</Background>
+            <HAlignment>Center</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+          <Widget type="StaticTextWidget">
+            <Name>StaticText1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>1</ZOrder>
+            <Position>14,80</Position>
+            <Size>457,35</Size>
+            <Scheme>default</Scheme>
+            <Text>Writing external gfx resources to SQI flash </Text>
+            <Frame>false</Frame>
+            <Background>false</Background>
+            <HAlignment>Center</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+        </Objects>
+      </Screen>
+      <Screen active="false" background="F8F8F8" clearOnShow="true" doubleBuffer="false" export="true" name="screen2" primary="false" visible="true">
+        <Objects>
+          <Widget type="StaticTextWidget">
+            <Name>StaticText3</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>0</ZOrder>
+            <Position>93,109</Position>
+            <Size>287,36</Size>
+            <Scheme>default</Scheme>
+            <Text>Writing to SQI flash complete!</Text>
+            <Frame>false</Frame>
+            <Background>false</Background>
+            <HAlignment>Center</HAlignment>
+            <VAlignment>Center</VAlignment>
+            <Events>
+              <Event enabled="false" name="GFX_GOL_STATICTEXT_ACTION_SELECTED" pretty_name="Selected"/>
+            </Events>
+          </Widget>
+        </Objects>
+      </Screen>
+    </Screens>
+    <Schemes defaultSchemeName="default">
+      <Scheme name="default">
+        <Font>Arial</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>FFFFFF</Primary>
+          <Secondary>404040</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>C0C0C0</EmbossLight>
+          <EmbossDark>383830</EmbossDark>
+          <TextPrimary>784030</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>F8FCF8</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+    </Schemes>
+  </Designer>
+  <General>
+    <HarmonyPath path="../../.."/>
+    <Processor name="PIC32MZ2048EFM144"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>drv_tmr_local.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_picture.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_progress_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_static_text.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_fs_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
+        <Name>gfx.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_fs.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_window.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache.h</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_digital_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_common.h</Name>
+        <Path>Header Files/framework/driver/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_host.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>gfx_types_image.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_edit_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_controller.h</Name>
+        <Path>Header Files/framework/driver/gfx/controller</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>sys_dma.c</Name>
+        <Path>Source Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>usb_host_scsi_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_scsi.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_list_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_msd.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>usb_host.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>usb_msd.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_types_resource.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scan_codes.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_font.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>diskio.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/hardware_access</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_surface.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>scsi.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>usb_host_scsi.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>ff.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scheme_default.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_msd_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_text_entry.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_host_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>gfx_colors.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>ff.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/file_system</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_group_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scroll_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>usb_host.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>mpfs.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_static_text.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_tmr_local.h</Name>
+        <Path>Header Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>ffconf.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/file_system</Path>
+      </File>
+      <File>
+        <Name>mpfs_local.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_check_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_macros.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>drv_usb.h</Name>
+        <Path>Header Files/framework/driver/usb</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>gfx.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_interface.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>usb_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_custom_control.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache_pic32mz.S</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scheme.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>gfx_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_host_msd.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_radio_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>diskio.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mz.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>usb_host_client_driver.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>drv_gfx_lcc_generic.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/framework/driver/gfx/controller/lcc</Path>
+        <Checksum>01FDB7AA1F703F4B8126F30E907BE813</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/bsp</Path>
+        <Checksum>9AFAF3F6210EF658384438E21E6E4724</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>DC7042E921B3E24FBD13C5F827281235</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_gfx_lcc_generic.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/framework/driver/gfx/controller/lcc</Path>
+        <Checksum>43202FF875E91AE678E480419B7F819E</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/framework/system/dma</Path>
+        <Checksum>0CE14BBEB78DCA8EA4AE6AABF57ACD8D</Checksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>A7AB2BAE4E0A0B6E2919CF5AE74C4858</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int_reference.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>6FDFFB527349AF40136A2B4E0D59DF4F</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>498522DEF8B49FD44C5E683660134350</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>nvm_disk_images.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/framework/system/fs</Path>
+        <Checksum>B00B90E021F15FFD6B0B1B7F2D0650A5</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>9779636DACC6C5D96384CCB92911EB0C</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/framework/system/ports/src</Path>
+        <Checksum>3DFB0BC56732FDD6D5377CC83C754517</Checksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int.S</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>45FC85692A55ECD0FEE885E880DAF262</Checksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/bsp</Path>
+        <Checksum>E25CE2E8561A30622F0189580F28A92A</Checksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>E80C99DAC2764F49A8BB2AF8C61CAA27</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>FC5BC7A62C7729E8A1A0085CA515B9E0</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>727404C4C91FEC17E64DC5F78AD2BB46</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/framework/system/clk/src</Path>
+        <Checksum>3687AD77242BD023A59E09AF0CED0BC3</Checksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_ef_sk_mebii_gfx_ext_res</Path>
+        <Checksum>98DF3B91F4F3001E785F95C1095F48E2</Checksum>
+        <ProjectFileChecksum>B3CE1F00B6841E9C89302AC33412F031</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:\microchip\harmony\core_v2xx\apps\programmer\sqi_flash\firmware\src"/>
+        <Include value="C:\microchip\harmony\core_v2xx\apps\programmer\sqi_flash\firmware\src\system_config\pic32mz_ef_sk_mebii_gfx_ext_res"/>
+        <Include value="C:\microchip\harmony\core_v2xx\framework"/>
+        <Include value="C:\microchip\harmony\core_v2xx\apps\programmer\sqi_flash\firmware\src\system_config\pic32mz_ef_sk_mebii_gfx_ext_res\framework"/>
+        <Include value="../src/system_config/pic32mz_ef_sk_mebii_gfx_ext_res/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../bin/framework/peripheral/PIC32MZ2048EFM144_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

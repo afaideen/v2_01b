@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<pic32mx_bt_sk version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../.."/>
+    <Processor name="PIC32MX270F256D"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>bufferutils.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>hcitr_tih4.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_local.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>hcitr_3wire.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>hci_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>bt_types.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>sdp_client.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>drv_usart_local_dma.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>bt_std.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ti_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/ti</Path>
+      </File>
+      <File>
+        <Name>baseband.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>spp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/spp</Path>
+      </File>
+      <File>
+        <Name>bt_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>l2cap_fixed_channel.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>hci_cmd_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>cmdbuffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>rfcomm_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_dma.c</Name>
+        <Path>Source Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>chmanager.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>bt_system.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>l2cap_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sdp_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>hci_linkkey_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>rfcomm_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>rfcomm_mgr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>hcitr_bcsp_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>hcitr_uart.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>frame_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>bt_version.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ssp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/ssp</Path>
+      </File>
+      <File>
+        <Name>l2cap_command_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>types.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/plat</Path>
+      </File>
+      <File>
+        <Name>fifo.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>sdp_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>dsp_script__PB_109_DSP_rev8.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>rfcomm_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>l2cap_timer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>l2cap_test.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>dsp_script__PB_109_DSP_rev8_friendly_DCR_included.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>hci_conn_state.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>issc.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/issc</Path>
+      </File>
+      <File>
+        <Name>bt_private_wo_asserts.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ti.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/ti</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>l2cap_psm.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>channel.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>hci_eir.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>drv_usart_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>rfcomm_timer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>hci_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>ssp_event_handler.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/ssp</Path>
+      </File>
+      <File>
+        <Name>rda.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/rda</Path>
+      </File>
+      <File>
+        <Name>gap.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/gap</Path>
+      </File>
+      <File>
+        <Name>hci_config_event_handlers.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>bt_hcitr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>script__PB_101_CSR8811_CSP28_UART.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>vcard_parser.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>hci_evt_handlers.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>bt_oem_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>hci_ctrl_state.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>hci_transport.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>spp_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/spp</Path>
+      </File>
+      <File>
+        <Name>uuid.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>rfcomm.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>command.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>rfcomm_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sdp_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>hci_utils.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>script__PB_173_CSR8X11_REV1.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>hci.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>xml_parser.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>bt_oem.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>l2cap_config_handlers.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>hcitr_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>script__PB_90_REV6.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/plat</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_tmr_local.h</Name>
+        <Path>Header Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>bt_log.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>bt_bdaddr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>drv_usart.h</Name>
+        <Path>Header Files/framework/driver/usart</Path>
+      </File>
+      <File>
+        <Name>hci_errors.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>csr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/csr</Path>
+      </File>
+      <File>
+        <Name>spp_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/spp</Path>
+      </File>
+      <File>
+        <Name>lm.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>bt_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>at_parser.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>hci_le.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>l2cap_eretr.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>drv_usart_buffer_queue_dma.c</Name>
+        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>patch.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr</Path>
+      </File>
+      <File>
+        <Name>drv_usart_local.h</Name>
+        <Path>Header Files/framework/driver/usart/src</Path>
+      </File>
+      <File>
+        <Name>sdp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>bt_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>rfcomm_cmd_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>l2cap_packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>packet.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/utils</Path>
+      </File>
+      <File>
+        <Name>l2cap.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>hci_cmd_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_usart_dma.c</Name>
+        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sdp_utils.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/sdp</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>l2cap_signal.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>rfcomm_mx.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/rfcomm</Path>
+      </File>
+      <File>
+        <Name>script__PB_109_CSR8811_REV16.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>hcitr_bcsp.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>script__PB_27_R20_BC6ROM_A04.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/extra/csr/Driver</Path>
+      </File>
+      <File>
+        <Name>hci_data_buffer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>hci_private.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>bt_timer.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>ssp_event.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/ssp</Path>
+      </File>
+      <File>
+        <Name>hci_data_queue.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/hci</Path>
+      </File>
+      <File>
+        <Name>l2cap_config.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/l2cap</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>bt_private_with_asserts.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+      <File>
+        <Name>bt_storage.h</Name>
+        <Path>Header Files/framework/bluetooth/cdbt/bt</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>300CB8CE657378976BB3743620CE8FDC</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_bt_sk</Path>
+        <Checksum>37D5BBFEDC7CC4BCDCF39E8A67A5929F</Checksum>
+        <ProjectFileChecksum>1492D8CE675C19B6B6A7C163DABED554</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk/framework/system/clk/src</Path>
+        <Checksum>9E1735DC00A06796E5D2C1A7FF8668AC</Checksum>
+        <ProjectFileChecksum>5DA498F967AA302F724192632B838836</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_bt_sk/framework/system/dma</Path>
+        <Checksum>03852E55C37A93C50A04522C41BC8495</Checksum>
+        <ProjectFileChecksum>738431806FEBAD00A84E782BA8A56B9A</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk</Path>
+        <Checksum>D5AAE8B73F831930B6889C5B915BFB41</Checksum>
+        <ProjectFileChecksum>2002B0C259919FAC64F106CEFC96B67E</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk/framework/system/ports/src</Path>
+        <Checksum>188E48B0462971AA9791AA3B481B0660</Checksum>
+        <ProjectFileChecksum>FEA9FB870316973DD98B14AE25062652</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk/bsp</Path>
+        <Checksum>1962B65FC2C4C8BD93E6A733DAACF598</Checksum>
+        <ProjectFileChecksum>76F03F8E0957C5EEFA4094509A59D5B8</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk</Path>
+        <Checksum>78691768A70B572F153DF33BE2BD87A8</Checksum>
+        <ProjectFileChecksum>79CD769212C806E06E77117E4EA47FA9</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_bt_sk</Path>
+        <Checksum>3C43AA41A53478C3E6863727F0C6E199</Checksum>
+        <ProjectFileChecksum>C53194FC1FA8DDF2A6B9F6811B9776CE</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_bt_sk/bsp</Path>
+        <Checksum>04AB0580F03E3BF8D715C790FC2DA905</Checksum>
+        <ProjectFileChecksum>CEF32BD4F13E0DF89A1583205655EB3F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_bt_sk</Path>
+        <Checksum>53F865C2102CB1BD198736E40F0F2472</Checksum>
+        <ProjectFileChecksum>29E4C25DF6414B07902B3A2FFA08EA78</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:\Microchip\harmony\2xxDev\apps\bluetooth\data\data_temp_sens_rgb\firmware\src"/>
+        <Include value="C:\Microchip\harmony\2xxDev\apps\bluetooth\data\data_temp_sens_rgb\firmware\src\system_config\pic32mx_bt_sk"/>
+        <Include value="C:\Microchip\harmony\2xxDev\framework"/>
+        <Include value="C:\Microchip\harmony\2xxDev\apps\bluetooth\data\data_temp_sens_rgb\firmware\src\system_config\pic32mx_bt_sk\framework"/>
+        <Include value="../src/system_config/pic32mx_bt_sk/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../bin/framework/peripheral/PIC32MX270F256D_peripherals.a"/>
+      <Library value="../../../../../../bin/framework/bluetooth/lib_bluetooth_SPPonly_O3_v2_4_1.a"/>
+    </Libraries>
+  </Manifest>
+</pic32mx_bt_sk>

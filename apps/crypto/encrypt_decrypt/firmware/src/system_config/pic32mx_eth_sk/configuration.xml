@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pic32mx_eth_sk version="2.0.0.12">
+  <General>
+    <HarmonyPath path="../../.."/>
+    <Processor name="PIC32MX795F512L"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>sha.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>camellia.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>infback.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>ecc.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>aes.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>asn_public.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>inftrees.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>random.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>certs_test.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>zlib.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>gzguts.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>dh.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sha512.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>inflate.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>port.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>trees.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>rsa.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>internal.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>compress.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>deflate.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>zconf.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>sha256.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>error.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>hash.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>hc128.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>logging.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>uncompr.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>logging.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>md4.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>inflate.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>random.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>misc.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>inffast.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>adler32.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>crypto.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>crypto.h</Name>
+        <Path>Header Files/framework/crypto</Path>
+      </File>
+      <File>
+        <Name>settings.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>mpi_superclass.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ec.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>memory.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>asn.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>visibility.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>des3.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tfm.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>deflate.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>coding.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>inffast.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>ecc.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>rsa.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>hmac.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>arc4.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ssl.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>aes.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>types.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>inftrees.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>zutil.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>trees.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>gzlog.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7/examples</Path>
+      </File>
+      <File>
+        <Name>port.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>compress.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>memory.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>arc4.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>integer.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tfm.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sha512.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>asm.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>integer.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>asn.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>hmac.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>des3.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>rabbit.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>hash.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>crc32.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>error-crypt.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>version.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>misc.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>crc32.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>md2.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>pwdbased.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>pwdbased.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>inffixed.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>mpi_class.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>md5.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ripemd.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>zutil.h</Name>
+        <Path>Header Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>dsa.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sha.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>coding.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>compress.c</Name>
+        <Path>Source Files/framework/crypto/src/zlib-1.2.7</Path>
+      </File>
+      <File>
+        <Name>sha256.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_eth_sk</Path>
+        <Checksum>5BAD36CA7011BCE00BF49C61D8F8D30E</Checksum>
+        <ProjectFileChecksum>55684ED1291E2BF65298F183CB49B1B0</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_eth_sk/bsp</Path>
+        <Checksum>4BFD4ADFBD1349338DAF5682785F28A5</Checksum>
+        <ProjectFileChecksum>A06F3FFEDF29BC232C8D8AFEEE296C28</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk</Path>
+        <Checksum>CE46EE383F1D386A152EB07C31948DFD</Checksum>
+        <ProjectFileChecksum>600E88729A10F235DF2B685E6DB506CB</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk/bsp</Path>
+        <Checksum>13105A2EA4197BA6ED37EC35570DF96E</Checksum>
+        <ProjectFileChecksum>0B91DBB651961F5B77AA74F6D9B4788E</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk</Path>
+        <Checksum>BE644D0142ACA48D9CA2E6255A02CDBA</Checksum>
+        <ProjectFileChecksum>1C599DDD1B59F842C4F91726D8E04876</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>drv_tmr_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_eth_sk/framework/driver/tmr</Path>
+        <Checksum>89CD3C8E9265D0E3AD21A0A64E5994AF</Checksum>
+        <ProjectFileChecksum>5A770ADFA6CD999BEE1B54CF6743F6D7</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_tmr_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk/framework/driver/tmr/src</Path>
+        <Checksum>34B6104EB603021403EAC6EB9F883261</Checksum>
+        <ProjectFileChecksum>5E09C434B1891653232F77734686B260</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk/framework/system/clk/src</Path>
+        <Checksum>FDF6C8068CFFAEEC5F8537A8D6514230</Checksum>
+        <ProjectFileChecksum>155E276CC753D936121531C0CC33ABFF</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk</Path>
+        <Checksum>6C91062AB8826D264BEC7CBC001C7474</Checksum>
+        <ProjectFileChecksum>5002B741C03EF9E23861854020D72CB3</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>9D8C4DC39257E476CD94C0A092540AC4</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_tmr_mapping.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk/framework/driver/tmr/src</Path>
+        <Checksum>94844A42DCFFEF2B4C9BA110246F14FC</Checksum>
+        <ProjectFileChecksum>674F6DDE57716C6E950AFF8BE73B58FA</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_eth_sk</Path>
+        <Checksum>4834ECAE7FE868BA02C538746C73CA8B</Checksum>
+        <ProjectFileChecksum>65926D49ED15B0B4CE40FFA9E1AE6E46</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_eth_sk/framework/system/ports/src</Path>
+        <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
+        <ProjectFileChecksum>54D9A4438720FABE37ED83BD492AC0AF</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:/microchip/harmony/core_v2xx/apps/crypto/encrypt_decrypt/firmware/src"/>
+        <Include value="C:/microchip/harmony/core_v2xx/apps/crypto/encrypt_decrypt/firmware/src/system_config/pic32mx_eth_sk"/>
+        <Include value="C:/microchip/harmony/core_v2xx/framework"/>
+        <Include value="C:/microchip/harmony/core_v2xx/apps/crypto/encrypt_decrypt/firmware/src/system_config/pic32mx_eth_sk/framework"/>
+        <Include value="../src/system_config/pic32mx_eth_sk/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</pic32mx_eth_sk>

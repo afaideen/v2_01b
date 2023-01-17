@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <Designer>
+    <Assets>
+      <Settings bpp="16">
+        <MemoryLocations>
+          <MemoryLocation address="0" id="default"/>
+        </MemoryLocations>
+      </Settings>
+    </Assets>
+    <Screens height="272" width="480">
+      <Screen active="true" background="000000" export="true" name="Screen1" primary="true" visible="true">
+        <Objects/>
+      </Screen>
+    </Screens>
+    <Schemes defaultSchemeName="default">
+      <Scheme name="default">
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>FFFFFF</Primary>
+          <Secondary>404040</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>C0C0C0</EmbossLight>
+          <EmbossDark>404040</EmbossDark>
+          <TextPrimary>000000</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+    </Schemes>
+  </Designer>
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../.."/>
+    <Processor name="PIC32MZ2064DAB288"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>drv_tmr_local.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_pic32mz.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>adpcm.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_fs_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
+        <Name>sys_fs.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>flac.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>mp3.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache.h</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>drv_codec_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4953</Path>
+      </File>
+      <File>
+        <Name>wma.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_host.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>speex.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_dma.c</Name>
+        <Path>Source Files/framework/driver/i2s/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>sys_dma.c</Name>
+        <Path>Source Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>usb_host_scsi_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_scsi.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_i2s.h</Name>
+        <Path>Header Files/framework/driver/i2s</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_msd.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>usb_host.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>usb_msd.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_dma_local.h</Name>
+        <Path>Header Files/framework/driver/i2s/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_local.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>diskio.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/hardware_access</Path>
+      </File>
+      <File>
+        <Name>flac.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_compatibility.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>wma.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>aac.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>scsi.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>mp3.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>usb_host_scsi.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>ff.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>speex.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_msd_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>opus_support.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>drv_ak4953_local.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4953</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>usb_host_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>ff.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/file_system</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.c</Name>
+        <Path>Source Files/framework/driver/i2c/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>usb_host.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>mpfs.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_clk.c</Name>
+        <Path>Source Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>sys_tmr_local.h</Name>
+        <Path>Header Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>ffconf.h</Name>
+        <Path>Header Files/framework/system/fs/fat_fs/src/file_system</Path>
+      </File>
+      <File>
+        <Name>adpcm.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>mpfs_local.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2s/src</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>drv_usb.h</Name>
+        <Path>Header Files/framework/driver/usb</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_pic32mz.c</Name>
+        <Path>Source Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>drv_ak4953.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4953</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>opus_support.h</Name>
+        <Path>Header Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>wav.c</Name>
+        <Path>Source Files/framework/decoder/default/wav/support</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_interface.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>usb_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>drv_ak4953.c</Name>
+        <Path>Source Files/framework/driver/codec/ak4953/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache_pic32mz.S</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_local.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>wav.h</Name>
+        <Path>Header Files/framework/decoder/default/wav/support</Path>
+      </File>
+      <File>
+        <Name>usb_host_msd.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_clk_variant_mapping.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>aac.c</Name>
+        <Path>Source Files/framework/decoder/default/stubs</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>diskio.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mz.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>usb_host_client_driver.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_forced.c</Name>
+        <Path>Source Files/framework/driver/i2c/src/dynamic</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_da_sk_meb2/bsp</Path>
+        <Checksum>7CCA7CD1966811EA4D95D64D6AD2DB35</Checksum>
+        <ProjectFileChecksum>DEBFEE9FA408FBE90D6F36E4B429658F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_da_sk_meb2/framework/system/ports/src</Path>
+        <Checksum>88D3F7A57CCB5380151CD8B2BF816BC3</Checksum>
+        <ProjectFileChecksum>28058084EA2CECE24D0AB1BDAAE85F34</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_da_sk_meb2/bsp</Path>
+        <Checksum>1C2469902DE8F6FA7C85AA73C4B628FF</Checksum>
+        <ProjectFileChecksum>04C3DE1E98CD3611C549A028CBA9AC78</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_da_sk_meb2</Path>
+        <Checksum>B0BCEEAE1E909F252BED58BE1CAD9EC0</Checksum>
+        <ProjectFileChecksum>660D522EECE4C7C0F752C0EEB4D1EA75</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_da_sk_meb2</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>1BCA0BFF489AFDBAF9D28D3D03EA7354</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_da_sk_meb2</Path>
+        <Checksum>F4070F5F607A562EDEAAA7C9ACBA545D</Checksum>
+        <ProjectFileChecksum>013A2727D0D978C2C2F874BB850A2694</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>nvm_disk_images.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_da_sk_meb2/framework/system/fs</Path>
+        <Checksum>B00B90E021F15FFD6B0B1B7F2D0650A5</Checksum>
+        <ProjectFileChecksum>A86535E514108488D88594122927568B</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_da_sk_meb2</Path>
+        <Checksum>50B40A13EA29CC701FF5FB9D37F17944</Checksum>
+        <ProjectFileChecksum>550CD2AE1092E9473AB2A91BFA8A5660</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_da_sk_meb2</Path>
+        <Checksum>EEC92AA986445A38834575EA717AF7FB</Checksum>
+        <ProjectFileChecksum>3FD64AD1F683A23E042E0BED7B10CA52</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mz_da_sk_meb2</Path>
+        <Checksum>F3404EFEA44236E078239EBF8B89D0DE</Checksum>
+        <ProjectFileChecksum>8704732E50A03A2903814208A324796D</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mz_da_sk_meb2/framework/system/dma</Path>
+        <Checksum>0CE14BBEB78DCA8EA4AE6AABF57ACD8D</Checksum>
+        <ProjectFileChecksum>2DCC87E7CB9EC0C0587343FBB5D8C2DB</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:/Git Repo/personal repo/btaudio/apps/audio/universal_audio_decoders/firmware/src"/>
+        <Include value="C:/Git Repo/personal repo/btaudio/apps/audio/universal_audio_decoders/firmware/src/system_config/pic32mz_da_sk_meb2"/>
+        <Include value="C:/Git Repo/personal repo/btaudio/framework"/>
+        <Include value="C:/Git Repo/personal repo/btaudio/apps/audio/universal_audio_decoders/firmware/src/system_config/pic32mz_da_sk_meb2/framework"/>
+        <Include value="../src/system_config/pic32mz_da_sk_meb2/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../bin/framework/peripheral/PIC32MZ2064DAB288_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

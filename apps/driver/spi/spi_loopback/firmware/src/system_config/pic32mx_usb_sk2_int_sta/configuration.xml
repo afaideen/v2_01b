@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../.."/>
+    <Processor name="PIC32MX795F512L"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>drv_spi.h</Name>
+        <Path>Header Files/framework/driver/spi</Path>
+      </File>
+      <File>
+        <Name>drv_spi_sys_queue_local_fifo.h</Name>
+        <Path>Header Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>drv_spi_sys_queue.h</Name>
+        <Path>Header Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>drv_spi_internal.h</Name>
+        <Path>Header Files/framework/driver/spi/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>drv_spi_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/spi/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/system/ports/src</Path>
+        <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>BE644D0142ACA48D9CA2E6255A02CDBA</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>7502633976A53872EBE69D2B00DFB63B</Checksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_static_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>264FD5AD06FB93C875AB1EF385B40F10</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_static_sys_queue.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>E06222D2E5F5F69EE3C77ACD6FCC3059</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>drv_spi_static_rm_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>01CB6CF2A540AF6D306E3EE96FE43232</Checksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>9E4B48B043EE8195276435B87EE14108</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_static_local.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>78123B95B749F09B0D928B421D1260D0</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>F358D09FC43190206206CBEADA3D8380</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/system/clk/src</Path>
+        <Checksum>D98BF06DE2384C667B1216850F415DCE</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/bsp</Path>
+        <Checksum>4BFD4ADFBD1349338DAF5682785F28A5</Checksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta</Path>
+        <Checksum>6BB89993970000011E448B13E11CAEF0</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>drv_spi_static_sys_queue.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>3D489FB0B5415BB6F80FA34FC0CEE9F7</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/bsp</Path>
+        <Checksum>13105A2EA4197BA6ED37EC35570DF96E</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_static.h</Name>
+        <Path>Header Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static</Path>
+        <Checksum>696B6563E3B236B4032D042E9FADE84C</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_mapping.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>B87F1B432EB46D73C88D4AA14D54E94C</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_static.c</Name>
+        <Path>Source Files/app/system_config/pic32mx_usb_sk2_int_sta/framework/driver/spi/static/src</Path>
+        <Checksum>18C3829D0FBF8643F993FB971AA700D2</Checksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="E:/official/git/core/apps/driver/spi/spi_loopback/firmware/src"/>
+        <Include value="E:/official/git/core/apps/driver/spi/spi_loopback/firmware/src/system_config/pic32mx_usb_sk2_int_sta"/>
+        <Include value="E:/official/git/core/framework"/>
+        <Include value="E:/official/git/core/apps/driver/spi/spi_loopback/firmware/src/system_config/pic32mx_usb_sk2_int_sta/framework"/>
+        <Include value="../src/system_config/pic32mx_usb_sk2_int_sta/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

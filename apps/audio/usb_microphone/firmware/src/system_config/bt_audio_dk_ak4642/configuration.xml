@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <Designer>
+    <Assets>
+      <Settings bpp="16" encoding="ASCII">
+        <MemoryLocations>
+          <MemoryLocation address="0" id="default"/>
+        </MemoryLocations>
+      </Settings>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="false" fileName="Arial" italic="false" location="internal" name="Arial12pt" size="12">
+        <Ranges>
+          <Range end="127" name="range" start="32"/>
+        </Ranges>
+      </Font>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="false" fileName="Arial" italic="false" location="internal" name="Arial14pt" size="14">
+        <Ranges>
+          <Range end="127" name="range" start="32"/>
+        </Ranges>
+      </Font>
+      <Font antialiasing="false" bold="false" compress="false" extendedGlyph="false" fileName="Arial" italic="false" location="internal" name="Arial20pt" size="20">
+        <Ranges>
+          <Range end="127" name="range" start="32"/>
+        </Ranges>
+      </Font>
+      <Image compress="false" fileName="MCHP_LOGO.bmp" height="30" location="internal" name="MCHP_LOGO" width="122">Qk1WKwAAAAAAADYAAAAoAAAAegAAAB4AAAABABgAAAAAACArAAAAAAAAAAAAAAAAAAAAAAAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOSwfPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0zJycpI0wiH3goJp0rKbIlJbUrKbIpJ6UkIoMtJlcuJCo7LR08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHSohKh0chyIk0SMm6CQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn6iAj1iEhly8nQTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dNionJCJ+IiXiJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftIybnHyCVKyIqPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh0nHy4jJLgkJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0gIsYuJkg8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHSwkNCEjySQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7V5f3GZdUzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dRjstxsbMZmjyJCftJCftJCftJCftJCftJCftJCftJCftKy7ti431YWPyJSjtJCftJCftJCftJCftJCftJCftNzru4eL96+vrVExBPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh2op6T////l5v05PO8kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+2OkPb+/v/v8P5TVvEkJ+0kJ+0kJ+0kJ+0kJ+0kJ+2io/f////////Lyso+MyY8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHWRdVvv7+////////7a4+Sgr7SQn7SQn7SQn7SQn7SQn7UpN8O3t/v///////9LT+ysu7SQn7SQn7SQn7SQn7Vha8ff3/v////////7+/o+LhzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dOzAi0NDO/////////////f3/hYb1JSjtJCftJCftJCftLC/uw8T6////////////////nZ73JSjtJCftJCftMTTu09P7////////////////5ubmTUI2PC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi0ePTEiPTEiPTEiPTEiPTEiOy8gOy0dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi0dPTEiPTEiPTEiPTEiPTEiOy4fPC4dPC4dPC4dPC4dOy8fRDgpRjorRjorRjorRjorPzMkPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh1nX1X4+Pj////////////////x8f5UVvEkJ+0kJ+0kJ+16fPT+/v/////////////////19f5ZW/EkJ+0lKO2OkPb9/f////////////////////94dX07LR08Lh08Lh08Lh2Wj4XIxL+/u7Y9MyY8Lh08Lh06LR1SSDxSRzs8Lh08Lh08Lh1RRDbAvLfIxL9/eXJMQTS/u7bIxL9gWVA8Lh1dV064t7bJycnJycnJycnJycnJycnFxcV8dm88MCGinpnIxL94c2w8Lh08Lh08Lh08Lh2zrqfIxL9mYFc8Lh1ZUkm2tbTJycnJycnJycnJycnJycm+vbxsZl48Lh48Lh1lXVO/vbrW1tbb29vb29vb29vb29vNzcx/enM5LBytqKLIxL+BeW88Lh08Lh08Lh1DNia4tK/IxL9bUkdbU0rIxL/FwbxeVEhuZ2DIxL+spp88Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHYWBnP7+/////////////////////8PE+iYo7SQn7To87+zs/f////////////////////X1/k5Q8SQn7UpM8PHx/v///////////////////+zs/kNFyjotJDwuHTwuHTwuHaWgmv////X19UxDODwuHTwuHXhya+zs7Ozs7GxlXTwuHTwuHWFVSP///////4OAfVJJPfLy8v///29qZT4zJujo6P///////////////////////////+np6T0xIsrKyv///5COjDwuHTwuHTwuHTksHeHg3v///3dzbjouIOTk5P////////////////////////////Pz80M6MEk+Md/e3v///////////////////////////9ra2kQ4K9nY1////5yWkDwuHTwuHTwuHUY5Kejo6P///2dgWGdiW/////v7+2xjWIF+ev///9jW0jwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAANSkjJym/ycr7////////////////////sLL4JSjtKCvttbb5////////////////////////kZP2JCftKSztxsf6/////////////////////f3/hIb1JCftJyBGPC4dPC4dPC4djIeB////+Pj4X1ZLPC4dPzIj19fX////////yMfFOS0fPC4dXVhR/////v7+gXhuUkk98vLy////b2plb2de////////7+/v4+Pj4+Pj4+Pj4+Pj4+Pj4eHgPTEiysrK////nJqYT0M1T0M1T0M1YlpP7u7u////d3JsZ19V/v7+////8PDw4+Pj4+Pj4+Pj7Ozs////////ioJ5aWJa/v7+////7u7u4uDe4+De4+De4+De4+DeycfFRzwu2djX////nJaQPC4dPC4dPC4dRjkp6Ojo////Z2BYZ2Jb////+/v7bGNYgX56////3tzZWE0+WE0+WE0+WE0+WE0+TkIzPC4ePC4dAAA3KzAhI9dHSfDw8f7////////////q6v1GSfAkJ+1sbvP4+P/////////////////////Y2fwvMu4kJ+17ffT9/f/////////////////////Ky/ssL+4kJ+0sJmg8Lh08Lh08Lh1vamT////8/PxwZ108Lh1eV0/////////////09PRdVEk8Lh1xa2X////7+/toX1VSST3y8vL///9vamWLhHr////39/daVEw9Myc9Myc9Myc9Myc9Myc9Myc9MSLKysr////29vbt7e3t7e3t7e329vb////19fVfVUl9dWv////6+vpiXVU9Myc9Myc9MydYT0Tr6+v///+UkY1vamX////09PReWE87LR08Lh08Lh08Lh08Lh08Lh08Lh3Z2Nf///+clpA8Lh08Lh08Lh1GOSno6Oj///9nYFhnYlv////7+/tsY1iBfnr////////////////////////////p6ellXlc8Lh0AADgsNyMm5yQn7Xp89P39//////39/4OE9SUo7TU47t3d/P////////////////////n5/mNl8iQn7UFD7+bm/f////////////////////j4/1FU8SQn7SMm6DEnQjwuHTwuHTwuHV5XTf///////4J5bjwuHamnpf///////////////5aUkTotHYF8dv////n5+VFIPlJJPfLy8v///29qZZaOhf///97e3kY6KzwuHTwuHTwuHTwuHTwuHTwuHT0xIsrKyv///////////////////////////769vDsvIY6Fe////+Tk5EtAMTwuHTwuHTwuHT8zJMvLy////5eWlG9qZf///+vr6z00KDwuHTwuHTwuHTwuHTwuHTwuHTwuHdnY1/////Hw7+Ti3+Ti3+Ti3+Xj4fz8/P///2dgWGdiW/////v7+2xjWIF+ev///////////////////////////////7y7ujwwIAAAOC05JCfrJCftKSztr7D4////xsb6Ky7uJSjtpKb3/////////////////////v7/pKb4JintKSvtsrP4/////////////////////v7/lpj2JSjtJCftIB6EOy0ePC4dPC4dPC4dXFFE9vb2////hIF+SD0v7+/u////4ODg8fHx////4eHhRDgqmZSO////9vb2OzEmUkk98vLy////b2pllo6F////19fXRDgoPC4dPC4dPC4dPC4dPC4dPC4dPTEiysrK////1dXUrKqnrKqnrKqntrWz+Pj4+/v7bmVajoV7////3d3dRzstPC4dPC4dPC4dPDAhw8PD////l5aUb2pl////6+vrPTQoPC4dPC4dPC4dPC4dPC4dPC4dPC4d2djX////////////////////////////////Z2BYZ2Jb////+/v7bGNYgX56////6enokY6MkY6MkY6MkY6M2NfW////4eHhRzorAAA3LDMiJN0kJ+0kJ+08P+/V1/xMTvAkJ+1YW/H6+v7////////////////////j5P08Pu8kJ+1oa/P7+//////////////////////X2Pw2Oe4kJ+0iI8YvJSo8Lh08Lh08Lh08Lh1ORDbo6Oj///+YlZJ9eXP+/v7///+Pi4ejoJ3///////9wamGtqKH////u7u08Lh1SST3y8vL///9vamWWjoX////f399HOis8Lh08Lh08Lh08Lh08Lh08Lh09MSLKysr///+Qjow8Lh08Lh08Lh06LR3h4N7///93c26OhXv////l5eVMQDI8Lh08Lh08Lh0/MyTLy8v///+XlpRvamX////r6+s9NCg8Lh08Lh08Lh08Lh08Lh08Lh08Lh3Z2Nf////29vbs7Ozs7Ozs7Ozt7e39/f3///9nYFhnYlv////7+/tsY1iBfnr////Y1tI8Lh08Lh08Lh08Lh2DfHP////q6upJPS4AADYqKR8hyiQn7SQn7SQn7Tc67iQn7S8y7tHS+////////////////////////3J09CQn7TAz7t/g/P////////////////////n6/2hq8yQn7SMm5yUgVzwuHTwuHTwuHTwuHTwuHUI3Kdvb2////6+tq8fFw/////Dw8FdNQVVORf///////7q5t7azr////9XU1DwuHVJJPfLy8v///29qZY2FfP////r6+lxUTD0vHj0vHj0vHj0vHj0vHj0vHj0xIsrKyv///5GPjD0vHj0vHj0vHkE1JuXk4v///3dzbn93bf////v7+2NcVT0vHj0vHj0vHlRKP+/v7////46Ni29qZf////b29mhhWT0vHj0vHj0vHj0vHj0vHj0vHjwuHdnY1////6Whm05CM05CM05CM1dMPuvr6////2dgWGdiW/////v7+2xjWIF+ev///9nW0z0vHj0vHj0vHj0vHo2Ig////+rq6kk9LgAAOSwdIyKmJCftJCftJCftJCftJSjtkZP2/v7/////////////////////ubr5JintJintoKL3////////////////////////q6z4JCftJCftHx+ZPC4dPC4dPC4dPC4dPC4dPC4dOy4f1NLQ////5eXl9vb2////t7WzOCscPzIiycnI////+vr629vb////ubm4PC4dUkk98vLy////b2plbmde////////////////////////////////4eHhPTEiysrK////8vLy5OTk5OTk5OTk8fHx////////d3JsY1tR/v7+/////Pz85OTk5OTk5OTk+Pj4////////ioJ5bGRb/v7+////////////////////////////0tLSPTIk2djX////nJaQPC4dPC4dPC4dRjkp6Ojo////Z2BYZ2Jb////+/v7bGNYgX56////+vr65OTk5OTk5OTk5ubm/f39////1NTUQjYnAAA8Lh0nI20kJ+wkJ+0kJ+0kJ+0qLO68vfr////////////////////r6/1ISvAkJ+0pLO7Fxvr////////////////////p6f05PO8kJ+0gI9UqIi08Lh08Lh08Lh08Lh08Lh08Lh08Lh3Bvrv////////////8/Px0bGM8Lh08Lh1/enT///////////////+kop88Lh1SST3y8vL///9vamU9Myjq6ur////////////////////////////U1NQ9MSLKysr////////////////////////////z8/NbUUU/MiPm5ub////////////////////////////09PRORDlKPzHh4N/////////////////////////////S0dA9MSLZ2Nf///+clpA8Lh08Lh08Lh1GOSno6Oj///9nYFhnYlv////7+/tsY1iBfnr///////////////////////////////+hnZk8Lh4AADwuHTAmMSEk2SQn7SQn7SQn7SQn7UpN8Ozt/v////////////7+/4eI9SUo7SQn7SQn7UpN8PPz/v////////////3+/3Z39CQn7SQn6yIeZjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHailof///////////+Tj4zswIzwuHTwuHUtBNOXl5f///////////52WjjwuHUlANL6+vcjIx1tWUTwuHV9XTru7u+Hh4OPj4uPj4uPj4uPj4tvb2nNxbTovIJ+fnsjIx8jIx8jIx8jIx8jIx8jIx8LCwXl1cDwvHjwuHVtTSri4uOHh4OPj4uPj4uPj4uLi4cPDw21mXTwuHjwuHV1WTbm5uOHh4OPj4uPj4uPj4uPj4tbW1oF7dDwuHauqqMjIx396czwuHTwuHTwuHUM2Jra2tcjIx1dQSFVQSsjIx8XFxF1USWhlYcjIx8jIx8jIx8jIx8jIx8jIx8fHxpqXkkU5LDwuHQAAPC4dPC4dHx6EJCftJCftJCftJCftJCftdHb0/f3/////////yMr7Ky7uJCftJCftJCftJCfte330/Pz/////////u7z6Ki3uJCftISKoOCshPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4djImF////////////lJCLPC4dPC4dPC4dPC4dpqOf////////////gHpyPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh0sIyUgItAkJ+0kJ+0kJ+0kJ+0mKe20tfn////19f5QUvAkJ+0kJ+0kJ+0kJ+0kJ+0pLO2ztPn////r6/1IS/AkJ+0jJdwtJDo8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh14c23////////39/dNRDo8Lh08Lh08Lh08Lh1eVk339/f///////9kXVU8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHSwlUyMm4yQn7SQn7SQn7SQn7TU47pKT9mRm8iQn7SQn7SQn7SQn7SQn7SQn7SQn7TY574+R9lZY8SQn7SQn7SEfdzwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHU9ENuLi4f39/Zyalz0wHzwuHTwuHTwuHTwuHT0wH6mopv7+/tTU00U5KjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dOSscGxlhIiXiJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftJCftHyG7MCUfPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dOi8hPjQpPC4dPC4dPC4dPC4dPC4dPC4dPC4dOy4dOTEnNCoePC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh04KxwjH2MiJd8kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0kJ+0iJeEnIUhKPjBiWExCNyk8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHSsjRR0gwCQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7SQn7CEfiTstH3l3da6urnp0bjwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAAPC4dPC4dPC4dPC4dPC4dPC4dPC4dNiohJyNuIiTJIyboJCftJCftJCftJCftJCftJCftJCftJCftJCftIybpIyS7NioqPC4dcG5qm5ubcWtkPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dPC4dAAA8Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh01KSQjH1AmJI8dH7ggI9QiJeMkJ+0jJuUgI9cfIb4nJZQmIFI2KSI8Lh08Lh09Lx5COCw6LR08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh08Lh0AADwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTUpITcrLjgsNDktOTgsNTgsLzYqJDwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHTwuHQAA</Image>
+    </Assets>
+    <Screens height="220" width="176">
+      <Screen active="true" background="000000" clearOnShow="true" doubleBuffer="false" export="true" name="MainScreen" primary="true" visible="true">
+        <Objects>
+          <Primitive type="TextPrimitive">
+            <Name>Text1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>0</ZOrder>
+            <Origin>30,55</Origin>
+            <Text>Codec: AK4642EN</Text>
+            <Font>Arial12pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="TextPrimitive">
+            <Name>Version</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>1</ZOrder>
+            <Origin>31,71</Origin>
+            <Text>USB : v1.1</Text>
+            <Font>Arial14pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="TextPrimitive">
+            <Name>Frequency</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>2</ZOrder>
+            <Origin>30,42</Origin>
+            <Text>Sample Frequency : 16KHz</Text>
+            <Font>Arial12pt</Font>
+            <Color>FFFFFF</Color>
+          </Primitive>
+          <Primitive type="TextPrimitive">
+            <Name>DemoName</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>3</ZOrder>
+            <Origin>30,24</Origin>
+            <Text>Harmony USB Microphone</Text>
+            <Font>Arial14pt</Font>
+            <Color>FCFCFC</Color>
+          </Primitive>
+          <Primitive type="ImagePrimitive">
+            <Name>Image1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>4</ZOrder>
+            <Origin>4,1</Origin>
+            <Image>MCHP_LOGO</Image>
+            <TransparencyColor>1D2E3C</TransparencyColor>
+          </Primitive>
+          <Primitive type="RectanglePrimitive">
+            <Name>Rectangle1</Name>
+            <Enabled>true</Enabled>
+            <Visible>true</Visible>
+            <ZOrder>5</ZOrder>
+            <Point1>0,-5</Point1>
+            <Point2>220,34</Point2>
+            <Radius>15</Radius>
+            <Outline>false</Outline>
+            <FillStyle>Gradient_Down</FillStyle>
+            <StartColor>FF0000</StartColor>
+            <EndColor>000000</EndColor>
+          </Primitive>
+        </Objects>
+      </Screen>
+    </Screens>
+    <Schemes defaultSchemeName="default">
+      <Scheme name="default">
+        <Font>Arial12pt</Font>
+        <Alpha>100</Alpha>
+        <BackgroundOffset>0,0</BackgroundOffset>
+        <EmbossSize>3</EmbossSize>
+        <Colors>
+          <Primary>FFFFFF</Primary>
+          <Secondary>404040</Secondary>
+          <Disabled>C0C0C0</Disabled>
+          <Background>000000</Background>
+          <EmbossLight>C0C0C0</EmbossLight>
+          <EmbossDark>404040</EmbossDark>
+          <TextPrimary>000000</TextPrimary>
+          <TextSecondary>FFFFFF</TextSecondary>
+          <TextDisabled>404040</TextDisabled>
+          <GradientStart>000000</GradientStart>
+          <GradientEnd>FFFFFF</GradientEnd>
+        </Colors>
+        <FillStyle>Color</FillStyle>
+        <BackgroundType>None</BackgroundType>
+      </Scheme>
+    </Schemes>
+  </Designer>
+  <General>
+    <HarmonyPath path="../../.."/>
+    <Processor name="PIC32MX470F512L"/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>gfx_gol_picture.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_progress_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_static_text.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_pmp_config.h</Name>
+        <Path>Header Files/framework/driver/pmp/config</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
+        <Name>usb_device_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>gfx.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_window.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_otm2201a.h</Name>
+        <Path>Header Files/framework/driver/gfx/controller/otm2201a</Path>
+      </File>
+      <File>
+        <Name>drv_pmp_local.h</Name>
+        <Path>Header Files/framework/driver/pmp/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_digital_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_common.h</Name>
+        <Path>Header Files/framework/driver/gfx</Path>
+      </File>
+      <File>
+        <Name>usb_device.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_read_write.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>gfx_types_image.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_otm2201a.c</Name>
+        <Path>Source Files/framework/driver/gfx/controller/otm2201a/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_dma.c</Name>
+        <Path>Source Files/framework/driver/i2s/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_edit_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>drv_gfx_controller.h</Name>
+        <Path>Header Files/framework/driver/gfx/controller</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs</Path>
+      </File>
+      <File>
+        <Name>sys_dma.c</Name>
+        <Path>Source Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>drv_ak4642.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4642</Path>
+      </File>
+      <File>
+        <Name>drv_pmp.h</Name>
+        <Path>Header Files/framework/driver/pmp</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_list_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_pic32mx.c</Name>
+        <Path>Source Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2s.h</Name>
+        <Path>Header Files/framework/driver/i2s</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>usb_host.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_dma_local.h</Name>
+        <Path>Header Files/framework/driver/i2s/src</Path>
+      </File>
+      <File>
+        <Name>gfx_types_resource.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_font.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_local.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_compatibility.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_surface.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mx.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs/src</Path>
+      </File>
+      <File>
+        <Name>drv_ak4642.c</Name>
+        <Path>Source Files/framework/driver/codec/ak4642/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_audio_v1_0.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_clk_pic32mx.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_text_entry.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_colors.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_primitive.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_group_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_static.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_scroll_bar.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c.c</Name>
+        <Path>Source Files/framework/driver/i2c/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_v1_0.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>usb_device.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk.c</Name>
+        <Path>Source Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>drv_i2s_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2s/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_check_box.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>gfx_types_macros.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_codec_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4642</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>drv_usb.h</Name>
+        <Path>Header Files/framework/driver/usb</Path>
+      </File>
+      <File>
+        <Name>usb_billboard.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs.c</Name>
+        <Path>Source Files/framework/driver/usb/usbfs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>gfx.c</Name>
+        <Path>Source Files/framework/gfx/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_interface.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>usb_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>usb_device_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_audio_v1_0.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_meter.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_custom_control.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>drv_ak4642_local.h</Name>
+        <Path>Header Files/framework/driver/codec/ak4642</Path>
+      </File>
+      <File>
+        <Name>gfx_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_local.h</Name>
+        <Path>Header Files/framework/driver/i2c/src</Path>
+      </File>
+      <File>
+        <Name>gfx_gol_radio_button.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_device.c</Name>
+        <Path>Source Files/framework/driver/usb/usbfs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_clk_variant_mapping.h</Name>
+        <Path>Header Files/framework/system/clk/src</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>drv_i2c_mapping.h</Name>
+        <Path>Header Files/framework/driver/i2c</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs</Path>
+      </File>
+      <File>
+        <Name>usb_host_client_driver.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>gfx_resources_int.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>E904BE87943F736798535EA63413A220</Checksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>95FA578FFD94389AA25FC6EC0553B18A</Checksum>
+        <ProjectFileChecksum>70E30F926E0FEA52A9580EA92BC0EF04</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>B5ADFD3B1A58B563A6B7F60DE6A6F553</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>01F824AD9AFB5E697BE77A094398D0F5</Checksum>
+        <ProjectFileChecksum>66E0075E66760A6781726064925F116A</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int_reference.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>BA5833ED0B8248BA1F9266861E243A09</Checksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642/bsp</Path>
+        <Checksum>07046F1358687EDF550918509AE69AB0</Checksum>
+        <ProjectFileChecksum>6CFA8CB306AAA74E88587B1FD010BE1D</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>gfx_hgc_definitions.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>A84433E292AFFBD7CE44C86EAE822DA5</Checksum>
+        <ProjectFileChecksum>36550D3917F27AA5CE90B6E6D8686640</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>72FB7DBDF2153C86C163EFD698F9BA00</Checksum>
+        <ProjectFileChecksum>7DF55D2CB60D5428A9E49A8C9B43BF07</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642/bsp</Path>
+        <Checksum>50665A37873737D7242C7D516906366F</Checksum>
+        <ProjectFileChecksum>5F9509502A0D51C2DF2E538E9497C970</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>gfx_resources_int.S</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>5ADB69EB317EC08302F096449314EA8B</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>A9188EBB28685C79A30DEAD49AF266DD</Checksum>
+        <ProjectFileChecksum>8F58A9FA6ED65A0E68AF23EE95B60C35</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_pmp_static.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642/framework/driver/pmp</Path>
+        <Checksum>799BFBF404CEF514B5929A7011B8FCD7</Checksum>
+        <ProjectFileChecksum>472F17259274890E7B86F90E723CE82F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642/framework/system/ports/src</Path>
+        <Checksum>1E68AC407D90FBA4941B31EEB476ED28</Checksum>
+        <ProjectFileChecksum>98955292828CD28BD638F2ECA3807236</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>F5A0CDBB519AC199FD2A3659F0F54A89</Checksum>
+        <ProjectFileChecksum>01A0EFE77981CECBFAB53B9EED34E4A3</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642</Path>
+        <Checksum>63BF7EDE55D2AD9CC64CDA05F211E78A</Checksum>
+        <ProjectFileChecksum>6157AE8BE4214B2A6EDC605A0479611C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_pmp_static.c</Name>
+        <Path>Source Files/app/system_config/bt_audio_dk_ak4642/framework/driver/pmp/src</Path>
+        <Checksum>7F6216B6339F1312FD9F8DC102157FB9</Checksum>
+        <ProjectFileChecksum>52C9FC4225C14BBA9360C35B97BE4F1C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/bt_audio_dk_ak4642/framework/system/dma</Path>
+        <Checksum>03852E55C37A93C50A04522C41BC8495</Checksum>
+        <ProjectFileChecksum>40009BDFEE2FBFF7D9C66F7B3A35C3E8</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:\Microchip\harmony\2xxDev\apps\audio\usb_microphone\firmware\src"/>
+        <Include value="C:\Microchip\harmony\2xxDev\apps\audio\usb_microphone\firmware\src\system_config\bt_audio_dk_ak4642"/>
+        <Include value="C:\Microchip\harmony\2xxDev\framework"/>
+        <Include value="C:\Microchip\harmony\2xxDev\apps\audio\usb_microphone\firmware\src\system_config\bt_audio_dk_ak4642\framework"/>
+        <Include value="../src/system_config/bt_audio_dk_ak4642/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../bin/framework/peripheral/PIC32MX470F512L_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>
