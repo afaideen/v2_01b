@@ -674,6 +674,7 @@
                     <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c</itemPath>
                     <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_api.c</itemPath>
                     <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c</itemPath>
+                    <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
@@ -2123,6 +2124,10 @@
             overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
       </item>
@@ -5010,6 +5015,10 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
@@ -7181,6 +7190,10 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
@@ -8817,6 +8830,10 @@
             overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
       </item>
@@ -12395,7 +12412,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="55000"/>
+        <property key="heap-size" value="53248"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>

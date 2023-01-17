@@ -101,10 +101,6 @@ void __ISR(_TIMER_1_VECTOR, ipl2AUTO) IntHandlerDrvTmrInstance0(void)
 
  
  
-void __ISR(_SPI_2_VECTOR, ipl1AUTO) _IntHandlerSPIInstance0(void)
-{
-    DRV_SPI_Tasks(sysObj.spiObjectIdx0);
-}
 void __ISR(_FCE_VECTOR, ipl4AUTO) _IntHandlerDrvNvm (void)
 {
     DRV_NVM_Tasks(sysObj.drvNvm);

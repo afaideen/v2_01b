@@ -48,7 +48,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdbool.h>
 
 
-int32_t DRV_SPI_MasterEBMSend8BitISR( struct DRV_SPI_DRIVER_OBJECT * pDrvInstance )
+int32_t DRV_SPI_MasterEBMSend8BitPolled( struct DRV_SPI_DRIVER_OBJECT * pDrvInstance )
 {
     register SPI_MODULE_ID spiId = pDrvInstance->spiId;
     register DRV_SPI_JOB_OBJECT * currentJob = pDrvInstance->currentJob;
@@ -89,19 +89,10 @@ int32_t DRV_SPI_MasterEBMSend8BitISR( struct DRV_SPI_DRIVER_OBJECT * pDrvInstanc
             PLIB_SPI_BufferWrite(spiId, 0xff);
         }
     }    
-    if (currentJob->dataLeftToTx + currentJob->dummyLeftToTx == 0)
-    {
-        /* We have no more data to send, turn off the TX interrupt*/
-        PLIB_SPI_FIFOInterruptModeSelect(spiId, SPI_FIFO_INTERRUPT_WHEN_TRANSMIT_BUFFER_IS_COMPLETELY_EMPTY);
-        pDrvInstance->txEnabled = false;
-        
-        /* Turn on the RX Interrupt*/
-        pDrvInstance->rxEnabled = true;
-    }
     return 0;
 }
 
-int32_t DRV_SPI_MasterEBMReceive8BitISR( struct DRV_SPI_DRIVER_OBJECT * pDrvInstance )
+int32_t DRV_SPI_MasterEBMReceive8BitPolled( struct DRV_SPI_DRIVER_OBJECT * pDrvInstance )
 {
     register SPI_MODULE_ID spiId = pDrvInstance->spiId;
     register DRV_SPI_JOB_OBJECT * currentJob = pDrvInstance->currentJob;
@@ -146,14 +137,6 @@ int32_t DRV_SPI_MasterEBMReceive8BitISR( struct DRV_SPI_DRIVER_OBJECT * pDrvInst
         }
     }
     
-    /* Figure out how many bytes are left to be received */
-    size_t bytesLeft = currentJob->dataLeftToRx + currentJob->dummyLeftToRx;
-
-    /* If the bytes left are smaller than the HW mark we have to change the interrupt mode */    
-    if (bytesLeft < PLIB_SPI_RX_8BIT_HW_MARK(spiId))
-    {
-        PLIB_SPI_FIFOInterruptModeSelect(spiId, SPI_FIFO_INTERRUPT_WHEN_RECEIVE_BUFFER_IS_NOT_EMPTY);
-    }
     return 0;    
 }
 

@@ -312,49 +312,49 @@ static void InitializeBoard(void) {
     mPORTESetPinsDigitalIn(BIT_8 | BIT_9);
 
     /* Clear SPI1CON register */
-    SPI1CONCLR = 0xFFFFFFFF;
-
-#ifdef HARDWARE_SPI
-    unsigned int pbFreq;
-
-    /* Enable SPI1, Set to Master Mode & Set CKE bit : Serial output data changes on transition
-      from active clock state to Idle clock state */
-    SPI1CON = 0x00008120;
-    /* Peripheral Bus Frequency = System Clock / PB Divider */
-    pbFreq = (DWORD) CLOCK_FREQ / (1 << mOSCGetPBDIV());
-
-    /* PB Frequency can be maximum 40 MHz */
-    if (pbFreq > (2 * MAX_SPI_CLK_FREQ_FOR_P2P)) {
-        {
-            unsigned int SPI_Clk_Freq;
-
-            unsigned char SPI_Brg1 = 1;
-
-            //For the SPI1
-            /* Continue the loop till you find SPI Baud Rate Register Value */
-            while (1) {
-                /* SPI Clock Calculation as per PIC32 Manual */
-                SPI_Clk_Freq = pbFreq / (2 * (SPI_Brg1 + 1));
-
-                if (SPI_Clk_Freq <= MAX_SPI_CLK_FREQ_FOR_P2P) {
-                    break;
-                }
-
-                SPI_Brg1++;
-            }
-
-
-
-            mSpiChnSetBrg(1, SPI_Brg1);
-
-        }
-    } else {
-        /* Set SPI1 Baud Rate */
-        mSpiChnSetBrg(1, 0);
-
-    }
-
-#endif
+//    SPI1CONCLR = 0xFFFFFFFF;
+//
+//#ifdef HARDWARE_SPI
+//    unsigned int pbFreq;
+//
+//    /* Enable SPI1, Set to Master Mode & Set CKE bit : Serial output data changes on transition
+//      from active clock state to Idle clock state */
+//    SPI1CON = 0x00008120;
+//    /* Peripheral Bus Frequency = System Clock / PB Divider */
+//    pbFreq = (DWORD) CLOCK_FREQ / (1 << mOSCGetPBDIV());
+//
+//    /* PB Frequency can be maximum 40 MHz */
+//    if (pbFreq > (2 * MAX_SPI_CLK_FREQ_FOR_P2P)) {
+//        {
+//            unsigned int SPI_Clk_Freq;
+//
+//            unsigned char SPI_Brg1 = 1;
+//
+//            //For the SPI1
+//            /* Continue the loop till you find SPI Baud Rate Register Value */
+//            while (1) {
+//                /* SPI Clock Calculation as per PIC32 Manual */
+//                SPI_Clk_Freq = pbFreq / (2 * (SPI_Brg1 + 1));
+//
+//                if (SPI_Clk_Freq <= MAX_SPI_CLK_FREQ_FOR_P2P) {
+//                    break;
+//                }
+//
+//                SPI_Brg1++;
+//            }
+//
+//
+//
+//            mSpiChnSetBrg(1, SPI_Brg1);
+//
+//        }
+//    } else {
+//        /* Set SPI1 Baud Rate */
+//        mSpiChnSetBrg(1, 0);
+//
+//    }
+//
+//#endif
 
     /* Set the Interrupt Priority */
     mINT2SetIntPriority(4);     //for radio miwi

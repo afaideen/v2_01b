@@ -155,11 +155,26 @@ const DRV_NVM_INIT drvNvmInit =
     .bufferType = DRV_SPI_BUFFER_TYPE_IDX0,
     .clockMode = DRV_SPI_CLOCK_MODE_IDX0,
     .inputSamplePhase = DRV_SPI_INPUT_PHASE_IDX0,
-    .txInterruptSource = DRV_SPI_TX_INT_SOURCE_IDX0,
-    .rxInterruptSource = DRV_SPI_RX_INT_SOURCE_IDX0,
-    .errInterruptSource = DRV_SPI_ERROR_INT_SOURCE_IDX0,
     .queueSize = DRV_SPI_QUEUE_SIZE_IDX0,
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX0,
+ };
+  /*** Index 1  ***/
+ DRV_SPI_INIT drvSpi1InitData =
+ {
+    .spiId = DRV_SPI_SPI_ID_IDX1,
+    .taskMode = DRV_SPI_TASK_MODE_IDX1,
+    .spiMode = DRV_SPI_SPI_MODE_IDX1,
+    .allowIdleRun = DRV_SPI_ALLOW_IDLE_RUN_IDX1,
+    .spiProtocolType = DRV_SPI_SPI_PROTOCOL_TYPE_IDX1,
+    .commWidth = DRV_SPI_COMM_WIDTH_IDX1,
+    .spiClk = DRV_SPI_SPI_CLOCK_IDX1,
+    .baudRate = DRV_SPI_BAUD_RATE_IDX1,
+    .bufferType = DRV_SPI_BUFFER_TYPE_IDX1,
+    .clockMode = DRV_SPI_CLOCK_MODE_IDX1,
+    .inputSamplePhase = DRV_SPI_INPUT_PHASE_IDX1,
+    .queueSize = DRV_SPI_QUEUE_SIZE_IDX1,
+    .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX1,
+    .numTrfsSmPolled = DRV_SPI_TRANS_PER_SM_RUN_IDX1,
  };
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="DRV_Timer Initialization Data">
@@ -523,9 +538,11 @@ void SYS_Initialize ( void* data )
 
     /*** SPI Driver Index 0 initialization***/
 
-    SYS_INT_VectorPrioritySet(DRV_SPI_INT_VECTOR_IDX0, DRV_SPI_INT_PRIORITY_IDX0);
-    SYS_INT_VectorSubprioritySet(DRV_SPI_INT_VECTOR_IDX0, DRV_SPI_INT_SUB_PRIORITY_IDX0);
     sysObj.spiObjectIdx0 = DRV_SPI_Initialize(DRV_SPI_INDEX_0, (const SYS_MODULE_INIT  * const)&drvSpi0InitData);
+
+    /*** SPI Driver Index 1 initialization***/
+
+    sysObj.spiObjectIdx1 = DRV_SPI_Initialize(DRV_SPI_INDEX_1, (const SYS_MODULE_INIT  * const)&drvSpi1InitData);
     /* Configure the Flash Controller Interrupt Priority */
     SYS_INT_VectorPrioritySet(INT_VECTOR_FCE, INT_PRIORITY_LEVEL4);
 
