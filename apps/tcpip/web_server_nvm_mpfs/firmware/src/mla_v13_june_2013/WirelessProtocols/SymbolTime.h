@@ -66,9 +66,9 @@
 #if defined(__PIC32MX__)
     /* this section is based on the Timer 2/3 module of the PIC32MX family */
     #if defined(WIRELESS_EVAL_BOARD)
-        #define INSTR_FREQ              (CLOCK_FREQ/4)//64MHz--->16MHz    //original
-//        #define INSTR_FREQ              (CLOCK_FREQ)//64MHz--->16MHz    //original
-//        #define INSTR_FREQ                  (GetPeripheralClock())//(CLOCK_FREQ/1)//64MHz--->16MHz
+//        #define INSTR_FREQ              (CLOCK_FREQ/4)//64MHz--->16MHz    //original
+//        #define INSTR_FREQ              (CLOCK_FREQ)//64MHz--->16MHz    
+        #define INSTR_FREQ                  (GetPeripheralClock())//(CLOCK_FREQ/1)//64MHz--->16MHz
     #else
         #define INSTR_FREQ  (CLOCK_FREQ/4)//64MHz--->16MHz
     #endif
@@ -93,17 +93,22 @@
         #define SYMBOL_TO_TICK_RATE         INSTR_FREQ  //original
     #else
         #define CLOCK_DIVIDER                           256 //original
-//        #define CLOCK_DIVIDER                           256*2 //original
 //        #define CLOCK_DIVIDER_SETTING           0x70
     #define CLOCK_DIVIDER_SETTING       T2_PS_1_256|T2_SOURCE_INT
         #define SYMBOL_TO_TICK_RATE             INSTR_FREQ
     #endif
 
 //    #define ONE_SECOND                                  (((DWORD)INSTR_FREQ/1000 * 62500) / (SYMBOL_TO_TICK_RATE / 1000) )//original
-    #define ONE_SECOND                                  (((DWORD)INSTR_FREQ/1000 * 62500) / (SYMBOL_TO_TICK_RATE / 1000) * 4 )
+//    #define ONE_SECOND                                  (((DWORD)INSTR_FREQ/1000 * 39000) / (SYMBOL_TO_TICK_RATE / 1000) * 2 ) // work with CLOCK 40MHz
+//    #define ONE_SECOND                                  (((DWORD)INSTR_FREQ/1000 * 39000) / (SYMBOL_TO_TICK_RATE / 1000) * 2 * 4 ) // work with CLOCK 80MHz
+//    #define ONE_SECOND                                  ( ( (DWORD)CLOCK_FREQ/1000 ) * 4 ) // work with CLOCK 80MHz, 64MHz, 40MHz
+    #define ONE_SECOND                                  ( ( (DWORD)GetPeripheralClock()/1000 ) * 4 ) // work with CLOCK 80MHz, 64MHz, 40MHz
+//    #define ONE_SECOND                                  (((DWORD)INSTR_FREQ/1000 * 62500) / (SYMBOL_TO_TICK_RATE / 1000) * 4 ) // work with CLOCK 64MHz
+//    #define ONE_SECOND                                  (((DWORD)INSTR_FREQ/1000 * 62500) / (SYMBOL_TO_TICK_RATE / 1000) * 5 )    // work with CLOCK 80MHz
+
     /* SYMBOLS_TO_TICKS to only be used with input (a) as a constant, otherwise you will blow up the code */
-    #define SYMBOLS_TO_TICKS(a)                     (((DWORD)(INSTR_FREQ/100000) * a) / (SYMBOL_TO_TICK_RATE / 100000))
-    #define TICKS_TO_SYMBOLS(a)                     (((DWORD)SYMBOL_TO_TICK_RATE/100000) * a / ((DWORD)CLOCK_FREQ/100000))
+    #define SYMBOLS_TO_TICKS(a)                     (((DWORD)(INSTR_FREQ/100000) * a) / (SYMBOL_TO_TICK_RATE / 100000)) //original
+    #define TICKS_TO_SYMBOLS(a)                     (((DWORD)SYMBOL_TO_TICK_RATE/100000) * a / ((DWORD)CLOCK_FREQ/100000)) //original
 #else
     #error "Unsupported processor.  New timing definitions required for proper operation"
 #endif

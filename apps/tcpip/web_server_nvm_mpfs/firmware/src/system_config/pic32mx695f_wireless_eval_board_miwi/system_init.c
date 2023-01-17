@@ -67,10 +67,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 /*** DEVCFG1 ***/
 
-#pragma config FNOSC =      FRCPLL
-#pragma config FSOSCEN =    OFF
+#pragma config FNOSC =      PRIPLL
+#pragma config FSOSCEN =    ON
 #pragma config IESO =       OFF
-#pragma config POSCMOD =    OFF
+#pragma config POSCMOD =    XT
 #pragma config OSCIOFNC =   OFF
 #pragma config FPBDIV =     DIV_1
 #pragma config FCKSM =      CSDCMD
@@ -79,8 +79,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /*** DEVCFG2 ***/
 
 #pragma config FPLLIDIV =   DIV_2
-#pragma config FPLLMUL =    MUL_16
-#pragma config FPLLODIV =   DIV_1
+#pragma config FPLLMUL =    MUL_20
+#pragma config FPLLODIV =   DIV_2
 #pragma config UPLLIDIV =   DIV_2
 #pragma config UPLLEN =     OFF
 /*** DEVCFG3 ***/
