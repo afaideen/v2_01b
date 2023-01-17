@@ -109,20 +109,24 @@ void LCD_WriteData(BYTE data)
 void LCDInit(void)
 {
     // LCD
+        ConfigureLCD_SPI();
 //    mPORTESetPinsDigitalOut(BIT_0 | BIT_1 | BIT_2 | BIT_3);
-        TRISEbits.TRISE0 = 0;
-        TRISEbits.TRISE1 = 0;
-        TRISEbits.TRISE2 = 0;
-        TRISEbits.TRISE3 = 0;
+        LCD_CS_TRIS = 0;
+        LCD_RS_TRIS = 0;
+        LCD_RESET_TRIS = 0;
+        LCD_BKLT_TRIS = 0;
 //     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_0);
 //     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_1);
 //     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_2);
 //     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_3);
     //Configure LCD SPI pins
 //    mPORTFSetPinsDigitalOut(BIT_8);
-     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_F, PORTS_BIT_POS_8);
-//    mPORTDSetPinsDigitalOut(BIT_15);
-     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_15);
+        LCD_SDO3 = 0;
+//     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_F, PORTS_BIT_POS_8);
+        
+//    mPORTDSetPinsDigitalOut(BIT_15);        
+        LCD_SCK3 = 0;
+//     PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_15);       
     
     LCD_CS = 1;
     LCD_RESET = 0;    

@@ -117,12 +117,14 @@
 #define LCD_RESET           LATEbits.LATE2
 #define LCD_BKLT_TRIS       TRISEbits.TRISE3
 #define LCD_BKLT            LATEbits.LATE3
+#define LCD_SDO3            TRISFbits.TRISF8
+#define LCD_SCK3            TRISDbits.TRISD15
 
 #define LCD_SPI_BRG         (SPI3BRG)
 #define LCD_SPICON1         (SPI3CON)
 #define LCD_SPICON1bits     (SPI3CONbits)
 #define LCD_MAX_SPI_FREQ    (100000ul)	// Hz
-// 25LC256 I/O pins
+// 25LC256 I/O pins     SPI1
 //#define EEPROM_ADDRESS_APPCONFIG    0x0000 //0-127 reserved for data miwi config. network wifi config starts at 128 to 511. Address at 512 used for miwi room info
 #define EEPROM_ADDRESS_APPCONFIG    256//0x0000 //0-127 reserved for data miwi config. network wifi config starts at 128 to 511. Address at 512 used for miwi room info
 #define EEPROM_CS_TRIS		(TRISBbits.TRISB14)

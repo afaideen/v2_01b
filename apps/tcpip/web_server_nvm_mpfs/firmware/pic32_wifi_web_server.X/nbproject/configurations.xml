@@ -1061,6 +1061,7 @@
             <itemPath>../../../../../framework/tcpip/src/ipv4.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/dns.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/tcpip_reboot.c</itemPath>
+            <itemPath>../../../../../framework/tcpip/src/sntp.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/tcpip_announce.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="stack" projectFiles="true">
@@ -1652,6 +1653,10 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../../../../../framework/tcpip/src/sntp.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../../../../../framework/tcpip/src/tcpip_announce.c"
             ex="true"
@@ -4084,6 +4089,10 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../../../../../framework/tcpip/src/sntp.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../../../../../framework/tcpip/src/tcpip_announce.c"
             ex="true"
@@ -6878,6 +6887,10 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../../../../../framework/tcpip/src/sntp.c"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../../../../../framework/tcpip/src/tcpip_announce.c"
             ex="true"
             overriding="false">
@@ -8520,6 +8533,10 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../../../../../framework/tcpip/src/sntp.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../../../../../framework/tcpip/src/tcpip_announce.c"
             ex="true"

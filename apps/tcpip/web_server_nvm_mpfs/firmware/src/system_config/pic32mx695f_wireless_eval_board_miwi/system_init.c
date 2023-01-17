@@ -79,8 +79,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /*** DEVCFG2 ***/
 
 #pragma config FPLLIDIV =   DIV_2
-#pragma config FPLLMUL =    MUL_20
-#pragma config FPLLODIV =   DIV_2
+#pragma config FPLLMUL =    MUL_16
+#pragma config FPLLODIV =   DIV_1
 #pragma config UPLLIDIV =   DIV_2
 #pragma config UPLLEN =     OFF
 /*** DEVCFG3 ***/
@@ -377,6 +377,17 @@ const TCPIP_HTTP_MODULE_CONFIG tcpipHTTPInitData =
 };
 
 
+/*** SNTP Client Initialization Data ***/
+const TCPIP_SNTP_MODULE_CONFIG tcpipSNTPInitData =
+{
+    .ntp_server		        = TCPIP_NTP_SERVER,
+    .ntp_interface		    = TCPIP_NTP_DEFAULT_IF,
+    .ntp_connection_type	= TCPIP_NTP_DEFAULT_CONNECTION_TYPE,
+    .ntp_reply_timeout		= TCPIP_NTP_REPLY_TIMEOUT,
+    .ntp_stamp_timeout		= TCPIP_NTP_TIME_STAMP_TMO,
+    .ntp_success_interval	= TCPIP_NTP_QUERY_INTERVAL,
+    .ntp_error_interval		= TCPIP_NTP_FAST_QUERY_INTERVAL,
+};
 
 
 
@@ -470,6 +481,7 @@ const TCPIP_STACK_MODULE_CONFIG TCPIP_STACK_MODULE_CONFIG_TBL [] =
     {TCPIP_MODULE_ANNOUNCE,      &tcpipAnnounceInitData},                     // TCPIP_MODULE_ANNOUNCE,
     {TCPIP_MODULE_DNS_CLIENT,&tcpipDNSClientInitData}, // TCPIP_MODULE_DNS_CLIENT,
     {TCPIP_MODULE_NBNS,          &tcpipNBNSInitData},                           // TCPIP_MODULE_NBNS
+    {TCPIP_MODULE_SNTP,    &tcpipSNTPInitData},                            // TCPIP_MODULE_SNTP,
 
     {TCPIP_MODULE_HTTP_SERVER,   &tcpipHTTPInitData},              // TCPIP_MODULE_HTTP_SERVER,
     {TCPIP_MODULE_REBOOT_SERVER, 0},                           // TCPIP_MODULE_REBOOT_SERVER,
@@ -607,6 +619,11 @@ void SYS_Initialize ( void* data )
     SYS_INT_ExternalInterruptTriggerSet(INT_EXTERNAL_INT_SOURCE1,INT_EDGE_TRIGGER_FALLING);
     SYS_INT_SourceEnable(INT_SOURCE_EXTERNAL_1);
 
+    /*Setup the INT_SOURCE_EXTERNAL_2 and Enable it*/
+    SYS_INT_VectorPrioritySet(INT_VECTOR_INT2, INT_PRIORITY_LEVEL4);
+    SYS_INT_VectorSubprioritySet(INT_VECTOR_INT2, INT_SUBPRIORITY_LEVEL2);
+    SYS_INT_ExternalInterruptTriggerSet(INT_EXTERNAL_INT_SOURCE2,INT_EDGE_TRIGGER_FALLING);
+    SYS_INT_SourceEnable(INT_SOURCE_EXTERNAL_2);
 
 
 

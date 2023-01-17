@@ -1278,6 +1278,10 @@
         <Path>Header Files/framework/system/int/src</Path>
       </File>
       <File>
+        <Name>sntp.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
         <Name>drv_usart.h</Name>
         <Path>Header Files/framework/driver/usart</Path>
       </File>
@@ -1502,18 +1506,38 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>429583E40BC98B3C34BA6EB0382B4D86</Checksum>
+        <Checksum>0886A436E6DCFA31662BD1F9EB79CFAD</Checksum>
         <ProjectFileChecksum>9CADFAEDDA6344B0BD607460210B48F9</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
       </Template>
       <Template>
         <Name>app_miwi.h</Name>
         <Path>Header Files/app</Path>
       </Template>
       <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi/bsp</Path>
+        <Checksum>CDDA47833628BA51E96BAC6D7C4DD55B</Checksum>
+        <ProjectFileChecksum>6DC94887FE0B53D9E34C965F25D3B06C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
+        <Checksum>99DDE0F83F8ADBBEADC2C70BE2B3F01A</Checksum>
+        <ProjectFileChecksum>80FD375557E58936E5B1D5E4390D382D</ProjectFileChecksum>
+      </Template>
+      <Template>
         <Name>custom_http_app.c</Name>
         <Path>Source Files/app</Path>
         <Checksum>1BF307221F86C9B493FACB153A662934</Checksum>
         <ProjectFileChecksum>119F24795B529679D9ED2C2814C05968</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
       </Template>
       <Template>
         <Name>app_miwi.c</Name>
@@ -1526,10 +1550,22 @@
         <ProjectFileChecksum>38E546E2192D227F474AAB342A881A4F</ProjectFileChecksum>
       </Template>
       <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
+        <Checksum>265E34E0D70F3DBBF977CE11DD2019DB</Checksum>
+        <ProjectFileChecksum>A73B2B0F626D6DBF0C3FA481D791CEC8</ProjectFileChecksum>
+      </Template>
+      <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/ports/src</Path>
         <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
         <ProjectFileChecksum>D93E4F18116966CBC70552B31304E455</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
+        <Checksum>A466C6F8A8A151DD07D7B11F05DFEBD5</Checksum>
+        <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>drv_spi_master_ebm_tasks.c</Name>
@@ -1552,8 +1588,12 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>7D8BE43CF32ACDDAFA516841EB77EBCA</Checksum>
+        <Checksum>163F522825530200C03755A780554DB4</Checksum>
         <ProjectFileChecksum>127C4950F1708730DF7F3459D811CD84</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
       </Template>
       <Template>
         <Name>drv_spi_master_rm_tasks.c</Name>
@@ -1584,42 +1624,6 @@
         <Path>Source Files/app</Path>
         <Checksum>4DDEE61F0B54A7C58907AAF949A0AA46</Checksum>
         <ProjectFileChecksum>1B0A811992762435E76A43FAC909FB72</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>main.c</Name>
-        <Path>Source Files/app</Path>
-      </Template>
-      <Template>
-        <Name>bsp.c</Name>
-        <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi/bsp</Path>
-        <Checksum>CDDA47833628BA51E96BAC6D7C4DD55B</Checksum>
-        <ProjectFileChecksum>6DC94887FE0B53D9E34C965F25D3B06C</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>system_tasks.c</Name>
-        <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>99DDE0F83F8ADBBEADC2C70BE2B3F01A</Checksum>
-        <ProjectFileChecksum>80FD375557E58936E5B1D5E4390D382D</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>app.c</Name>
-        <Path>Source Files/app</Path>
-      </Template>
-      <Template>
-        <Name>system_definitions.h</Name>
-        <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>265E34E0D70F3DBBF977CE11DD2019DB</Checksum>
-        <ProjectFileChecksum>A73B2B0F626D6DBF0C3FA481D791CEC8</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>system_config.h</Name>
-        <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>DE61F287B09A9016BE402C3D1146E892</Checksum>
-        <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>app.h</Name>
-        <Path>Header Files/app</Path>
       </Template>
       <Template>
         <Name>bsp.h</Name>

@@ -284,7 +284,7 @@ void SPIFlashInit(void)
 			//case 0x41:	// SST25VF016B		(16 Mbit)	0xAD,  7us, AAI Word
 			//case 0x4A:	// SST25VF032B		(32 Mbit)	0xAD,  7us, AAI Word
 			//case 0x8C:	// SST25VF020B		(2 Mbit)	0xAD,  7us, AAI Word
-			//case 0x8D:	// SST25VF040B		(4 Mbit)	0xAD,  7us, AAI Word
+			case 0x8D:	// SST25VF040B		(4 Mbit)	0xAD,  7us, AAI Word
 			//case 0x8E:	// SST25VF080B		(8 Mbit)	0xAD,  7us, AAI Word				
 			// Assume AAI Word programming is supported for the above commented 
 			// devices and unknown devices.

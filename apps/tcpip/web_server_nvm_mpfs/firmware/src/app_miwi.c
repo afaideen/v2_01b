@@ -64,6 +64,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "legacy/int_5xx_6xx_7xx_legacy.h"
 #include "legacy/system.h"
 #include "WirelessProtocols/SymbolTime.h"
+#include "XEEPROM.h"
 
 void putsUART2(unsigned int *buffer);
 void DelayMs(uint16_t ms);
@@ -141,10 +142,9 @@ void APP_MIWI_Initialize ( void )
         /* Place the App state machine in its initial state. */
         app_miwiData.state = APP_MIWI_STATE_INIT;
         LEDS_OFF();
-        InitializeBoard();
-
-//        ConfigureLCD_SPI();
-        SPI3CONbits.ON = 1;
+//        InitializeBoard();
+        XEEInit();
+        SPIFlashInit();
         LCDInit();
         /*******************************************************************/
         // Display Start-up Splash Screen
@@ -254,26 +254,26 @@ static void InitializeBoard(void) {
 //    DDPCONbits.JTAGEN = 0;
 
     // LEDs
-//    LEDS_OFF();
-//    mPORTESetPinsDigitalOut(BIT_5 | BIT_6 | BIT_7);
+    LEDS_OFF();
+    mPORTESetPinsDigitalOut(BIT_5 | BIT_6 | BIT_7);
 
     // Switches
-//    mPORTDSetPinsDigitalIn(BIT_4 | BIT_5 | BIT_6);
-//    ConfigCNPullups(CN13_PULLUP_ENABLE | CN14_PULLUP_ENABLE | CN15_PULLUP_ENABLE);
+    mPORTDSetPinsDigitalIn(BIT_4 | BIT_5 | BIT_6);
+    ConfigCNPullups(CN13_PULLUP_ENABLE | CN14_PULLUP_ENABLE | CN15_PULLUP_ENABLE);
 
     // LCD
-//    mPORTESetPinsDigitalOut(BIT_0 | BIT_1 | BIT_2 | BIT_3);
+    mPORTESetPinsDigitalOut(BIT_0 | BIT_1 | BIT_2 | BIT_3);
     //Configure LCD SPI pins
-//    mPORTFSetPinsDigitalOut(BIT_8);
-//    mPORTDSetPinsDigitalOut(BIT_15);
+    mPORTFSetPinsDigitalOut(BIT_8);
+    mPORTDSetPinsDigitalOut(BIT_15);
 
     //SPI Flash
-//    mPORTDSetPinsDigitalOut(BIT_14);
+    mPORTDSetPinsDigitalOut(BIT_14);
 
 
     //UART
-//    mPORTFSetPinsDigitalOut(BIT_5);
-//    mPORTFSetPinsDigitalIn(BIT_4);
+    mPORTFSetPinsDigitalOut(BIT_5);
+    mPORTFSetPinsDigitalIn(BIT_4);
 
     //MiWi
 #if defined(MRF24J40) || defined(MRF49XA)
@@ -304,58 +304,58 @@ static void InitializeBoard(void) {
 
     /* Set the Port Directions of SDO, SDI, Clock & Slave Select Signal */
     /* Set SCK port pin to output */
-//    mPORTDSetPinsDigitalOut(BIT_10);
-//    /* Set SDO port pin to output */
-//    mPORTDSetPinsDigitalOut(BIT_0);
-//    /* Set SDI port pin to input */
-//    mPORTCSetPinsDigitalIn(BIT_4);
+    mPORTDSetPinsDigitalOut(BIT_10);
+    /* Set SDO port pin to output */
+    mPORTDSetPinsDigitalOut(BIT_0);
+    /* Set SDI port pin to input */
+    mPORTCSetPinsDigitalIn(BIT_4);
     /* Set INT1, INT2 port pins to input */
-//    mPORTESetPinsDigitalIn(BIT_8 | BIT_9);
+    mPORTESetPinsDigitalIn(BIT_8 | BIT_9);
 
     /* Clear SPI1CON register */
-//    SPI1CONCLR = 0xFFFFFFFF;
-//
-//#ifdef HARDWARE_SPI
-//    unsigned int pbFreq;
-//
-//    /* Enable SPI1, Set to Master Mode & Set CKE bit : Serial output data changes on transition
-//      from active clock state to Idle clock state */
-//    SPI1CON = 0x00008120;
-//    /* Peripheral Bus Frequency = System Clock / PB Divider */
-//    pbFreq = (DWORD) CLOCK_FREQ / (1 << mOSCGetPBDIV());
-//
-//    /* PB Frequency can be maximum 40 MHz */
-//    if (pbFreq > (2 * MAX_SPI_CLK_FREQ_FOR_P2P)) {
-//        {
-//            unsigned int SPI_Clk_Freq;
-//
-//            unsigned char SPI_Brg1 = 1;
-//
-//            //For the SPI1
-//            /* Continue the loop till you find SPI Baud Rate Register Value */
-//            while (1) {
-//                /* SPI Clock Calculation as per PIC32 Manual */
-//                SPI_Clk_Freq = pbFreq / (2 * (SPI_Brg1 + 1));
-//
-//                if (SPI_Clk_Freq <= MAX_SPI_CLK_FREQ_FOR_P2P) {
-//                    break;
-//                }
-//
-//                SPI_Brg1++;
-//            }
-//
-//
-//
-//            mSpiChnSetBrg(1, SPI_Brg1);
-//
-//        }
-//    } else {
-//        /* Set SPI1 Baud Rate */
-//        mSpiChnSetBrg(1, 0);
-//
-//    }
-//
-//#endif
+    SPI1CONCLR = 0xFFFFFFFF;
+
+#ifdef HARDWARE_SPI
+    unsigned int pbFreq;
+
+    /* Enable SPI1, Set to Master Mode & Set CKE bit : Serial output data changes on transition
+      from active clock state to Idle clock state */
+    SPI1CON = 0x00008120;
+    /* Peripheral Bus Frequency = System Clock / PB Divider */
+    pbFreq = (DWORD) CLOCK_FREQ / (1 << mOSCGetPBDIV());
+
+    /* PB Frequency can be maximum 40 MHz */
+    if (pbFreq > (2 * MAX_SPI_CLK_FREQ_FOR_P2P)) {
+        {
+            unsigned int SPI_Clk_Freq;
+
+            unsigned char SPI_Brg1 = 1;
+
+            //For the SPI1
+            /* Continue the loop till you find SPI Baud Rate Register Value */
+            while (1) {
+                /* SPI Clock Calculation as per PIC32 Manual */
+                SPI_Clk_Freq = pbFreq / (2 * (SPI_Brg1 + 1));
+
+                if (SPI_Clk_Freq <= MAX_SPI_CLK_FREQ_FOR_P2P) {
+                    break;
+                }
+
+                SPI_Brg1++;
+            }
+
+
+
+            mSpiChnSetBrg(1, SPI_Brg1);
+
+        }
+    } else {
+        /* Set SPI1 Baud Rate */
+        mSpiChnSetBrg(1, 0);
+
+    }
+
+#endif
 
     /* Set the Interrupt Priority */
     mINT2SetIntPriority(4);     //for radio miwi

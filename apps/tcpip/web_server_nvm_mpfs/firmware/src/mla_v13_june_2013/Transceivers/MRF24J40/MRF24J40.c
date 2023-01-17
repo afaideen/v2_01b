@@ -1594,9 +1594,8 @@
      *
      ********************************************************************/
 
-//TODO: configure later
         #if defined(WIRELESS_EVAL_BOARD)
-            void __ISR(_EXTERNAL_2_VECTOR, ipl4) _INT2Interrupt(void)
+            void __ISR(_EXTERNAL_2_VECTOR, IPL4AUTO) _INT2Interrupt(void)
         #endif
     {
         if(RFIE && RFIF)
