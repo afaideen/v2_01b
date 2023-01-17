@@ -249,7 +249,7 @@ static void InitializeBoard(void) {
 //    // JTAG, you'll still have a tiny window before JTAG goes away.
 //    // The PIC32 Starter Kit debuggers use JTAG and therefore must not
 //    // disable JTAG.
-    DelayMs(50);
+//    DelayMs(50);
 //    DDPCONbits.JTAGEN = 0;
 
     // LEDs
