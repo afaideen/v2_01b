@@ -973,6 +973,12 @@
               <itemPath>../../../../../framework/system/command/src/sys_command.c</itemPath>
             </logicalFolder>
           </logicalFolder>
+          <logicalFolder name="f11" displayName="common" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../framework/system/common/src/sys_buffer.c</itemPath>
+              <itemPath>../../../../../framework/system/common/src/sys_queue.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="console" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../../framework/system/console/src/sys_console.c</itemPath>
@@ -1547,6 +1553,14 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_buffer.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_queue.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../../../../../framework/system/dma/src/sys_dma.c"
             ex="true"
@@ -4003,6 +4017,14 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_buffer.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_queue.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../../../../../framework/system/dma/src/sys_dma.c"
             ex="true"
@@ -6839,6 +6861,14 @@
         <C32Global>
         </C32Global>
       </item>
+      <item path="../../../../../framework/system/common/src/sys_buffer.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_queue.c"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../../../../../framework/tcpip/src/tcpip_announce.c"
             ex="true"
             overriding="false">
@@ -8451,6 +8481,14 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_buffer.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/system/common/src/sys_queue.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../../../../../framework/tcpip/src/smtpc_private.h"
             ex="false"
@@ -12357,7 +12395,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="53248"/>
+        <property key="heap-size" value="55000"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>

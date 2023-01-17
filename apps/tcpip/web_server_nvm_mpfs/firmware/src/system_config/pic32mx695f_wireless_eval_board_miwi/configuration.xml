@@ -642,6 +642,10 @@
         <Path>Header Files/framework/crypto/src</Path>
       </File>
       <File>
+        <Name>sys_buffer.c</Name>
+        <Path>Source Files/framework/system/common/src</Path>
+      </File>
+      <File>
         <Name>arp_manager.h</Name>
         <Path>Header Files/framework/tcpip/src</Path>
       </File>
@@ -892,6 +896,10 @@
       <File>
         <Name>tcpip_types.h</Name>
         <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.c</Name>
+        <Path>Source Files/framework/system/common/src</Path>
       </File>
       <File>
         <Name>berkeley_manager.h</Name>
@@ -1552,7 +1560,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>29B401D8F7011CFD4A43FCE8831233AB</Checksum>
+        <Checksum>25588E95BD8F0B216495932EE442F6F6</Checksum>
         <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1616,10 +1624,10 @@
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\web_server_nvm_mpfs\firmware\src"/>
-        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\web_server_nvm_mpfs\firmware\src\system_config\pic32mx695f_wireless_eval_board_miwi"/>
-        <Include value="D:\Microchip\harmony\v2_01b\framework"/>
-        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\web_server_nvm_mpfs\firmware\src\system_config\pic32mx695f_wireless_eval_board_miwi\framework"/>
+        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src"/>
+        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi"/>
+        <Include value="D:/Microchip/harmony/v2_01b/framework"/>
+        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi/framework"/>
         <Include value="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp"/>
       </C32>
     </CompilerItems>
