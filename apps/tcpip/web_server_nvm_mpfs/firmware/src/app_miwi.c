@@ -268,7 +268,7 @@ static void InitializeBoard(void) {
 //    mPORTDSetPinsDigitalOut(BIT_15);
 
     //SPI Flash
-    mPORTDSetPinsDigitalOut(BIT_14);
+//    mPORTDSetPinsDigitalOut(BIT_14);
 
 
     //UART
