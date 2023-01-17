@@ -143,7 +143,8 @@ void APP_MIWI_Initialize ( void )
         LEDS_OFF();
         InitializeBoard();
 
-        ConfigureLCD_SPI();
+//        ConfigureLCD_SPI();
+        SPI3CONbits.ON = 1;
         LCDInit();
         /*******************************************************************/
         // Display Start-up Splash Screen
@@ -253,26 +254,26 @@ static void InitializeBoard(void) {
 //    DDPCONbits.JTAGEN = 0;
 
     // LEDs
-    LEDS_OFF();
-    mPORTESetPinsDigitalOut(BIT_5 | BIT_6 | BIT_7);
+//    LEDS_OFF();
+//    mPORTESetPinsDigitalOut(BIT_5 | BIT_6 | BIT_7);
 
     // Switches
-    mPORTDSetPinsDigitalIn(BIT_4 | BIT_5 | BIT_6);
-    ConfigCNPullups(CN13_PULLUP_ENABLE | CN14_PULLUP_ENABLE | CN15_PULLUP_ENABLE);
+//    mPORTDSetPinsDigitalIn(BIT_4 | BIT_5 | BIT_6);
+//    ConfigCNPullups(CN13_PULLUP_ENABLE | CN14_PULLUP_ENABLE | CN15_PULLUP_ENABLE);
 
     // LCD
-    mPORTESetPinsDigitalOut(BIT_0 | BIT_1 | BIT_2 | BIT_3);
+//    mPORTESetPinsDigitalOut(BIT_0 | BIT_1 | BIT_2 | BIT_3);
     //Configure LCD SPI pins
-    mPORTFSetPinsDigitalOut(BIT_8);
-    mPORTDSetPinsDigitalOut(BIT_15);
+//    mPORTFSetPinsDigitalOut(BIT_8);
+//    mPORTDSetPinsDigitalOut(BIT_15);
 
     //SPI Flash
     mPORTDSetPinsDigitalOut(BIT_14);
 
 
     //UART
-    mPORTFSetPinsDigitalOut(BIT_5);
-    mPORTFSetPinsDigitalIn(BIT_4);
+//    mPORTFSetPinsDigitalOut(BIT_5);
+//    mPORTFSetPinsDigitalIn(BIT_4);
 
     //MiWi
 #if defined(MRF24J40) || defined(MRF49XA)
@@ -303,13 +304,13 @@ static void InitializeBoard(void) {
 
     /* Set the Port Directions of SDO, SDI, Clock & Slave Select Signal */
     /* Set SCK port pin to output */
-    mPORTDSetPinsDigitalOut(BIT_10);
-    /* Set SDO port pin to output */
-    mPORTDSetPinsDigitalOut(BIT_0);
-    /* Set SDI port pin to input */
-    mPORTCSetPinsDigitalIn(BIT_4);
+//    mPORTDSetPinsDigitalOut(BIT_10);
+//    /* Set SDO port pin to output */
+//    mPORTDSetPinsDigitalOut(BIT_0);
+//    /* Set SDI port pin to input */
+//    mPORTCSetPinsDigitalIn(BIT_4);
     /* Set INT1, INT2 port pins to input */
-    mPORTESetPinsDigitalIn(BIT_8 | BIT_9);
+//    mPORTESetPinsDigitalIn(BIT_8 | BIT_9);
 
     /* Clear SPI1CON register */
 //    SPI1CONCLR = 0xFFFFFFFF;

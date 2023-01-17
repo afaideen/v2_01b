@@ -176,6 +176,24 @@ const DRV_NVM_INIT drvNvmInit =
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX1,
     .numTrfsSmPolled = DRV_SPI_TRANS_PER_SM_RUN_IDX1,
  };
+  /*** Index 2  ***/
+ DRV_SPI_INIT drvSpi2InitData =
+ {
+    .spiId = DRV_SPI_SPI_ID_IDX2,
+    .taskMode = DRV_SPI_TASK_MODE_IDX2,
+    .spiMode = DRV_SPI_SPI_MODE_IDX2,
+    .allowIdleRun = DRV_SPI_ALLOW_IDLE_RUN_IDX2,
+    .spiProtocolType = DRV_SPI_SPI_PROTOCOL_TYPE_IDX2,
+    .commWidth = DRV_SPI_COMM_WIDTH_IDX2,
+    .spiClk = DRV_SPI_SPI_CLOCK_IDX2,
+    .baudRate = DRV_SPI_BAUD_RATE_IDX2,
+    .bufferType = DRV_SPI_BUFFER_TYPE_IDX2,
+    .clockMode = DRV_SPI_CLOCK_MODE_IDX2,
+    .inputSamplePhase = DRV_SPI_INPUT_PHASE_IDX2,
+    .queueSize = DRV_SPI_QUEUE_SIZE_IDX2,
+    .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX2,
+    .numTrfsSmPolled = DRV_SPI_TRANS_PER_SM_RUN_IDX2,
+ };
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="DRV_Timer Initialization Data">
 /*** TMR Driver Initialization Data ***/
@@ -543,6 +561,10 @@ void SYS_Initialize ( void* data )
     /*** SPI Driver Index 1 initialization***/
 
     sysObj.spiObjectIdx1 = DRV_SPI_Initialize(DRV_SPI_INDEX_1, (const SYS_MODULE_INIT  * const)&drvSpi1InitData);
+
+    /*** SPI Driver Index 2 initialization***/
+
+    sysObj.spiObjectIdx2 = DRV_SPI_Initialize(DRV_SPI_INDEX_2, (const SYS_MODULE_INIT  * const)&drvSpi2InitData);
     /* Configure the Flash Controller Interrupt Priority */
     SYS_INT_VectorPrioritySet(INT_VECTOR_FCE, INT_PRIORITY_LEVEL4);
 

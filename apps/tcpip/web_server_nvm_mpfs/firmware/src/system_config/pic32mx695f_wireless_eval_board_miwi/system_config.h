@@ -161,8 +161,8 @@ extern "C" {
 #define SYS_PORT_D_LAT          0x0800
 #define SYS_PORT_D_ODC          0x0000
 
-#define SYS_PORT_E_TRIS         0xFF1F
-#define SYS_PORT_E_LAT          0x0000
+#define SYS_PORT_E_TRIS         0xFF10
+#define SYS_PORT_E_LAT          0x0004
 #define SYS_PORT_E_ODC          0x0000
 
 #define SYS_PORT_F_TRIS         0xFFFF
@@ -230,8 +230,8 @@ extern "C" {
 #define DRV_SPI_DMA 				0
 
 /*** SPI Driver Static Allocation Options ***/
-#define DRV_SPI_INSTANCES_NUMBER 		2
-#define DRV_SPI_CLIENTS_NUMBER 			2
+#define DRV_SPI_INSTANCES_NUMBER 		3
+#define DRV_SPI_CLIENTS_NUMBER 			3
 #define DRV_SPI_ELEMENTS_PER_QUEUE 		10
 /* SPI Driver Instance 0 Configuration */
 #define DRV_SPI_SPI_ID_IDX0 				SPI_ID_2
@@ -262,6 +262,21 @@ extern "C" {
 #define DRV_SPI_QUEUE_SIZE_IDX1 			10
 #define DRV_SPI_RESERVED_JOB_IDX1 			1
 #define DRV_SPI_TRANS_PER_SM_RUN_IDX1 		16
+/* SPI Driver Instance 2 Configuration */
+#define DRV_SPI_SPI_ID_IDX2 				SPI_ID_3
+#define DRV_SPI_TASK_MODE_IDX2 				DRV_SPI_TASK_MODE_POLLED
+#define DRV_SPI_SPI_MODE_IDX2				DRV_SPI_MODE_MASTER
+#define DRV_SPI_ALLOW_IDLE_RUN_IDX2			false
+#define DRV_SPI_SPI_PROTOCOL_TYPE_IDX2 		DRV_SPI_PROTOCOL_TYPE_STANDARD
+#define DRV_SPI_COMM_WIDTH_IDX2 			SPI_COMMUNICATION_WIDTH_8BITS
+#define DRV_SPI_SPI_CLOCK_IDX2 				CLK_BUS_PERIPHERAL_1
+#define DRV_SPI_BAUD_RATE_IDX2 				100000
+#define DRV_SPI_BUFFER_TYPE_IDX2 			DRV_SPI_BUFFER_TYPE_STANDARD
+#define DRV_SPI_CLOCK_MODE_IDX2 			DRV_SPI_CLOCK_MODE_IDLE_HIGH_EDGE_FALL
+#define DRV_SPI_INPUT_PHASE_IDX2 			SPI_INPUT_SAMPLING_PHASE_AT_END
+#define DRV_SPI_QUEUE_SIZE_IDX2 			10
+#define DRV_SPI_RESERVED_JOB_IDX2 			1
+#define DRV_SPI_TRANS_PER_SM_RUN_IDX2 		16
 /*** Timer Driver Configuration ***/
 #define DRV_TMR_INTERRUPT_MODE             true
 #define DRV_TMR_INSTANCES_NUMBER           2
@@ -714,12 +729,40 @@ extern "C" {
 #define RESET_RADIOStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11)
 #define RESET_RADIOStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_11, Value)
 
+/*** Functions for LCD_CS pin ***/
+#define LCD_CSToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_0)
+#define LCD_CSOn() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_0)
+#define LCD_CSOff() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_0)
+#define LCD_CSStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_0)
+#define LCD_CSStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_0, Value)
 
-#include "Configs/HWP PIC32 EVAL_BRD.h"
+/*** Functions for LCD_RS pin ***/
+#define LCD_RSToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_1)
+#define LCD_RSOn() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_1)
+#define LCD_RSOff() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_1)
+#define LCD_RSStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_1)
+#define LCD_RSStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_1, Value)
+
+/*** Functions for LCD_RESET pin ***/
+#define LCD_RESETToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_2)
+#define LCD_RESETOn() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_2)
+#define LCD_RESETOff() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_2)
+#define LCD_RESETStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_2)
+#define LCD_RESETStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_2, Value)
+
+/*** Functions for LCD_BACKLIGHT pin ***/
+#define LCD_BACKLIGHTToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_3)
+#define LCD_BACKLIGHTOn() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_3)
+#define LCD_BACKLIGHTOff() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_3)
+#define LCD_BACKLIGHTStateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_3)
+#define LCD_BACKLIGHTStateSet(Value) PLIB_PORTS_PinWrite(PORTS_ID_0, PORT_CHANNEL_E, PORTS_BIT_POS_3, Value)
+
+
+
 /*** Application Instance 0 Configuration ***/
     
 /*** Application Instance 1 Configuration ***/
-
+#include "Configs/HWP PIC32 EVAL_BRD.h"
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }

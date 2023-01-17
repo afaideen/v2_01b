@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
   <General>
     <HarmonyPath path="../../.."/>
     <Processor name=""/>
@@ -1498,7 +1502,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>2F25DA28B9CCEB4D323F7E1D36D10565</Checksum>
+        <Checksum>429583E40BC98B3C34BA6EB0382B4D86</Checksum>
         <ProjectFileChecksum>9CADFAEDDA6344B0BD607460210B48F9</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1555,6 +1559,7 @@
         <Name>drv_spi_master_rm_tasks.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic</Path>
         <Checksum>8A927633BC2D46F21D1335A09FE558B1</Checksum>
+        <ProjectFileChecksum>BD95B534DDAF57F4F2C593CE6C5890F3</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>drv_spi_tasks.c</Name>
@@ -1593,7 +1598,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>973DEA901A50E15A30640B60BDAF68BC</Checksum>
+        <Checksum>99DDE0F83F8ADBBEADC2C70BE2B3F01A</Checksum>
         <ProjectFileChecksum>80FD375557E58936E5B1D5E4390D382D</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1603,13 +1608,13 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>D06CFD0FD5997AE4D9A376925D6EB100</Checksum>
+        <Checksum>265E34E0D70F3DBBF977CE11DD2019DB</Checksum>
         <ProjectFileChecksum>A73B2B0F626D6DBF0C3FA481D791CEC8</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>DD022FE54AC3F28B03AD99793DA8DF3D</Checksum>
+        <Checksum>CD53D3DCF4838F426C0848BD579CCB0F</Checksum>
         <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1636,8 +1641,4 @@
       <Library value="../../../../../bin/framework/peripheral/PIC32MX695F512L_peripherals.a"/>
     </Libraries>
   </Manifest>
-  <DisplayManager>
-    <SystemInitScript/>
-    <SystemStartScript/>
-  </DisplayManager>
 </configuration>
