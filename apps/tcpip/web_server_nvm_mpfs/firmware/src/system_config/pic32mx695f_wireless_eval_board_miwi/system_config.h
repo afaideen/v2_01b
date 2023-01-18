@@ -710,11 +710,11 @@ extern "C" {
 /*** Functions for BSP_SWITCH_2 pin ***/
 #define BSP_SWITCH_2StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_4)
 
-/*** Functions for BSP_SWITCH_1 pin ***/
-#define BSP_SWITCH_1StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_5)
-
 /*** Functions for BSP_SWITCH_0 pin ***/
-#define BSP_SWITCH_0StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_6)
+#define BSP_SWITCH_0StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_5)
+
+/*** Functions for BSP_SWITCH_1 pin ***/
+#define BSP_SWITCH_1StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_D, PORTS_BIT_POS_6)
 
 /*** Functions for RADIO_WAKE pin ***/
 #define RADIO_WAKEToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_9)

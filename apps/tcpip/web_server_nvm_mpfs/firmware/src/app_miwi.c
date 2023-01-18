@@ -65,12 +65,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "legacy/system.h"
 #include "WirelessProtocols/SymbolTime.h"
 #include "XEEPROM.h"
+#include "WirelessProtocols/MiWiHelper.h"
 
-void putsUART2(unsigned int *buffer);
+
+
+void putsUART2(unsigned char *buffer);
 void DelayMs(uint16_t ms);
 BOOL MiApp_ProtocolInit(BOOL bNetworkFreezer);
 static void InitializeBoard(void);
-//MIWI_TICK MiWi_TickGet(void);
 
 // *****************************************************************************
 // *****************************************************************************
@@ -102,6 +104,13 @@ BYTE LCDText[16*2+1];
 */
 
 APP_MIWI_DATA app_miwiData;
+BYTE miwi_msg[][40] = 
+                    {
+                            "\r\nMiWi Network created\r\n",
+                            "\r\nMiWi Network failed\r\n",
+                            "\r\n",
+                            "\r\nRunning MiWi at channel...",
+                    };
 
 // *****************************************************************************
 // *****************************************************************************
@@ -118,122 +127,6 @@ APP_MIWI_DATA app_miwiData;
 // *****************************************************************************
 // *****************************************************************************
 
-
-/* TODO:  Add any necessary local functions.
-*/
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Application Initialization and State Machine Functions
-// *****************************************************************************
-// *****************************************************************************
-MIWI_TICK t1, t0;
-/*******************************************************************************
-  Function:
-    void APP_MIWI_Initialize ( void )
-
-  Remarks:
-    See prototype in app_miwi.h.
- */
-
-void APP_MIWI_Initialize ( void )
-{
-        /* Place the App state machine in its initial state. */
-        app_miwiData.state = APP_MIWI_STATE_INIT;
-        LEDS_OFF();
-//        InitializeBoard();
-        XEEInit();
-        SPIFlashInit();
-        LCDInit();
-        /*******************************************************************/
-        // Display Start-up Splash Screen
-        /*******************************************************************/
-        LCDBacklightON();
-        LED2_ON();
-        LCDErase();
-        sprintf((char *) LCDText, (char*) "  MiWi - WiFi  ");
-        sprintf((char *) &(LCDText[16]), (char*) " Gateway  Demo");
-        LCDUpdate();
-        
-        DelayMs(200);
-        LCDErase();
-        strcpy((char *) LCDText, DRV_WIFI_DEFAULT_SSID);
-        strcpy((char *) LCDText+16, TCPIP_NETWORK_DEFAULT_IP_ADDRESS);
-        LCDUpdate();
-        
-        DelayMs(200);
-        
-        LCDBacklightOFF();
-//        while(1)
-//        {
-//                LED1_INV();
-////                DelayMs(4000);
-//                BSP_DelayMs(4000);
-//        }
-        MiApp_ProtocolInit(FALSE);
-//        InitSymbolTimer();
-        putsUART( (unsigned int*) "Running MiWi...\r\n" );
-        t1 = MiWi_TickGet();
-}
-
-
-/******************************************************************************
-  Function:
-    void APP_MIWI_Tasks ( void )
-
-  Remarks:
-    See prototype in app_miwi.h.
- */
-
-void APP_MIWI_Tasks ( void )
-{
-         
-        Nop();
-        t0 = MiWi_TickGet();
-        if( MiWi_TickGetDiff(t0, t1) > (2 * ONE_SECOND) )
-        {
-                t1 = MiWi_TickGet();
-                LED_1 ^= 1;
-        }
-        Nop();
-
-    /* Check the application's current state. */
-    switch ( app_miwiData.state )
-    {
-        /* Application's initial state. */
-        case APP_MIWI_STATE_INIT:
-        {
-            bool appInitialized = true;
-       
-        
-            if (appInitialized)
-            {
-            
-                app_miwiData.state = APP_MIWI_STATE_SERVICE_TASKS;
-            }
-            break;
-        }
-
-        case APP_MIWI_STATE_SERVICE_TASKS:
-        {
-        
-            break;
-        }
-
-        /* TODO: implement your application state machine.*/
-        
-
-        /* The default state should never be executed. */
-        default:
-        {
-            /* TODO: Handle error in application's state machine. */
-            break;
-        }
-    }
-}
-
- 
 static void InitializeBoard(void) {
     // WiFi Module hardware Initialization handled by Library
 
@@ -427,6 +320,124 @@ static void InitializeBoard(void) {
 //#endif
 
 }
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Application Initialization and State Machine Functions
+// *****************************************************************************
+// *****************************************************************************
+MIWI_TICK t1, t0;
+/*******************************************************************************
+  Function:
+    void APP_MIWI_Initialize ( void )
+
+  Remarks:
+    See prototype in app_miwi.h.
+ */
+
+void APP_MIWI_Initialize ( void )
+{
+        /* Place the App state machine in its initial state. */
+        app_miwiData.state = APP_MIWI_STATE_INIT;
+        LEDS_OFF();
+//        InitializeBoard();
+        XEEInit();
+        SPIFlashInit();
+        LCDInit();
+        /*******************************************************************/
+        // Display Start-up Splash Screen
+        /*******************************************************************/
+        LCDBacklightON();
+        LED2_ON();
+        LCDErase();
+        sprintf((char *) LCDText, (char*) "  MiWi - WiFi  ");
+        sprintf((char *) &(LCDText[16]), (char*) " Gateway  Demo");
+        LCDUpdate();
+        
+        DelayMs(200);
+        LCDErase();
+        strcpy((char *) LCDText, DRV_WIFI_DEFAULT_SSID);
+        strcpy((char *) LCDText+16, TCPIP_NETWORK_DEFAULT_IP_ADDRESS);
+        LCDUpdate();
+        
+        DelayMs(200);
+        
+        LCDBacklightOFF();
+        if( BSP_SWITCH_0StateGet() )
+        {
+                MiApp_ProtocolInit(FALSE);
+                app_miwiData.connection = CreateNewConnectionAtChannel(currentChannel ) ;
+                app_miwiData.channel = currentChannel;
+        }
+        else{
+                MiApp_ProtocolInit(TRUE);
+        }
+        
+        putsUART(miwi_msg[3] );
+        PrintDec( app_miwiData.channel  );
+        putsUART(miwi_msg[2]);
+        t1 = MiWi_TickGet();
+}
+
+
+/******************************************************************************
+  Function:
+    void APP_MIWI_Tasks ( void )
+
+  Remarks:
+    See prototype in app_miwi.h.
+ */
+
+void APP_MIWI_Tasks ( void )
+{
+         
+        Nop();
+        t0 = MiWi_TickGet();
+        if( MiWi_TickGetDiff(t0, t1) > (2 * ONE_SECOND) )
+        {
+                t1 = MiWi_TickGet();
+                LED_1 ^= 1;
+        }
+        Nop();
+
+    /* Check the application's current state. */
+    switch ( app_miwiData.state )
+    {
+        /* Application's initial state. */
+        case APP_MIWI_STATE_INIT:
+        {
+            bool appInitialized = true;            
+       
+        
+            if (appInitialized)
+            {
+            
+                app_miwiData.state = APP_MIWI_STATE_SERVICE_TASKS;
+            }
+            break;
+        }
+
+        case APP_MIWI_STATE_SERVICE_TASKS:
+        {
+        
+            break;
+        }
+
+        /* TODO: implement your application state machine.*/
+        
+
+        /* The default state should never be executed. */
+        default:
+        {
+            /* TODO: Handle error in application's state machine. */
+            break;
+        }
+    }
+}
+
+ 
+
 /*******************************************************************************
  End of File
  */

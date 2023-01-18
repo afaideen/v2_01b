@@ -72,6 +72,7 @@ extern "C" {
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+    extern BYTE miwi_msg[][40];
 
 // *****************************************************************************
 /* Application states
@@ -113,7 +114,8 @@ typedef struct
     /* The application's current state */
     APP_MIWI_STATES state;
 
-    /* TODO: Define any additional data used by the application. */
+    BOOL                        connection;
+    BYTE                         channel;
 
 } APP_MIWI_DATA;
 

@@ -2,6 +2,7 @@
 #include "GenericTypeDefs.h"
 #include "MiWiHelper.h"
 #include "WirelessProtocols/MCHP_API.h"
+#include "app_miwi.h"
 
 #if defined(MIWI_HELPER)
 extern void DemoOutput_ChannelError(BYTE channel);
@@ -73,12 +74,14 @@ BOOL CreateNewConnectionAtChannel(BYTE channel)
         #endif
     }
     DemoOutput_Channel(channel, 0);
-    Printf("\r\nCreate connection...");
+    Printf("\r\nCreate MiWi connection...");
     MiApp_ConnectionMode(ENABLE_ALL_CONN);
     
     connstat = MiApp_StartConnection(START_CONN_DIRECT, 10, 0xFFFFFFFF);//create connection at selected channel/myChannel
 //    BOOL connstat = MiApp_StartConnection(START_CONN_DIRECT, 0, 0);//also okay!
+    putsUART(connstat ?  miwi_msg[0] : miwi_msg[1] );
     return connstat;
+    
 }
 
 #ifdef ENABLE_ACTIVE_SCAN

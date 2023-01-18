@@ -5,18 +5,24 @@
             <url>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app_miwi.c</url>
             <bookmark id="1">
                 <name/>
-                <line>324</line>
+                <line>439</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/Console.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/DemoOutput.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/NVM.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/NVM.c</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/Configs/HWP%20PIC32%20EVAL_BRD.h</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app_miwi.c</file>
-            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c</file>
-            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/LCD_ST7032.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app_miwi.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/UART.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/mla_v13_june_2013/WirelessProtocols/MiWiHelper.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/main.c</file>
         </group>
     </open-files>
 </project-private>

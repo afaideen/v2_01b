@@ -78,7 +78,8 @@
     #define getcUART1           (char)ReadUART1
     #define ReadUART1()		(U1RXREG)
 
-    void putsUART2(unsigned int *buffer);
+    void putsUART2(unsigned char *buffer);
+//    void putsUART2(unsigned int *buffer);
 //    void putsUART2(const char *buffer);
     
     #define putrsUART2(x) putsUART2(x)

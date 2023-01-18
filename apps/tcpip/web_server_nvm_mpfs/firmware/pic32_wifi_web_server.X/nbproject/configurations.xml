@@ -576,6 +576,7 @@
           <itemPath>../src/mla_v13_june_2013/WirelessProtocols/SymbolTime.h</itemPath>
           <itemPath>../src/mla_v13_june_2013/WirelessProtocols/Console.h</itemPath>
           <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MSPI.h</itemPath>
+          <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MiWiHelper.h</itemPath>
         </logicalFolder>
         <itemPath>../src/mla_v13_june_2013/LCD_ST7032.h</itemPath>
         <itemPath>../src/mla_v13_june_2013/NVM.h</itemPath>
@@ -584,6 +585,7 @@
         <itemPath>../src/mla_v13_june_2013/XEEPROM.h</itemPath>
         <itemPath>../src/mla_v13_june_2013/Configs/ConfigApp.h</itemPath>
         <itemPath>../src/mla_v13_june_2013/Configs/HWP PIC32 EVAL_BRD.h</itemPath>
+        <itemPath>../src/mla_v13_june_2013/DemoOutput.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -617,11 +619,13 @@
             <itemPath>../src/mla_v13_june_2013/WirelessProtocols/SymbolTime.c</itemPath>
             <itemPath>../src/mla_v13_june_2013/WirelessProtocols/Console.c</itemPath>
             <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MSPI.c</itemPath>
+            <itemPath>../src/mla_v13_june_2013/WirelessProtocols/MiWiHelper.c</itemPath>
           </logicalFolder>
           <itemPath>../src/mla_v13_june_2013/LCD_ST7032.c</itemPath>
           <itemPath>../src/mla_v13_june_2013/UART.c</itemPath>
           <itemPath>../src/mla_v13_june_2013/SPIEEPROM.c</itemPath>
           <itemPath>../src/mla_v13_june_2013/SPIFlash.c</itemPath>
+          <itemPath>../src/mla_v13_june_2013/DemoOutput.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="chipkit_wf32" projectFiles="true">
@@ -12373,7 +12377,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="WIRELESS_EVAL_BOARD;CFG_INCLUDE_PIC32_EVAL_BOARD;_SUPPRESS_PLIB_WARNING;PROTOCOL_MIWI_PRO"/>
+                  value="WIRELESS_EVAL_BOARD;CFG_INCLUDE_PIC32_EVAL_BOARD;_SUPPRESS_PLIB_WARNING;PROTOCOL_MIWI_PRO;MIWI_HELPER"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>

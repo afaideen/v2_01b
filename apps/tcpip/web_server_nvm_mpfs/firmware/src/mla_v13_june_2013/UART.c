@@ -58,7 +58,7 @@
 #include <GenericTypeDefs.h>
 #include "UART.h"
 
-void putsUART2(unsigned int *buffer);
+//void putsUART2(unsigned int *buffer);
 
 BYTE ReadStringUART(BYTE *Dest, BYTE BufferLen)
 {
@@ -91,7 +91,8 @@ BYTE ReadStringUART(BYTE *Dest, BYTE BufferLen)
 * Return Value      : None                                                 *  
 ***************************************************************************/
 
-void putsUART2(unsigned int *buffer)
+//void putsUART2(unsigned int *buffer)
+void putsUART2(unsigned char *buffer)
 {
     char * temp_ptr = (char *) buffer;
 

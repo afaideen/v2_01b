@@ -1564,7 +1564,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>A466C6F8A8A151DD07D7B11F05DFEBD5</Checksum>
+        <Checksum>753E850F65AA314808A04CE0B9B9D38D</Checksum>
         <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1628,7 +1628,7 @@
       <Template>
         <Name>bsp.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi/bsp</Path>
-        <Checksum>4E9625BBE5A440551D986EA6E89E92EC</Checksum>
+        <Checksum>6EB2ABFBBB958C4BF34BF7BC1320E8FA</Checksum>
         <ProjectFileChecksum>301A84506536780D7B98D18830B972A6</ProjectFileChecksum>
       </Template>
     </Templates>

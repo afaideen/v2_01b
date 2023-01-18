@@ -129,8 +129,8 @@
 #error Unknown processor.  See Compiler.h
 #endif
 
-#define Printf(x) ConsolePutROMString((ROM char*)x)
-//#define Printf(x)       putsUART(x)
+//#define Printf(x) ConsolePutROMString((ROM char*)x)
+#define Printf(x)       putsUART(x)
 //#define printf(x) ConsolePutROMString((ROM char*)x)
 #endif
 
