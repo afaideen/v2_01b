@@ -1506,7 +1506,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>0886A436E6DCFA31662BD1F9EB79CFAD</Checksum>
+        <Checksum>1F91D39B74350311DDF75D4428D23CE0</Checksum>
         <ProjectFileChecksum>9CADFAEDDA6344B0BD607460210B48F9</ProjectFileChecksum>
       </Template>
       <Template>
@@ -1564,7 +1564,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>753E850F65AA314808A04CE0B9B9D38D</Checksum>
+        <Checksum>09617CA1144764F6D8CCEC7A9246ED8C</Checksum>
         <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>

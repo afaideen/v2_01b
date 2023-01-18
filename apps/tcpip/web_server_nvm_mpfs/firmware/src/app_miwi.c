@@ -66,7 +66,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "WirelessProtocols/SymbolTime.h"
 #include "XEEPROM.h"
 #include "WirelessProtocols/MiWiHelper.h"
-
+#include "mla_v13_june_2013/nvm/nvm.h"
 
 
 void putsUART2(unsigned char *buffer);
@@ -87,6 +87,7 @@ static void InitializeBoard(void);
 #define MAX_SPI_CLK_FREQ_FOR_P2P             (10000000) //For MRF24J40 10MHz, for MRF89XA 1MHz
 
 BYTE LCDText[16*2+1];
+
 
 // *****************************************************************************
 /* Application Data
@@ -111,6 +112,20 @@ BYTE miwi_msg[][40] =
                             "\r\n",
                             "\r\nRunning MiWi at channel...",
                     };
+ static MyConfigType DefaultConfig __attribute__((space(prog),address(0x9D000000))) =
+        {
+            TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
+            TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
+            TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
+            TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
+            TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
+            TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
+            TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
+            TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
+            TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
+        //                    TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
+        //    &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
+        };
 
 // *****************************************************************************
 // *****************************************************************************
@@ -321,6 +336,46 @@ static void InitializeBoard(void) {
 
 }
 
+void example_write_nvm_flash(void)
+{
+       
+
+        
+         static struct 
+        {
+            char                ifName[10 + 1];       // interface name
+            char                nbnsName[16 + 1];     // host name
+            char                ifMacAddr[17 + 1];    // MAC address
+            char                ipAddr[15 +1];        // IP address
+            char                ipMask[15 + 1];       // mask
+            char                gwIP[15 + 1];         // gateway IP address
+            char                dns1IP[15 + 1];       // DNS IP address
+            char                dns2IP[15 + 1];       // DNS IP address
+        }httpNetData = {
+                "ENC28J60  ",
+                "BIRDPEEK        ",
+                "00:04:A3:11:22:33",
+                "192.168.43.200",
+                "255.255.255.0",
+                "192.168.43.1",
+                "192.168.43.10",
+                "192.168.43.11",
+                };
+        DWORD *addr, buffer[4096];        
+        WORD i, size;
+       
+        memset(&buffer, 0xffffffff, sizeof(buffer));
+        size = sizeof(DefaultConfig);
+        memcpy(buffer, &DefaultConfig, 4096); //overwrite/save backup old data
+        memcpy(buffer, &httpNetData, sizeof(httpNetData)); //copy new value from httpNetData into buffer
+        Nop();
+        addr = (DWORD*)&DefaultConfig;
+        NVMUpdate(addr, buffer);
+        
+        Nop();
+        LEDS_ON();
+
+}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -338,6 +393,7 @@ MIWI_TICK t1, t0;
 
 void APP_MIWI_Initialize ( void )
 {
+        
         /* Place the App state machine in its initial state. */
         app_miwiData.state = APP_MIWI_STATE_INIT;
         LEDS_OFF();
@@ -378,6 +434,9 @@ void APP_MIWI_Initialize ( void )
         PrintDec( app_miwiData.channel  );
         putsUART(miwi_msg[2]);
         t1 = MiWi_TickGet();
+        
+        example_write_nvm_flash();
+        
 }
 
 

@@ -205,7 +205,7 @@ extern "C" {
 #define DRV_NVM_INTERRUPT_SOURCE      	INT_SOURCE_FLASH_CONTROL
 
 #define DRV_NVM_MEDIA_SIZE              64
-#define DRV_NVM_MEDIA_START_ADDRESS     0x9D000000
+#define DRV_NVM_MEDIA_START_ADDRESS     0x9D001000
 
 #define DRV_NVM_ERASE_WRITE_ENABLE
 
@@ -789,7 +789,7 @@ extern "C" {
 
 
 /*** Application Instance 0 Configuration ***/
-    
+
 /*** Application Instance 1 Configuration ***/
 #include "Configs/HWP PIC32 EVAL_BRD.h"
 //DOM-IGNORE-BEGIN

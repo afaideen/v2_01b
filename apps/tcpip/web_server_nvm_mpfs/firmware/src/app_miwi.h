@@ -73,6 +73,8 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
     extern BYTE miwi_msg[][40];
+//    extern const TCPIP_NETWORK_CONFIG __attribute__((space(prog),address(0x9D000000))) TCPIP_HOSTS_CONFIGURATION[];
+    extern const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[]; 
 
 // *****************************************************************************
 /* Application states
@@ -119,7 +121,33 @@ typedef struct
 
 } APP_MIWI_DATA;
 
+ typedef struct
+        {
+            char                ifName[10 + 1];       // interface name
+            char                nbnsName[16 + 1];     // host name
+            char                ifMacAddr[17 + 1];    // MAC address
+            char                ipAddr[15 +1];        // IP address
+            char                ipMask[15 + 1];       // mask
+            char                gwIP[15 + 1];         // gateway IP address
+            char                dns1IP[15 + 1];       // DNS IP address
+            char                dns2IP[15 + 1];       // DNS IP address
+            char                pwrMode[6 + 1];       // DNS IP address
+//            /* flags for interface start-up */
+//            TCPIP_NETWORK_CONFIG_FLAGS   startFlags;
+//        //        int                 startFlags;
+//            const struct TCPIP_MAC_OBJECT_TYPE*    pMacObject;  
+//             /* static IPv6 address; only if TCPIP_NETWORK_CONFIG_IPV6_ADDRESS specified can be NULL if not needed*/
+//            char*     ipv6Addr;   
+//            /* subnet prefix length; only if TCPIP_NETWORK_CONFIG_IPV6_ADDRESS specified
+//               0 means default value (64)
+//               should probably always be 64 as requested by the RFC */
+//            int       ipv6PrefixLen;
+//            /* default IPv6 gateway address; only if TCPIP_NETWORK_CONFIG_IPV6_ADDRESS specified
+//               can be NULL if not needed*/
+//            char*     ipv6Gateway; 
 
+//            const TCPIP_NETWORK_CONFIG    netConfig;
+        }MyConfigType;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Routines

@@ -132,7 +132,7 @@ const DRV_NVM_INIT drvNvmInit =
     .nvmID = NVM_ID_0,
     .interruptSource = INT_SOURCE_FLASH_CONTROL,
 
-    .mediaStartAddress = 0x9D000000,
+    .mediaStartAddress = 0x9D001000,
     .nvmMediaGeometry = (SYS_FS_MEDIA_GEOMETRY *)&NVMGeometry
 
 };
@@ -453,6 +453,7 @@ TCPIP_STACK_HEAP_INTERNAL_CONFIG tcpipHeapConfig =
 };
  
 const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[] =
+//const TCPIP_NETWORK_CONFIG __attribute__((space(prog),address(0x9D000000))) TCPIP_HOSTS_CONFIGURATION[] =
 {
 /*** Network Configuration Index 0 ***/
     {
