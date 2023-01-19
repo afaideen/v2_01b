@@ -509,8 +509,8 @@ extern "C" {
 #define TCPIP_HTTP_DEFAULT_LEN		        		10
 #define TCPIP_HTTP_MAX_DATA_LEN		        		100
 #define TCPIP_HTTP_MIN_CALLBACK_FREE				16
-#define TCPIP_HTTP_SKT_TX_BUFF_SIZE		    		512
-#define TCPIP_HTTP_SKT_RX_BUFF_SIZE		    		512
+#define TCPIP_HTTP_SKT_TX_BUFF_SIZE		    		0
+#define TCPIP_HTTP_SKT_RX_BUFF_SIZE		    		0
 #define TCPIP_HTTP_CONFIG_FLAGS		        		1
 #define TCPIP_HTTP_FILE_UPLOAD_ENABLE
 #define TCPIP_HTTP_FILE_UPLOAD_NAME				"mpfsupload"

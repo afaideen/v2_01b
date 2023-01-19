@@ -226,6 +226,28 @@ typedef enum
 
 } APP_STATE;
 
+typedef enum
+{
+    /* Initialize the state machine, and also checks if prescan is allowed. */
+    APP_WIFI_PRESCAN_INIT,
+
+    /* In this state the application waits for the prescan to finish. */
+    APP_WIFI_PRESCAN_WAIT,
+
+    /* In this state the application saves the prescan results. */
+    APP_WIFI_PRESCAN_SAVE,
+
+    /* After prescan, Wi-Fi module is reset in this state. */
+    APP_WIFI_PRESCAN_RESET,
+
+    /* In this state, the application waits for Wi-Fi reset to finish. */
+    APP_WIFI_PRESCAN_WAIT_RESET,
+
+    /* Prescan is complete. */
+    APP_WIFI_PRESCAN_DONE,
+
+} APP_WIFI_PRESCAN_STATE;
+
 // *****************************************************************************
 /* Application Data
 
@@ -246,6 +268,9 @@ typedef struct
     /* application's current state */
     APP_STATE state;
 
+    /* prescan's current state */
+    APP_WIFI_PRESCAN_STATE scanState;
+
     /* application data buffer */
     //uint8_t data[64];
 
@@ -260,14 +285,16 @@ typedef enum {
     MRF24WN_MODULE = 3
 } MRF24W_MODULE_TYPE;
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Application Callback Routines
-// *****************************************************************************
-// *****************************************************************************
-
-/* These routines are called by drivers when certain events occur.
-*/
+typedef struct {
+    uint8_t ssid[32 + 1]; // 32-byte SSID plus null terminator
+    uint8_t networkType;
+    uint8_t prevSSID[32 + 1]; // previous SSID
+    uint8_t prevNetworkType; // previous network type
+    uint8_t wepKeyIndex;
+    uint8_t securityMode;
+    uint8_t securityKey[64 + 1]; // 64-byte key plus null terminator
+    uint8_t securityKeyLen; // number of bytes in security key (can be 0)
+} WF_REDIRECTION_CONFIG;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -337,6 +364,31 @@ void APP_Initialize(void);
     This routine must be called from SYS_Tasks() routine.
  */
 void APP_Tasks(void);
+
+/*******************************************************************************
+  Function:
+    uint8_t APP_WIFI_Prescan(void)
+
+  Summary:
+    Wi-Fi Prescan Function
+
+  Description:
+    This function implements the Wi-Fi prescan in a non blocking manner.
+
+  Precondition:
+    The system and application initialization ("SYS_Initialize") should be
+    called before calling this function.
+
+  Parameters:
+    None.
+
+  Returns:
+    None.
+
+  Remarks:
+    None.
+ */
+uint8_t APP_WIFI_Prescan(void);
 
 #endif /* _APP_HEADER_H */
 

@@ -75,13 +75,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #   define APP_SWITCH_2StateGet() BSP_SWITCH_1StateGet()
 #   define APP_SWITCH_3StateGet() BSP_SWITCH_1StateGet()
 #else
-#   define APP_LED_1 BSP_LED_3
-#   define APP_LED_2 BSP_LED_2
-#   define APP_LED_3 BSP_LED_1
+#   define APP_LED_1 BSP_LED_0
+#   define APP_LED_2 BSP_LED_1
+#   define APP_LED_3 BSP_LED_2
 
-#   define APP_SWITCH_1StateGet() BSP_SWITCH_3StateGet()
-#   define APP_SWITCH_2StateGet() BSP_SWITCH_2StateGet()
-#   define APP_SWITCH_3StateGet() BSP_SWITCH_1StateGet()
+#   define APP_SWITCH_1StateGet() BSP_SWITCH_0StateGet()
+#   define APP_SWITCH_2StateGet() BSP_SWITCH_1StateGet()
+#   define APP_SWITCH_3StateGet() BSP_SWITCH_2StateGet()
 #endif
 
 #if defined(TCPIP_IF_MRF24W) /* Wi-Fi Interface */

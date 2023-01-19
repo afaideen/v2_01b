@@ -31,7 +31,7 @@ DEFAULTCONF=pic32mx695f_wireless_eval_board_miwi
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=chipkit_wf32 pic32mx795_pim__e16 pic32mx795_pim__e16__11n__freertos pic32mx795_pim__e16__freertos pic32mx695f_wireless_eval_board_miwi 
+ALLCONFS=chipkit_wf32 pic32mx795_pim__e16 pic32mx795_pim__e16__11n__freertos pic32mx795_pim__e16__freertos pic32mx695f_wireless_eval_board_miwi 32mx_wireless_eval_board_easyconf 
 
 
 # build
@@ -50,6 +50,7 @@ ALLCONFS=chipkit_wf32 pic32mx795_pim__e16 pic32mx795_pim__e16__11n__freertos pic
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx795_pim__e16__11n__freertos clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx795_pim__e16__freertos clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx695f_wireless_eval_board_miwi clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=32mx_wireless_eval_board_easyconf clean
 
 
 
@@ -60,6 +61,7 @@ ALLCONFS=chipkit_wf32 pic32mx795_pim__e16 pic32mx795_pim__e16__11n__freertos pic
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx795_pim__e16__11n__freertos build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx795_pim__e16__freertos build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx695f_wireless_eval_board_miwi build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=32mx_wireless_eval_board_easyconf build
 
 
 

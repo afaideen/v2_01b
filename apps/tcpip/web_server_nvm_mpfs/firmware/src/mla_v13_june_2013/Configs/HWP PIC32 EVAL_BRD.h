@@ -108,7 +108,7 @@
 #define	SW1                 BUTTON0_IO
 #define	SW2                 BUTTON2_IO
 
-// LCD Pin Definitions
+// LCD Pin Definitions shared with SPI3 SPIFLASH MEMORY
 #define LCD_CS_TRIS         TRISEbits.TRISE0
 #define LCD_CS              LATEbits.LATE0
 #define LCD_RS_TRIS         TRISEbits.TRISE1
@@ -148,7 +148,7 @@
 #define ANALOG_TEMP_TRIS    (TRISBbits.TRISB10)
 #define ANALOG_TEMP_IO      (LATBbits.LATB10)
 
-//SPI Flash
+//SPI Flash, SPI3 shared with LCD
 #define SPIFLASH_CS_TRIS       (TRISDbits.TRISD14)
 #define SPIFLASH_CS_IO         (LATDbits.LATD14)
 #define SPIFLASH_SCK_TRIS      (TRISDbits.TRISD15)

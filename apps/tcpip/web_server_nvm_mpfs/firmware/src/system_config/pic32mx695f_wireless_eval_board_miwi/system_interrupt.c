@@ -78,11 +78,13 @@ void __ISR(_EXTERNAL_1_VECTOR, IPL3AUTO) _IntHandlerExternalInterruptInstance0(v
 }
 
 //Move to MRF24J40.c for Radio Transceiver 802.15.4
-//void __ISR(_EXTERNAL_2_VECTOR, IPL4AUTO) _IntHandlerExternalInterruptInstance1(void)
-//{
-//    PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_EXTERNAL_2);
-//}
+void __ISR(_EXTERNAL_2_VECTOR, IPL4AUTO) _IntHandlerExternalInterruptInstance1(void)
+{
+    ISR_EXT_INT2();
+    PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_EXTERNAL_2);
+}
 
+    
 void __ISR(_TIMER_1_VECTOR, ipl2AUTO) IntHandlerDrvTmrInstance0(void)
 {
     DRV_TMR_Tasks(sysObj.drvTmr0);

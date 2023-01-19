@@ -64,7 +64,7 @@
     #include "WirelessProtocols/SymbolTime.h"
     #include "WirelessProtocols/NVM.h"
     #include "legacy/attribs.h"
-  
+
     /************************ VARIABLES ********************************/
     MACINIT_PARAM   MACInitParams;
     
@@ -1594,9 +1594,10 @@
      *
      ********************************************************************/
 
-        #if defined(WIRELESS_EVAL_BOARD)
-            void __ISR(_EXTERNAL_2_VECTOR, IPL4AUTO) _INT2Interrupt(void)
-        #endif
+//        #if defined(WIRELESS_EVAL_BOARD)
+//            void __ISR(_EXTERNAL_2_VECTOR, IPL4AUTO) _INT2Interrupt(void)
+//        #endif
+    void ISR_EXT_INT2(void)
     {
         if(RFIE && RFIF)
         {  

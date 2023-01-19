@@ -110,8 +110,10 @@ static IWPRIV_SET_PARAM s_app_set_param;
 static OSAL_MUTEX_HANDLE_TYPE s_appLock;
 #endif
 
+bool g_redirect_signal = false;
 WF_CONFIG_DATA g_wifi_cfg;
 WF_DEVICE_INFO g_wifi_deviceInfo;
+WF_REDIRECTION_CONFIG g_redirectionConfig;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -307,8 +309,7 @@ void APP_WIFI_Tasks(void)
              * If the IP address of an interface has changed,
              * display the new value on the system console.
              */
-//            for (i = 0; i < nNets; ++i)
-            for (i = 0; i < 1; ++i)
+            for (i = 0; i < nNets; ++i)
             {
                 IPV4_ADDR ipAddr;
                 TCPIP_NET_HANDLE netH = TCPIP_STACK_IndexToNet(i);

@@ -360,5 +360,6 @@
         } bits;
     } MRF24J40_STATUS;
 
+    void ISR_EXT_INT2(void);
 #endif
 

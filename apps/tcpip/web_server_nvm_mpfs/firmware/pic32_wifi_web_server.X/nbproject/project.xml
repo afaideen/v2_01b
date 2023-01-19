@@ -55,6 +55,8 @@
                 <sourceRootElem>..\src\system_config\pic32mx695f_wireless_eval_board_miwi</sourceRootElem>
                 <sourceRootElem>../../../../../../../../github/microchip/mla_v2013-06-15/Combo/MiWi Protocol to WiFi Wireless Demo Kit/Wireless_Eval_Board</sourceRootElem>
                 <sourceRootElem>../../../../../../../../github/microchip/mla_v2013-06-15/Microchip/WirelessProtocols</sourceRootElem>
+                <sourceRootElem>..\src\32mx_wireless_eval_board_easyconf</sourceRootElem>
+                <sourceRootElem>..\src\system_config\32mx_wireless_eval_board_easyconf</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
@@ -75,6 +77,10 @@
                 </confElem>
                 <confElem>
                     <name>pic32mx695f_wireless_eval_board_miwi</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>32mx_wireless_eval_board_easyconf</name>
                     <type>2</type>
                 </confElem>
             </confList>
