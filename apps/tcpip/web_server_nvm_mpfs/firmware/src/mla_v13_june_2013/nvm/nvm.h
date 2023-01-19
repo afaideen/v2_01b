@@ -135,6 +135,7 @@ unsigned int NVMWriteRow(void* address, void* data);
  ********************************************************************/
 unsigned int NVMErasePage(void* address);
 void NVMUpdate(DWORD *addr, DWORD buffer[]);
+void NVMWrite4K(DWORD *olddata, DWORD *newdata, WORD size_newdata);
 
 /*********************************************************************
  * Function:        unsigned int NVMClearError(void)

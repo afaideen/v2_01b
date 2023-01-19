@@ -89,3 +89,14 @@ void NVMUpdate(DWORD *addr, DWORD buffer[])
         while( i < 4096 )
                 NVMWriteWord(addr++, buffer[i++]);
 }
+
+void NVMWrite4K(DWORD *olddata, DWORD *newdata, WORD size_newdata)
+{
+        DWORD buffer[4096];  
+        memset(&buffer, 0xffffffff, sizeof(buffer));  
+        
+        memcpy(buffer, olddata, 4096); //overwrite/save backup old data at 0x9d00 0000 *olddata
+        memcpy(buffer, newdata, size_newdata); //copy new value from httpNetData into buffer
+        Nop();
+         NVMUpdate(olddata, buffer);
+}

@@ -112,20 +112,20 @@ BYTE miwi_msg[][40] =
                             "\r\n",
                             "\r\nRunning MiWi at channel...",
                     };
- static MyConfigType DefaultConfig __attribute__((space(prog),address(0x9D000000))) =
-        {
-            TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
-            TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
-            TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
-            TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
-            TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
-            TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
-            TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
-            TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
-            TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
-        //                    TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
-        //    &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
-        };
+  MyConfigType DefaultConfig __attribute__((space(prog),address(0x9D000000))) =
+{
+    TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
+    TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
+    TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
+    TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
+    TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
+    TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
+    TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
+    TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
+    TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
+    TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
+//    &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
+};
 
 // *****************************************************************************
 // *****************************************************************************
@@ -337,21 +337,9 @@ static void InitializeBoard(void) {
 }
 
 void example_write_nvm_flash(void)
-{
-       
-
+{      
         
-         static struct 
-        {
-            char                ifName[10 + 1];       // interface name
-            char                nbnsName[16 + 1];     // host name
-            char                ifMacAddr[17 + 1];    // MAC address
-            char                ipAddr[15 +1];        // IP address
-            char                ipMask[15 + 1];       // mask
-            char                gwIP[15 + 1];         // gateway IP address
-            char                dns1IP[15 + 1];       // DNS IP address
-            char                dns2IP[15 + 1];       // DNS IP address
-        }httpNetData = {
+        MyConfigType httpNetData = {
                 "ENC28J60  ",
                 "BIRDPEEK        ",
                 "00:04:A3:11:22:33",
@@ -360,17 +348,15 @@ void example_write_nvm_flash(void)
                 "192.168.43.1",
                 "192.168.43.10",
                 "192.168.43.11",
+                TCPIP_NETWORK_DEFAULT_POWER_MODE,
+                TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
                 };
-        DWORD *addr, buffer[4096];        
-        WORD i, size;
+        DWORD buffer[4096];   
+        DWORD *addr;
+
+        addr = (DWORD*)&DefaultConfig;  //location address 0x9d00 0000
+        NVMWrite4K( addr, (DWORD*)&httpNetData, sizeof(httpNetData));
        
-        memset(&buffer, 0xffffffff, sizeof(buffer));
-        size = sizeof(DefaultConfig);
-        memcpy(buffer, &DefaultConfig, 4096); //overwrite/save backup old data
-        memcpy(buffer, &httpNetData, sizeof(httpNetData)); //copy new value from httpNetData into buffer
-        Nop();
-        addr = (DWORD*)&DefaultConfig;
-        NVMUpdate(addr, buffer);
         
         Nop();
         LEDS_ON();
@@ -435,7 +421,7 @@ void APP_MIWI_Initialize ( void )
         putsUART(miwi_msg[2]);
         t1 = MiWi_TickGet();
         
-        example_write_nvm_flash();
+//        example_write_nvm_flash();
         
 }
 

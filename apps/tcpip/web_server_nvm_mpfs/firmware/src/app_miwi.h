@@ -132,9 +132,9 @@ typedef struct
             char                dns1IP[15 + 1];       // DNS IP address
             char                dns2IP[15 + 1];       // DNS IP address
             char                pwrMode[6 + 1];       // DNS IP address
-//            /* flags for interface start-up */
+            /* flags for interface start-up */
 //            TCPIP_NETWORK_CONFIG_FLAGS   startFlags;
-//        //        int                 startFlags;
+                int                 startFlags;
 //            const struct TCPIP_MAC_OBJECT_TYPE*    pMacObject;  
 //             /* static IPv6 address; only if TCPIP_NETWORK_CONFIG_IPV6_ADDRESS specified can be NULL if not needed*/
 //            char*     ipv6Addr;   
