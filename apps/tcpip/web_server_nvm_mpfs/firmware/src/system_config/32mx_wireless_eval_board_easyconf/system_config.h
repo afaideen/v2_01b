@@ -367,7 +367,7 @@ extern "C" {
 #define MRF_INT_VECTOR INT_VECTOR_INT1
 
 #define DRV_WIFI_DEFAULT_NETWORK_TYPE       DRV_WIFI_NETWORK_TYPE_SOFT_AP
-#define DRV_WIFI_DEFAULT_SSID               "mchp_wireless_eval_brd"
+#define DRV_WIFI_DEFAULT_SSID               "mchp_wifi"
 #define DRV_WIFI_DEFAULT_LIST_RETRY_COUNT   (DRV_WIFI_RETRY_ADHOC) /* Dummy, not used */
 #define DRV_WIFI_DEFAULT_CHANNEL_LIST       {6} /* Set Soft AP network channel */
 
@@ -408,9 +408,10 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-/*** Crypto Library Configuration ***/
 
-#define HAVE_MCAPI
+/* MPLAB Harmony Net Presentation Layer Definitions*/
+#define NET_PRES_NUM_INSTANCE 1
+#define NET_PRES_NUM_SOCKETS 10
 
 
 
@@ -820,6 +821,8 @@ extern "C" {
 /*** Application Instance 0 Configuration ***/
 #include "HWP PIC32 EVAL_BRD.h"
 /*** Application Instance 1 Configuration ***/
+
+/*** Application Instance 2 Configuration ***/
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

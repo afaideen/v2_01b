@@ -154,6 +154,10 @@
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
       </File>
       <File>
+        <Name>net_pres_certstore.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
         <Name>internal.h</Name>
         <Path>Header Files/framework/crypto/src</Path>
       </File>
@@ -280,6 +284,10 @@
       <File>
         <Name>hmac.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>net_pres_socketapiconversion.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
       </File>
       <File>
         <Name>lhash.h</Name>
@@ -570,6 +578,10 @@
         <Path>Header Files/framework/tcpip/src</Path>
       </File>
       <File>
+        <Name>net_pres_socketapi.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
         <Name>sys_console_uart.c</Name>
         <Path>Source Files/framework/system/console/src</Path>
       </File>
@@ -788,6 +800,10 @@
       <File>
         <Name>tfm.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>net_pres.c</Name>
+        <Path>Source Files/framework/net/pres/src</Path>
       </File>
       <File>
         <Name>sys_devcon_local.h</Name>
@@ -1926,6 +1942,10 @@
         <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
       </File>
       <File>
+        <Name>net_pres_transportapi.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
         <Name>sys_random_local.h</Name>
         <Path>Header Files/framework/system/random/src</Path>
       </File>
@@ -2070,6 +2090,10 @@
         <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
       </File>
       <File>
+        <Name>net_pres_local.h</Name>
+        <Path>Header Files/framework/net/pres/src</Path>
+      </File>
+      <File>
         <Name>conf.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
       </File>
@@ -2124,6 +2148,10 @@
       <File>
         <Name>tcpip_ethernet.h</Name>
         <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>net_pres_encryptionproviderapi.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
       </File>
       <File>
         <Name>mpi_superclass.h</Name>
@@ -2344,26 +2372,10 @@
     </Files>
     <Templates>
       <Template>
-        <Name>sys_ports_static.c</Name>
-        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/system/ports/src</Path>
-        <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
-        <ProjectFileChecksum>E6A6ED20E6BFA52DC2D632E2E4C8444C</ProjectFileChecksum>
-      </Template>
-      <Template>
         <Name>bsp.c</Name>
         <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/bsp</Path>
         <Checksum>CDDA47833628BA51E96BAC6D7C4DD55B</Checksum>
         <ProjectFileChecksum>5008A63E2F70FD114FC4E0AE4B0C65D6</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>system_interrupt.c</Name>
-        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
-        <Checksum>72E6E59B0B688F429BAD3185A461EF73</Checksum>
-        <ProjectFileChecksum>6E4B21CDEB71407E983635F9AA9419C4</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>main.c</Name>
-        <Path>Source Files/app</Path>
       </Template>
       <Template>
         <Name>app_miwi.h</Name>
@@ -2382,14 +2394,10 @@
         <ProjectFileChecksum>E4C335C7CABA70E2950600D8210DA533</ProjectFileChecksum>
       </Template>
       <Template>
-        <Name>bsp.h</Name>
-        <Path>Header Files/app/system_config/32mx_wireless_eval_board_easyconf/bsp</Path>
-        <Checksum>6EB2ABFBBB958C4BF34BF7BC1320E8FA</Checksum>
-        <ProjectFileChecksum>AA6C6FD3181CF17058EDEEAFF8FA6836</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>app_wifi_easyconfig.c</Name>
-        <Path>Source Files/app</Path>
+        <Name>net_pres_enc_glue.h</Name>
+        <Path>Header Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres</Path>
+        <Checksum>3FDF1EF72050D3301433F2D1893EC89D</Checksum>
+        <ProjectFileChecksum>7447DAA3D0AE3F7CE1FD66CE15DB998C</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>nvm_disk_images.h</Name>
@@ -2406,7 +2414,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
-        <Checksum>07B58A5B9B8A73498F5CE0522B837C74</Checksum>
+        <Checksum>A773FED13F45BAF31FA40FC22250828D</Checksum>
         <ProjectFileChecksum>8227E0D8DDF7B0FBD0B7EECA307621FE</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2416,26 +2424,14 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
-        <Checksum>F46563BD9362F412B44E6B947182452C</Checksum>
+        <Checksum>528B51820EB842983A41154D2DD81E20</Checksum>
         <ProjectFileChecksum>C5EDA6A018434F1607040EB8D2ED2A49</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
-        <Checksum>F2E55480D55B58865662531C54972F1D</Checksum>
+        <Checksum>C040E947316F5672BD15C50BE77DBAEC</Checksum>
         <ProjectFileChecksum>A858C2C5661D1F35D52EA2EDBD739E87</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>system_exceptions.c</Name>
-        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
-        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
-        <ProjectFileChecksum>0CC2AC1B3B165619E8E62EFDF50A97F0</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>drv_spi_tasks.c</Name>
-        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/driver/spi/dynamic</Path>
-        <Checksum>6A9CAA93CBADF84F7B41AF81ED26C19A</Checksum>
-        <ProjectFileChecksum>2CA39E4DCF82D3B5474F7ED87AB7ADA8</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app_wifi_easyconfig.h</Name>
@@ -2460,9 +2456,73 @@
         <ProjectFileChecksum>5AF9A8EDFAA1515080F42E4DB59E024F</ProjectFileChecksum>
       </Template>
       <Template>
+        <Name>app_tls_client.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>http_print.c</Name>
+        <Path>Source Files/app</Path>
+        <Checksum>36A16C64F0D37124A6311EF2414217A6</Checksum>
+        <ProjectFileChecksum>1B0A811992762435E76A43FAC909FB72</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/system/ports/src</Path>
+        <Checksum>83E28A9509BFB1178054925FE7ED2D75</Checksum>
+        <ProjectFileChecksum>E6A6ED20E6BFA52DC2D632E2E4C8444C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
+        <Checksum>D3E33E698EC60FE57DA2EBC95CF7BD13</Checksum>
+        <ProjectFileChecksum>6E4B21CDEB71407E983635F9AA9419C4</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>app_tls_client.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/32mx_wireless_eval_board_easyconf/bsp</Path>
+        <Checksum>6EB2ABFBBB958C4BF34BF7BC1320E8FA</Checksum>
+        <ProjectFileChecksum>AA6C6FD3181CF17058EDEEAFF8FA6836</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app_wifi_easyconfig.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>net_pres_enc_glue.c</Name>
+        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres</Path>
+        <Checksum>55E30EA7D4F2F3E990F9BF6632FE9134</Checksum>
+        <ProjectFileChecksum>AF8A40C66B9DD29373CC0C291D351BE6</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>0CC2AC1B3B165619E8E62EFDF50A97F0</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_spi_tasks.c</Name>
+        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/driver/spi/dynamic</Path>
+        <Checksum>6A9CAA93CBADF84F7B41AF81ED26C19A</Checksum>
+        <ProjectFileChecksum>2CA39E4DCF82D3B5474F7ED87AB7ADA8</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>net_pres_cert_store.c</Name>
+        <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres</Path>
+        <Checksum>3F4E03EE648D13926A69502089B5DAD5</Checksum>
+        <ProjectFileChecksum>0F6CAAFFA47D3682552DABDF80F3AFC0</ProjectFileChecksum>
+      </Template>
+      <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/32mx_wireless_eval_board_easyconf</Path>
-        <Checksum>BA71A5EE50934CD488B74089B1AD49C6</Checksum>
+        <Checksum>D92633C6A56A1A94A17E450F99D4CAA1</Checksum>
         <ProjectFileChecksum>9487A7081D40C0A2C39068E97D212C82</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2471,19 +2531,13 @@
         <Checksum>F78A27976D8E0E5DB99817734D27EB0C</Checksum>
         <ProjectFileChecksum>0EEA07BB07232F5C37CC3D7FBFCA65DE</ProjectFileChecksum>
       </Template>
-      <Template>
-        <Name>http_print.c</Name>
-        <Path>Source Files/app</Path>
-        <Checksum>36A16C64F0D37124A6311EF2414217A6</Checksum>
-        <ProjectFileChecksum>1B0A811992762435E76A43FAC909FB72</ProjectFileChecksum>
-      </Template>
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\web_server_nvm_mpfs\firmware\src"/>
-        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\web_server_nvm_mpfs\firmware\src\system_config\32mx_wireless_eval_board_easyconf"/>
-        <Include value="D:\Microchip\harmony\v2_01b\framework"/>
-        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\web_server_nvm_mpfs\firmware\src\system_config\32mx_wireless_eval_board_easyconf\framework"/>
+        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src"/>
+        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/32mx_wireless_eval_board_easyconf"/>
+        <Include value="D:/Microchip/harmony/v2_01b/framework"/>
+        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/32mx_wireless_eval_board_easyconf/framework"/>
         <Include value="../src/system_config/32mx_wireless_eval_board_easyconf/bsp"/>
         <Define value="HAVE_CONFIG_H"/>
         <Include value="../../../../../third_party/tcpip/wolfssl"/>

@@ -27,7 +27,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=pic32_wifi_web_server.X
 
 # Active Configuration
-DEFAULTCONF=32mx_wireless_eval_board_easyconf
+DEFAULTCONF=pic32mx695f_wireless_eval_board_miwi
 CONF=${DEFAULTCONF}
 
 # All Configurations

@@ -86,12 +86,14 @@ void SYS_Tasks ( void )
     DRV_SPI_Tasks(sysObj.spiObjectIdx2);
 
     /* Maintain Middleware & Other Libraries */
+    NET_PRES_Tasks(sysObj.netPres);
     /* Maintain the TCP/IP Stack*/
     TCPIP_STACK_Task(sysObj.tcpip);
 
     /* Maintain the application's state machine. */
     APP_WIFI_EASYCONFIG_Tasks();
     APP_MIWI_Tasks();
+    APP_TLS_CLIENT_Tasks();
 }
 
 

@@ -404,16 +404,10 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-/*** Crypto Library Configuration ***/
 
-#define HAVE_MCAPI
-#define NO_CERTS
-#define NO_PWDBASED
-#define NO_OLD_TLS
-#define NO_SHA
-#define NO_AES
-#define NO_ASN
-#define NO_RSA
+/* MPLAB Harmony Net Presentation Layer Definitions*/
+#define NET_PRES_NUM_INSTANCE 1
+#define NET_PRES_NUM_SOCKETS 3
 
 
 
@@ -791,6 +785,8 @@ extern "C" {
 /*** Application Instance 0 Configuration ***/
 
 /*** Application Instance 1 Configuration ***/
+
+/*** Application Instance 2 Configuration ***/
 #include "Configs/HWP PIC32 EVAL_BRD.h"
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

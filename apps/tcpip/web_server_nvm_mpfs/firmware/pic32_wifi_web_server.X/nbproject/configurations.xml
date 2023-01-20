@@ -13,7 +13,12 @@
               <itemPath>../src/system_config/32mx_wireless_eval_board_easyconf/bsp/bsp.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
-              <logicalFolder name="f1" displayName="system" projectFiles="true">
+              <logicalFolder name="f1" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="fs" projectFiles="true">
                   <itemPath>../src/system_config/32mx_wireless_eval_board_easyconf/framework/system/fs/nvm_disk_images.h</itemPath>
                 </logicalFolder>
@@ -49,12 +54,18 @@
               <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
-              <logicalFolder name="f1" displayName="system" projectFiles="true">
+              <logicalFolder name="f1" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="fs" projectFiles="true">
                   <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/fs/nvm_disk_images.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
+            <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/config.h</itemPath>
             <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h</itemPath>
             <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_definitions.h</itemPath>
           </logicalFolder>
@@ -131,6 +142,7 @@
         <itemPath>../src/app.h</itemPath>
         <itemPath>../src/app_miwi.h</itemPath>
         <itemPath>../src/app_wifi_easyconfig.h</itemPath>
+        <itemPath>../src/app_tls_client.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="crypto" projectFiles="true">
@@ -919,7 +931,13 @@
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="system" projectFiles="true">
+              <logicalFolder name="f2" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.c</itemPath>
+                  <itemPath>../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_cert_store.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f3" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="clk" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/32mx_wireless_eval_board_easyconf/framework/system/clk/src/sys_clk_static.c</itemPath>
@@ -991,7 +1009,13 @@
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="system" projectFiles="true">
+              <logicalFolder name="f2" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.c</itemPath>
+                  <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_cert_store.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f3" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="clk" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/clk/src/sys_clk_static.c</itemPath>
@@ -1141,6 +1165,8 @@
         <itemPath>../src/app_wifi_easyconfig.c</itemPath>
         <itemPath>../src/app_commands.c</itemPath>
         <itemPath>../src/custom_http_app_easyconfig.c</itemPath>
+        <itemPath>../src/app_tls_client.c</itemPath>
+        <itemPath>../src/custom_http_app_webserver.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
         <logicalFolder name="f1" displayName="crypto" projectFiles="true">
@@ -1378,9 +1404,9 @@
             <itemPath>../../../../../framework/tcpip/src/dns.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/tcpip_announce.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/sntp.c</itemPath>
-            <itemPath>../../../../../framework/tcpip/src/tcpip_reboot.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/dhcps.c</itemPath>
             <itemPath>../../../../../framework/tcpip/src/dnss.c</itemPath>
+            <itemPath>../../../../../framework/tcpip/src/tcpip_reboot.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="stack" projectFiles="true">
           </logicalFolder>
@@ -2086,20 +2112,6 @@
       <item path="../../../../../framework/tcpip/src/tcpip_reboot.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../../../../../third_party/rtos/FreeRTOS/Source/croutine.c"
             ex="true"
@@ -3507,6 +3519,18 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
@@ -3546,272 +3570,78 @@
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/config.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_api.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/fs/nvm_disk_images.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/ports/src/sys_ports_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_definitions.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_exceptions.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_interrupt.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx795_pim__e16/bsp/bsp.c"
             ex="true"
@@ -5802,20 +5632,6 @@
       <item path="../../../../../framework/tcpip/src/tcpip_reboot.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../../../../../third_party/rtos/FreeRTOS/Source/croutine.c"
             ex="true"
@@ -7391,6 +7207,18 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
@@ -7718,272 +7546,78 @@
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/config.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_api.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/fs/nvm_disk_images.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/ports/src/sys_ports_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_definitions.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_exceptions.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_interrupt.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx795_pim__e16__11n__freertos/FreeRTOSConfig.h"
             ex="true"
@@ -9879,20 +9513,6 @@
       <item path="../../../../../framework/tcpip/src/tcpip_reboot.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../../../../../third_party/tcpip/wolfssl/cyassl/callbacks.h"
             ex="true"
@@ -10850,6 +10470,18 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
@@ -11177,272 +10809,78 @@
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/config.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_api.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/fs/nvm_disk_images.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/ports/src/sys_ports_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_definitions.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_exceptions.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_interrupt.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx795_pim__e16/bsp/bsp.c"
             ex="true"
@@ -12806,20 +12244,6 @@
       <item path="../../../../../framework/tcpip/src/tcpip_reboot.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../../../../../third_party/tcpip/wolfssl/cyassl/callbacks.h"
             ex="true"
@@ -13777,6 +13201,18 @@
             ex="true"
             overriding="false">
       </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
@@ -14104,272 +13540,78 @@
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/config.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_api.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/fs/nvm_disk_images.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/ports/src/sys_ports_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_definitions.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_exceptions.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_interrupt.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx795_pim__e16/bsp/bsp.c"
             ex="true"
@@ -15389,6 +14631,98 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/adler32.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/compress.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/crc32.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/crc32.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/deflate.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/deflate.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/examples/gzlog.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/gzguts.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/infback.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inffast.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inffast.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inffixed.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inflate.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inflate.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inftrees.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/inftrees.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/trees.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/trees.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/uncompr.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/zconf.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/zlib.h"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/zutil.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../../framework/crypto/src/zlib-1.2.7/zutil.h"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../../../../../framework/driver/wifi/mrf24w/src/drv_wifi_rtos_wrapper.c"
             ex="true"
             overriding="false">
@@ -15732,7 +15066,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_certstore.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -15750,7 +15084,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_encryptionproviderapi.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -15768,7 +15102,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_socketapi.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -15786,7 +15120,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_socketapiconversion.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -15804,7 +15138,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_transportapi.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -15822,7 +15156,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/src/net_pres.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -15840,7 +15174,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/src/net_pres_local.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -16441,934 +15775,6 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/callbacks.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/certs_test.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/crl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/aes.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/arc4.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/asn.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/asn_public.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/blake2-impl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/blake2-int.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/blake2.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/camellia.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/chacha.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/coding.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/compress.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/des3.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/dh.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/dsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/ecc.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/error-crypt.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/fips_test.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/hc128.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/hmac.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/integer.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/logging.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/md2.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/md4.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/md5.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/memory.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/misc.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/mpi_class.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/mpi_superclass.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/pkcs7.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/poly1305.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/port/pic32/pic32mz-crypt.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/pwdbased.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/rabbit.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/random.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/ripemd.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/rsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/settings.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/settings_comp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/sha.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/sha256.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/sha512.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/tfm.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/types.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/visibility.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ctaocrypt/wc_port.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/error-ssl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/internal.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ocsp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/asn1.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/bio.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/bn.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/conf.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/crypto.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/des.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/dh.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/dsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ec.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ec25519.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ecdh.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ecdsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ed25519.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/engine.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/err.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/evp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/hmac.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/lhash.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/md4.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/md5.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ocsp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/opensslconf.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/opensslv.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ossl_typ.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/pem.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/pkcs12.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/rand.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ripemd.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/rsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/sha.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ssl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/stack.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/ui.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/x509.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/openssl/x509v3.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/options.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/sniffer.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/sniffer_error.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/ssl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/test.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/cyassl/version.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/examples/client/client.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/examples/echoclient/echoclient.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/examples/echoserver/echoserver.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/examples/server/server.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/crl.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/internal.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/io.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/keys.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/ocsp.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/sniffer.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/ssl.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/src/tls.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/tests/unit.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/asm.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/blake2b.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/camellia.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/chacha.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/chacha20_poly1305.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/curve25519.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/dh.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/dsa.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/ecc_fp.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/ed25519.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/fe_low_mem.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/fe_operations.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/ge_low_mem.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/ge_operations.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/hc128.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/md2.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/md4.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/misc.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/pkcs7.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/poly1305.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/rabbit.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfcrypt/src/ripemd.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/callbacks.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/certs_test.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/crl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/error-ssl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/internal.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/mem_track.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/ocsp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/asn1.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/bio.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/bn.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/conf.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/crypto.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/des.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/dh.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/dsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ec.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ec25519.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ecdh.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ecdsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ed25519.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/engine.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/err.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/evp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/hmac.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/lhash.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/md4.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/md5.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ocsp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/opensslconf.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/opensslv.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ossl_typ.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/pem.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/pkcs12.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/rand.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ripemd.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/rsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/sha.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ssl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/stack.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/ui.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/x509.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/openssl/x509v3.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/options.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/sniffer.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/sniffer_error.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/ssl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/test.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/version.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/aes.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/arc4.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/asn.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/asn_public.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2-impl.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2-int.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/camellia.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/chacha.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/chacha20_poly1305.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/coding.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/compress.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/curve25519.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/des3.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/dh.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/dsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ecc.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ed25519.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/error-crypt.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/fe_operations.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/fips_test.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ge_operations.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/hash.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/hc128.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/hmac.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/idea.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/integer.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/logging.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md2.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md4.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md5.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/memory.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/misc.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/mpi_class.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/mpi_superclass.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/pkcs7.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/poly1305.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port/nrf51.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port/pic32/pic32mz-crypt.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port/ti/ti-ccm.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port/ti/ti-hash.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/pwdbased.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/rabbit.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/random.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ripemd.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/rsa.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/settings.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/sha.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/sha256.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/sha512.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/signature.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/srp.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/tfm.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/types.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/visibility.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/wc_encrypt.h"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="../../../../../third_party/tcpip/wolfssl/wolfssl/wolfcrypt/wc_port.h"
-            ex="true"
-            overriding="false">
-      </item>
       <item path="../src/app_commands.c" ex="true" overriding="false">
         <C32>
         </C32>
@@ -17416,6 +15822,8 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../src/custom_http_app_webserver.c" ex="true" overriding="false">
       </item>
       <item path="../src/mla_v13_june_2013/Common/delay.c"
             ex="true"
@@ -17508,6 +15916,18 @@
             overriding="false">
       </item>
       <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/driver/spi/dynamic/drv_spi_tasks.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/32mx_wireless_eval_board_easyconf/framework/net/pres/net_pres_enc_glue.h"
             ex="true"
             overriding="false">
       </item>
@@ -18888,7 +17308,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/mla_v13_june_2013/Common;../src/mla_v13_june_2013;../src/mla_v13_june_2013/Configs;../src;../src/system_config/pic32mx695f_wireless_eval_board_miwi;../../../../../framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp"/>
+                  value="../src/mla_v13_june_2013/Common;../src/mla_v13_june_2013;../src/mla_v13_june_2013/Configs;../src;../src/system_config/pic32mx695f_wireless_eval_board_miwi;../../../../../framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework;../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp;../../../../../third_party/tcpip/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -18898,7 +17318,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="WIRELESS_EVAL_BOARD;CFG_INCLUDE_PIC32_EVAL_BOARD;_SUPPRESS_PLIB_WARNING;PROTOCOL_MIWI_PRO;MIWI_HELPER"/>
+                  value="WIRELESS_EVAL_BOARD;CFG_INCLUDE_PIC32_EVAL_BOARD;_SUPPRESS_PLIB_WARNING;PROTOCOL_MIWI_PRO;MIWI_HELPER;HAVE_CONFIG_H"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -18954,7 +17374,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="53248"/>
+        <property key="heap-size" value="65000"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -21194,7 +19614,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_certstore.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21212,7 +19632,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_encryptionproviderapi.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21230,7 +19650,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_socketapi.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21248,7 +19668,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_socketapiconversion.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21266,7 +19686,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/net_pres_transportapi.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21284,7 +19704,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/src/net_pres.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21302,7 +19722,7 @@
         </C32Global>
       </item>
       <item path="../../../../../framework/net/pres/src/net_pres_local.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <C32>
         </C32>
@@ -21448,20 +19868,6 @@
       <item path="../../../../../framework/tcpip/src/tcpip_reboot.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../../../../../third_party/rtos/FreeRTOS/Source/croutine.c"
             ex="true"
@@ -21914,6 +20320,20 @@
         </C32Global>
       </item>
       <item path="../src/app.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/app_wifi.c" ex="true" overriding="false">
         <C32>
@@ -21931,7 +20351,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="../src/custom_http_app.c" ex="true" overriding="false">
+      <item path="../src/custom_http_app.c" ex="false" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -21946,6 +20366,8 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="../src/custom_http_app_easyconfig.c" ex="true" overriding="false">
       </item>
       <item path="../src/mla_v13_june_2013/Common/delay.c"
             ex="true"
@@ -22304,272 +20726,78 @@
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/bsp/bsp.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/config.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_api.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/driver/spi/dynamic/drv_spi_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_cert_store.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/clk/src/sys_clk_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/fs/nvm_disk_images.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/framework/system/ports/src/sys_ports_static.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_definitions.h"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_exceptions.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_interrupt.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx695f_wireless_eval_board_miwi/system_tasks.c"
             ex="true"
             overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
       </item>
       <item path="../src/system_config/pic32mx795_pim__e16/bsp/bsp.c"
             ex="true"
@@ -23886,7 +22114,6 @@
         <property key="UART6" value="true"/>
         <property key="USB" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="hwtoolclock.instructionspeed" value="4"/>
         <property key="hwtoolclock.units" value="mips"/>

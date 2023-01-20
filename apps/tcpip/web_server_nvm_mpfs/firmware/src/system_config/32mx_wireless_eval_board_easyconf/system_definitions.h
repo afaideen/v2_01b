@@ -75,8 +75,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "tcpip/tcpip.h"
 #include "driver/ethmac/drv_ethmac.h"
 #include "driver/wifi/mrf24w/drv_wifi.h"
+#include "net/pres/net_pres.h"
+#include "net/pres/net_pres_encryptionproviderapi.h"
+#include "net/pres/net_pres_transportapi.h"
+#include "net/pres/net_pres_socketapi.h"
 #include "app.h"
 #include "app_miwi.h"
+#include "app_tls_client.h"
 
 
 // DOM-IGNORE-BEGIN
@@ -127,6 +132,7 @@ typedef struct
     /*** SPI Object for Index 2 ***/
     SYS_MODULE_OBJ				spiObjectIdx2;
     SYS_MODULE_OBJ  tcpip;
+    SYS_MODULE_OBJ  netPres;
 
 } SYSTEM_OBJECTS;
 

@@ -63,6 +63,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <sys/attribs.h>
 #include "app.h"
 #include "app_miwi.h"
+#include "app_tls_client.h"
 #include "system_definitions.h"
 
 // *****************************************************************************
