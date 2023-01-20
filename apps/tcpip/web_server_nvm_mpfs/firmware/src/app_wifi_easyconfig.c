@@ -101,7 +101,7 @@ extern BYTE LCDText[16*2+1];
   Remarks:
     Application strings and buffers are be defined outside this structure.
  */
-static APP_DATA s_appData;
+static APP_DATA appData;
 static BSP_LED_STATE s_LEDstate = BSP_LED_STATE_OFF;
 static IWPRIV_GET_PARAM s_app_get_param;
 static IWPRIV_SET_PARAM s_app_set_param;
@@ -164,7 +164,7 @@ static void APP_TCPIP_IF_Up(TCPIP_NET_HANDLE netH);
   Remarks:
     None.
  */
-void APP_WIFI_Initialize(void)
+void APP_WIFI_EASYCONFIG_Initialize(void)
 {
 #if (OSAL_USE_RTOS == 1) /* It means FreeRTOS V8.x.x is used. */
     if (!APP_OSAL_MutexInit(&s_appLock)) {
@@ -173,8 +173,8 @@ void APP_WIFI_Initialize(void)
     }
 #endif
 
-    s_appData.state = APP_MOUNT_DISK;
-    s_appData.scanState = APP_WIFI_PRESCAN_INIT;
+    appData.state = APP_MOUNT_DISK;
+    appData.scanState = APP_WIFI_PRESCAN_INIT;
 
     s_app_set_param.conn.initConnAllowed = false;
     iwpriv_set(INITCONN_OPTION_SET, &s_app_set_param);
@@ -191,7 +191,7 @@ void APP_WIFI_Initialize(void)
   Remarks:
     None.
  */
-void APP_WIFI_Tasks(void)
+void APP_WIFI_EASYCONFIG_Tasks(void)
 {
     static bool isWiFiPowerSaveConfigured = false;
     static bool wasNetUp[2] = {true, true}; // this app supports 2 interfaces so far
@@ -201,14 +201,14 @@ void APP_WIFI_Tasks(void)
     static TCPIP_NET_HANDLE netHandleWiFi;
     int i, nNets;
 
-    switch (s_appData.state)
+    switch (appData.state)
     {
         case APP_MOUNT_DISK:
             if (SYS_FS_Mount(SYS_FS_NVM_VOL, LOCAL_WEBSITE_PATH_FS, MPFS2, 0, NULL) == 0)
             {
                 SYS_CONSOLE_PRINT("SYS_Initialize: The %s File System is mounted\r\n", SYS_FS_MPFS_STRING);
                 APP_CONSOLE_HeaderDisplay();
-                s_appData.state = APP_TCPIP_WAIT_INIT;
+                appData.state = APP_TCPIP_WAIT_INIT;
             }
             else
             {
@@ -221,11 +221,11 @@ void APP_WIFI_Tasks(void)
             if (tcpipStat < 0)
             {
                 SYS_CONSOLE_MESSAGE("APP: TCP/IP stack initialization failed!\r\n");
-//                s_appData.state = APP_TCPIP_ERROR;
+//                appData.state = APP_TCPIP_ERROR;
             }
             else if (tcpipStat == SYS_STATUS_READY)
             {
-                s_appData.state = APP_WIFI_CONFIG;
+                appData.state = APP_WIFI_CONFIG;
             }
             break;
         }
@@ -250,11 +250,11 @@ void APP_WIFI_Tasks(void)
                 if (!g_redirect_signal) {
                     s_app_set_param.scan.prescanAllowed = true;
                     iwpriv_set(PRESCAN_OPTION_SET, &s_app_set_param);
-                    s_appData.state = APP_WIFI_PRESCAN;
+                    appData.state = APP_WIFI_PRESCAN;
             } else {
                     g_redirect_signal = false;
                     APP_TCPIP_IFModules_Enable(netHandleWiFi);
-                    s_appData.state = APP_TCPIP_TRANSACT;
+                    appData.state = APP_TCPIP_TRANSACT;
                 break;
             }
             } else {
@@ -268,10 +268,10 @@ void APP_WIFI_Tasks(void)
             // do anything
             uint8_t scanStatus = APP_WIFI_Prescan();
             if (scanStatus == IWPRIV_READY) {
-                s_appData.state = APP_TCPIP_MODULES_ENABLE;
+                appData.state = APP_TCPIP_MODULES_ENABLE;
             } else if (scanStatus == IWPRIV_ERROR) {
                 SYS_CONSOLE_MESSAGE("Wi-Fi Prescan Error\r\n");
-                s_appData.state = APP_TCPIP_MODULES_ENABLE;
+                appData.state = APP_TCPIP_MODULES_ENABLE;
             } else {
                 break;
             }
@@ -282,7 +282,7 @@ void APP_WIFI_Tasks(void)
             nNets = TCPIP_STACK_NumberOfNetworksGet();
             for (i = 0; i < nNets; ++i)
                 APP_TCPIP_IFModules_Enable(TCPIP_STACK_IndexToNet(i));
-            s_appData.state = APP_TCPIP_TRANSACT;
+            appData.state = APP_TCPIP_TRANSACT;
 
         case APP_TCPIP_TRANSACT:
             // wait for redirection command from custom_http_app.c
@@ -292,7 +292,7 @@ void APP_WIFI_Tasks(void)
                 APP_TCPIP_IF_Down(netHandleWiFi);
                 APP_TCPIP_IF_Up(netHandleWiFi);
                 isWiFiPowerSaveConfigured = false;
-                s_appData.state = APP_WIFI_CONFIG;
+                appData.state = APP_WIFI_CONFIG;
                 break;
             } else if (s_app_get_param.conn.status == IWPRIV_CONNECTION_REESTABLISHED) {
                 // restart dhcp client and config power save
@@ -402,7 +402,7 @@ void APP_WIFI_Tasks(void)
 
 uint8_t APP_WIFI_Prescan(void)
 {
-    switch (s_appData.scanState) {
+    switch (appData.scanState) {
         case APP_WIFI_PRESCAN_INIT:
             iwpriv_get(PRESCAN_OPTION_GET, &s_app_get_param);
             if (s_app_get_param.scan.prescanAllowed) {
@@ -412,7 +412,7 @@ uint8_t APP_WIFI_Prescan(void)
                 if (type == WF_NETWORK_TYPE_SOFT_AP && s_app_get_param.conn.status == IWPRIV_CONNECTION_SUCCESSFUL)
                     return IWPRIV_ERROR;
                 iwpriv_execute(PRESCAN_START, &s_app_execute_param);
-                s_appData.scanState = APP_WIFI_PRESCAN_WAIT;
+                appData.scanState = APP_WIFI_PRESCAN_WAIT;
                 break;
             } else {
                 return IWPRIV_READY;
@@ -424,9 +424,9 @@ uint8_t APP_WIFI_Prescan(void)
             {
                 iwpriv_get(SCANSTATUS_GET, &s_app_get_param);
                 if (s_app_get_param.scan.scanStatus == IWPRIV_SCAN_SUCCESSFUL) {
-                    s_appData.scanState = APP_WIFI_PRESCAN_SAVE;
+                    appData.scanState = APP_WIFI_PRESCAN_SAVE;
                 } else {
-                    s_appData.scanState = APP_WIFI_PRESCAN_INIT;
+                    appData.scanState = APP_WIFI_PRESCAN_INIT;
                     return IWPRIV_ERROR;
                 }
             } else {
@@ -438,7 +438,7 @@ uint8_t APP_WIFI_Prescan(void)
             if (s_app_execute_param.scan.saveStatus == IWPRIV_IN_PROGRESS)
                 break;
             else // IWPRIV_READY
-                s_appData.scanState = APP_WIFI_PRESCAN_RESET;
+                appData.scanState = APP_WIFI_PRESCAN_RESET;
 
         case APP_WIFI_PRESCAN_RESET: {
             TCPIP_NET_HANDLE netH = TCPIP_STACK_NetHandleGet(WIFI_INTERFACE_NAME);
@@ -448,19 +448,19 @@ uint8_t APP_WIFI_Prescan(void)
             iwpriv_set(INITCONN_OPTION_SET, &s_app_set_param);
             s_app_set_param.scan.prescanAllowed = false;
             iwpriv_set(PRESCAN_OPTION_SET, &s_app_set_param);
-            s_appData.scanState = APP_WIFI_PRESCAN_WAIT_RESET;
+            appData.scanState = APP_WIFI_PRESCAN_WAIT_RESET;
             break;
         }
 
         case APP_WIFI_PRESCAN_WAIT_RESET:
             iwpriv_get(INITSTATUS_GET, &s_app_get_param);
             if (s_app_get_param.driverStatus.initStatus == IWPRIV_READY)
-                s_appData.scanState = APP_WIFI_PRESCAN_DONE;
+                appData.scanState = APP_WIFI_PRESCAN_DONE;
             else
                 break;
 
         case APP_WIFI_PRESCAN_DONE:
-            s_appData.scanState = APP_WIFI_PRESCAN_INIT;
+            appData.scanState = APP_WIFI_PRESCAN_INIT;
             return IWPRIV_READY;
     }
 

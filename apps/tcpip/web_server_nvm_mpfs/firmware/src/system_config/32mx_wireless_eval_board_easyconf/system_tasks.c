@@ -90,7 +90,7 @@ void SYS_Tasks ( void )
     TCPIP_STACK_Task(sysObj.tcpip);
 
     /* Maintain the application's state machine. */
-    APP_Tasks();
+    APP_WIFI_EASYCONFIG_Tasks();
     APP_MIWI_Tasks();
 }
 

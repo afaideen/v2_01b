@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<configuration version="2.0.0.11">
+<configuration version="2.0.0.12">
   <General>
     <HarmonyPath path="../../.."/>
     <Processor name="PIC32MX795F512L"/>
@@ -2435,10 +2435,10 @@
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="C:\SmallTests\V6Temp\HarmonyWPDGit_0514\apps\tcpip\wifi_wolfssl_tcp_client\firmware\src"/>
-        <Include value="C:\SmallTests\V6Temp\HarmonyWPDGit_0514\apps\tcpip\wifi_wolfssl_tcp_client\firmware\src\system_config\pic32mx_eth_sk__ioexp"/>
-        <Include value="C:\SmallTests\V6Temp\HarmonyWPDGit_0514\framework"/>
-        <Include value="C:\SmallTests\V6Temp\HarmonyWPDGit_0514\apps\tcpip\wifi_wolfssl_tcp_client\firmware\src\system_config\pic32mx_eth_sk__ioexp\framework"/>
+        <Include value="C:/SmallTests/V6Temp/HarmonyWPDGit_0514/apps/tcpip/wifi_wolfssl_tcp_client/firmware/src"/>
+        <Include value="C:/SmallTests/V6Temp/HarmonyWPDGit_0514/apps/tcpip/wifi_wolfssl_tcp_client/firmware/src/system_config/pic32mx_eth_sk__ioexp"/>
+        <Include value="C:/SmallTests/V6Temp/HarmonyWPDGit_0514/framework"/>
+        <Include value="C:/SmallTests/V6Temp/HarmonyWPDGit_0514/apps/tcpip/wifi_wolfssl_tcp_client/firmware/src/system_config/pic32mx_eth_sk__ioexp/framework"/>
         <Include value="../src/system_config/pic32mx_eth_sk__ioexp/bsp"/>
         <Define value="HAVE_CONFIG_H"/>
         <Include value="../../../../../third_party/tcpip/wolfssl"/>
