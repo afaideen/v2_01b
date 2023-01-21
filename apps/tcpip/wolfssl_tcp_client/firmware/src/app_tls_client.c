@@ -60,9 +60,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-#define     PORTNUM                             80
-//#define     HOSTNAME0                     "myfreedomaintest.website"
-#define     HOSTNAME0                     "192.168.0.103"
+#define     PORTNUM                             443
+#define     HOSTNAME0                     "myfreedomaintest.website"
+//#define     HOSTNAME0                     "192.168.0.103"
 
 #define     HOSTNAME1                     "api.weatherapi.com"
 #define     apiWeatherKey                   "303fb9ce3b5f40c1ace11052221207"
@@ -228,7 +228,8 @@ void APP_TLS_CLIENT_Tasks ( void )
             if(option_api == 0)
             {
                 app_tls_clientData.host = host0;
-                app_tls_clientData.port = 5000;
+//                app_tls_clientData.port = 5000;
+                app_tls_clientData.port = PORTNUM;
             }
             else  if(option_api == 1){
                 app_tls_clientData.host = host1;
