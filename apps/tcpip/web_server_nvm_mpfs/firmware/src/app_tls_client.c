@@ -60,7 +60,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
+#define     PORTNUM                             80
+//static ROM BYTE ServerName[] =  "myfreedomaintest.website";
 
+#define     HOSTNAME0                     "myfreedomaintest.website"
 
 #define     HOSTNAME1                     "api.weatherapi.com"
 #define     apiWeatherKey                   "303fb9ce3b5f40c1ace11052221207"
@@ -106,7 +109,7 @@ char                                            networkBuffer[1024];
 BYTE                     latitude[16];
 BYTE                     longitude[16];
 BYTE                     option_api;
-BYTE                    *host1, *host2;
+BYTE                    *host0, *host1, *host2;
 
 
 // *****************************************************************************
@@ -127,6 +130,12 @@ void APP_TLS_CLIENT_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
     app_tls_clientData.state = 0xff;
+
+     //    OPTION 0
+    strcpy((char*)app_tls_clientData.api1.hostname, HOSTNAME0);
+//    strcpy((char*)app_tls_clientData.api1.api_key, apiWeatherKey);
+//    strcpy((char*)app_tls_clientData.api1.param.location, location_param);
+    host0 = &app_tls_clientData.api1.hostname[0];
 
     //    OPTION 1
     strcpy((char*)app_tls_clientData.api1.hostname, HOSTNAME1);
@@ -162,6 +171,12 @@ void APP_TLS_CLIENT_Tasks ( void )
     TCPIP_DNS_RESULT result;
     SYS_TMR_HANDLE delayHandle;
     uint16_t  v;
+    static BYTE body_data[] = "{"
+                                "\"key1\": \"Hi! Are you my server?\","
+                                "\"key2\": 128.0123,"
+                                "\"key3\": true"
+                            "}";
+     size_t size_dt;
     
     if(SYS_TMR_TickCountGet() - startTick >= SYS_TMR_TickCounterFrequencyGet()/2ul)
     {
@@ -172,7 +187,9 @@ void APP_TLS_CLIENT_Tasks ( void )
     if(!BSP_SWITCH_1StateGet() || !BSP_SWITCH_2StateGet()){
         if(SYS_TMR_TickCountGet() - t_sw >= SYS_TMR_TickCounterFrequencyGet() * 0.25)
         {
-            if(!BSP_SWITCH_1StateGet())
+            if(!BSP_SWITCH_0StateGet())
+                option_api = 0;
+            else if(!BSP_SWITCH_1StateGet())
                 option_api = 1;
             else if(!BSP_SWITCH_2StateGet())
                 option_api = 2;
@@ -210,9 +227,11 @@ void APP_TLS_CLIENT_Tasks ( void )
             app_tls_clientData.clearBytesSent = 0;
             
             app_tls_clientData.ipMode = 4;
-            if(option_api == 1)
+            if(option_api == 0)
+                app_tls_clientData.host = host0;
+            else  if(option_api == 1)
                 app_tls_clientData.host = host1;
-            else
+            else if(option_api == 2)
                 app_tls_clientData.host = host2;
             result = TCPIP_DNS_Resolve(app_tls_clientData.host, TCPIP_DNS_TYPE_A);
             app_tls_clientData.queryState = 4;
@@ -315,6 +334,22 @@ void APP_TLS_CLIENT_Tasks ( void )
        
         case APP_TCPIP_SEND_REQUEST_SSL:
         
+            if(option_api == 0)
+            {
+                    size_dt = strlen(body_data);
+                    sprintf(networkBuffer, 
+                    "GET /post/test HTTP/1.1\r\n"
+                    "Host: %s:%d\r\n"
+                    "Accept: */*\r\n"
+                    "Connection: keep-alive\r\n"
+                    "Content-Length: %d"
+                    "\r\n\r\n"
+                    "%s"
+                    , HOSTNAME0
+                    , PORTNUM
+                    , size_dt
+                    , body_data);
+            }
             if(option_api == 1)
             {
                 //https://api.weatherapi.com/v1/current.json?q=Segamat&key=303fb9ce3b5f40c1ace11052221207
@@ -326,7 +361,7 @@ void APP_TLS_CLIENT_Tasks ( void )
                         "\r\n",
                         location_param, app_tls_clientData.api1.api_key, host1);
             }
-            else
+            else if(option_api == 2)
             {
                 //https://api.openweathermap.org/data/2.5/weather?lat=2.902632&lon=101.634693&appid=892a3a878ae1aa72d5b34877caa5b239
                 //Option 2:Open Weather Map Api
