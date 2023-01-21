@@ -70,11 +70,6 @@ extern "C" {
 #define USE_FAST_MATH
 #define TFM_TIMING_RESISTANT
 #define NO_WOLFSSL_SERVER
-#define NO_DH
-#define NO_PSK
-#define NO_PWDBASED
-#define NO_RABBIT
-#define NO_HC128
 #define WOLFSSL_DER_LOAD
 #define HAVE_ECC
 

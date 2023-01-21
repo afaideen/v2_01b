@@ -131,7 +131,7 @@ void APP_TLS_CLIENT_Initialize ( void )
     app_tls_clientData.state = 0xff;
 
      //    OPTION 0
-    strcpy((char*)app_tls_clientData.api0.hostname, HOSTNAME0);
+    strcpy((char*)app_tls_clientData.api0.hostname, HOSTNAME0);   
     host0 = &app_tls_clientData.api0.hostname[0];
 
     //    OPTION 1
@@ -226,11 +226,19 @@ void APP_TLS_CLIENT_Tasks ( void )
             
             app_tls_clientData.ipMode = 4;
             if(option_api == 0)
+            {
                 app_tls_clientData.host = host0;
-            else  if(option_api == 1)
+                app_tls_clientData.port = 5000;
+            }
+            else  if(option_api == 1){
                 app_tls_clientData.host = host1;
+                app_tls_clientData.port = 443;
+            }
             else if(option_api == 2)
+            {
                 app_tls_clientData.host = host2;
+                app_tls_clientData.port = 443;
+            }
             result = TCPIP_DNS_Resolve((char*)app_tls_clientData.host, TCPIP_DNS_TYPE_A);
             app_tls_clientData.queryState = 4;
             app_tls_clientData.state = APP_TLS_CLIENT_WAIT_ON_DNS;
