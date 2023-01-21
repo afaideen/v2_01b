@@ -352,6 +352,16 @@ const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 };
 
 // </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="SYS_MSG Initialization Data">
+/*** Message System Initialization Data ***/
+
+static uint16_t queuePriorities0[2] = { 64, 32 };
+SYS_MSG_INIT msg0Init =
+{
+    .nMaxMsgsDelivered = 1,
+    .nMessagePriorities = 1,
+};
+// </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="SYS_TMR Initialization Data">
 /*** TMR Service Initialization Data ***/
 const SYS_TMR_INIT sysTmrInitData =
@@ -672,6 +682,10 @@ void SYS_Initialize ( void* data )
 
 
 
+
+    /*** Message Service Initialization Code ***/
+    msg0Init.nQSizes = queuePriorities0;
+    sysObj.sysMsg0 = SYS_MSG_Initialize(SYS_MSG_0, (SYS_OBJ_HANDLE)&msg0Init);
 
     /*** Random Service Initialization Code ***/
     SYS_RANDOM_Initialize(0, 0);

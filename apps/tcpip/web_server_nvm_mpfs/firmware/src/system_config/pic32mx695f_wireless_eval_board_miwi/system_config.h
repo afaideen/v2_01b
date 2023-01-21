@@ -140,6 +140,11 @@ extern "C" {
 
 /*** Interrupt System Service Configuration ***/
 #define SYS_INT                     true
+/*** Message System Service Configuration ***/
+
+#define SYS_MSG_MAX_MAILBOXES        2
+#define SYS_MSG_MAX_TYPES            2
+
 
 /*** Ports System Service Configuration ***/
 #define SYS_PORT_AD1PCFG        ~0xc00
@@ -407,7 +412,7 @@ extern "C" {
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/
 #define NET_PRES_NUM_INSTANCE 1
-#define NET_PRES_NUM_SOCKETS 3
+#define NET_PRES_NUM_SOCKETS 5
 
 
 

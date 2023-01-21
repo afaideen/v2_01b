@@ -33,7 +33,7 @@ CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT OF
 SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
 *******************************************************************************/
-
+#include "../../../system_definitions.h"
 #include "net_pres_enc_glue.h"
 #include "net/pres/net_pres_transportapi.h"
 #include "net/pres/net_pres_certstore.h"
@@ -122,7 +122,7 @@ bool NET_PRES_EncProviderStreamClientInit0(NET_PRES_TransportObject * transObjec
     if (wolfSSL_CTX_load_verify_buffer(net_pres_wolfSSLInfoStreamClient0.context, caCertsPtr, caCertsLen, SSL_FILETYPE_ASN1) != SSL_SUCCESS)
     {
         // Couldn't load the certificates
-        //SYS_CONSOLE_MESSAGE("Something went wrong loading the certificates\r\n");
+        SYS_CONSOLE_MESSAGE("Something went wrong loading the certificates\r\n");
         wolfSSL_CTX_free(net_pres_wolfSSLInfoStreamClient0.context);
         return false;
     }

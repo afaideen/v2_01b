@@ -70,14 +70,21 @@ extern "C" {
 #define USE_FAST_MATH
 #define TFM_TIMING_RESISTANT
 #define NO_WOLFSSL_SERVER
+#define NO_DES3
+#define NO_DH
+#define NO_DSA
 #define NO_MD4
+#define NO_PSK
+#define NO_PWDBASED
 #define NO_RC4
 #define NO_RABBIT
 #define NO_HC128
-#define WOLFSSL_DER_LOAD
+#define HAVE_AESCCM
+#define HAVE_AESGCM
 #define HAVE_ECC
 
 
+#define NO_OLD_TLS
 
 
 #ifdef	__cplusplus

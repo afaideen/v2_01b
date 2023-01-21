@@ -73,12 +73,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 void __ISR(_EXTERNAL_1_VECTOR, IPL3AUTO) _IntHandlerExternalInterruptInstance0(void)
 {
-        //WIFI INT1
     PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_EXTERNAL_1);
     DRV_WIFI_MRF24W_ISR((SYS_MODULE_OBJ)0);
 }
-
-//Move to MRF24J40.c for Radio Transceiver 802.15.4
 void __ISR(_EXTERNAL_2_VECTOR, IPL4AUTO) _IntHandlerExternalInterruptInstance1(void)
 {
     ISR_EXT_INT2();

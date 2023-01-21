@@ -214,6 +214,10 @@
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
       </File>
       <File>
+        <Name>sys_msg.h</Name>
+        <Path>Header Files/framework/system/msg</Path>
+      </File>
+      <File>
         <Name>tcpip_reboot.h</Name>
         <Path>Header Files/framework/tcpip</Path>
       </File>
@@ -930,6 +934,10 @@
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
       </File>
       <File>
+        <Name>sys_msg.c</Name>
+        <Path>Source Files/framework/system/msg/src</Path>
+      </File>
+      <File>
         <Name>dnss_private.h</Name>
         <Path>Header Files/framework/tcpip/src</Path>
       </File>
@@ -980,6 +988,10 @@
       <File>
         <Name>opensslconf.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>sys_msg_local.h</Name>
+        <Path>Header Files/framework/system/msg/src</Path>
       </File>
       <File>
         <Name>sniffer.h</Name>
@@ -2334,6 +2346,10 @@
         <Path>Header Files/framework/crypto/src</Path>
       </File>
       <File>
+        <Name>sys_msg_config.h</Name>
+        <Path>Header Files/framework/system/msg/config</Path>
+      </File>
+      <File>
         <Name>drv_wifi_mgmt_msg.c</Name>
         <Path>Source Files/framework/driver/wifi/mrf24w/src</Path>
       </File>
@@ -2370,7 +2386,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>960F911E67DC5D44FB7AA60A347EE657</Checksum>
+        <Checksum>988F40BC30F4941D35DFE3ECCF4174F8</Checksum>
         <ProjectFileChecksum>9CADFAEDDA6344B0BD607460210B48F9</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2480,7 +2496,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>BF6371E7616772EAFCC6BD701A3063F7</Checksum>
+        <Checksum>34DD090BA392272166A9C9E4ECBB3A9F</Checksum>
         <ProjectFileChecksum>80FD375557E58936E5B1D5E4390D382D</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2490,13 +2506,13 @@
       <Template>
         <Name>config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>DAF9D71CC230A701C4487266A3FA8493</Checksum>
+        <Checksum>39F14A1C36B55051578368128104A83B</Checksum>
         <ProjectFileChecksum>43D403F2EF28662626E5D8E08E8DA288</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>789845961520A0275B2936F6EFC343FE</Checksum>
+        <Checksum>A2D8332FCF44E2A4A2E3D267693B61A5</Checksum>
         <ProjectFileChecksum>A73B2B0F626D6DBF0C3FA481D791CEC8</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2508,7 +2524,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mx695f_wireless_eval_board_miwi</Path>
-        <Checksum>3FD6D3247FEC3B988ACE9F47A0A083D7</Checksum>
+        <Checksum>01988554A0CC9EBFF14829C5D7D18014</Checksum>
         <ProjectFileChecksum>AC2024F2CDEE177186B9D3C78EF384D3</ProjectFileChecksum>
       </Template>
       <Template>

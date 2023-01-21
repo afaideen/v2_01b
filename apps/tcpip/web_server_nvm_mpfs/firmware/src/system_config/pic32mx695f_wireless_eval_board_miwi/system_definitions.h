@@ -75,6 +75,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "tcpip/tcpip.h"
 #include "driver/ethmac/drv_ethmac.h"
 #include "driver/wifi/mrf24w/drv_wifi.h"
+#include "system/msg/sys_msg.h"
 #include "net/pres/net_pres.h"
 #include "net/pres/net_pres_encryptionproviderapi.h"
 #include "net/pres/net_pres_transportapi.h"
@@ -121,6 +122,7 @@ typedef struct
     SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  drvNvm;
     SYS_MODULE_OBJ  sysDebug;
+    SYS_MODULE_OBJ  sysMsg0;
     SYS_MODULE_OBJ  sysConsole0;
 
     /*** SPI Object for Index 0 ***/

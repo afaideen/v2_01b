@@ -78,6 +78,7 @@ void SYS_Tasks ( void )
     SYS_DEVCON_Tasks(sysObj.sysDevcon);
     /* Maintain the file system state machine. */
     SYS_FS_Tasks();
+    SYS_MSG_Tasks( (SYS_OBJ_HANDLE) sysObj.sysMsg0 );
     /* SYS_TMR Device layer tasks routine */ 
     SYS_TMR_Tasks(sysObj.sysTmr);
 

@@ -41,5 +41,7 @@ bool NET_PRES_CertStoreGetCACerts(const uint8_t ** certPtr, int32_t * certSize, 
 {
     *certPtr = client_cert_der_2048;
     *certSize = sizeof_client_cert_der_2048;
+//    *certPtr = clientcert2048_der;
+//    *certSize = clientcert2048_der_len;
     return true;
 }
