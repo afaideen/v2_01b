@@ -164,7 +164,7 @@ typedef struct
     uint32_t clearBytesReceived;
     uint32_t clearBytesSent;
     
-    API_CHILDREN api1, api2;
+    API_CHILDREN api0, api1, api2;
 
 } APP_TLS_CLIENT_DATA;
 

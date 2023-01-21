@@ -61,9 +61,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 #define     PORTNUM                             80
-//static ROM BYTE ServerName[] =  "myfreedomaintest.website";
-
-#define     HOSTNAME0                     "myfreedomaintest.website"
+//#define     HOSTNAME0                     "myfreedomaintest.website"
+#define     HOSTNAME0                     "192.168.0.103"
 
 #define     HOSTNAME1                     "api.weatherapi.com"
 #define     apiWeatherKey                   "303fb9ce3b5f40c1ace11052221207"
@@ -132,10 +131,8 @@ void APP_TLS_CLIENT_Initialize ( void )
     app_tls_clientData.state = 0xff;
 
      //    OPTION 0
-    strcpy((char*)app_tls_clientData.api1.hostname, HOSTNAME0);
-//    strcpy((char*)app_tls_clientData.api1.api_key, apiWeatherKey);
-//    strcpy((char*)app_tls_clientData.api1.param.location, location_param);
-    host0 = &app_tls_clientData.api1.hostname[0];
+    strcpy((char*)app_tls_clientData.api0.hostname, HOSTNAME0);
+    host0 = &app_tls_clientData.api0.hostname[0];
 
     //    OPTION 1
     strcpy((char*)app_tls_clientData.api1.hostname, HOSTNAME1);
@@ -150,10 +147,9 @@ void APP_TLS_CLIENT_Initialize ( void )
     strcpy((char*)app_tls_clientData.api2.param.gps_lng, (const char*)longitudeSepang);
     strcpy((char*)latitude, (const char*)latitudeSepang);
     strcpy((char*)longitude, (const char*)longitudeSepang);
+    host2 = &app_tls_clientData.api2.hostname[0];
     
     app_tls_clientData.port = 443;
-    host1 = &app_tls_clientData.api1.hostname[0];
-    host2 = &app_tls_clientData.api2.hostname[0];
 }
 
 
@@ -183,7 +179,8 @@ void APP_TLS_CLIENT_Tasks ( void )
         BSP_LED_2Toggle();               
     }
     
-    if(!BSP_SWITCH_1StateGet() || !BSP_SWITCH_2StateGet()){
+    if( !BSP_SWITCH_0StateGet()||!BSP_SWITCH_1StateGet() || !BSP_SWITCH_2StateGet() )
+    {
         if(SYS_TMR_TickCountGet() - t_sw >= SYS_TMR_TickCounterFrequencyGet() * 0.25)
         {
             if(!BSP_SWITCH_0StateGet())
@@ -194,9 +191,11 @@ void APP_TLS_CLIENT_Tasks ( void )
                 option_api = 2;
             t_sw = SYS_TMR_TickCountGet();
             app_tls_clientData.state = APP_TLS_CLIENT_STATE_INIT;
-            if(option_api == 1)
+            if(option_api == 0)
+                while(!BSP_SWITCH_0StateGet());
+            else if(option_api == 2)
                 while(!BSP_SWITCH_1StateGet());
-            else
+            else if(option_api == 2)
                 while(!BSP_SWITCH_2StateGet());
             delayHandle = SYS_TMR_DelayMS(250); // 0.25 second delay. 
             while(SYS_TMR_DelayStatusGet(delayHandle) == false) // Code will block here
@@ -335,6 +334,7 @@ void APP_TLS_CLIENT_Tasks ( void )
         
             if(option_api == 0)
             {
+                    //Option 0: Local private server https://192.168.0.103:5000/post/test
                     size_dt = strlen((const char*)body_data);
                     sprintf(networkBuffer, 
                     "GET /post/test HTTP/1.1\r\n"
