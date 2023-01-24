@@ -13,3 +13,8 @@ if __name__ == '__main__':
     # socketio.run(app, debug=False, port=5000, host="0.0.0.0")
     ##use '0.0.0.0' to access the server from external ip
     app.run(host="0.0.0.0", port=5000, ssl_context=('cert.pem', 'key.pem'))
+
+
+
+
+    

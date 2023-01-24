@@ -55,6 +55,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "app_tls_client.h"
 
+int wolfSSL_Debugging_ON(void);
+int wolfSSL_Debugging_OFF(void);
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -127,6 +130,11 @@ BYTE                    *host0, *host1, *host2;
 
 void APP_TLS_CLIENT_Initialize ( void )
 {
+#if defined( DEBUG_WOLFSSL )
+        wolfSSL_Debugging_ON();
+//        wolfSSL_Debugging_OFF();
+#endif
+        
     /* Place the App state machine in its initial state. */
     app_tls_clientData.state = 0xff;
 
