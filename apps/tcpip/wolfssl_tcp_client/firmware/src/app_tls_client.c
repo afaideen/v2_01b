@@ -63,9 +63,10 @@ int wolfSSL_Debugging_OFF(void);
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-#define     PORTNUM                             443
-#define     HOSTNAME0                     "myfreedomaintest.website"
-//#define     HOSTNAME0                     "192.168.0.103"     //local private server setting
+//#define     PORTNUM                             443
+//#define     HOSTNAME0                     "myfreedomaintest.website"
+#define     HOSTNAME0                     "192.168.0.103"     //local private server setting
+#define     PORTNUM                             5000
 
 #define     HOSTNAME1                     "api.weatherapi.com"
 #define     apiWeatherKey                   "303fb9ce3b5f40c1ace11052221207"
