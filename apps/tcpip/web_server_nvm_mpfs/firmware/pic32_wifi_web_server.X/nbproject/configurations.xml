@@ -863,6 +863,7 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <itemPath>../src/custom_linker/custom_p32MX695F512L.ld</itemPath>
+      <itemPath>../../../../../../v1_08_01/apps/EagleEye2014/firmware/src/linker/p32MX795F512L.ld</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -1507,6 +1508,7 @@
     <Elem>../../../../../../../../github/microchip/mla_v2013-06-15/Microchip/WirelessProtocols</Elem>
     <Elem>..\src\32mx_wireless_eval_board_easyconf</Elem>
     <Elem>..\src\system_config\32mx_wireless_eval_board_easyconf</Elem>
+    <Elem>../../../../../../v1_08_01/apps/EagleEye2014/firmware/src/linker</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -28723,6 +28725,10 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../../../../../../v1_08_01/apps/EagleEye2014/firmware/src/linker/p32MX795F512L.ld"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="../../../../../framework/crypto/src/zlib-1.2.7/adler32.c"
             ex="false"
             overriding="false">

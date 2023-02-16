@@ -452,21 +452,51 @@ TCPIP_STACK_HEAP_INTERNAL_CONFIG tcpipHeapConfig =
     .heapSize = TCPIP_STACK_DRAM_SIZE,
 };
  
+NETCONFIG MyConfig __attribute__((section(".my_space"),space(prog))) =//__attribute__((space(prog),address(0x9D000000))) =
+//NETCONFIG MyConfig =
+{
+    .ifName = TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
+    .nbnsName = TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
+    .ifMacAddr = TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
+    .ipAddr = TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
+    .ipMask = TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
+    .gwIP = TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
+    .dns1IP = TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
+    .dns2IP = TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
+    .pwrMode = TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
+    .startFlags = TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
+    .pMacObject = &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
+    TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,
+    TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH,
+    TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY,      //for ipv6
+    .netConfig.interface             = (char *)&MyConfig.ifName,
+    .netConfig.hostName          = (char *)&MyConfig.nbnsName,
+    .netConfig.macAddr            = (char *)&MyConfig.ifMacAddr,
+    .netConfig.ipAddr                = (char *)&MyConfig.ipAddr,
+    .netConfig.ipMask                = (char *)&MyConfig.ipMask,
+    .netConfig.gateway             = (char *)&MyConfig.gwIP,
+    .netConfig.priDNS               = (char *)&MyConfig.dns1IP,
+    .netConfig.secondDNS        = (char *)&MyConfig.dns2IP,
+    .netConfig.powerMode        = (char *)&MyConfig.pwrMode,
+    .netConfig.startFlags           = TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,
+    .netConfig.pMacObject        = &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,
+};
+
 const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[] =
 {
 /*** Network Configuration Index 0 ***/
     {
-        TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
-        TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
-        TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
-        TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
-        TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
-        TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
-        TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
-        TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
-        TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
-        TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
-       &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
+        (char *)&MyConfig.ifName,       // interface
+        (char *)&MyConfig.nbnsName,            // hostName
+        (char *)&MyConfig.ifMacAddr,             // macAddr
+        (char *)&MyConfig.ipAddr,           // ipAddr
+        (char *)&MyConfig.ipMask,              // ipMask
+        (char *)&MyConfig.gwIP,              // gateway
+        (char *)&MyConfig.dns1IP,                  // priDNS
+        (char *)&MyConfig.dns2IP,           // secondDNS
+        (char *)&MyConfig.pwrMode,           // powerMode
+        .startFlags = TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,//TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,
+        .pMacObject = &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,
     },
 };
 

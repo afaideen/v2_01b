@@ -339,7 +339,7 @@ static void InitializeBoard(void) {
 void example_write_nvm_flash(void)
 {      
         
-        MyConfigType httpNetData = {
+        MyConfigType httpNetNewData = {
                 "ENC28J60  ",
                 "BIRDPEEK        ",
                 "00:04:A3:11:22:33",
@@ -351,11 +351,11 @@ void example_write_nvm_flash(void)
                 TCPIP_NETWORK_DEFAULT_POWER_MODE,
                 TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
                 };
-        DWORD buffer[4096];   
+ 
         DWORD *addr;
 
         addr = (DWORD*)&DefaultConfig;  //location address 0x9d00 0000
-        NVMWrite4K( addr, (DWORD*)&httpNetData, sizeof(httpNetData));
+        NVMWrite4K( addr, (DWORD*)&httpNetNewData, sizeof(httpNetNewData));
        
         
         Nop();

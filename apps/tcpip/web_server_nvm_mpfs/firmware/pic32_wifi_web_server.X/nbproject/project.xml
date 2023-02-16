@@ -57,6 +57,7 @@
                 <sourceRootElem>../../../../../../../../github/microchip/mla_v2013-06-15/Microchip/WirelessProtocols</sourceRootElem>
                 <sourceRootElem>..\src\32mx_wireless_eval_board_easyconf</sourceRootElem>
                 <sourceRootElem>..\src\system_config\32mx_wireless_eval_board_easyconf</sourceRootElem>
+                <sourceRootElem>../../../../../../v1_08_01/apps/EagleEye2014/firmware/src/linker</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
