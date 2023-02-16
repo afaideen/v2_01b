@@ -140,11 +140,6 @@ extern "C" {
 
 /*** Interrupt System Service Configuration ***/
 #define SYS_INT                     true
-/*** Message System Service Configuration ***/
-
-#define SYS_MSG_MAX_MAILBOXES        2
-#define SYS_MSG_MAX_TYPES            2
-
 
 /*** Ports System Service Configuration ***/
 #define SYS_PORT_AD1PCFG        ~0xc00
@@ -409,10 +404,16 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+/*** Crypto Library Configuration ***/
 
-/* MPLAB Harmony Net Presentation Layer Definitions*/
-#define NET_PRES_NUM_INSTANCE 1
-#define NET_PRES_NUM_SOCKETS 5
+#define HAVE_MCAPI
+#define NO_CERTS
+#define NO_PWDBASED
+#define NO_OLD_TLS
+#define NO_AES
+#define HAVE_ECC
+#define USE_FAST_MATH
+#define NO_RSA
 
 
 

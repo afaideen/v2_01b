@@ -247,50 +247,6 @@ SYSTEM_OBJECTS sysObj;
 // Section: Module Initialization Data
 // *****************************************************************************
 // *****************************************************************************
-/* Net Presentation Layer Data Definitions */
-#include "framework/net/pres/net_pres_enc_glue.h"
-
-static const NET_PRES_TransportObject netPresTransObject0SC = {
-    .fpOpen        = (NET_PRES_TransOpen)TCPIP_TCP_ClientOpen,
-    .fpLocalBind         = (NET_PRES_TransBind)TCPIP_TCP_Bind,
-    .fpRemoteBind        = (NET_PRES_TransBind)TCPIP_TCP_RemoteBind,
-    .fpOptionGet         = (NET_PRES_TransOption)TCPIP_TCP_OptionsGet,
-    .fpOptionSet         = (NET_PRES_TransOption)TCPIP_TCP_OptionsSet,
-    .fpIsConnected       = (NET_PRES_TransBool)TCPIP_TCP_IsConnected,
-    .fpWasReset          = (NET_PRES_TransBool)TCPIP_TCP_WasReset,
-    .fpDisconnect        = (NET_PRES_TransBool)TCPIP_TCP_Disconnect,
-    .fpConnect           = (NET_PRES_TransBool)TCPIP_TCP_Connect,
-    .fpClose             = (NET_PRES_TransClose)TCPIP_TCP_Close,
-    .fpSocketInfoGet     = (NET_PRES_TransSocketInfoGet)TCPIP_TCP_SocketInfoGet,
-    .fpFlush             = (NET_PRES_TransBool)TCPIP_TCP_Flush,
-    .fpPeek              = (NET_PRES_TransPeek)TCPIP_TCP_ArrayPeek,
-    .fpDiscard           = (NET_PRES_TransDiscard)TCPIP_TCP_Discard,
-    .fpHandlerRegister   = (NET_PRES_TransHandlerRegister)TCPIP_TCP_SignalHandlerRegister,
-    .fpHandlerDeregister = (NET_PRES_TransSignalHandlerDeregister)TCPIP_TCP_SignalHandlerDeregister,
-    .fpRead              = (NET_PRES_TransRead)TCPIP_TCP_ArrayGet,
-    .fpWrite             = (NET_PRES_TransWrite)TCPIP_TCP_ArrayPut,
-    .fpReadyToRead       = (NET_PRES_TransReady)TCPIP_TCP_GetIsReady,
-    .fpReadyToWrite      = (NET_PRES_TransReady)TCPIP_TCP_PutIsReady,
-    .fpIsPortDefaultSecure = (NET_PRES_TransIsPortDefaultSecured)TCPIP_Helper_TCPSecurePortGet,
-};
-static const NET_PRES_INST_DATA netPresCfgs[] = 
-{
-    {
-        .pTransObject_sc = &netPresTransObject0SC,
-        .pProvObject_ss = NULL,
-        .pProvObject_sc = &net_pres_EncProviderStreamClient0,
-        .pProvObject_ds = NULL,
-        .pProvObject_dc = NULL,
-    },
-};
-
-static const NET_PRES_INIT_DATA netPresInitData = 
-{
-    .numLayers = sizeof(netPresCfgs) / sizeof(NET_PRES_INST_DATA),
-    .pInitData = netPresCfgs
-};
-  
- 
 // <editor-fold defaultstate="collapsed" desc="SYS_COMMAND Initialization Data">
 /*** System Command Initialization Data ***/
 
@@ -351,16 +307,6 @@ const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
     }
 };
 
-// </editor-fold>
-// <editor-fold defaultstate="collapsed" desc="SYS_MSG Initialization Data">
-/*** Message System Initialization Data ***/
-
-static uint16_t queuePriorities0[2] = { 64, 32 };
-SYS_MSG_INIT msg0Init =
-{
-    .nMaxMsgsDelivered = 1,
-    .nMessagePriorities = 1,
-};
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="SYS_TMR Initialization Data">
 /*** TMR Service Initialization Data ***/
@@ -683,10 +629,6 @@ void SYS_Initialize ( void* data )
 
 
 
-    /*** Message Service Initialization Code ***/
-    msg0Init.nQSizes = queuePriorities0;
-    sysObj.sysMsg0 = SYS_MSG_Initialize(SYS_MSG_0, (SYS_OBJ_HANDLE)&msg0Init);
-
     /*** Random Service Initialization Code ***/
     SYS_RANDOM_Initialize(0, 0);
 
@@ -694,7 +636,6 @@ void SYS_Initialize ( void* data )
     sysObj.sysTmr  = SYS_TMR_Initialize(SYS_TMR_INDEX_0, (const SYS_MODULE_INIT  * const)&sysTmrInitData);
   
     /* Initialize Middleware */
-    sysObj.netPres = NET_PRES_Initialize(0, (SYS_MODULE_INIT*)&netPresInitData);
 
     
     /* TCPIP Stack Initialization */
@@ -708,7 +649,6 @@ void SYS_Initialize ( void* data )
     /* Initialize the Application */
     APP_Initialize();
     APP_MIWI_Initialize();
-    APP_TLS_CLIENT_Initialize();
 }
 
 
