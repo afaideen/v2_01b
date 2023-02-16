@@ -313,6 +313,7 @@ void APP_TLS_CLIENT_Tasks ( void )
             if (app_tls_clientData.socket == INVALID_SOCKET) {
                 SYS_CONSOLE_MESSAGE("Could not create socket - aborting\r\n");
                 app_tls_clientData.state = APP_TLS_CLIENT_WAITING_FOR_COMMAND;
+                break;
             }
             SYS_CONSOLE_MESSAGE("Starting connection\r\n");
             app_tls_clientData.state = APP_TLS_CLIENT_WAIT_FOR_CONNECTION;

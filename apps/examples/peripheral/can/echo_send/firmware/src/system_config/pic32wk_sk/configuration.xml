@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../../.."/>
+    <Processor name=""/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>drv_can.h</Name>
+        <Path>Header Files/framework/driver/can</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>drv_can_static.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk/framework/driver/can</Path>
+        <Checksum>D3F56B5AA587284969E8FA6426E77B30</Checksum>
+        <ProjectFileChecksum>4E90F63564B2F3207DAD2F4F492F8B5D</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>1CFA6D37C62E49F0E26BEE18DE23EC40</Checksum>
+        <ProjectFileChecksum>211D5465BCCA83CDDFF70C5252D8DD40</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/system/ports/src</Path>
+        <Checksum>AF8524934A0D2E7AF8CA9C230025814A</Checksum>
+        <ProjectFileChecksum>901B045D8FE1FA16373D61E547B5723F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_can_mapping.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/driver/can/src</Path>
+        <Checksum>B28D34F2F6074A12493157972EA57849</Checksum>
+        <ProjectFileChecksum>140F5D68EF6DCD9947E1612FBAB13098</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>C2C6A1A4284DF3A5861CA6C57E286B5F</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>DD040A3AFCC7285F602084616A14852D</Checksum>
+        <ProjectFileChecksum>656DB006B01CF73DC3E8DBB46B4DAE55</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>BE644D0142ACA48D9CA2E6255A02CDBA</Checksum>
+        <ProjectFileChecksum>BD73D3C58C03D5C996080C8458830EA1</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk/bsp</Path>
+        <Checksum>044608305E60164031B4C079AE383FA1</Checksum>
+        <ProjectFileChecksum>FBB1861C84E89D5B35D1036A9B92E206</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>038FEAB57B5B8E6E1B6AE3A45A3F7F80</Checksum>
+        <ProjectFileChecksum>9A487EF0936B7E6AD235B4D0F3703FB3</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/bsp</Path>
+        <Checksum>567767CC87EDC74F976A8E3D7371F6CA</Checksum>
+        <ProjectFileChecksum>BD106DC0B326906D9819F00E8BBCC113</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>64BA150E88FA9131D4BD8D749A8EC478</Checksum>
+        <ProjectFileChecksum>1A5055D42746C0210400877A37A3E27D</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/system/clk/src</Path>
+        <Checksum>9628E1F2383A3FF772221CB8FBCBF08C</Checksum>
+        <ProjectFileChecksum>A9C62CE0BC6EEC6FFC966FD4A1DD8F08</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_can_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/driver/can/src</Path>
+        <Checksum>4BE8473563B164149D6BF96916D6E78C</Checksum>
+        <ProjectFileChecksum>A363FD88B75FD7911891711E063E1038</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="F:\CodeBase\GIT\WSG\wsg\apps\examples\peripheral\can\echo_send\firmware\src"/>
+        <Include value="F:\CodeBase\GIT\WSG\wsg\apps\examples\peripheral\can\echo_send\firmware\src\system_config\pic32wk_sk"/>
+        <Include value="F:\CodeBase\GIT\WSG\wsg\framework"/>
+        <Include value="F:\CodeBase\GIT\WSG\wsg\apps\examples\peripheral\can\echo_send\firmware\src\system_config\pic32wk_sk\framework"/>
+        <Include value="../src/system_config/pic32wk_sk/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../../bin/framework/peripheral/PIC32WK2057GPD132_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

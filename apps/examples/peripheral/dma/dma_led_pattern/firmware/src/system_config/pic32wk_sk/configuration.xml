@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="2.0.0.12">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../../.."/>
+    <Processor name=""/>
+    <Board name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_dma.h</Name>
+        <Path>Header Files/framework/system/dma</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_dma_local.h</Name>
+        <Path>Header Files/framework/system/dma/src</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_compatibility.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>drv_tmr_static.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk/framework/driver/tmr</Path>
+        <Checksum>32B8EFE3BEEDAE68AB64FB82D2B04AD5</Checksum>
+        <ProjectFileChecksum>427696D8FDC6926843C936406867FBAE</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>77A9388564D8AFF6047B18460E35BDFA</Checksum>
+        <ProjectFileChecksum>ACF083B88944DC93CC58A75DDDDB1B77</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/system/ports/src</Path>
+        <Checksum>44E37C480B23E8633D7BB2669F3E1606</Checksum>
+        <ProjectFileChecksum>B4FC5D4C99DA6CF38DBAA144DA321153</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/system/dma/src</Path>
+        <Checksum>3CFAC1E28B05F25A62165B6E8EFEE6A3</Checksum>
+        <ProjectFileChecksum>370DF2F45D5C54E31B000A0B215CF529</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>C1FACE5213A6E073620CE13320CCF784</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_tmr_mapping.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/driver/tmr/src</Path>
+        <Checksum>0651845480D5D3E21D8BF17EE68DBEAC</Checksum>
+        <ProjectFileChecksum>BDE03B1C6E2F5507452FD7D98306492B</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>BB31311C4D781B68EB619B86F273AA59</Checksum>
+        <ProjectFileChecksum>B88B26F8F1B28245944B8B2D55EB2278</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>92208AA30C3C19AFF9797DE386E1F2E6</Checksum>
+        <ProjectFileChecksum>1F27E966ECBC44490997331EBDA8963C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk/bsp</Path>
+        <Checksum>044608305E60164031B4C079AE383FA1</Checksum>
+        <ProjectFileChecksum>4D0773DC401D4789D2CF83F84FAE926C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>5FDA6B549E9B31ECDFA60ECD4605E969</Checksum>
+        <ProjectFileChecksum>107EA64BBB182A6B509F3F6C4B6A1748</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>bsp.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/bsp</Path>
+        <Checksum>567767CC87EDC74F976A8E3D7371F6CA</Checksum>
+        <ProjectFileChecksum>A7399EBE5AC2C7197B283787D6B2DBE6</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>sys_dma_static.h</Name>
+        <Path>Header Files/app/system_config/pic32wk_sk/framework/system/dma</Path>
+        <Checksum>0CE14BBEB78DCA8EA4AE6AABF57ACD8D</Checksum>
+        <ProjectFileChecksum>EAA75B263CC74D61EFA79E5CF31471AB</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk</Path>
+        <Checksum>5C78ADB9E111EB575EE8397B8E69456D</Checksum>
+        <ProjectFileChecksum>5EA14C53DE8A329F07F660CB200D6F54</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_tmr_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/driver/tmr/src</Path>
+        <Checksum>9CF11DBF8AC2B05AEFA158D897D6A5CE</Checksum>
+        <ProjectFileChecksum>0FF1139C4F9196D5D093C1412335D2D2</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/pic32wk_sk/framework/system/clk/src</Path>
+        <Checksum>9628E1F2383A3FF772221CB8FBCBF08C</Checksum>
+        <ProjectFileChecksum>A663F58D8BD9DDF189C0BD50B01EA88C</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32>
+        <Include value="C:\cm\Harmony\apps\examples\peripheral\dma\dma_led_pattern\firmware\src"/>
+        <Include value="C:\cm\Harmony\apps\examples\peripheral\dma\dma_led_pattern\firmware\src\system_config\pic32wk_sk"/>
+        <Include value="C:\cm\Harmony\framework"/>
+        <Include value="C:\cm\Harmony\apps\examples\peripheral\dma\dma_led_pattern\firmware\src\system_config\pic32wk_sk\framework"/>
+        <Include value="../src/system_config/pic32wk_sk/bsp"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../../bin/framework/peripheral/PIC32WK2057GPD132_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>
