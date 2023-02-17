@@ -466,9 +466,9 @@ NETCONFIG MyConfig __attribute__((section(".my_space"),space(prog))) =//__attrib
     .pwrMode = TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
     .startFlags = TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
     .pMacObject = &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
-    TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,
-    TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH,
-    TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY,      //for ipv6
+    TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,          //      .ipv6Addr = &TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,
+    .ipv6PrefixLen = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH,
+    TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY,          //      .ipv6Gateway = &TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY,      //for ipv6
     .netConfig.interface             = (char *)&MyConfig.ifName,
     .netConfig.hostName          = (char *)&MyConfig.nbnsName,
     .netConfig.macAddr            = (char *)&MyConfig.ifMacAddr,
@@ -480,6 +480,9 @@ NETCONFIG MyConfig __attribute__((section(".my_space"),space(prog))) =//__attrib
     .netConfig.powerMode        = (char *)&MyConfig.pwrMode,
     .netConfig.startFlags           = TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,
     .netConfig.pMacObject        = &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,
+        TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,      //    .netConfig.ipv6Addr                 = &TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,
+    .netConfig.ipv6PrefixLen                 = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH,
+        TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY       //    .netConfig.ipv6Gateway                 = &TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY,
 };
 
 const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[] =
@@ -497,6 +500,9 @@ const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[] 
         (char *)&MyConfig.pwrMode,           // powerMode
         .startFlags = TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,//TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,
         .pMacObject = &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,
+        TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS,
+        .ipv6PrefixLen = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH,
+        TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY
     },
 };
 

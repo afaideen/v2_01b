@@ -1880,7 +1880,7 @@ Discarded input sections
  .text          0x00000000        0x0 build/pic32mx695f_wireless_eval_board_miwi/production/_ext/1360937237/app_miwi.o
  .bss           0x00000000        0x0 build/pic32mx695f_wireless_eval_board_miwi/production/_ext/1360937237/app_miwi.o
  .reginfo       0x00000000       0x18 build/pic32mx695f_wireless_eval_board_miwi/production/_ext/1360937237/app_miwi.o
- _06329d2063edd2b2
+ _062a9d2063eed610
                 0x00000000       0x8c build/pic32mx695f_wireless_eval_board_miwi/production/_ext/1360937237/app_miwi.o
  .text.example_write_nvm_flash
                 0x00000000       0xac build/pic32mx695f_wireless_eval_board_miwi/production/_ext/1360937237/app_miwi.o
