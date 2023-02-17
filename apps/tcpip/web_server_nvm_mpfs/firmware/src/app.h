@@ -276,6 +276,10 @@ typedef struct
         
         TCPIP_NETWORK_CONFIG    netConfig;
     }NETCONFIG;
+    
+        extern NETCONFIG MyConfig;
+//        extern const TCPIP_NETWORK_CONFIG __attribute__((space(prog),address(0x9D000000))) TCPIP_HOSTS_CONFIGURATION[];
+    extern const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[];
 
 // *****************************************************************************
 /* Application Data
