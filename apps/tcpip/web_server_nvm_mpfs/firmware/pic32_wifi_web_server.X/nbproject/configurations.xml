@@ -28710,7 +28710,7 @@
         </archiverTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>true</parseOnProdLoad>
+          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
@@ -36252,7 +36252,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="WIRELESS_EVAL_BOARD;CFG_INCLUDE_PIC32_EVAL_BOARD;_SUPPRESS_PLIB_WARNING;PROTOCOL_MIWI_PRO;MIWI_HELPER;"/>
+                  value="WIRELESS_EVAL_BOARD;CFG_INCLUDE_PIC32_EVAL_BOARD;_SUPPRESS_PLIB_WARNING;PROTOCOL_MIWI_PRO;MIWI_HELPER"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -36504,7 +36504,6 @@
         <property key="UART6" value="true"/>
         <property key="USB" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="hwtoolclock.instructionspeed" value="4"/>
         <property key="hwtoolclock.units" value="mips"/>

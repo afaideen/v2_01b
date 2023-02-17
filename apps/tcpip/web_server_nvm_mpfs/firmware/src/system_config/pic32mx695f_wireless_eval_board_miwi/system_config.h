@@ -295,19 +295,6 @@ extern "C" {
 #define DRV_TMR_ASYNC_WRITE_ENABLE_IDX0     false
 #define DRV_TMR_POWER_STATE_IDX0            SYS_MODULE_POWER_RUN_FULL
 
-/*** Timer Driver 1 Configuration ***/
-#define DRV_TMR_PERIPHERAL_ID_IDX1          TMR_ID_2
-#define DRV_TMR_INTERRUPT_SOURCE_IDX1       INT_SOURCE_TIMER_2
-#define DRV_TMR_INTERRUPT_VECTOR_IDX1       INT_VECTOR_T2
-#define DRV_TMR_ISR_VECTOR_IDX1             _TIMER_2_VECTOR
-#define DRV_TMR_INTERRUPT_PRIORITY_IDX1     INT_PRIORITY_LEVEL1
-#define DRV_TMR_INTERRUPT_SUB_PRIORITY_IDX1 INT_SUBPRIORITY_LEVEL0
-#define DRV_TMR_CLOCK_SOURCE_IDX1           DRV_TMR_CLKSOURCE_INTERNAL
-#define DRV_TMR_PRESCALE_IDX1               TMR_PRESCALE_VALUE_256
-#define DRV_TMR_OPERATION_MODE_IDX1         DRV_TMR_OPERATION_MODE_16_BIT
-#define DRV_TMR_ASYNC_WRITE_ENABLE_IDX1     false
-#define DRV_TMR_POWER_STATE_IDX1            SYS_MODULE_POWER_RUN_FULL
-
  // *****************************************************************************
 /* USART Driver Configuration Options
 */

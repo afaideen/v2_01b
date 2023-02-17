@@ -112,20 +112,7 @@ BYTE miwi_msg[][40] =
                             "\r\n",
                             "\r\nRunning MiWi at channel...",
                     };
-  MyConfigType DefaultConfig __attribute__((space(prog),address(0x9D000000))) =
-{
-    TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
-    TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
-    TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
-    TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
-    TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
-    TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
-    TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
-    TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
-    TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
-    TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
-//    &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
-};
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -338,7 +325,21 @@ static void InitializeBoard(void) {
 
 void example_write_nvm_flash(void)
 {      
-        
+          MyConfigType DefaultConfig __attribute__((space(prog),address(0x9D000000))) =
+        {
+            TCPIP_NETWORK_DEFAULT_INTERFACE_NAME,       // interface
+            TCPIP_NETWORK_DEFAULT_HOST_NAME,            // hostName
+            TCPIP_NETWORK_DEFAULT_MAC_ADDR,             // macAddr
+            TCPIP_NETWORK_DEFAULT_IP_ADDRESS,           // ipAddr
+            TCPIP_NETWORK_DEFAULT_IP_MASK,              // ipMask
+            TCPIP_NETWORK_DEFAULT_GATEWAY,              // gateway
+            TCPIP_NETWORK_DEFAULT_DNS,                  // priDNS
+            TCPIP_NETWORK_DEFAULT_SECOND_DNS,           // secondDNS
+            TCPIP_NETWORK_DEFAULT_POWER_MODE,           // powerMode
+            TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS,      // startFlags
+        //    &TCPIP_NETWORK_DEFAULT_MAC_DRIVER,           // pMacObject
+        };
+
         MyConfigType httpNetNewData = {
                 "ENC28J60  ",
                 "BIRDPEEK        ",

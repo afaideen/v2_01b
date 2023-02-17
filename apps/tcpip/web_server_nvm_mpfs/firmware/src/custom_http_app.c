@@ -512,7 +512,7 @@ static struct
     char                gwIP[15 + 1];       // gateway IP address
     char                dns1IP[15 + 1];     // DNS IP address
     char                dns2IP[15 + 1];     // DNS IP address
-    
+    /************USER ADDED****************/
     char                pwrMode[6 + 1];     
     TCPIP_NETWORK_CONFIG_FLAGS   startFlags; 
     const struct  TCPIP_MAC_OBJECT_TYPE    *pMacObject;  
@@ -520,7 +520,7 @@ static struct
     char*     ipv6Addr;   
     int       ipv6PrefixLen;
     char*     ipv6Gateway; 
-
+    /************USER ADDED****************/
     TCPIP_NETWORK_CONFIG   netConfig;  // configuration in the interface requested format
 }httpNetData;
 
@@ -1816,11 +1816,11 @@ void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
         
         strcpy( httpNetData.pwrMode, httpNetData.netConfig.powerMode);
         httpNetData.startFlags = httpNetData.netConfig.startFlags;
-        httpNetData.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+//        httpNetData.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
 
-        *httpNetData.ipv6Addr            = TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS;
-        httpNetData.ipv6PrefixLen       = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH;
-        *httpNetData.ipv6Gateway      = TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY;
+//        *(httpNetData.ipv6Addr)            = TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS;
+//        httpNetData.ipv6PrefixLen          = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH;
+//        *(httpNetData.ipv6Gateway)      = TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY;
         
         NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) );
 
