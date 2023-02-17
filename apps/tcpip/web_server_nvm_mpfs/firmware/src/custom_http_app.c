@@ -512,6 +512,14 @@ static struct
     char                gwIP[15 + 1];       // gateway IP address
     char                dns1IP[15 + 1];     // DNS IP address
     char                dns2IP[15 + 1];     // DNS IP address
+    
+    char                pwrMode[6 + 1];     
+    TCPIP_NETWORK_CONFIG_FLAGS   startFlags; 
+    const struct  TCPIP_MAC_OBJECT_TYPE    *pMacObject;  
+    
+    char*     ipv6Addr;   
+    int       ipv6PrefixLen;
+    char*     ipv6Gateway; 
 
     TCPIP_NETWORK_CONFIG   netConfig;  // configuration in the interface requested format
 }httpNetData;
@@ -527,6 +535,7 @@ static HTTP_IO_RESULT HTTPPostConfig(HTTP_CONN_HANDLE connHandle)
     TCPIP_MAC_ADDR newMACAddr;
 
     httpNetData.currNet = 0; // forget the old settings
+    
 
     // Check to see if the browser is attempting to submit more data than we
     // can parse at once.  This function needs to receive all updated
@@ -657,6 +666,8 @@ static HTTP_IO_RESULT HTTPPostConfig(HTTP_CONN_HANDLE connHandle)
         // save current interface and mark as valid
         httpNetData.currNet = TCPIP_TCP_SocketNetGet(sktHTTP);
         strncpy(httpNetData.ifName, TCPIP_STACK_NetNameGet(httpNetData.currNet), sizeof(httpNetData.ifName));
+    
+        
     }
     else
     {   // Configuration error
@@ -1802,6 +1813,16 @@ void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
         httpNetData.netConfig.powerMode = TCPIP_STACK_IF_POWER_FULL;
         // httpNetData.netConfig.startFlags should be already set;
         httpNetData.netConfig.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+        
+        strcpy( httpNetData.pwrMode, httpNetData.netConfig.powerMode);
+        httpNetData.startFlags = httpNetData.netConfig.startFlags;
+        httpNetData.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+
+        *httpNetData.ipv6Addr            = TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS;
+        httpNetData.ipv6PrefixLen       = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH;
+        *httpNetData.ipv6Gateway      = TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY;
+        
+        NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) );
 
         TCPIP_STACK_NetDown(httpNetData.currNet);
         TCPIP_STACK_NetUp(httpNetData.currNet, &httpNetData.netConfig);

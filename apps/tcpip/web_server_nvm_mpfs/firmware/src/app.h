@@ -259,7 +259,7 @@ typedef struct
         char                gwIP[15 + 1];         // gateway IP address
         char                dns1IP[15 + 1];       // DNS IP address
         char                dns2IP[15 + 1];       // DNS IP address
-        char                pwrMode[6 + 1];       // DNS IP address
+        char                pwrMode[6 + 1];       // 
         /* flags for interface start-up */
         TCPIP_NETWORK_CONFIG_FLAGS   startFlags;
 
@@ -277,7 +277,7 @@ typedef struct
         TCPIP_NETWORK_CONFIG    netConfig;
     }NETCONFIG;
     
-        extern NETCONFIG MyConfig;
+    extern NETCONFIG MyConfig;
 //        extern const TCPIP_NETWORK_CONFIG __attribute__((space(prog),address(0x9D000000))) TCPIP_HOSTS_CONFIGURATION[];
     extern const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[];
 
