@@ -214,7 +214,7 @@ void APP_WIFI_Tasks(void)
             if (tcpipStat < 0)
             {
                 SYS_CONSOLE_MESSAGE("APP: TCP/IP stack initialization failed!\r\n");
-//                s_appData.state = APP_TCPIP_ERROR;
+                s_appData.state = APP_TCPIP_ERROR;
             }
             else if (tcpipStat == SYS_STATUS_READY)
             {
@@ -250,17 +250,23 @@ void APP_WIFI_Tasks(void)
 
         case APP_TCPIP_TRANSACT:
             iwpriv_get(CONNSTATUS_GET, &s_app_get_param);
-            if (s_app_get_param.conn.status == IWPRIV_CONNECTION_FAILED) {
-                APP_TCPIP_IFModules_Disable(netHandleWiFi);
+            if (s_app_get_param.conn.status == IWPRIV_CONNECTION_FAILED) 
+            {
+//                if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+                        APP_TCPIP_IFModules_Disable(netHandleWiFi);
                 APP_TCPIP_IF_Down(netHandleWiFi);
                 APP_TCPIP_IF_Up(netHandleWiFi);
                 isWiFiPowerSaveConfigured = false;
                 s_appData.state = APP_WIFI_CONFIG;
                 break;
             } else if (s_app_get_param.conn.status == IWPRIV_CONNECTION_REESTABLISHED) {
-                // restart dhcp client and config power save
+               
                 TCPIP_DHCP_Disable(netHandleWiFi);
-                TCPIP_DHCP_Enable(netHandleWiFi);
+                if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+                {
+                         // restart dhcp client and config power save
+                        TCPIP_DHCP_Enable(netHandleWiFi);
+                }
                 isWiFiPowerSaveConfigured = false;
             }
 
@@ -279,12 +285,13 @@ void APP_WIFI_Tasks(void)
                 {
                     const char *netName = TCPIP_STACK_NetNameGet(netH);
                     wasNetUp[i] = false;
+//                    if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
                     APP_TCPIP_IFModules_Disable(netH);
                     if (IS_WF_INTF(netName))
                         isWiFiPowerSaveConfigured = false;
                 }
 
-                if (TCPIP_STACK_NetIsUp(netH) && !wasNetUp[i])
+                if ( TCPIP_STACK_NetIsUp(netH) && !wasNetUp[i] )
                 {
                     wasNetUp[i] = true;
                     APP_TCPIP_IFModules_Enable(netH);
@@ -297,7 +304,8 @@ void APP_WIFI_Tasks(void)
              */
             if (!isWiFiPowerSaveConfigured &&
                 TCPIP_STACK_NetIsUp(netHandleWiFi) &&
-                (TCPIP_STACK_NetAddress(netHandleWiFi) != defaultIPWiFi.Val)) {
+                (TCPIP_STACK_NetAddress(netHandleWiFi) != defaultIPWiFi.Val)) 
+            {
                 APP_WIFI_PowerSave_Config(true);
                 isWiFiPowerSaveConfigured = true;
             }
@@ -328,7 +336,6 @@ void APP_WIFI_Tasks(void)
                         dwLastIP[i].Val = ipAddr.Val;
                         SYS_CONSOLE_PRINT("%s IP Address: %d.%d.%d.%d \r\n", TCPIP_STACK_NetNameGet(netH), ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
                         #if defined(WIRELESS_EVAL_BOARD)
-//                        DelayMs(500);
                          startTick = SYS_TMR_TickCountGet();
                          LCDBacklightOFF();
                         #endif
@@ -457,7 +464,8 @@ static void APP_TCPIP_IFModules_Enable(TCPIP_NET_HANDLE netH)
     const char *netName = TCPIP_STACK_NetNameGet(netH);
     const char *netBiosName = TCPIP_STACK_NetBIOSName(netH);
 
-    TCPIP_DHCP_Enable(netH);
+    if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+        TCPIP_DHCP_Enable(netH);
     if (IS_WF_INTF(netName)) {
         APP_WIFI_IPv6MulticastFilter_Set(netH);
     }

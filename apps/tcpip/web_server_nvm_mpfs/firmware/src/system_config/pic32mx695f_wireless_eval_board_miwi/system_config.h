@@ -639,15 +639,17 @@ extern "C" {
 #define TCPIP_IF_MRF24W 
 #define TCPIP_NETWORK_DEFAULT_HOST_NAME 			"MCHPBOARD_W"
 #define TCPIP_NETWORK_DEFAULT_MAC_ADDR 				"00:a4:a3:11:22:33"
-#define TCPIP_NETWORK_DEFAULT_IP_ADDRESS 			"0.0.0.0"
+#define TCPIP_NETWORK_DEFAULT_IP_ADDRESS 			"192.168.0.124"//"0.0.0.0"
 #define TCPIP_NETWORK_DEFAULT_IP_MASK 				"255.255.255.0"
 #define TCPIP_NETWORK_DEFAULT_GATEWAY	 			"192.168.0.1"
 #define TCPIP_NETWORK_DEFAULT_DNS 				"192.168.0.1"
 #define TCPIP_NETWORK_DEFAULT_SECOND_DNS 			"0.0.0.0"
 #define TCPIP_NETWORK_DEFAULT_POWER_MODE 			"full"
-#define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS                       \
-                                                    TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
-                                                    TCPIP_NETWORK_CONFIG_DNS_CLIENT_ON |\
+//    #define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS       TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON
+    #define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS       TCPIP_NETWORK_CONFIG_IP_STATIC
+//#define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS                       \
+//                                                    TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
+//                                                    TCPIP_NETWORK_CONFIG_DNS_CLIENT_ON |\
                                                     TCPIP_NETWORK_CONFIG_IP_STATIC
 #define TCPIP_NETWORK_DEFAULT_MAC_DRIVER 		    DRV_MRF24W_MACObject
 #define TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS 			0

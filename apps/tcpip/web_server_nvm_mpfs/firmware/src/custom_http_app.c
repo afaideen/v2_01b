@@ -1816,13 +1816,13 @@ void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
         
         strcpy( httpNetData.pwrMode, httpNetData.netConfig.powerMode);
         httpNetData.startFlags = httpNetData.netConfig.startFlags;
+        
 //        httpNetData.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
-
 //        *(httpNetData.ipv6Addr)            = TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS;
 //        httpNetData.ipv6PrefixLen          = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH;
 //        *(httpNetData.ipv6Gateway)      = TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY;
-        
-        NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) );
+                        
+        NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) - sizeof(httpNetData.netConfig) );
 
         TCPIP_STACK_NetDown(httpNetData.currNet);
         TCPIP_STACK_NetUp(httpNetData.currNet, &httpNetData.netConfig);
