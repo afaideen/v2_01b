@@ -44,6 +44,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/tmr/sys_tmr.h"
 #include "tcpip/tcpip.h"
 #include "tcpip/src/common/helpers.h"
+#include "TimeDelay.h"
 
 /****************************************************************************
   Section:
@@ -1803,37 +1804,51 @@ void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
     // will gracefully restart the interface and bring it back online immediately
     if(httpNetData.currNet != 0)
     {   // valid data
-        httpNetData.netConfig.interface = httpNetData.ifName;
-        httpNetData.netConfig.hostName = httpNetData.nbnsName;
-        httpNetData.netConfig.macAddr = httpNetData.ifMacAddr;
-        httpNetData.netConfig.ipAddr = httpNetData.ipAddr;
-        httpNetData.netConfig.ipMask = httpNetData.ipMask;
-        httpNetData.netConfig.gateway = httpNetData.gwIP;
-        httpNetData.netConfig.priDNS = httpNetData.dns1IP;
-        httpNetData.netConfig.secondDNS = httpNetData.dns2IP;
-//        httpNetData.netConfig.powerMode = TCPIP_STACK_IF_POWER_FULL;
+        httpNetData.netConfig.interface             = MyConfig.ifName;
+        httpNetData.netConfig.hostName          = MyConfig.nbnsName;
+        httpNetData.netConfig.macAddr            = MyConfig.ifMacAddr;
+        httpNetData.netConfig.ipAddr                = MyConfig.ipAddr;
+        httpNetData.netConfig.ipMask                = MyConfig.ipMask;
+        httpNetData.netConfig.gateway             = MyConfig.gwIP;
+        httpNetData.netConfig.priDNS                = MyConfig.dns1IP;
+        httpNetData.netConfig.secondDNS         = MyConfig.dns2IP;
+        httpNetData.netConfig.powerMode         = TCPIP_STACK_IF_POWER_FULL;
         // httpNetData.netConfig.startFlags should be already set;
-//        httpNetData.netConfig.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+        httpNetData.netConfig.pMacObject        = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
         
-        strcpy( httpNetData.pwrMode, TCPIP_STACK_IF_POWER_FULL);
-        httpNetData.startFlags                    = httpNetData.netConfig.startFlags;
-        
-        tempStartFlags                               = httpNetData.netConfig.startFlags ;
-        httpNetData.netConfig                   = MyConfig.netConfig;
-        httpNetData.netConfig.startFlags    = tempStartFlags;
-        
-        httpNetData.netConfig.powerMode = TCPIP_STACK_IF_POWER_FULL;
-        httpNetData.netConfig.pMacObject  = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+        strcpy( httpNetData.pwrMode, TCPIP_STACK_IF_POWER_FULL );
+        httpNetData.startFlags                      = httpNetData.netConfig.startFlags;        
         httpNetData.pMacObject                  = httpNetData.netConfig.pMacObject;
 //        *(httpNetData.ipv6Addr)            = TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS;
 //        httpNetData.ipv6PrefixLen          = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH;
 //        *(httpNetData.ipv6Gateway)      = TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY;
                         
         NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) );
+        
+        IPV4_ADDR       ipAddr, ipMask, gateway, priDNS, secondDNS;
+        TCPIP_Helper_StringToIPAddress(httpNetData.netConfig.ipAddr, &ipAddr);        
+        TCPIP_Helper_StringToIPAddress(httpNetData.netConfig.ipMask, &ipMask);        
+        TCPIP_Helper_StringToIPAddress(httpNetData.netConfig.gateway, &gateway);        
+        TCPIP_Helper_StringToIPAddress(httpNetData.netConfig.priDNS, &priDNS);        
+        TCPIP_Helper_StringToIPAddress(httpNetData.netConfig.secondDNS, &secondDNS);        
+        
+        TCPIP_STACK_NetAddressSet(httpNetData.currNet, (IPV4_ADDR*)&ipAddr, (IPV4_ADDR*)&ipMask, true);
+        TCPIP_STACK_NetAddressGatewaySet(httpNetData.currNet, (IPV4_ADDR*)&gateway);
+        TCPIP_STACK_NetAddressDnsPrimarySet(httpNetData.currNet, (IPV4_ADDR*)&priDNS);
+        TCPIP_STACK_NetAddressDnsSecondSet(httpNetData.currNet, (IPV4_ADDR*)&secondDNS);
+        
+//        if(httpNetData.startFlags == TCPIP_NETWORK_CONFIG_IP_STATIC)
+//        {
+//            TCPIP_DHCP_Disable(httpNetData.currNet);            
+//        }
+        if(httpNetData.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+        {
+                TCPIP_DHCP_Enable(httpNetData.currNet);
+        }
 
         TCPIP_STACK_NetDown(httpNetData.currNet);
         TCPIP_STACK_NetUp(httpNetData.currNet, &httpNetData.netConfig);
-        Reset();
+//        Reset();      //For debug comment it
     }
 }
 

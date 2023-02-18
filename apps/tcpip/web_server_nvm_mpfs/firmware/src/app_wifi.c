@@ -193,6 +193,8 @@ void APP_WIFI_Tasks(void)
     static IPV4_ADDR dwLastIP[2] = { {-1}, {-1} }; // this app supports 2 interfaces so far
     static TCPIP_NET_HANDLE netHandleWiFi;
     int i, nNets;
+    
+     IPV4_ADDR       ipAddr, ipMask, gateway, priDNS, secondDNS;
 
     switch (s_appData.state)
     {
@@ -250,7 +252,20 @@ void APP_WIFI_Tasks(void)
             if(MyConfig.startFlags == TCPIP_NETWORK_CONFIG_IP_STATIC)
             {
                 TCPIP_DHCP_Disable(netHandleWiFi);
-                LED2_ON();
+                TCPIP_Helper_StringToIPAddress(MyConfig.netConfig.ipAddr, &ipAddr);        
+                TCPIP_Helper_StringToIPAddress(MyConfig.netConfig.ipMask, &ipMask);        
+                TCPIP_Helper_StringToIPAddress(MyConfig.netConfig.gateway, &gateway);  
+                TCPIP_Helper_StringToIPAddress(MyConfig.netConfig.priDNS, &priDNS);        
+                TCPIP_Helper_StringToIPAddress(MyConfig.netConfig.secondDNS, &secondDNS);       
+                
+                TCPIP_STACK_NetAddressSet(netHandleWiFi, (IPV4_ADDR*)&ipAddr, (IPV4_ADDR*)&ipMask, true);
+                TCPIP_STACK_NetAddressGatewaySet(netHandleWiFi, (IPV4_ADDR*)&gateway);
+                TCPIP_STACK_NetAddressDnsPrimarySet(netHandleWiFi, (IPV4_ADDR*)&priDNS);
+                TCPIP_STACK_NetAddressDnsSecondSet(netHandleWiFi, (IPV4_ADDR*)&secondDNS);
+            }
+            else if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+            {
+                    TCPIP_DHCP_Enable(netHandleWiFi);
             }
 
         case APP_TCPIP_TRANSACT:

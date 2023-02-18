@@ -23,7 +23,7 @@
             <url>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app_wifi.c</url>
             <bookmark id="12">
                 <name/>
-                <line>269</line>
+                <line>284</line>
                 <key/>
             </bookmark>
         </file>
@@ -31,12 +31,12 @@
             <url>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/custom_http_app.c</url>
             <bookmark id="10">
                 <name/>
-                <line>667</line>
+                <line>668</line>
                 <key/>
             </bookmark>
             <bookmark id="11">
                 <name/>
-                <line>1827</line>
+                <line>1821</line>
                 <key/>
             </bookmark>
         </file>
@@ -92,14 +92,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app.h</file>
-            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/src/dhcp.c</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/custom_http_app.c</file>
-            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/src/tcpip_manager.c</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi/system_config.h</file>
-            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/tcpip.h</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/src/tcpip_manager.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/tcpip_manager.h</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/app_wifi.c</file>
-            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/main.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/tcpip.h</file>
             <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/system_config/pic32mx695f_wireless_eval_board_miwi/system_init.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/apps/tcpip/web_server_nvm_mpfs/firmware/src/main.c</file>
+            <file>file:/D:/Microchip/harmony/v2_01b/framework/tcpip/src/tcpip_commands.c</file>
         </group>
     </open-files>
 </project-private>
