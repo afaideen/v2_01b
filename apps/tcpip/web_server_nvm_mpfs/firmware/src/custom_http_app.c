@@ -1797,6 +1797,7 @@ void TCPIP_HTTP_Print_ddns_status_msg(HTTP_CONN_HANDLE connHandle)
 
 void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
 {
+        TCPIP_NETWORK_CONFIG_FLAGS tempStartFlags;
     // This is not so much a print function, but causes the interface to restart
     // when the configuration is changed.  If called via an AJAX call, this
     // will gracefully restart the interface and bring it back online immediately
@@ -1810,22 +1811,29 @@ void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
         httpNetData.netConfig.gateway = httpNetData.gwIP;
         httpNetData.netConfig.priDNS = httpNetData.dns1IP;
         httpNetData.netConfig.secondDNS = httpNetData.dns2IP;
-        httpNetData.netConfig.powerMode = TCPIP_STACK_IF_POWER_FULL;
+//        httpNetData.netConfig.powerMode = TCPIP_STACK_IF_POWER_FULL;
         // httpNetData.netConfig.startFlags should be already set;
-        httpNetData.netConfig.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+//        httpNetData.netConfig.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
         
-        strcpy( httpNetData.pwrMode, httpNetData.netConfig.powerMode);
-        httpNetData.startFlags = httpNetData.netConfig.startFlags;
+        strcpy( httpNetData.pwrMode, TCPIP_STACK_IF_POWER_FULL);
+        httpNetData.startFlags                    = httpNetData.netConfig.startFlags;
         
-//        httpNetData.pMacObject = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+        tempStartFlags                               = httpNetData.netConfig.startFlags ;
+        httpNetData.netConfig                   = MyConfig.netConfig;
+        httpNetData.netConfig.startFlags    = tempStartFlags;
+        
+        httpNetData.netConfig.powerMode = TCPIP_STACK_IF_POWER_FULL;
+        httpNetData.netConfig.pMacObject  = TCPIP_STACK_MACObjectGet(httpNetData.currNet);
+        httpNetData.pMacObject                  = httpNetData.netConfig.pMacObject;
 //        *(httpNetData.ipv6Addr)            = TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS;
 //        httpNetData.ipv6PrefixLen          = TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH;
 //        *(httpNetData.ipv6Gateway)      = TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY;
                         
-        NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) - sizeof(httpNetData.netConfig) );
+        NVMWrite4K( &MyConfig, (DWORD*)&httpNetData, sizeof(httpNetData) );
 
         TCPIP_STACK_NetDown(httpNetData.currNet);
         TCPIP_STACK_NetUp(httpNetData.currNet, &httpNetData.netConfig);
+        Reset();
     }
 }
 

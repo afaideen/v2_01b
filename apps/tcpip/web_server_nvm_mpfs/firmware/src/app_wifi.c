@@ -247,13 +247,18 @@ void APP_WIFI_Tasks(void)
             for (i = 0; i < nNets; ++i)
                 APP_TCPIP_IFModules_Enable(TCPIP_STACK_IndexToNet(i));
             s_appData.state = APP_TCPIP_TRANSACT;
+            if(MyConfig.startFlags == TCPIP_NETWORK_CONFIG_IP_STATIC)
+            {
+                TCPIP_DHCP_Disable(netHandleWiFi);
+                LED2_ON();
+            }
 
         case APP_TCPIP_TRANSACT:
             iwpriv_get(CONNSTATUS_GET, &s_app_get_param);
             if (s_app_get_param.conn.status == IWPRIV_CONNECTION_FAILED) 
             {
-//                if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
-                        APP_TCPIP_IFModules_Disable(netHandleWiFi);
+
+                APP_TCPIP_IFModules_Disable(netHandleWiFi);
                 APP_TCPIP_IF_Down(netHandleWiFi);
                 APP_TCPIP_IF_Up(netHandleWiFi);
                 isWiFiPowerSaveConfigured = false;
@@ -269,7 +274,7 @@ void APP_WIFI_Tasks(void)
                 }
                 isWiFiPowerSaveConfigured = false;
             }
-
+            
             SYS_CMD_READY_TO_READ();
 
             /*
@@ -285,7 +290,7 @@ void APP_WIFI_Tasks(void)
                 {
                     const char *netName = TCPIP_STACK_NetNameGet(netH);
                     wasNetUp[i] = false;
-//                    if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+                    
                     APP_TCPIP_IFModules_Disable(netH);
                     if (IS_WF_INTF(netName))
                         isWiFiPowerSaveConfigured = false;
@@ -497,6 +502,7 @@ static void APP_TCPIP_IF_Up(TCPIP_NET_HANDLE netH)
     TCPIP_STACK_InitializeDataGet(tcpipStackObj, &tcpip_init_data);
     pIfConf = tcpip_init_data.pNetConf + net_ix;
     TCPIP_STACK_NetUp(netH, pIfConf);
+//    TCPIP_STACK_NetUp(netH, &MyConfig.netConfig);
 }
 
 /*******************************************************************************
