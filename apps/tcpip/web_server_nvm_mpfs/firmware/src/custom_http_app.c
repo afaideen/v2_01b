@@ -1841,14 +1841,14 @@ void TCPIP_HTTP_Print_reboot(HTTP_CONN_HANDLE connHandle)
 //        {
 //            TCPIP_DHCP_Disable(httpNetData.currNet);            
 //        }
-        if(httpNetData.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
-        {
-                TCPIP_DHCP_Enable(httpNetData.currNet);
-        }
+//        if(httpNetData.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+//        {
+//                TCPIP_DHCP_Enable(httpNetData.currNet);
+//        }
 
         TCPIP_STACK_NetDown(httpNetData.currNet);
         TCPIP_STACK_NetUp(httpNetData.currNet, &httpNetData.netConfig);
-//        Reset();      //For debug comment it
+        Reset();      //For debug comment it
     }
 }
 

@@ -484,7 +484,7 @@ static void APP_TCPIP_IFModules_Enable(TCPIP_NET_HANDLE netH)
     const char *netName = TCPIP_STACK_NetNameGet(netH);
     const char *netBiosName = TCPIP_STACK_NetBIOSName(netH);
 
-    if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
+//    if(MyConfig.startFlags != TCPIP_NETWORK_CONFIG_IP_STATIC)
         TCPIP_DHCP_Enable(netH);
     if (IS_WF_INTF(netName)) {
         APP_WIFI_IPv6MulticastFilter_Set(netH);
