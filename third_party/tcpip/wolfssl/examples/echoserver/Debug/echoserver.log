@@ -1,0 +1,24 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: The property "IntermediateOutputPath" is being set to a value for the first time, but it was already consumed at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(30,5): warning MSB4211: The property "DebugType" is being set to a value for the first time, but it was already consumed at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (29,5)".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(373,5): warning MSB4211: The property "CleanFile" is being set to a value for the first time, but it was already consumed at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  echoserver.c
+echoserver.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_CTX_use_certificate_file referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_CTX_use_PrivateKey_file referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_CTX_new referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_new referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_set_fd referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_write referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_read referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_accept referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_CTX_free referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_free referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_shutdown referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_CTX_set_default_passwd_cb referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSLv23_server_method referenced in function _echoserver_test@4
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_Init referenced in function _main
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_Cleanup referenced in function _main
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_Debugging_ON referenced in function _main
+echoserver.obj : error LNK2019: unresolved external symbol _wolfSSL_SetTmpDH_file referenced in function _echoserver_test@4
+D:\Microchip\harmony\v2_01b\third_party\tcpip\wolfssl\examples\echoserver\Debug\echoserver.exe : fatal error LNK1120: 17 unresolved externals

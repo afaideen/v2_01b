@@ -18,7 +18,7 @@ AC_CANONICAL_HOST
 AC_CANONICAL_BUILD
 
 AM_INIT_AUTOMAKE([1.11 -Wall -Werror -Wno-portability foreign tar-ustar subdir-objects no-define color-tests])
-AC_PREREQ([2.63])
+AC_PREREQ([2.71])
 
 AC_ARG_PROGRAM
 AC_DEFUN([PROTECT_AC_USE_SYSTEM_EXTENSIONS],

@@ -1,0 +1,153 @@
+src/src_libwolfssl_la-ssl.lo: src/ssl.c config.h \
+ wolfssl/wolfcrypt/settings.h wolfssl/wolfcrypt/visibility.h \
+ /usr/include/errno.h /usr/include/sys/errno.h /usr/include/sys/reent.h \
+ /usr/include/_ansi.h /usr/include/newlib.h \
+ /usr/include/_newlib_version.h /usr/include/sys/config.h \
+ /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
+ /usr/include/cygwin/config.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/11/include/stddef.h \
+ /usr/include/sys/_types.h /usr/include/machine/_types.h \
+ /usr/include/machine/_default_types.h /usr/include/sys/lock.h \
+ wolfssl/internal.h wolfssl/wolfcrypt/types.h wolfssl/wolfcrypt/wc_port.h \
+ /usr/include/pthread.h /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+ /usr/include/sys/_stdint.h /usr/include/machine/endian.h \
+ /usr/include/machine/_endian.h /usr/include/bits/endian.h \
+ /usr/include/sys/select.h /usr/include/sys/_sigset.h \
+ /usr/include/sys/_timeval.h /usr/include/sys/timespec.h \
+ /usr/include/sys/_timespec.h /usr/include/sys/_pthreadtypes.h \
+ /usr/include/sys/cpuset.h /usr/include/machine/types.h \
+ /usr/include/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/wordsize.h /usr/include/sys/sysmacros.h \
+ /usr/include/signal.h /usr/include/_ansi.h /usr/include/sys/signal.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/11/include/stdint.h /usr/include/stdint.h \
+ /usr/include/sys/_intsup.h /usr/include/cygwin/signal.h \
+ /usr/include/sys/ucontext.h /usr/include/sched.h \
+ /usr/include/sys/sched.h /usr/include/time.h /usr/include/machine/time.h \
+ /usr/include/sys/_locale.h /usr/include/cygwin/time.h \
+ wolfssl/wolfcrypt/memory.h /usr/include/stdlib.h \
+ /usr/include/machine/stdlib.h /usr/include/alloca.h \
+ /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
+ /usr/include/string.h /usr/include/strings.h /usr/include/sys/string.h \
+ /usr/include/ctype.h wolfssl/ssl.h wolfssl/version.h \
+ /usr/include/stdio.h /usr/lib/gcc/x86_64-pc-cygwin/11/include/stdarg.h \
+ /usr/include/sys/stdio.h /usr/include/sys/uio.h \
+ wolfssl/wolfcrypt/random.h wolfssl/wolfcrypt/sha256.h \
+ wolfssl/wolfcrypt/des3.h wolfssl/wolfcrypt/chacha.h \
+ wolfssl/wolfcrypt/asn.h wolfssl/wolfcrypt/integer.h \
+ wolfssl/wolfcrypt/tfm.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/11/include/limits.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/11/include/syslimits.h \
+ /usr/include/limits.h /usr/include/features.h \
+ /usr/include/cygwin/limits.h wolfssl/wolfcrypt/rsa.h \
+ wolfssl/wolfcrypt/hash.h wolfssl/wolfcrypt/md5.h wolfssl/wolfcrypt/sha.h \
+ wolfssl/wolfcrypt/sha512.h wolfssl/wolfcrypt/dh.h \
+ wolfssl/wolfcrypt/asn_public.h wolfssl/wolfcrypt/ecc.h \
+ wolfssl/wolfcrypt/aes.h wolfssl/wolfcrypt/poly1305.h \
+ wolfssl/wolfcrypt/logging.h wolfssl/wolfcrypt/hmac.h wolfssl/error-ssl.h \
+ wolfssl/wolfcrypt/error-crypt.h wolfssl/wolfcrypt/coding.h \
+ wolfcrypt/src/misc.c wolfssl/wolfcrypt/misc.h /usr/include/dirent.h \
+ /usr/include/sys/dirent.h /usr/include/sys/stat.h \
+ /usr/include/cygwin/stat.h
+config.h:
+wolfssl/wolfcrypt/settings.h:
+wolfssl/wolfcrypt/visibility.h:
+/usr/include/errno.h:
+/usr/include/sys/errno.h:
+/usr/include/sys/reent.h:
+/usr/include/_ansi.h:
+/usr/include/newlib.h:
+/usr/include/_newlib_version.h:
+/usr/include/sys/config.h:
+/usr/include/machine/ieeefp.h:
+/usr/include/sys/features.h:
+/usr/include/cygwin/config.h:
+/usr/lib/gcc/x86_64-pc-cygwin/11/include/stddef.h:
+/usr/include/sys/_types.h:
+/usr/include/machine/_types.h:
+/usr/include/machine/_default_types.h:
+/usr/include/sys/lock.h:
+wolfssl/internal.h:
+wolfssl/wolfcrypt/types.h:
+wolfssl/wolfcrypt/wc_port.h:
+/usr/include/pthread.h:
+/usr/include/sys/types.h:
+/usr/include/sys/cdefs.h:
+/usr/include/sys/_stdint.h:
+/usr/include/machine/endian.h:
+/usr/include/machine/_endian.h:
+/usr/include/bits/endian.h:
+/usr/include/sys/select.h:
+/usr/include/sys/_sigset.h:
+/usr/include/sys/_timeval.h:
+/usr/include/sys/timespec.h:
+/usr/include/sys/_timespec.h:
+/usr/include/sys/_pthreadtypes.h:
+/usr/include/sys/cpuset.h:
+/usr/include/machine/types.h:
+/usr/include/endian.h:
+/usr/include/bits/byteswap.h:
+/usr/include/bits/wordsize.h:
+/usr/include/sys/sysmacros.h:
+/usr/include/signal.h:
+/usr/include/_ansi.h:
+/usr/include/sys/signal.h:
+/usr/lib/gcc/x86_64-pc-cygwin/11/include/stdint.h:
+/usr/include/stdint.h:
+/usr/include/sys/_intsup.h:
+/usr/include/cygwin/signal.h:
+/usr/include/sys/ucontext.h:
+/usr/include/sched.h:
+/usr/include/sys/sched.h:
+/usr/include/time.h:
+/usr/include/machine/time.h:
+/usr/include/sys/_locale.h:
+/usr/include/cygwin/time.h:
+wolfssl/wolfcrypt/memory.h:
+/usr/include/stdlib.h:
+/usr/include/machine/stdlib.h:
+/usr/include/alloca.h:
+/usr/include/cygwin/stdlib.h:
+/usr/include/cygwin/wait.h:
+/usr/include/string.h:
+/usr/include/strings.h:
+/usr/include/sys/string.h:
+/usr/include/ctype.h:
+wolfssl/ssl.h:
+wolfssl/version.h:
+/usr/include/stdio.h:
+/usr/lib/gcc/x86_64-pc-cygwin/11/include/stdarg.h:
+/usr/include/sys/stdio.h:
+/usr/include/sys/uio.h:
+wolfssl/wolfcrypt/random.h:
+wolfssl/wolfcrypt/sha256.h:
+wolfssl/wolfcrypt/des3.h:
+wolfssl/wolfcrypt/chacha.h:
+wolfssl/wolfcrypt/asn.h:
+wolfssl/wolfcrypt/integer.h:
+wolfssl/wolfcrypt/tfm.h:
+/usr/lib/gcc/x86_64-pc-cygwin/11/include/limits.h:
+/usr/lib/gcc/x86_64-pc-cygwin/11/include/syslimits.h:
+/usr/include/limits.h:
+/usr/include/features.h:
+/usr/include/cygwin/limits.h:
+wolfssl/wolfcrypt/rsa.h:
+wolfssl/wolfcrypt/hash.h:
+wolfssl/wolfcrypt/md5.h:
+wolfssl/wolfcrypt/sha.h:
+wolfssl/wolfcrypt/sha512.h:
+wolfssl/wolfcrypt/dh.h:
+wolfssl/wolfcrypt/asn_public.h:
+wolfssl/wolfcrypt/ecc.h:
+wolfssl/wolfcrypt/aes.h:
+wolfssl/wolfcrypt/poly1305.h:
+wolfssl/wolfcrypt/logging.h:
+wolfssl/wolfcrypt/hmac.h:
+wolfssl/error-ssl.h:
+wolfssl/wolfcrypt/error-crypt.h:
+wolfssl/wolfcrypt/coding.h:
+wolfcrypt/src/misc.c:
+wolfssl/wolfcrypt/misc.h:
+/usr/include/dirent.h:
+/usr/include/sys/dirent.h:
+/usr/include/sys/stat.h:
+/usr/include/cygwin/stat.h:

@@ -1,0 +1,24 @@
+MD5      test passed!
+SHA      test passed!
+SHA-256  test passed!
+SHA-384  test passed!
+SHA-512  test passed!
+HMAC-MD5 test passed!
+HMAC-SHA test passed!
+HMAC-SHA256 test passed!
+HMAC-SHA384 test passed!
+HMAC-SHA512 test passed!
+GMAC     test passed!
+Chacha   test passed!
+POLY1305 test passed!
+ChaCha20-Poly1305 AEAD test passed!
+DES      test passed!
+DES3     test passed!
+AES      test passed!
+AES-GCM  test passed!
+RANDOM   test passed!
+RSA      test passed!
+DH       test passed!
+ECC      test passed!
+wolfSSL error: can't load ca file, Please run from wolfSSL home dir
+FAIL testsuite/testsuite.test.exe (exit status: 1)

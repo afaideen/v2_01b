@@ -1,0 +1,5 @@
+Access denied. Option -c requires administrative privileges.
+
+
+Couldn't find www.google.com, skipping
+PASS scripts/google.test (exit status: 0)
