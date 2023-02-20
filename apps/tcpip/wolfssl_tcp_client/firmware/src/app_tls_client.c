@@ -54,6 +54,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 
 #include "app_tls_client.h"
+#include "config.h"
 
 int wolfSSL_Debugging_ON(void);
 int wolfSSL_Debugging_OFF(void);
@@ -63,10 +64,11 @@ int wolfSSL_Debugging_OFF(void);
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-//#define     PORTNUM                             443
-//#define     HOSTNAME0                     "myfreedomaintest.website"
-#define     HOSTNAME0                     "192.168.0.103"     //local private server setting
-#define     PORTNUM                             5000
+#define     PORTNUM                             443
+#define     HOSTNAME0                     "myfreedomaintest.website"
+//Comment below uncomment above
+//#define     HOSTNAME0                     "192.168.0.103"     //local private server setting
+//#define     PORTNUM                             5000
 
 #define     HOSTNAME1                     "api.weatherapi.com"
 #define     apiWeatherKey                   "303fb9ce3b5f40c1ace11052221207"
@@ -132,8 +134,8 @@ BYTE                    *host0, *host1, *host2;
 void APP_TLS_CLIENT_Initialize ( void )
 {
 #if defined( DEBUG_WOLFSSL )
-        wolfSSL_Debugging_ON();
-//        wolfSSL_Debugging_OFF();
+//        wolfSSL_Debugging_ON();
+        wolfSSL_Debugging_OFF();
 #endif
         
     /* Place the App state machine in its initial state. */

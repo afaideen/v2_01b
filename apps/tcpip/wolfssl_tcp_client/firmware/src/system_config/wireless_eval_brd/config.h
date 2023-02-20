@@ -67,13 +67,15 @@ extern "C" {
 
 #define SINGLE_THREADED
 
-#define USE_FAST_MATH
 #define TFM_TIMING_RESISTANT
 #define NO_WOLFSSL_SERVER
 #define WOLFSSL_DER_LOAD
+#define WOLFSSL_SHA512
 #define HAVE_ECC
 
+#define DEBUG_WOLFSSL
 
+#define NO_OLD_TLS
 
 
 #ifdef	__cplusplus

@@ -2366,7 +2366,7 @@
       <Template>
         <Name>config.h</Name>
         <Path>Header Files/app/system_config/wireless_eval_brd</Path>
-        <Checksum>140EA4C95C4E2177BC7F36B9AC16F878</Checksum>
+        <Checksum>204664B73D0912FED837AAA75DEA6C8B</Checksum>
         <ProjectFileChecksum>D663E120569444D81ACA86AA2BE2FAB9</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2382,13 +2382,13 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/wireless_eval_brd</Path>
-        <Checksum>EAEBDBBDC00B31B8074426FF981B0D6A</Checksum>
+        <Checksum>A664D95A73E3A70B1459A37B808685FC</Checksum>
         <ProjectFileChecksum>621CC61CDEDA7B4FB5C3ED8A8ABAF021</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/wireless_eval_brd</Path>
-        <Checksum>E08BC3D23452D218831CF032D44546A6</Checksum>
+        <Checksum>B61F14DBA298F83EC174624E4FF38C21</Checksum>
         <ProjectFileChecksum>BD574D03B4DEA83B3AFEDEDB4E61F8FF</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2410,10 +2410,10 @@
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/wolfssl_tcp_client/firmware/src"/>
-        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/wolfssl_tcp_client/firmware/src/system_config/wireless_eval_brd"/>
-        <Include value="D:/Microchip/harmony/v2_01b/framework"/>
-        <Include value="D:/Microchip/harmony/v2_01b/apps/tcpip/wolfssl_tcp_client/firmware/src/system_config/wireless_eval_brd/framework"/>
+        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\wolfssl_tcp_client\firmware\src"/>
+        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\wolfssl_tcp_client\firmware\src\system_config\wireless_eval_brd"/>
+        <Include value="D:\Microchip\harmony\v2_01b\framework"/>
+        <Include value="D:\Microchip\harmony\v2_01b\apps\tcpip\wolfssl_tcp_client\firmware\src\system_config\wireless_eval_brd\framework"/>
         <Include value="../src/system_config/wireless_eval_brd/bsp"/>
         <Define value="HAVE_CONFIG_H"/>
         <Include value="../../../../../third_party/tcpip/wolfssl"/>

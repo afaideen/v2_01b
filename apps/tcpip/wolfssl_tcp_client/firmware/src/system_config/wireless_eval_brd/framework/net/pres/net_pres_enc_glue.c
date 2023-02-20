@@ -43,6 +43,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "wolfssl/wolfcrypt/logging.h"
 #include "wolfssl/wolfcrypt/random.h"
 
+//User added
+#include "system_definitions.h"
+
 static uint8_t _net_pres_wolfsslUsers = 0;
 typedef struct 
 {
@@ -122,7 +125,7 @@ bool NET_PRES_EncProviderStreamClientInit0(NET_PRES_TransportObject * transObjec
     if (wolfSSL_CTX_load_verify_buffer(net_pres_wolfSSLInfoStreamClient0.context, caCertsPtr, caCertsLen, SSL_FILETYPE_ASN1) != SSL_SUCCESS)
     {
         // Couldn't load the certificates
-        //SYS_CONSOLE_MESSAGE("Something went wrong loading the certificates\r\n");
+        SYS_CONSOLE_MESSAGE("Something went wrong loading the certificates\r\n");
         wolfSSL_CTX_free(net_pres_wolfSSLInfoStreamClient0.context);
         return false;
     }

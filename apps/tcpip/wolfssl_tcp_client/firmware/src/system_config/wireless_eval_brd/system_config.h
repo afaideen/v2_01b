@@ -322,7 +322,8 @@ extern "C" {
 #define MRF_INT_VECTOR INT_VECTOR_INT1
 
 #define DRV_WIFI_DEFAULT_NETWORK_TYPE       DRV_WIFI_NETWORK_TYPE_INFRASTRUCTURE
-#define DRV_WIFI_DEFAULT_SSID               "wifi hamim_2.4GHz@unifi"
+//#define DRV_WIFI_DEFAULT_SSID               "wifi hamim_2.4GHz@unifi"
+#define DRV_WIFI_DEFAULT_SSID               "HAN_TP-LINK_F9CC"
 #define DRV_WIFI_DEFAULT_LIST_RETRY_COUNT   (DRV_WIFI_RETRY_FOREVER) /* Number (1..255) of times to try to connect to the SSID when using Infrastructure network type */
 #define DRV_WIFI_DEFAULT_CHANNEL_LIST       {} /* Channel list for Domain - use default in module */
 
@@ -461,7 +462,7 @@ extern "C" {
 
 /*** SNTP Configuration ***/
 #define TCPIP_STACK_USE_SNTP_CLIENT
-#define TCPIP_NTP_DEFAULT_IF		        		"PIC32INT"
+#define TCPIP_NTP_DEFAULT_IF		        		"MRF24W"
 #define TCPIP_NTP_VERSION             			    	4
 #define TCPIP_NTP_DEFAULT_CONNECTION_TYPE   			IP_ADDRESS_TYPE_IPV4
 #define TCPIP_NTP_EPOCH		                		2208988800ul
