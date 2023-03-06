@@ -113,7 +113,19 @@ BYTE miwi_msg[][40] =
                             "\r\nRunning MiWi at channel...",
                     };
 
-
+/*************************************************************************/
+// AdditionalNodeID variable array defines the additional 
+// information to identify a device on a PAN. This array
+// will be transmitted when initiate the connection between 
+// the two devices. This  variable array will be stored in 
+// the Connection Entry structure of the partner device. The 
+// size of this array is ADDITIONAL_NODE_ID_SIZE, defined in 
+// ConfigApp.h.
+// In this demo, this variable array is set to be empty.
+/*************************************************************************/
+#if ADDITIONAL_NODE_ID_SIZE > 0
+    BYTE AdditionalNodeID[ADDITIONAL_NODE_ID_SIZE] = {0x00};
+#endif
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -369,7 +381,7 @@ void example_write_nvm_flash(void)
 // Section: Application Initialization and State Machine Functions
 // *****************************************************************************
 // *****************************************************************************
-MIWI_TICK t1, t0;
+MIWI_TICK t1, t0, t2;
 /*******************************************************************************
   Function:
     void APP_MIWI_Initialize ( void )
@@ -446,6 +458,15 @@ void APP_MIWI_Tasks ( void )
                 LED_1 ^= 1;
         }
         Nop();
+        
+                /*******************************************************************/
+                // Wait for a Node to Join Network then proceed to Demo's
+                /*******************************************************************/               
+//                while(!ConnectionTable[0].status.bits.isValid)
+//                {
+                        if(MiApp_MessageAvailable())
+                            MiApp_DiscardMessage();
+//                }  
 
     /* Check the application's current state. */
     switch ( app_miwiData.state )
@@ -453,7 +474,13 @@ void APP_MIWI_Tasks ( void )
         /* Application's initial state. */
         case APP_MIWI_STATE_INIT:
         {
-            bool appInitialized = true;            
+            bool appInitialized = false;
+
+ 
+            if(ConnectionTable[0].status.bits.isValid)
+            {
+                    appInitialized = true;
+            }
        
         
             if (appInitialized)
@@ -466,6 +493,11 @@ void APP_MIWI_Tasks ( void )
 
         case APP_MIWI_STATE_SERVICE_TASKS:
         {
+                if( MiWi_TickGetDiff(MiWi_TickGet(), t2) > (0.25 * ONE_SECOND) )
+                {
+                        t2 = MiWi_TickGet();
+                        LED_2 ^= 1;
+                }
         
             break;
         }

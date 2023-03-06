@@ -104,8 +104,8 @@
         BYTE myLongAddress[MY_ADDRESS_LENGTH] = {EUI_0,EUI_1};    
     #endif
 
-//    BYTE            currentChannel = 11;             // current operating channel for the device
-    BYTE            currentChannel = 25;             // current operating channel for the device
+    BYTE            currentChannel = 11;             // current operating channel for the device
+//    BYTE            currentChannel = 25;             // current operating channel for the device
     BYTE            ConnMode = 0;
     typedef union
     {
